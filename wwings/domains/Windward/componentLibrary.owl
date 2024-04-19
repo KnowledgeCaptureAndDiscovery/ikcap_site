@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY flns "http://www.isi.edu/ikcap/wwings/fileOntology.owl#" >
+    <!ENTITY wflns "http://www.isi.edu/ikcap/wwings/workflowOntology.owl#" >
+    <!ENTITY clns "http://www.isi.edu/ikcap/wwings/componentOntology.owl#" >
+    <!ENTITY exereqns "http://www.isi.edu/ikcap/wwings/executionRequirements.owl#" >
+    <!ENTITY wwflns "http://www.isi.edu/ikcap/wwings/domains/Windward/fileOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/wwings/domains/Windward/componentLibrary.owl#"
+     xml:base="http://www.isi.edu/ikcap/wwings/domains/Windward/componentLibrary.owl"
+     xmlns:wflns="http://www.isi.edu/ikcap/wwings/workflowOntology.owl#"
+     xmlns:wwflns="http://www.isi.edu/ikcap/wwings/domains/Windward/fileOntology.owl#"
+     xmlns:exereqns="http://www.isi.edu/ikcap/wwings/executionRequirements.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:flns="http://www.isi.edu/ikcap/wwings/fileOntology.owl#"
+     xmlns:clns="http://www.isi.edu/ikcap/wwings/componentOntology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/wwings/domains/Windward/fileOntology.owl"/>
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/wwings/componentOntology.owl"/>
+    </owl:Ontology>
+    <wwflns:KojakSeedMembers rdf:ID="KojakSeedMembers_16"/>
+    <BC-Seed-Members-To-Seed-Members rdf:ID="BC-Seed-Members-To-Seed-Members_31">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_37"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_39"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#BCSeedMembers_32"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#SeedMembers_34"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </BC-Seed-Members-To-Seed-Members>
+    <wwflns:Links rdf:ID="Links_3"/>
+    <wwflns:BCSeedMembers rdf:ID="BCSeedMembers_52"/>
+    <flns:String rdf:ID="unknownLabel_1">
+        <flns:hasValue rdf:datatype="&xsd;string">unknown</flns:hasValue>
+    </flns:String>
+    <wwflns:WatchList rdf:ID="WatchList_1"/>
+    <GDA-Wrapped rdf:ID="GDA-Wrapped_23">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_32"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_34"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#ArgumentAndPrefix_36"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#ArgumentAndPrefix_38"/>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Links_24"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#GDADemographics_26"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#SeedMembers_28"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#GDAGroups_30"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </GDA-Wrapped>
+    <wwflns:KojakGroups rdf:ID="KojakGroups_8"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_37">
+        <clns:hasArgument rdf:resource="#BCSeedMembers_32"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_46">
+        <clns:hasArgument rdf:resource="#Links_42"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="Merge-GDA-KOJAK-Groups">
+        <rdfs:subClassOf rdf:resource="#Merge"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Filter">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Hats-Trades-To-Capability-Priors">
+        <rdfs:subClassOf rdf:resource="#Merge"/>
+    </owl:Class>
+    <wwflns:Links rdf:ID="Links_24"/>
+    <owl:Class rdf:ID="WatchList-Plus-Groups-To-Suspicious-Groups">
+        <rdfs:subClassOf rdf:resource="#Filter"/>
+    </owl:Class>
+    <owl:Class rdf:ID="GDA-Groups-To-Groups">
+        <rdfs:subClassOf rdf:resource="#TranslateGroups"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Links-To-BC-Links">
+        <rdfs:subClassOf rdf:resource="#TranslateLinks"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Netkit-Scores-To-Watch-List">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Seed-Members-To-KOJAK-Seed-Members">
+        <rdfs:subClassOf rdf:resource="#TranslateSeedMembers"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Seed-Members-To-GDA-Seed-Members">
+        <rdfs:subClassOf rdf:resource="#TranslateSeedMembers"/>
+    </owl:Class>
+    <owl:Class rdf:ID="CapTracker">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <wwflns:SeedMembers rdf:ID="SeedMembers_28"/>
+    <wwflns:GDAGroups rdf:ID="GDAGroups_24"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_30">
+        <clns:hasArgument rdf:resource="#Groups_26"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:GDA-Demographics-ParamFile rdf:ID="GDA-Demographics-ParamFile_24">
+        <flns:unusedByJob rdf:datatype="&xsd;boolean">true</flns:unusedByJob>
+        <wwflns:hasThresholdProbability rdf:resource="#thresholdProbability_1"/>
+        <wwflns:unknownLabel rdf:resource="#unknownLabel_1"/>
+    </wwflns:GDA-Demographics-ParamFile>
+    <wwflns:BCGroups rdf:ID="BCGroups_1"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_36">
+        <clns:hasArgument rdf:resource="#SeedMembers_28"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:Groups rdf:ID="Groups_45"/>
+    <wwflns:Links rdf:ID="Links_2"/>
+    <wwflns:GDADemographics rdf:ID="GDADemographics_26"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_48">
+        <clns:hasArgument rdf:resource="#GDALinks_44"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_53">
+        <clns:hasArgument rdf:resource="#Groups_47"/>
+    </clns:ArgumentAndPrefix>
+    <GDA-Groups-To-Groups rdf:ID="GDA-Groups-To-Groups_23">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_28"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_30"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#GDAGroups_24"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Groups_26"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </GDA-Groups-To-Groups>
+    <wwflns:Links rdf:ID="Links_42"/>
+    <Links-To-GDA-Links rdf:ID="Links-To-GDA-Links_41">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_46"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_48"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Links_42"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#GDALinks_44"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Links-To-GDA-Links>
+    <owl:Class rdf:ID="Terrorist-Hats-To-Watch-List">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <wwflns:Groups rdf:ID="Groups_26"/>
+    <wwflns:GDALinks rdf:ID="GDALinks_44"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_51">
+        <clns:hasArgument rdf:resource="#Groups_45"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_6">
+        <clns:hasArgument rdf:resource="#BCGroups_1"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="arg3-to-hml">
+        <clns:hasArgument rdf:resource="#hatsMeetingsMeetingType"/>
+    </clns:ArgumentAndPrefix>
+    <flns:String rdf:ID="hatsMeetingMeetingView"/>
+    <wwflns:HatsKojakScript rdf:ID="HatsKojakScript_6"/>
+    <owl:Class rdf:ID="Hats-Meetings-To-Links">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HatsMeetings-To-Links">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="arg2-to-thwl">
+        <clns:hasArgument rdf:resource="#WatchList_1"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="BC-Seed-Members-To-Seed-Members">
+        <rdfs:subClassOf rdf:resource="#TranslateSeedMembers"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_11">
+        <clns:hasArgument rdf:resource="#Links_3"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="arg2-to-hml">
+        <clns:hasArgument rdf:resource="#Links_16"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="WatchList-To-NK-Known">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <Seed-Members-To-GDA-Seed-Members rdf:ID="Seed-Members-To-GDA-Seed-Members_9">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_15"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_18"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#SeedMembers_10"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#GDASeedMembers_12"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Seed-Members-To-GDA-Seed-Members>
+    <owl:Class rdf:ID="TranslateGroups">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_13">
+        <clns:hasArgument rdf:resource="#WatchList_7"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:BCSeedMembers rdf:ID="BCSeedMembers_32"/>
+    <flns:String rdf:ID="hatsMeetingsMeetingType"/>
+    <wwflns:Links rdf:ID="Links_16"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_1">
+        <clns:hasArgument rdf:resource="#KojakGroups_8"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="KOJAK-Groups-To-Groups">
+        <rdfs:subClassOf rdf:resource="#TranslateGroups"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Make-Warnings">
+        <rdfs:subClassOf rdf:resource="#Filter"/>
+    </owl:Class>
+    <wwflns:KojakSeedMembers rdf:ID="KojakSeedMembers_43"/>
+    <owl:Class rdf:ID="Netkit">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_20">
+        <clns:hasArgument rdf:resource="#thresholdProbability_1"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:HatsMeetings rdf:ID="HatsMeetings_14">
+        <wwflns:hasMeetingView rdf:resource="#hatsMeetingMeetingView"/>
+        <wwflns:hasMeetingType rdf:resource="#hatsMeetingsMeetingType"/>
+    </wwflns:HatsMeetings>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_10">
+        <clns:hasArgument rdf:resource="#KojakLinks_4"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="BC-Groups-To-BC-Seed-Members">
+        <rdfs:subClassOf rdf:resource="#Filter"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="arg4-to-hml">
+        <clns:hasArgument rdf:resource="#hatsMeetingMeetingView"/>
+    </clns:ArgumentAndPrefix>
+    <Merge-GDA-KOJAK-Groups rdf:ID="Merge-GDA-KOJAK-Groups_44">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_51"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_53"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#ArgumentAndPrefix_55"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Groups_45"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#Groups_47"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Groups_49"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Merge-GDA-KOJAK-Groups>
+    <owl:Class rdf:ID="Translate">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_34">
+        <clns:hasArgument rdf:resource="#GDADemographics_26"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_39">
+        <clns:hasArgument rdf:resource="#SeedMembers_34"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_29">
+        <clns:hasArgument rdf:resource="#unknownLabel_1"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="TranslateSeedMembers">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <wwflns:SeedMembers rdf:ID="SeedMembers_34"/>
+    <Terrorist-Hats-To-Watch-List rdf:ID="Terrorist-Hats-To-Watch-List_1">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#arg1-to-thwl"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#arg2-to-thwl"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#TerroristHats_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#WatchList_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Terrorist-Hats-To-Watch-List>
+    <owl:Class rdf:ID="GDA-Wrapped">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Links-To-CapTracker">
+        <rdfs:subClassOf rdf:resource="#TranslateLinks"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_16">
+        <clns:hasArgument rdf:resource="#GDADemographics_9"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="arg1-to-hml">
+        <clns:hasArgument rdf:resource="#HatsMeetings_14"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="TranslateLinks">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_19">
+        <clns:hasArgument rdf:resource="#KojakLinks_14"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="WatchList-To-Label-Priors">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <wwflns:GDASeedMembers rdf:ID="GDASeedMembers_12"/>
+    <Links-Plus-Watch-List-To-GDA-Dems rdf:ID="Links-Plus-Watch-List-To-GDA-Dems_1">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_11"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_13"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#ArgumentAndPrefix_16"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#ArgumentAndPrefix_20"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#ArgumentAndPrefix_29"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Links_3"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#WatchList_7"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#GDA-Demographics-ParamFile_24"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#GDADemographics_9"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Links-Plus-Watch-List-To-GDA-Dems>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_47">
+        <clns:hasArgument rdf:resource="#KojakSeedMembers_43"/>
+    </clns:ArgumentAndPrefix>
+    <KOJAK-Groups-To-Groups rdf:ID="KOJAK-Groups-To-Groups_32">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_40"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_42"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#KojakGroups_33"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Groups_35"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </KOJAK-Groups-To-Groups>
+    <HatsMeetings-To-Links rdf:ID="HatsMeetings-To-Links_13">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#arg1-to-hml"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#arg2-to-hml"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#arg3-to-hml"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#arg4-to-hml"/>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#HatsMeetings_14"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Links_16"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </HatsMeetings-To-Links>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_18">
+        <clns:hasArgument rdf:resource="#GDASeedMembers_12"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_17">
+        <clns:hasArgument rdf:resource="#Links_12"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="Links-To-GDA-Links">
+        <rdfs:subClassOf rdf:resource="#TranslateLinks"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_55">
+        <clns:hasArgument rdf:resource="#Groups_49"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:SeedMembers rdf:ID="SeedMembers_41"/>
+    <Links-To-KOJAK-Links rdf:ID="Links-To-KOJAK-Links_11">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_17"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_19"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Links_12"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#KojakLinks_14"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Links-To-KOJAK-Links>
+    <owl:Class rdf:ID="Links-To-KOJAK-Links">
+        <rdfs:subClassOf rdf:resource="#TranslateLinks"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="arg1-to-thwl">
+        <clns:hasArgument rdf:resource="#TerroristHats_1"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:SeedMembers rdf:ID="SeedMembers_10"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_32">
+        <clns:hasArgument rdf:resource="#Links_24"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:TerroristHats rdf:ID="TerroristHats_1"/>
+    <wwflns:Links rdf:ID="Links_12"/>
+    <BC rdf:ID="BC_21">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_3"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_6"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#BCLinks_22"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#BCGroups_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </BC>
+    <wwflns:Groups rdf:ID="Groups_47"/>
+    <Links-To-BC-Links rdf:ID="Links-To-BC-Links_1">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#arg1-to-lbl"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_8"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#Links_2"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#BCLinks_4"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Links-To-BC-Links>
+    <wwflns:BCLinks rdf:ID="BCLinks_22"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_3">
+        <clns:hasArgument rdf:resource="#BCLinks_22"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_45">
+        <clns:hasArgument rdf:resource="#SeedMembers_41"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="Netkit-Wrapped">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_8">
+        <clns:hasArgument rdf:resource="#BCLinks_4"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:GDADemographics rdf:ID="GDADemographics_9"/>
+    <clns:ArgumentAndPrefix rdf:ID="arg1-to-lbl">
+        <clns:hasArgument rdf:resource="#Links_2"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:Groups rdf:ID="Groups_49"/>
+    <owl:Class rdf:ID="Links-Plus-Watch-List-To-GDA-Dems">
+        <rdfs:subClassOf rdf:resource="#Merge"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Merge-Watch-List">
+        <rdfs:subClassOf rdf:resource="#Merge"/>
+    </owl:Class>
+    <Seed-Members-To-KOJAK-Seed-Members rdf:ID="Seed-Members-To-KOJAK-Seed-Members_40">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_45"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_47"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#SeedMembers_41"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#KojakSeedMembers_43"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </Seed-Members-To-KOJAK-Seed-Members>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_28">
+        <clns:hasArgument rdf:resource="#GDAGroups_24"/>
+    </clns:ArgumentAndPrefix>
+    <KOJAK-Wrapped rdf:ID="KOJAK-Wrapped_1">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_12"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_14"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#ArgumentAndPrefix_10"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#ArgumentAndPrefix_21"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#ArgumentAndPrefix_1"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#HatsKojakConfig_2"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#KojakLinks_4"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#HatsKojakScript_6"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#KojakSeedMembers_16"/>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#KojakGroups_8"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </KOJAK-Wrapped>
+    <wwflns:BC-Groups-To-BC-Seed-Members-Param-File rdf:ID="BC-Groups-To-BC-Seed-Members-Param-File_58">
+        <flns:unusedByJob rdf:datatype="&xsd;boolean">true</flns:unusedByJob>
+        <wwflns:hasMaxLength rdf:resource="#BCG-to-BCSM-MaxLength"/>
+    </wwflns:BC-Groups-To-BC-Seed-Members-Param-File>
+    <owl:Class rdf:ID="GDA">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <owl:Class rdf:ID="RLP">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WatchList-To-RLP-Labels">
+        <rdfs:subClassOf rdf:resource="#Translate"/>
+    </owl:Class>
+    <wwflns:HatsKojakConfig rdf:ID="HatsKojakConfig_2"/>
+    <wwflns:GDAGroups rdf:ID="GDAGroups_30"/>
+    <flns:String rdf:ID="BCG-to-BCSM-MaxLength">
+        <flns:hasValue rdf:datatype="&xsd;string">9</flns:hasValue>
+    </flns:String>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_54">
+        <clns:hasArgument rdf:resource="#BCGroups_50"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="KOJAK-Wrapped">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Merge">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <wwflns:BCLinks rdf:ID="BCLinks_4"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_15">
+        <clns:hasArgument rdf:resource="#SeedMembers_10"/>
+    </clns:ArgumentAndPrefix>
+    <BC-Groups-To-BC-Seed-Members rdf:ID="BC-Groups-To-BC-Seed-Members_49">
+        <clns:hasNamespace rdf:datatype="&xsd;string">ww</clns:hasNamespace>
+        <clns:hasVersion rdf:datatype="&xsd;string">1</clns:hasVersion>
+        <clns:hasArguments>
+            <rdf:List>
+                <rdf:first rdf:resource="#ArgumentAndPrefix_54"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ArgumentAndPrefix_56"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#ArgumentAndPrefix_61"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasArguments>
+        <clns:hasInputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#BCGroups_50"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#BC-Groups-To-BC-Seed-Members-Param-File_58"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </clns:hasInputs>
+        <clns:hasOutputs>
+            <rdf:List>
+                <rdf:first rdf:resource="#BCSeedMembers_52"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </clns:hasOutputs>
+    </BC-Groups-To-BC-Seed-Members>
+    <owl:Class rdf:ID="Threatened-Beacons">
+        <rdfs:subClassOf rdf:resource="#Filter"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_56">
+        <clns:hasArgument rdf:resource="#BCSeedMembers_52"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:KojakLinks rdf:ID="KojakLinks_14"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_38">
+        <clns:hasArgument rdf:resource="#GDAGroups_30"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:Groups rdf:ID="Groups_35"/>
+    <owl:Class rdf:ID="BC">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_21">
+        <clns:hasArgument rdf:resource="#KojakSeedMembers_16"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:KojakLinks rdf:ID="KojakLinks_4"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_42">
+        <clns:hasArgument rdf:resource="#Groups_35"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_14">
+        <clns:hasArgument rdf:resource="#HatsKojakScript_6"/>
+    </clns:ArgumentAndPrefix>
+    <owl:Class rdf:ID="Links-To-RLP-Links">
+        <rdfs:subClassOf rdf:resource="#TranslateLinks"/>
+    </owl:Class>
+    <flns:String rdf:ID="thresholdProbability_1">
+        <flns:hasValue rdf:datatype="&xsd;string">1.0</flns:hasValue>
+    </flns:String>
+    <owl:Class rdf:ID="KOJAK">
+        <rdfs:subClassOf rdf:resource="&clns;ComponentType"/>
+    </owl:Class>
+    <wwflns:WatchList rdf:ID="WatchList_7"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_61">
+        <clns:hasArgument rdf:resource="#BCG-to-BCSM-MaxLength"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:BCGroups rdf:ID="BCGroups_50"/>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_40">
+        <clns:hasArgument rdf:resource="#KojakGroups_33"/>
+    </clns:ArgumentAndPrefix>
+    <clns:ArgumentAndPrefix rdf:ID="ArgumentAndPrefix_12">
+        <clns:hasArgument rdf:resource="#HatsKojakConfig_2"/>
+    </clns:ArgumentAndPrefix>
+    <wwflns:KojakGroups rdf:ID="KojakGroups_33"/>
+</rdf:RDF>

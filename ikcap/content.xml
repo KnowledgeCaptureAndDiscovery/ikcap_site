@@ -1,0 +1,157 @@
+<project>
+  <name>Interactive Knowledge Capture</name> 
+  <title>Home Page of the Interactive Knowledge Capture Research Group</title> 
+<status>
+<short>
+        <ul style="line-height:1.5em;padding-left:2em">
+<li>May 2017: <a href="http://www.isi.edu/ikcap/news/WAIVS-2017">Workshop on Analyzing Artistic Style using our WINGS workflow system</a></li>
+<li>April 2017: <a href="http://www.isi.edu/ikcap/news/PLOS-ONE">Our paper on Quantifying Reproducibility inaugural Datasets Collection for PLOS ONE's first ten years</a></li>
+<li>February 2017: Tutorial at AAAI 2017: <a href="http://doi.org/10.5281/zenodo.159206">Learn to Write a Scientific Paper of the Future: Reproducible Research, Open Science, and Digital Scholarship</a>
+<li>December 2016: Yolanda Gil <a href="http://www.isi.edu/news/story/277">elected Fellow</a> of the Association for Computing Machinery (ACM)</li>
+<li>October 2016: Kicking off the <a href="http://scientificpaperofthefuture.org/">Scientific Paper of the Future Initiative</a> with a <a href="http://scientificpaperofthefuture.org/events">training session</a> at the Stanford Center for Reproducible Neuroscience</li>
+<li>September 2016: Our long-time collaborator <a href="http://dgarijo.github.io/me/">Daniel Garijo</a> joins the group as a postdoctoral researcher</li>
+	</ul>
+</short> 
+<long>
+<ul>
+<li>May 2017: <a href="http://www.isi.edu/ikcap/news/WAIVS-2017">Workshop on Analyzing Artistic Style using our WINGS workflow system</a></li>
+<li>April 2017: <a href="http://www.isi.edu/ikcap/news/PLOS-ONE">Our paper on Quantifying Reproducibility inaugural Datasets Collection for PLOS ONE's first ten years</a></li>
+<li>February 2017: Tutorial at AAAI 2017: <a href="http://doi.org/10.5281/zenodo.159206">Learn to Write a Scientific Paper of the Future: Reproducible Research, Open Science, and Digital Scholarship</a>
+<li>December 2016: Yolanda Gil <a href="http://www.isi.edu/news/story/277">elected Fellow</a> of the Association for Computing Machinery (ACM)</li>
+<li>October 2016: Kicking off the <a href="http://scientificpaperofthefuture.org/">Scientific Paper of the Future Initiative</a> with a <a href="http://scientificpaperofthefuture.org/events">training session</a> at the Stanford Center for Reproducible Neuroscience</li>
+<li>September 2016: Our long-time collaborator <a href="http://dgarijo.github.io/me/">Daniel Garijo</a> joins the group as a postdoctoral researcher</li>
+<li>August 2016: <a href="http://www.isi.edu/ikcap/interns/2016-Summer/index.html">Our summer interns</a> worked on data science topics</li>
+<li>July 2016: Yolanda Gil <a href="http://www.isi.edu/news/story/265">elected President</a> of the Association for the Advancement of Artificial Intelligence (AAAI)</li>
+<li>June 2016: First <a href="https://utdirect.utexas.edu/apps/abroad/student/pgm_list/detail/nlogon/1374/">Summer School</a> on <a href="http://is-geo.org">Intelligent Systems for Geosciences</a></li>
+<li>October 2015: Yolanda Gil is <a href="https://www.youtube.com/watch?v=7UXKd3dJvBg ">invited to speak</a> at the 50th Anniversary of the founding of the Department of Computer Science at Carnegie Mellon University</li>
+<li>September 2015: Yolanda Gil speaks in a <a href="https://www.youtube.com/watch?v=PEpt8R-SyoY ">panel on Artificial Intelligence</a> at the DARPA Wait What Conference</li>
+<li>August 2015: <a href="http://www.isi.edu/ikcap/interns/2015-Summer/index.html">Our summer interns</a> developed curriculum to teach data science</li>
+<li>March 2015: Kicking off the <a href="http://www.scientificpaperofthefuture.org">Scientific Paper of the Future Initiative</a></li>
+<li>September 2014: <a href="http://www.isi.edu/ikcap/interns/2014-Summer/index.html">Our summer interns</a> had productive contributions to developing infrastructure for science</li>
+<li>August 2014: A week-long field trip to <a href="http://www.isi.edu/~gil/presentations/ec3/">understand the technical challenges of field science for geologists</a></li>
+<li>July 2014: Our contributions to using the W3C PROV standard for geospatial data in an <a href="https://portal.opengeospatial.org/files/?artifact_id=58967">Open Geospatial Consortium technical report</a></li>
+<li>April 2014: Published <a href="http://dx.doi.org/10.1371/journal.pcbi.1003542">Ten simple rules for the caring and feeding of scientific data</a></li>
+<li>February 2014 - Our <a href="http://www.wings-workflows.org">Wings semantic workflow system</a> is part of the original collection of <a href="http://www.darpa.mil/OpenCatalog/">DARPA open source projects</a></li>
+<li>December 2013 - <a href="http://www.isi.edu/ikcap/ads/summer-2014-internships.html">Summer 2014 Undergraduate research Internship Opportunities !!</a></li><li>November 2013 - <a href="http://www.wings-workflows.org/drugome">Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome</a> - <a href="http://dx.doi.org/10.1371/journal.pone.0080278">Now Published!</a></li><li>October 2013: Our work was highlighted at the <a href="http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013">Semantic MediaWiki Conference</a> with a <a href="http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/Organic_Data_Science:_Opening_Scientific_Data_Curation">keynote talk</a>, a <a href="http://semantic-mediawiki.org/wiki/SMWCon_Fall_2013/An_Analysis_of_Semantic_Wiki_Communities:_Why_Are_They_Embracing_Properties_and_Not_Concepts%3F">presentation</a>, and a demonstration.</li>
+<li>September 2013 - We released the new all-java version of the WINGS source code on github: <a href="https://github.com/IKCAP/wings">https://github.com/IKCAP/wings</a></li>
+<li>April 2013 - We are involved with the <a href="http://www.w3.org/2011/prov/wiki/">W3C Provenance Working Group</a>, just announced the final release of the <a href="http://www.w3.org/TR/prov-primer/">PROV standard</a> 
+<li>February 2013 - Our <a href="http://www.wings-workflows.org">Wings workflow system</a> is now <a href="https://cwiki.apache.org/confluence/display/OODT/Integrating+OODT+with+Wings">integrated  with the <a href="http://oodt.apache.org">Apache OODT execution framework</a> 
+<li>September 2012 - <a href="www.isi.edu/~gil">Yolanda Gil</a> coedited the <a href="http://earthcube.ning.com">EarthCube</a> <a href="https://sites.google.com/site/earthcubeworkflow/">Roadmap for Workflows in Geosciences</a> just released</li>
+<li>August 2012 - <a href="www.isi.edu/~gil">Yolanda Gil</a> coedited the report of the <a href="http://www.discoveryinformaticsinitiative.org/diw2012">NSF Workshop on Discovery Informatics</a> just released</li>
+<li>July 2012 - <a href="www.isi.edu/~gil">Yolanda Gil</a> is elected a fellow of the <a href="aaai.org">Association for the Advancement of Artificial Intelligence</a></li>
+<li>March 2012 - An <a href="http://www.theatlantic.com/technology/archive/2012/03/scholars-yes-we-need-better-attribution-systems-but-no-we-dont-know-how-to-make-them-either/254527/">article in The Atlantic</a> about <a href="http://ijdc.net/index.php/ijdc/article/view/203">our recent publication on "Requirements for provenance on the Web"</a></li>
+<li>February 2012 - <a href="http://www.discoveryinformaticsinitiative.org/">Discovery Informatics</a> takes off with an <a href="http://www.discoveryinformaticsinitiative.org/diw2012">NSF workshop</a>, join us at the <a href="http://www.discoveryinformaticsinitiative.org/dis2012">AAAI Fall Symposium</a></li>
+<li>December 2011 - We are involved with the <a href="http://www.w3.org/2011/prov/wiki/">W3C Provenance Working Group</a>, just announced the first release of its <a href="http://www.w3.org/TR/prov-primer/">PROV standard</a></li>
+<li>October 24, 2011: Our paper on <a href="http://www.bibbase.org/cache/www.isi.edu__7Egil_publications.bib/gil-etal-iswc11.html">"Mind your metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows"</a> is nominated for Best In-Use Paper at the <a href="http://iswc2011.semanticweb.org/">ISWC conference</a> and selected as runner-up</li>
+<li>October 14, 2011:  Ricky Sethi receives a prestigious <a href="http://www.cra.org/ccc/press.release.10.14.11.php">CCC Computing Innovation Fellowship</a></li>
+<li>September 9, 2011:  <a href="http://www.oeg-upm.net/index.php/en/phdstudents/28-dgarijo">Daniel Garijo</a>, a summer intern, wins the <a href="http://i-semantics.tugraz.at/blog/2011/09/best-paper-award-triplification-challenge-winners"> 2011 Triplification Challenge</a></li>
+<li>February 15, 2011: Our paper on <a href="http://www.bibbase.org/cache/www.isi.edu__7Egil_publications.bib/fritz-gil-iui11.html">learning procedures by integrating demonstrations and instructions</a> is selected finalist for best paper at the <a href="http://www.iuiconf.org/">IUI conference</a></li>
+<li>December 21, 2010: The <a href="http://www.w3.org/2005/Incubator/prov/wiki">W3C Provenance Incubator Group</a>, chaired by <a href="http://www.isi.edu/~gil">Yolanda Gil</a>, releases its <a href="http://www.w3.org/2005/Incubator/prov/XGR-prov-20101214/">Final Report</a></li> 
+<li>November 11, 2010: <a href="http://www.isi.edu/ikcap/shortipedia">Shortipedia</a> was selected as a finalist in the competitive <a href="http://challenge.semanticweb.org">Semantic Web Challenge</a>, where it <a href="http://www3.isi.edu/about-news_story.htm?s=237">won Third Prize</a></li> 
+<li>October 1, 2010: <a href="http://wings.isi.edu">The Wings Workflow System is released open source</a></li> 
+<li>September 3, 2010: <a href="http://data.bibbase.org">BibBase</a> Triplified wins Honorary Mention in the <a href="http://triplify.org/Challenge/2010">2010 Triplification Challenge</a></li> 
+<li>July 1, 2010: Yolanda Gil is elected Chair of <a href="http://www.sigart.org">ACM SIGART</a>, the ACM's Special Interest Group in Artificial Int
+elligence</li><li>May 18, 2010: <a href="http://www.isi.edu/~fritz">Christian Fritz</a> receives Honorable Mention for the 2010 ICAPS Best Dissertation Award</li><li>March 17, 2010: Release of <a href="http://wind.isi.edu/sandbox">Wings Sandbox</a></li><li>February 19, 2010: Demonstration of learning Wings workflows from natural language input using the new <a href="http://www.isi.edu/ikcap/tellme">TellMe system</a></li> 
+<li>March 17, 2010: Release of Wings Sandbox.</li> 
+<li>February 19, 2010: Demonstration of learning Wings workflows from natural language input using the new TellMe system.</li> 
+<li>January 14, 2010: <a href="http://wings.isi.edu">Wings</a> workflows reused to reproduce previously published results in population genomics.</li> 
+<li>November 3, 2009: <a href="http://wings.isi.edu">Wings</a> workflows used for <a href="http://ai.isi.edu/discourse/">student assessment in online learning</a>.</li> 
+<li>June 11, 2009: <a href="http://wind.isi.edu/wings">Workflow site</a> for the <a href="http://www.nimhgenetics.org">Center for Collaborative Genetic Studies on Mental Disorders (CGSMD)</a> is launched.  The site allows users to run computational workflows for population genomics using <a href="http://wings.isi.edu">Wings</a> and <a href="http://wings.isi.edu">Pegasus</a>.  Wings assists the user to set up the workflows correctly according to semantic constraints, and Pegasus enables scalable distributed execution of workflows.</li> 
+<li>March 3, 2009: Release of a <a href="http://apps.facebook.com/hiertodo-app">collaborative to-do application for FaceBook</a>.  Users can organize to-dos hierarchically, share to-dos with their network of friends to get their suggestions, and export solutions once they have solved common to-dos.  </li> 
+<li>October 20, 2008: Release of a <a href="http://apps.facebook.com/todo-lists/">to-do application for FaceBook</a>.  We are collecting more data about the kinds of tasks that people do in the form of their to-dos for our <a href="">Beamer project</a>.  </li> 
+<li>July 13, 2008: Tutorial on <a href="http://www.isi.edu/~gil/AAAI08Tutorial/">Computational Workflows for Large-Scale AI Research</a> at <a href="http://www.aaai.org/Conferences/AAAI/aaai08.php">AAAI-08</a>.  The tutorial introduces computational workflows to AI researchers as a powerful paradigm they can use to manage large-scale experimentation, and presents interesting research problems for AI that arise in developing workflow systems.  </li> 
+<li>July, 2007: The <a href="http://wings.isi.edu/">Wings/Pegasus</a> workflow system is used for large-scale earthquake simulations for<a href="http://www.isi.edu/~gil/papers/gil-etal-iaai07.pdf">seismic hazard analysis</a>.  To simulate a hundred thousand rupture variations, Wings automatically generated a workflow more than 8,000 computational steps and more than 2M triples of metadata for 100,000 files. This is a collaboration with the <a href="www.scec.org">Southern California Earthquake Center (SCEC)</a>.  </li> 
+<li>January, 2006: <a href="http://www.isi.edu/ikcap/learner/">Learner's knowledge repository</a> makes the list of the <a href="http://ebiquity.umbc.edu/blogger/big-owl-documents-on-the-semantic-web/"> 100 largest owl documents in the Semantic Web</a>. This repository contains common knowledge collected from volunteer contributors.  To date, more than 700,000 statements have been collected.</li> 
+<li>July 2005: <a href="http://www.isi.edu/ikcap/learner/">Learner</a> is installed in a museum exhibit to <a href="http://www3.isi.edu/about-news_story.htm?s=111">collect common knowledge from museum goers</a>.  In collaboration with the Science Museum of Minnesota, Learner is being used to collect broad-coverage repositories of world knowledge from volunteer contributors.</li> 
+</ul>
+</long>
+</status>
+<description>
+<short>
+Our research covers various aspects of user-centered knowledge-rich environments for distributed problem solving. We work on a variety of applications, including scientific workflows and grid computing, intelligent assistants for office tasks, and a variety of defense-related topics.
+</short>
+<long>
+Our research covers various aspects of user-centered knowledge-rich environments for distributed problem solving. We work on a variety of applications, including scientific workflows and grid computing, intelligent assistants for office tasks, and a variety of defense-related topics.
+</long>
+</description>
+
+<research>
+<short>
+Our research topics include knowledge capture, knowledge bases and ontologies, intelligent user interfaces, semantic web, grid computing, dialogue planning, natural language understanding, planning and decision aids, problem solving methods and process modeling, workflow composition, trust and access policies, multi-agent systems, and service-based architectures.
+</short> 
+<long>
+Our work concentrates on several research themes:
+<UL> 
+<li><b>Automating data science and scientific discovery:</b> semantic workflows, scientific knowledge representation, metadata for software components.  Projects in this area include: <a href="http://disk-project.org/">DISK</a>, <a href="http://wings-workflows.org/">WINGS</a>, <a href="http://ontosoft.org/">OntoSoft</a>, <a href="http://scientificpaperofthefuture.org/">Scientific Paper of the Future</a>, <a href="http://scientificpaperofthefuture.org/gpf/">Geoscience Paper of the Future</a></li>
+<li><b>Crowdsourcing ontologies and metadata:</b> collaborative science, collaboration meta-workflows, semantic wikis, social computing.  Projects in this area include: <a href="http://organicdatascience.org/">Organic Data Science</a>, <a href="http://organicdatacuration.org/">Organic Data Curation</a>, <a href="http://linked.earth/">Linked Earth</a>, <a href="http://www.socialknowledgecollection.org/">Social Knowledge Collection</a></li>
+<LI> <b> Knowledge acquisition: </b>
+    knowledge collection from volunteers, knowledge acquisition dialogues, learning from being told, learning from demonstration and from examples. Projects in this area include <A HREF="http://workflow-design.isi.edu/"> Workflow Design</A>, <A HREF="http://www.isi.edu/ikcap/tellme"> TellMe</A>, <A HREF="http://www.isi.edu/ikcap/learner"> Learner</A>, <A HREF="http://www.isi.edu/ikcap/cat"> CAT</A>, <A HREF="http://www.isi.edu/ikcap/kanal"> KANAL</A>, <A HREF="http://www.isi.edu/ikcap/metalearning">Maven</A>, <A HREF="http://www.isi.edu/ikcap/slick"> SLICK</A>, and <A HREF="http://www.isi.edu/ikcap/expect/"> EXPECT</A>. 
+</LI>
+<LI> <b> Knowledge management and trust in the semantic web: </b> content trust in information sources, structured discussion and argumentation, provenance, and knowledge and information management. Projects include <A HREF="http://www.isi.edu/ikcap/trellis"> TRELLIS</A>, <A HREF="http://www.isi.edu/ikcap/mathtrust">MathTrust</A>, and <A HREF="http://www.isi.edu/ikcap/wings"> Wings</A>, <A HREF="http://www.isi.edu/ikcap/expect/"> EXPECT</A>.
+</LI>
+<LI> <b> Interactive intelligent systems: </b> user-centered decision aids, mixed-initiative tools, knowledge-based systems. Projects include <A HREF="http://www.isi.edu/ikcap/beamer"> Beamer</A>, <A HREF="http://www.isi.edu/ikcap/wings">Wings</A>, <A HREF="http://www.isi.edu/ikcap/cat"> CAT</A>, <A HREF="http://www.isi.edu/ikcap/temple"> Temple</A>, and <A HREF="http://www.isi.edu/ikcap/expect/"> EXPECT</A>.
+</LI>
+<LI> <b> Mixed-Initiative Planning: </b> plan evaluation and critiquing, human-in-the-loop planning, plan ontologies and representations, planning with incomplete information. Projects include <A HREF="http://www.isi.edu/ikcap/cat">CAT</A>, <A HREF="http://www.isi.edu/ikcap/kanal/"> KANAL</A>, <A HREF="http://www.isi.edu/ikcap/expect/"> EXPECT</A>, <A HREF="http://www.isi.edu/isd/HPKB/planet/"> PLANET</A>, <A HREF="http://www.isi.edu/expect/inspect.html"> INSPECT</A>, and <A HREF="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/prodigy/Web/prodigy-home.html"> PRODIGY</A>.
+</LI>
+</UL>
+<H3>Distributed Problem Solving </H3>
+<UL>
+<LI> <b> Computational workflows: </b> workflow representation, interactive workflow composition, automated workflow generation. Projects include <A HREF="http://workflow-design.isi.edu/"> Workflow Design</A>, <A HREF="http://www.isi.edu/ikcap/wings"> Wings</A>, <A HREF="http://pegasus.isi.edu"> Pegasus</A>, and <A HREF="http://www.isi.edu/ikcap/cat"> CAT</A>.
+</LI>
+<LI> <b> Provenance and trust: </b>  Problem solving and workflow provenance, knowledge provenance, content trust. Projects include <A HREF="http://www.isi.edu/ikcap/wings"> Wings</A>, <A HREF="http://www.isi.edu/ikcap/trellis"> TRELLIS</A>, and <A HREF="http://www.isi.edu/ikcap/mathtrust"> MathTrust</A>.</LI>
+<LI> <b> Distributed problem solving and grid computing: </b> workflow management for distributed problem solving, intelligent middleware for Grid computing. Projects include <A HREF="http://pegasus.isi.edu"> Pegasus</A>, <A HREF="http://www.isi.edu/ikcap/cognitive-grids"> Cognitive Grids</A>, and <A HREF="http://www.isi.edu/ikcap/scec-it"> SCEC-CME</A>.
+</LI>
+<LI> <b> Agent-Based Systems: </b> agent communication, agentizing people, agent environments to support human organizations. Projects include <A HREF="http://www.isi.edu/ikcap/beamer"> Beamer</A>, <A HREF="http://www.isi.edu/expect/projects/agents"> PHOSPHORUS</A>, <A HREF="http://www.isi.edu/expect/projects/agents/rosetta.html"> ROSETTA</A>, and <A HREF="http://www.isi.edu/e-elves/"> Electric Elves</A>.
+</LI>
+</UL>
+</long>
+</research>
+
+<mainlink>
+  <a href="http://ai.isi.edu/">USC/ISI Intelligent Systems Division</a>
+</mainlink>
+<mainlink>
+  <a href="http://www.isi.edu/">USC Information Sciences Institute</a>
+</mainlink>
+<mainlink>
+  <a href="http://www.isi.edu/ikcap/projects.html">List of Projects</a> 
+</mainlink>
+<mainlink>
+  <a href="status.html">Latest News</a> 
+</mainlink>
+<mainlink>
+  <a href="demo.html">Demos</a> 
+</mainlink>
+
+<link>
+  <a href="http://ai.isi.edu/">USC/ISI Intelligent Systems Division</a>
+</link>
+<link>
+  <a href="http://www.isi.edu/">USC Information Sciences Institute</a>
+</link>
+<link>
+  <a href="http://www.isi.edu/ikcap/projects.html">Projects</a> 
+  </link>
+<link>
+  <a href="http://www.isi.edu/ikcap/ikcap/people.html">People</a> 
+  </link>
+<link>
+  <a href="status.html">Latest News</a> 
+</link>
+<link>
+  <a href="demo.html">Demos</a> 
+</link>
+<!--  Demo 
+  --> 
+<demo>
+  Recent Demos:
+    <ul>
+    <li><a href="http://www.wings-workflows.org/wings-portal/"><b>Wings Portal</b></a></li>
+    <li><a href="http://www.wings-workflows.org/tutorial"><b>Wings Demo Videos</b></a></li>
+       <li><a href="http://www.isi.edu/ikcap/tellme/demo.html"><b>TellMe Demo Videos</b></a></li>
+       <li><a href="http://shortipedia.org"><b>Shortipedia Web Site</b></a></li>
+       <li><a href="http://howtodo.isi.edu"><b>HowToDo Web Site</b></a></li>
+     </ul>
+</demo>
+</project>
+

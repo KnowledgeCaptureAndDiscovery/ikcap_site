@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The KANAL Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Knowledge Analysis on Process Models</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Research</H2>
+	 <p />
+	 
+<b>KANAL</b> checks process models specified by a user reports possible errors in
+the models, and generates specific suggestions to the user about how to fix
+those errors.  Our approach is inspired on previous work on <a
+href="http://www.isi.edu/expect/">EXPECT</a> using Interdependency Models (<a
+href="http://www.isi.edu/expect/papers/kim-gil-aaai99.pdf">Kim and Gil
+AAAI-99</a>, <a
+href="http://www.isi.edu/expect/papers/kim-gil-aaai-2000.pdf">Kim and Gil
+AAAI-2000</a>).  KANAL analyzes the interdependencies among the individual
+steps of a process model.  For example, a simulation of the execution of the
+steps allows KANAL to anlayze interdependencies between the conditions and
+effects of different steps, such as that the required conditions for each step
+are met when the step is supposed to take place, and that the expected effects
+of the overall process are in fact obtained.
+
+<p /> The kinds of checks performed and the kinds of fixes proposed by <b>KANAL</b> include
+
+<ul>
+<li> Unachieved Preconditions
+</li>
+<li> Unachieved Expected Effects
+</li>
+<li> Unordered Steps
+</li>
+<li> Inappropriate Execution of Steps
+</li>
+<li> Inappropriate Loops
+</li>
+<li> Inappropriate Disjunctive Branches
+</li>
+<li> Inappropriate Branches
+</li>
+
+</ul>
+
+The KANAL has been used by
+various end users including biologists who built and tested models of complex
+molecular biology processes and army officers who used KANAL to critique their
+plans, i.e., courses of action (COAs). We found that its analysis report was
+very useful for checking the plans that were entered by users and often
+suggested useful ways of improving the plans. However we also found that
+sometimes users wish to extend the background knowledge that is used to
+produce the analysis report. For example, they may want to define various
+special cases of actions that are relevant for different situations, or
+exceptions that were not specifically addressed in the general background
+knowledge. In general, knowledge bases are never complete and it is important
+to provide a capability of adapting the knowledge base for varying needs. To
+support this capability we have extended our authoring environment so that the
+user can choose to enter special cases of critiquing knowledge as well as to
+change the description of the process itself in order to improve the resulting
+report. In this extension, instead of describing different cases in a single
+definition, we make use of the inheritance mechanism in the given knowledge
+representation system to represent each special case as a separate entity. We
+believe that this approach provides a more a natural view of special cases
+for end users and has efficiency advantages. The details are described in 
+<a 
+href="http://www.isi.edu/expect/papers/kim-blythe-iui-2003.pdf">Kim and
+blythe, IUI-2003</a>.
+
+
+    
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

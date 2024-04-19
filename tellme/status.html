@@ -1,0 +1,409 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The TellMe Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Learning from natural tutorial instruction</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Status</H2>
+
+
+ We are currently focusing on two aspects of this work:
+ <ol>
+   <li><a href="#tellme">Learning Procedures from Tutorial Instruction.</a></li>
+   <li><a href="#wargus">A Framework for Combining Instruction and Demonstration.</a></li>
+ </ol>
+
+<a name="tellme"></a>
+ <h3>Learning Procedures from Tutorial Instruction</h3>
+
+ <p>
+ We have implemented an extension to the <a href="/ikcap/wings/">Wings
+ Workflow System</a> that allows users to author new procedures and
+ edit existing procedures using natural language instruction.
+ </p>
+
+ <p>
+ To illustrate how this works, consider a scenarios where the system
+ learns procedures executed by airplane pilots to patrol an area
+ looking for oil pollution from ships.  The user is teaching the kinds
+ of reconnaissance tasks that pilots do in the Belgian Navy, which are
+ scenarios that we chose for our evaluation, as we will describe later
+ on.  The system starts off having a number of primitive actions for
+ recording the situation with a variety of instruments, including
+ infrared and ultraviolet cameras, SLAR cameras, and digital picture
+ and video cameras.  There are also primitive actions to send alerts
+ and reports back to the base, and to generate initial estimates of
+ the volume of the spill.
+ </p>
+
+ <p>
+ The following is an example of the utterances and the interaction of
+ a user with the system to teach a procedure where a plane is to
+ descend closer once a spill is found, then take videos and send them
+ to the headquarters, and to record the GPS readings and send them
+ along as well.
+ </p>
+
+ <blockquote>
+
+   User: "find oil spill, descend to a position of height 200"
+   
+   <p><i>The system shows the user that it assumes that meant to
+       descend after finding the spill. It also shows the user an
+       alternative interpretation where the descent was meant to
+       happen before finding the spill. It asks the user to either
+       accept the assumed interpretation and if not to choose the
+       alternative.</i></p>
+
+   User: "film the spill"
+   
+   <p><i>The system indicates it did not understand that</i></p>
+
+   User: "record videos and send them"
+
+   <p><i>The system shows the user that it assumes that meant to
+     iterate over each of the videos and send each in turn, since the
+     send action is defined for sending one document at a
+     time.</i></p>
+
+   <p><i>The system shows the user that the result of sending the
+     videos is a series of message receipts.</i></p>
+
+   <p><i>The system shows that it assumes the position to be after the
+     descent, it also shows the alternative interpretation that it is
+     the position before descending. </i></p>
+
+   User: "record GPS reading"
+
+   <p><i>The system shows the user that it assumes that the
+     instruction meant to record the GPS reading over the position
+     after descending.  It also shows the user an alternative
+     interpretation which is to record the GPS reading at the position
+     when the spill was first found.  It asks the user to either
+     accept the assumed interpretation and if not to choose the
+     alternative.</i></p>
+
+   User: <i>(selects the latter option)</i><br/>
+
+   User: "record image"
+   
+   <p><i>The system shows three interpretations, one for the action to
+     record IR image, another for record UV image, and another to
+     record SLR image</i></p>
+
+   User: "send thickness image"
+
+   <p><i>The system shows the user that it is not familiar with the
+     term high level alert, but that it assumes it is a kind of alert
+     given the context in which the term is used.  The user does not
+     have to interrupt the instruction and define it now.</i></p>
+
+   <p><i>The system shows the user that the send action requires some
+     evidence as input, and that it assumes that to be the output of
+     the record GPS reading action.</i></p>
+
+ </blockquote>
+
+The following is a screeshot of TellMe, documenting the state of
+ teaching after going through the steps of this interaction.
+
+<img src="tellme_oilspill1.png"/>
+
+<p>
+The current procedure hypothesis is shown on the right hand side: At
+the bottom a dataflow diagram is shown.  At the top, a set of
+constraints is shown, most of which were inferred by the system from
+the utterances of the user and any available domain knowledge.  In
+many cases, the user's instruction is ambiguous and the system creates
+alternative interpretations, each resulting in a different procedure
+hypotheses.  To show that it is considering these hypotheses, it shows
+them in the History panel, where the user can view them (e.g., in the
+figure after five utterances: "TellMeTemplate.1.1.1.1.1" -
+"TellMeTemplate.1.1.1.1.4"). The user is always asked to select one of
+them.
+</p>
+
+
+<h4>Can Non-Programmers Use TellMe?</h4>  
+
+We conducted initial formative user studies.  The goal was to collect
+feedback on the overall approach and to find out whether there were
+any major barriers for users to communicate procedural knowledge with
+our interface.
+
+
+<!-- b>Set Up</b><br/>
+<p>
+We tested six subjects with ages ranging from 11 to 55.  Six subjects
+is typically sufficient for the kind of information that we were
+seeking about our system [Hwang and Salvendy 10].  None of the
+subjects had programming experience, except one of the younger ones
+who had used Scratch [Resnick et al 09].  Subjects spent between
+15mins and 1hr using the system.
+</p>
+
+<p>
+We wanted to avoid giving the subjects extensive training on our
+system.  If our goal is to show that it is natural to give this kind
+of instruction, then any substantial training would defeat that
+purpose.  The instructions to the subjects were limited to one page
+that described the different features and buttons of the TellMe
+interface, and are available on our web site.
+</p>
+
+<p>
+We also wanted to avoid giving them descriptions of what procedures to
+teach because then they would likely just utter to the system the
+procedure in the way we described it to them.  Therefore, we choose a
+Web site not developed by us that explains activities that are carried
+out by pilots that detect oil spills that pollute the sea off the
+coast of Belgium, without describing explicitly the procedures to be
+followed . We coded basic actions and object types, as well as the
+paraphrases based on the text that appears on that site.  We asked the
+subjects to begin by looking at the actions that were already defined
+in the system.  We then asked them to think of possible procedures
+that they would think are reasonable for a pilot to carry out, and to
+teach them to the system.  As a result, the procedures that different
+subjects created were unique and not comparable.  We noted that some
+subjects designed the procedure as they went along rather than
+beforehand, so in those cases they had to adjust the procedure that
+they had previously created, which they were able to do.
+</p  -->
+
+
+<!-- b>Results</b></br  -->
+
+<!--p>
+The full details of these studies are included in a paper currently
+under review. 
+But in order to convey the results, consider the
+following table. In addition
+We show a number of procedures that were
+generated by our test users. These show what non-programmers are
+capable of achieving using TellMe.
+</p -->
+
+The following example procedures were generated by non-programmers,
+and show what non-programmers are capable of achieving using TellMe.
+
+<!-- table>
+  <tr><th>Subject</th> <th>Total utterances</th> <th>Accepted</th></tr>
+  <tr><td align="center">S1</td> <td align="right">9</td> <td align="right">6</td></tr>
+  <tr><td align="center">S2</td> <td align="right">15</td> <td align="right">14</td></tr>
+  <tr><td align="center">S3</td> <td align="right">39</td> <td align="right">17</td></tr>
+  <tr><td align="center">S4</td> <td align="right">3</td> <td align="right">3</td></tr>
+  <tr><td align="center">S5</td> <td align="right">41</td> <td align="right">19</td></tr>
+  <tr><td align="center">S5</td> <td align="right">15</td> <td align="right">13</td></tr>
+  <tr><td align="center">S6</td> <td align="right">27</td> <td align="right">10</td></tr>
+</table -->
+
+
+<img src="tellme_ex3.png" width=700px/><br/>
+<img src="tellme_ex4.png" width=400px/><br/>
+
+The following procedure is accompandied by the
+instructions that were used to create it.
+
+<img src="tellme_ex1.png" width=700px />
+<img src="tellme_ex1_inst.png" width=400px /><br/>
+
+<!-- img src="tellme_ex2.png" width=700px />
+<img src="tellme_ex2_inst.png" width=300px /><br/ -->
+
+
+
+<a name="wargus"></a>
+ <h3>A Framework for Combining Instruction and Demonstration</h3>
+
+<p>
+We have developed a formal framework that allows for the use of
+program demonstrations to resolve several types of ambiguities and
+omissions that are common in such instructions. The framework
+effectively combines some of the benefits of programming by
+demonstration and programming by natural instruction.The key idea of
+our approach is to use non-deterministic programs to compactly
+represent the (possibly infinite) set of candidate programs for given
+instructions, and to filter from this set by means of simulating the
+execution of these programs following the steps of a given
+demonstration. Due to the rigorous semantics of our framework we can
+prove that this leads to a sound algorithm for identifying the
+intended program, making assumptions only about the types of
+ambiguities and omissions occurring in the instruction. 
+</p>
+
+<p>
+We have implemented our approach and demonstrate its ability to
+resolve ambiguities and omissions by considering a list of classes of
+such issues and how our approach resolves them in a concrete example
+domain. Our empirical results show that our approach can effectively
+and efficiently identify programs that are consistent with both the
+natural instruction and the given demonstrations.
+</p>
+
+Currently our system is able to resolve the following kinds of issues
+commonly occurring in human instruction, when combined with a
+demonstration of the target program in an example scenario:
+<ul>
+<li> mapping of objects to action arguments, 
+<li> missing action arguments,
+<li> ambiguous references like "him" or "it", 
+<li> ambiguous scoping of conditionals and iterations, and 
+<li> unknown terms to refer to known actions or functions.
+</ul>
+
+
+
+<h4>Learning Complex Game Playing Procedures</h4> 
+<p>
+To evaluate our approach's ability to resolve types of omissions and
+ambiguities that are common in human instruction we consider
+procedures in the open-source real-time strategy game
+Stratagus/Wargus1. In this game, the goal of the player is to defeat
+all of the opponent's agents using his own footmen. Footmen units can
+be built in barracks, which in turn can be built by peasants. In order
+to provide food for his units, the player also needs sufficient
+supplies, which are provided by farms. Farms can, again, be built by
+peasants and each farm provides enough supply for four units. As an
+example, we consider a family of scenarios where initially the player
+only has one peasant, and the opponent, controlled by the computer,
+has N footmen. In order to win, the player has to first use his
+peasant to build barracks where he then can build footmen. In order to
+do so, he also needs to build farms to create the supplies for the
+footmen. The following screen-shot shows the situation where the
+player completed building barracks, farms, and four footmen (twice as
+many as the opponent's) and is now ready to attack the
+opponent. Outnumbering the opponent by a factor of two he is certain
+to win the game.
+</p>
+
+<img src="stratagus_annotated.png" width=400px/><br/>
+
+
+<p>
+As a running example in this paper, we will show how a user can teach
+this general procedure to the computer by combining natural
+instruction and a demonstration in an example scenario with two
+opponent footmen. The procedure that will be taught will be applicable
+to any scenario where there is at least one peasant and any number of
+opponent footmen. The strategy is to always build twice as many
+footmen before attacking the opponent. This procedure contains
+several loops and iterations over sets. </p>
+
+<p>
+Instructions generally contain several types of omissions and
+ambiguities simultaneously. Consider the following text, which is
+understood by our interface. These instructions omit action arguments,
+lack scopes for loops and iterations, use unknown terms, and contain
+ambiguous references. </p>
+
+<p>
+<b>Example:</b> <i>"Build barracks using bestPeasant then wait until
+bestPeasant is ready, while noOfFootmen is less than noOfOppFootmen
+times 2, if supply is less than 1 then build farm, wait until
+bestPeasant is ready, create footman, wait until bestBarracks is
+ready, while there is an opponent who is alive, take the
+closestOpponent, forall footman attack him, wait until he is
+dead."</i>
+</p>
+
+Using our current implementation, we can take this instruction and
+combine it with <a href="../wargus/demonstration.m4v">this
+demonstration</a> to generate the following target program:
+
+<img src="target_program.png" width=300px/><br/>
+
+A full log of our current set of evaluation experiments can be found 
+<a href="../wargus/experiments.txt">here</a>. This file contains for
+each experiment: the utterances of the user, the representation of
+these utterances as a non-deterministic program, and the refined
+program created from this via consideration of the given
+demonstration.
+
+
+
+<h4>Approach</h4>
+
+The key ideas of our approach are as follows:
+<ol>
+<li> We can represent (infinite) sets of program hypotheses using
+non-deterministic programs, in particular we can represent the
+incomplete procedures that can result from a PbI system. These are
+used to represent uncertainty about the target program being
+learned. In particular, we use the logical programming language Golog
+which readily allows us to represent and reason about such
+non-deterministic programs. A Golog program can be understood to
+represent sets of deterministic programs, namely all those that would
+result by resolving the non-determinism in one way or another. We have
+developed a simple, controlled grammar based interface that generates
+Golog programs from English instructions. This PbI system uses Golog's
+non-deterministic programming constructs in places where instructions
+are ambiguous or incomplete.</li>
+
+<li>We can refine these program hypotheses learned through PbI based
+on an example from a PbD system. We extend Golog's semantics to
+implement the update function that removes from a set of hypotheses
+all those that are inconsistent with newly given demonstrations. This
+is implemented as refinements to the program representing the version
+space, resolving some of the uncertainty, i.e., making some
+non-deterministic parts of the program deterministic. In many cases, a
+single example can be sufficient to resolve all nondeterminism,
+resulting in the following data-flow:</li>
+
+<img src="diagram.png" width=300px/><br/>
+
+<li>We can integrate any two program hypotheses into a single one, for
+example to integrate the output of a PbI system with the output of a
+PbD system that has learned from several demonstrations. We accomplish
+this by defining a mechanism for Golog program synchronization that
+implements a provably sound and complete means of computing symbolic
+intersection of (possibly infinite) sets of hypotheses.
+</li>
+
+
+    
+  </TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

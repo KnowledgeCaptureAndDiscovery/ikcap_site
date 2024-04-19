@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ElectricityService" targetNamespace="urn:target-electricity-service" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:tns="urn:target-electricity-service" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd1="http://xmlbus.com/ElectricityService/xsd">
+    <message name="computeAmpacity">
+        <part name="wire" type="xsd:string"/>
+    </message>
+    <message name="computeAmpacityResponse">
+        <part name="return" type="xsd:int"/>
+    </message>
+    <message name="computeAmps">
+        <part name="Volts" type="xsd:int"/>
+        <part name="Watts" type="xsd:int"/>
+    </message>
+    <message name="computeAmpsResponse">
+        <part name="return" type="xsd:int"/>
+    </message>
+    <message name="computeVolts">
+        <part name="Amps" type="xsd:int"/>
+        <part name="Watts" type="xsd:int"/>
+    </message>
+    <message name="computeVoltsResponse">
+        <part name="return" type="xsd:int"/>
+    </message>
+    <message name="computeWatts">
+        <part name="Amps" type="xsd:int"/>
+        <part name="Volts" type="xsd:int"/>
+    </message>
+    <message name="computeWattsResponse">
+        <part name="return" type="xsd:int"/>
+    </message>
+    <message name="computeWireSize">
+        <part name="Amps" type="xsd:int"/>
+    </message>
+    <message name="computeWireSizeResponse">
+        <part name="return" type="xsd:string"/>
+    </message>
+    <portType name="ElectricityPortType">
+        <operation name="computeAmpacity">
+            <input message="tns:computeAmpacity" name="computeAmpacity"/>
+            <output message="tns:computeAmpacityResponse" name="computeAmpacityResponse"/>
+        </operation>
+        <operation name="computeAmps">
+            <input message="tns:computeAmps" name="computeAmps"/>
+            <output message="tns:computeAmpsResponse" name="computeAmpsResponse"/>
+        </operation>
+        <operation name="computeVolts">
+            <input message="tns:computeVolts" name="computeVolts"/>
+            <output message="tns:computeVoltsResponse" name="computeVoltsResponse"/>
+        </operation>
+        <operation name="computeWatts">
+            <input message="tns:computeWatts" name="computeWatts"/>
+            <output message="tns:computeWattsResponse" name="computeWattsResponse"/>
+        </operation>
+        <operation name="computeWireSize">
+            <input message="tns:computeWireSize" name="computeWireSize"/>
+            <output message="tns:computeWireSizeResponse" name="computeWireSizeResponse"/>
+        </operation>
+    </portType>
+    <binding name="ElectricityPortBinding" type="tns:ElectricityPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="computeAmpacity">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="computeAmpacity">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </input>
+            <output name="computeAmpacityResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </output>
+        </operation>
+        <operation name="computeAmps">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="computeAmps">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </input>
+            <output name="computeAmpsResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </output>
+        </operation>
+        <operation name="computeVolts">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="computeVolts">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </input>
+            <output name="computeVoltsResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </output>
+        </operation>
+        <operation name="computeWatts">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="computeWatts">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </input>
+            <output name="computeWattsResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </output>
+        </operation>
+        <operation name="computeWireSize">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="computeWireSize">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </input>
+            <output name="computeWireSizeResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-electricity-service" use="encoded"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ElectricityService">
+        <port binding="tns:ElectricityPortBinding" name="ElectricityPort">
+            <soap:address 
+                location="http://www.xmlbus.com:9010/xmlbus/container/Electricity/ElectricityService/ElectricityPort/"/>
+        </port>
+    </service>
+</definitions>

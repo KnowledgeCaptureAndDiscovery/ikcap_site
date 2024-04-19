@@ -1,0 +1,190 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The DOCKER Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Helping People Connect Software</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Research</H2>
+	 <p />
+	 
+<p>
+We are developing DOCKER (Distributed Operations of Code with
+Knowledge-based descriptions for Earthquake Research), a framework that
+ensures adequate use of earthquake simulation models and code through
+the use of a knowledge-based constraint reasoner.  Although our research
+is motivated and driven by the analysis of seismic hazard, DOCKER is 
+a domain-independent,
+Web-based tool that can be used for other applications as well.
+</p>
+
+<p>
+DOCKER supports the publication and use of implemented simulation models
+through the following new capabilities:
+</p>
+
+<ol>
+<li><i>System ensures appropriate use of models.</i> Each simulation model
+designed to take into account specific types of earth shaking phenomena,
+which result in constraints that should be taken into account by the
+engineers using the models. Seismic hazard analysis models are a good 
+example of this,
+where users must take into account 1) the type of tectonic region that
+the model is applicable to, 2) the type of faulting, 3) magnitude range,
+4) distance range, and 5) site types.  By representing these constraints
+in a declarative and expressive language, the system can exploit
+state-of-the-art knowledge representation and reasoning techniques to
+detect violations of these constraints and to guide users in finding
+models that are appropriate to the particular site and earthquake
+forecast being considered.</li>
+
+<li><i>Users have just-in-time access to documentation of models in order to
+make judgments about the appropriate use of models.</i> Engineers that have
+read the documentation months or years earlier may not necessarily
+recall all the details that the model authors specified.  Backing up the
+constraints with the appropriate documentation sources will be very
+useful, especially when users need to make judgments about the severity
+and possible dismissal of constraint violations.  In addition, it would
+be useful to accommodate constraints in different degrees of
+formalization.  Some of these constraints, such as the basic types and
+bounds of input parameters, lend themselves more to formalization.
+Other characteristics seem more appropriate for human consumption
+"recordings with unknown or poor estimates of magnitude mechanism
+distance or site excluded from data set", so that the user can put the
+data into perspective.</li>
+
+<li><i>New models are easily incorporated into the framework.</i>  Our
+environment should facilitate the publication and use of new models in
+order to accelerate scientific progress.  In particular in seismic hazard
+analysis, new
+models and updates of existing models are likely to appear in the near
+and long term.  Publishing models should be a painless process and
+should not require technical expertise in distributed computing or
+knowledge representation skills.</li>
+</ol>
+
+
+<p>
+Our initial implementation of DOCKER to publish and use simulation models
+(embodied in executable code)
+that includes the following capabilities:
+</p>
+
+<ul>
+<li> <b>Integrates formal and informal representations of software components
+and their associated constraints</b>: Constraints associated with the model
+can be captured with different degrees of formality, and are always
+grounded in documentation. When possible, models and their constraints
+are formally represented and the system maintains a reference to
+original documents that explain the constraint and that can be brought
+up to the user's attention so the user can assess the severity of a
+constraint violation.  This is also useful since there are important
+constraints that require an involved and detailed effort in knowledge
+representation that may not yet be expressible with the existing
+ontologies and need to await further ontology development.</li>
+
+<li> <b>Enforces adequate use of components through knowledge-based constraint
+reasoning</b>: DOCKER is integrated with Powerloom, a knowledge
+representation and reasoning system that provides an expressive language
+to describe model constraints.  This enables the system to detect
+constraint violations and alert users when any models or code are
+invoked in an inappropriate context. With this framework, the system can
+also be proactive and support users in case of constraint violations by
+making suggestions about alternative settings that would respect those
+constraints.  It also suggests the use of models that were not being
+considered by the user.</li>
+
+<li> <b>Supports access to models as layered services</b>: DOCKER supports
+distributed access to models and code through a layered view of
+service-based interaction, where a software component is viewed as a
+service provider.  It is designed to facilitate future integration with
+Grid services through the Open Grid Services Architecture (OSGA). DOCKER
+provides a higher layer of abstraction by providing a knowledge-based
+view of the capabilities of the services.</li>
+
+<li> <b>Facilitates model publication</b>: DOCKER includes a user interface that
+facilitates publication of code by guiding users through simple steps
+that setup the system to automatically generate wrappers for the code
+that enable it to function at the various service layers.  DOCKER also
+generates automatically the user interface required to access and invoke
+the models, as well as the necessary constraint checks.</li>
+</ul>
+
+<p>
+DOCKER's user interface is supported by any Web-based browser.  A User
+Interaction Manager routes user requests to the appropriate internal
+components.  A Constraint Reasoner accesses a Powerloom server to load
+the formal descriptions of the models and to check constraints against
+the overall SCEC ontologies.  For each model, a Publisher creates
+automatically several layers of wrappers for the code provided by the
+user. The lowest layers support message transport, and for this DOCKER
+generates the corresponding WSDL description and SOAP handlers. At
+higher layers, DOCKER generates automatically declarative expressions of
+simple constraints (type, enumerations, and bounds) in Poweloom, as well
+as XML Schemas for compatibility with lower layers. More complex
+constraints can be added manually by knowledge engineers.
+</p>
+
+<p>
+DOCKER uses
+the IKRAFT Annotator [Gil and Ratnakar 02] to enable model publishers to link
+constraints and any other salient statement about their model in free text
+to the original documentation of the model (e.g., a technical publication).
+This enables end users to see the reasons behind each constraint in 
+the model and
+understand whether it is ok to override certain constraints if necessary.
+</p>
+
+<p>
+Our plans for future work include better support to handle constraint
+violations, support for ontology development to capture relevant
+domain terminology, integration with the Grid
+infrastructure being developed within the SCEC/IT work, and
+incorporation of physics-based (Pathway 2) models into our framework.
+</p>
+
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

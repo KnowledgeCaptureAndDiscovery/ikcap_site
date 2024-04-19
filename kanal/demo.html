@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The KANAL Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Knowledge Analysis on Process Models</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Demo</H2>
+
+<p />
+<video width="1000" height="800" controls>
+  <source src="kanal-demo-video.m4v" />
+Your browser does not support the video tag.
+</video>
+<div style="font-size:11px;text-decoration:underline">Kanal demo video</div>
+
+<center>
+<b><font face="Arial,Helvetica" size="+1">A Screen Walkthrough
+Demonstration of <b>KANAL</b></font></b>
+<p /><b><font face="Arial,Helvetica">KANAL November 2002</font></b></center>
+
+<br />
+<p /><b><font face="Arial,Helvetica" size="-1">Start with the SHAKEN Login
+Screen. KANAL is currently used
+within an end-to-end KA system called SHAKEN. </font></b>
+<p /><img src="demoimages/shaken-login.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1">
+You can start KANAL by
+selecting "Test Knowledge" from the SHAKEN main window. </font></b>
+<p /><img src="demoimages/shaken-main-window.gif" />
+<br />
+<br />
+<br />
+
+
+<p /><b><font face="Arial,Helvetica" size="-1">You can select or search for
+the name of the process model you want to test.</font></b>
+<p /><img src="demoimages/kanal-test-knowledge-main.gif" />
+<br />
+<br />
+<br />
+
+
+<p /><b><font face="Arial,Helvetica" size="-1"> Before you run KANAL, you can
+specify the effects you intend to achieve from the process model.
+You can either check if intermediate steps achieve intended effects or the
+overall plan (process model) achieve the effects using these. </font></b>
+<p /><img src="demoimages/kanal-expected-effects.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> This window shows the KANAL
+results. The summary section at the top lists the steps where KANAL found
+some errors (or warnings). By clicking each step listed on the left, you can
+see the detailed results from KANAL. This destroy step seems fine.
+You can see that an expected effect (remaining strength of unit 4 being
+greater than 0.7) was not achieved.</font></b>
+<p /><img src="demoimages/kanal-first-run.gif" />
+<p /><img src="demoimages/kanal-step-info.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> KANAL found a failed
+precondition: the available force ratio is not greater than or equal to 5.
+The "force ratio explanation" provides the details.</font></b>
+<p /><img src="demoimages/kanal-first-run-warnings-found.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> KANAL provide several general
+suggestions for this problem.  (In other cases, KANAL can produce
+more specific suggestions on how to fix the error).  In this case user choose to create
+a special case of the Destroy-Unit to address the given situation. </font></b>
+<p /><img src="demoimages/kanal-suggestions-window.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> KANAL provide several general
+suggestions for this problem.  (In other cases, KANAL can produce
+more specific suggestions on how to fix the error).  In this case user choose to create
+a special case of the Destroy-Unit (called Destroy-Unit-Mechanized-Infantry)
+to address the given situation. </font></b> 
+<p /><img src="demoimages/kanal-creating-special-case.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> User makes agent being
+Mechanized-Infantry-Brigade as the trigger (defining criteria) of the new
+action definition. This special case of Destroy-Unit will be used when its
+agent is a Mechanized-Infantry-Brigade </font></b>  
+<p /><img src="demoimages/action-editor-convert-to-trigger.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> In this case the
+Required-Force-Ratio-Value is 2 instead of 5.</font></b> 
+<p /><img src="demoimages/action-editor-final.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> User tests the same
+plan with the new definition (Destroy-Unit-Mechanized-Infantry)
+and the warning is now gone.</font></b> 
+<p /><img src="demoimages/kanal-second-run-warning-gone.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> Summary of state transition:
+KANAL generates a table for each property that chanages over time in order to
+visualize changes made objects in a plan.</font></b> 
+<p /><img src="demoimages/kanal-time-varying-properties.gif" />
+<br />
+<br />
+<br />
+
+
+<P>
+
+</P>
+
+
+
+   
+
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</body>
+</html>

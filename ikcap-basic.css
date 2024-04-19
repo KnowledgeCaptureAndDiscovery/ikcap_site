@@ -1,0 +1,91 @@
+body {
+   font: 12px/1.5em "Trebuchet ms",sans-serif;
+   color: black;
+   padding: 2em;
+   min-width: 550px;
+   max-width: 750px;
+   margin:2em 2em;
+   background-image:url(images/kcap.gif);
+   background-attachment: fixed;
+}
+
+td.b, td.b li {
+  line-height:1.5em;
+}
+
+h1,h2 {
+   text-align: center;
+   color: #039;
+   background-color: #cde;
+   padding: 0.5em;
+}
+
+h3 {
+   color: #039;
+   letter-spacing: .5em;
+   font-size: 1.2em;
+   border-bottom: 1px solid #39c;
+   background-color: transparent;
+   font-weight:bold;
+   padding-top: 1.5em;
+}
+
+
+h4 {
+   color:brown;
+   letter-spacing: .3em;
+   font-size: 1em;
+   border-bottom: 1px solid brown;
+   background-color: transparent;
+   font-weight:bold;
+   padding-top: 1em;
+}
+
+ul{
+  list-style-image: url("images/listimage.png");
+  line-height: normal;
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+ul ul {padding-left: 1.5em;}
+
+ul > li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p.MainLine:first-letter {
+   font-size: 3em;
+}
+
+a {
+   text-decoration:none;
+   border-bottom: 1px dotted #069;
+   color: #069;
+}
+
+a:hover {
+   background-color: #DDEEFF;
+}
+
+p.heading {
+  font-size: 0.9em;
+}
+
+div.showLater {
+   font-size: 12px;
+   text-align: left;
+   line-height: 0.5em;
+   letter-spacing: 0.1em;
+   background-color:none;
+}
+
+img {
+}
+
+div.footer {
+   padding-top: 2em;
+   border-top:1px solid #BBB;
+   width:100%;
+}

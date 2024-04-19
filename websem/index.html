@@ -1,0 +1,76 @@
+<html>
+<style>
+body{color:#003366}
+input.button{font-family:Verdana;font-size:xx-small;font-weight:bold;color:#ffffff;background:#224488}
+</style>
+<script>
+   function opendisclaimer() {
+		var str="The University of Southern California (USC), and the Information Sciences Institute (ISI) do not make, and expressly disclaim, any expressed or implied warranties, representations or endorsements of any kind whatsoever, including, without limitation, the implied warranties of merchantability or fitness for a particular purpose, and the warranties of title or non-infringement. In no event shall USC, or ISI be liable for: <br><br>(a) Any incidental, consequential, or indirect damages (including, without limitation, damages for loss of profits, business interruption, loss of programs or information, and the like) arising out of the use of or inability to use the software, even if usc or any of its authorized representatives has been advised of the possibility of such damages, <br>(b) Any claim attributable to errors, omissions, or other inaccuracies in the software, or <br>(c) Any claim by any third party<br>";
+		diswin = window.open("","diswin","width=400, height=300, scrollbars=yes, resizable=yes");
+		diswin.document.writeln("<html><body bgcolor=white>");
+		diswin.document.writeln("<font face='Arial,Helvetica'><b>Disclaimer :</b><font size=-1>");
+		diswin.document.writeln("<br>"+str);
+		diswin.document.writeln("</font>");
+	}
+
+</script>
+
+<body bgcolor=white>
+<form method=post action="http://excalibur.isi.edu:8000/cgi-bin/newTrellis/login.pl">
+<table style="width:100%; height:100%">
+   <tr><td align=center>
+	<table cellspacing=0 cellpadding=0>
+	<tr><td align=center colspan=2>
+	<br>
+	   <img src="images/logo.gif"><br>
+           [Login with your email-id and no password]
+           <br><br>
+	</td></tr>
+
+	<tr><td>
+	   <b>Login :</b> 
+	</td><td>
+	   <input type=text name=user>
+	</td></tr>
+	<tr><td>
+	   <b>Password :</b>
+	</td><td>
+	   <input type=password name=password>
+	</td></tr>
+	<tr><td></td><td align=left>
+	   <input type=submit class="button" value="Go !">
+	   &nbsp;<input type=button class="button" style="background:maroon" value=" ? " onclick="window.open('/newTrellis/toolHelp.htm#login')">
+        </td></tr>
+	<tr><td></td><td style="padding:3px">
+        <font size=-1>
+<b><a href="http://excalibur.isi.edu:8888/bugzilla" target="_blank">File Bugs</a> & <a href='http://sourceforge.net/forum/forum.php?forum_id=252008'>Suggestions</a></b>
+	</font>
+	</td></tr>
+	</table>
+   </td></tr>
+   <tr valign=bottom><td  align=center>
+      <font size=-1 color="maroon">
+	<a href="http://trellis.semanticweb.org/">Trellis Home</a>&nbsp;
+	<a href="http://www.usc.edu/">USC</a>&nbsp;
+	<a href="http://www.isi.edu/">ISI</a>&nbsp;
+	<a href="http://www.isi.edu/expect/web/trellis/people.html">People</a>&nbsp;<br>
+	<a href="javascript:opendisclaimer()">Disclaimer</a>
+      <br><br>
+      <i>This Site works best with IE 5.5+<br>
+         Netscape 6.x and Mozilla 1.x are also partially supported</i>
+      </font>
+   </td></tr>
+</table>
+</form>
+<!--<center>
+<iframe style="visibility:hidden" hspace=0 vspace=0 marginwidth=0 marginheight=0 width=0 height=0 frameborder=0 scrolling=no src="http://excalibur.isi.edu:8000/cgi-bin/log/logit.pl?file=/nfs/isd/varunr/apache/htdocs/newTrellis/log.txt"></iframe>
+ BEGIN GEOBUTTON CODE 
+<iframe src="http://button.geobutton.com/~26013/1/1/showiframe?"
+width=120 height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 
+frameborder=0 scrolling=no style="display:none">
+<img width=120 height=60 border=0 ismap alt="" src="http://button.geobutton.com/~26013/1/1/showbutton?">
+<img src="http://button.geobutton.com/~26013/1/1/showlogo?">
+</iframe>-->
+<!-- END GEOBUTTON CODE -->
+</body>
+</html>

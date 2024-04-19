@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../xslfiles/project-main-view.xsl"?>
+
+<!--
+
+If you can read this, your browser doesn't support xml.
+please update your browser, or view the html version of the projects
+from http://www.isi.edu/ikcap
+
+-->
+
+<!DOCTYPE outer [
+ <!ENTITY proj SYSTEM "content.xml">
+ <!ENTITY isdfunds SYSTEM "../isd-funding.xml">
+ <!ENTITY personnel SYSTEM "../isd-personnel.xml">
+ <!ENTITY pubs SYSTEM "../isd-publications.xml">
+   ]>
+
+<outer xmlns:xi="http://www.w3.org/2001/XInclude">
+   &personnel;
+   &pubs;
+   &proj;
+   &isdfunds;
+</outer>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY flns "http://www.isi.edu/ikcap/wwings/fileOntology.owl#" >
+    <!ENTITY exereqns "http://www.isi.edu/ikcap/wwings/executionRequirements.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/wwings/componentOntology.owl#"
+     xml:base="http://www.isi.edu/ikcap/wwings/componentOntology.owl"
+     xmlns:exereqns="http://www.isi.edu/ikcap/wwings/executionRequirements.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:flns="http://www.isi.edu/ikcap/wwings/fileOntology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/wwings/fileOntology.owl"/>
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/wwings/executionRequirements.owl"/>
+    </owl:Ontology>
+    <owl:ObjectProperty rdf:ID="hasNameFormat"/>
+    <owl:Class rdf:ID="ArgumentAndPrefix"/>
+    <owl:Class rdf:ID="FileOrCollectionList">
+        <rdfs:subClassOf rdf:resource="&rdf;List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="&flns;Collection"/>
+                            <owl:Class rdf:about="&flns;File"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="&flns;Collection"/>
+    <owl:Class rdf:ID="ArgumentAndPrefixList">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;rest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#ArgumentAndPrefixList"/>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection"/>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&rdf;List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:allValuesFrom rdf:resource="#ArgumentAndPrefix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasParameter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="hasArguments">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="#ArgumentAndPrefixList"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:about="&flns;File"/>
+    <owl:DatatypeProperty rdf:ID="hasValue">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="hasPrefix">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ArgumentAndPrefix"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:about="&flns;FileNameFormat"/>
+    <owl:ObjectProperty rdf:ID="hasComponentType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentCollection"/>
+        <rdfs:range rdf:resource="#ComponentType"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="ComponentProfile">
+        <rdfs:subClassOf rdf:resource="&flns;MetaDatatype"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ComponentCollection"/>
+    <owl:ObjectProperty rdf:ID="hasInputs">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="#FileOrCollectionList"/>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:ID="hasKey">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentProfile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:about="&flns;FileCollection"/>
+    <owl:ObjectProperty rdf:ID="hasOutputs">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="#FileOrCollectionList"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >fills in the &lt;uses&gt; tag from the file/collection items in the list</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="hasProfileVal">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentProfile"/>
+        <rdfs:range rdf:resource="&flns;MetaDatatype"/>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:ID="hasExecutablePath">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="hasSuffix">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ArgumentAndPrefix"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:about="&flns;MetaDatatype"/>
+    <owl:ObjectProperty rdf:ID="hasProfiles">
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="#ComponentProfile"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="hasExecutionRequirements">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="&exereqns;ExecutionRequirements"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="SystemComponentType">
+        <rdfs:subClassOf rdf:resource="#ComponentType"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ComponentType"/>
+    <owl:ObjectProperty rdf:ID="hasArgument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ArgumentAndPrefix"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="&flns;File"/>
+                    <owl:Class rdf:about="&flns;FileCollection"/>
+                    <owl:Class rdf:about="&flns;FileNameFormat"/>
+                    <owl:Class rdf:about="&flns;MetaDatatype"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:ID="hasNamespace">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#ComponentProfile"/>
+                    <owl:Class rdf:about="#ComponentType"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="hasVersion">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ComponentType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+</rdf:RDF>

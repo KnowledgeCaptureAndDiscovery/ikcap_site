@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The Cognitive Grids Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Intelligent Middleware for Distributed Problem Solving</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Status</H2>
+
+<h2 style="font-size:14px"><a href="../pegasus">Pegasus</a> helps scientists find gravitational waves using LIGO data.</h2>
+<object CLASSID="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" WIDTH="530" HEIGHT="530" CODEBASE="http://www.apple.com/qtactivex/qtplugin.cab#version=6,0,2,0">
+<param NAME="controller" VALUE="TRUE"/>
+<param NAME="type" VALUE="video/mpeg"/>
+<param NAME="autoplay" VALUE="false"/>
+<param NAME="target" VALUE="myself"/>
+<param NAME="src" VALUE="http://www.isi.edu/~deelman/ligo3.mpeg"/>
+<param NAME="pluginspage" VALUE="http://www.apple.com/quicktime/download/indext.html"/>
+<embed  WIDTH="530" HEIGHT="530" CONTROLLER="TRUE" SRC="http://www.isi.edu/~deelman/ligo3.mpeg"></embed>
+</object>
+<div style="font-size:10px">Searching for Gravitational Waves in Pulsars and Other Stellar Objects</div>
+<p>Gravitational waves, though predicted by Einstein's theory of relativity, have never been observed experimentally.  Through simulations of Einstein's equations, scientists predict that those waves should be produced by colliding black holes or collapsing supernovae.</p>
+<p>The Laser Interferometry Gravitational-Wave Observatory (LIGO) project aims to detect such phenomena.  At $300M, it is the largest single enterprise ever undertaking by National Science Foundation.  With facilities in Livingston, Louisiana and Hanford, Washington, LIGO joined gravitational-wave observatories in Italy, Germany and Japan in searching for these signals.  Pulsars are believed to generate such waves, so scientists search areas with known pulsars as well as other areas in the hope that they will find other objects that emit them as well.</p>
+<p>The <a href="http://pegasus.isi.edu">Pegasus</a> planner that we have developed is one of the tools that scientists can use to analyze data collected by LIGO.  In the Fall of 2002, a 17-day data collection effort was held, followed by a two-months run in February of 2003 and a six-month run that will start in late 2003.  LIGO instruments are designed to measure the effect of gravitational waves on test masses suspended in a vacuum.  The data collected during experiments is a collection of time series (multi-channel). The observations are processed through Fourier transforms and frequency range extraction software. This may involve composing a workflow of hundreds of jobs and executing them in appropriate computing resources on the grid, which gets unmanageable very fast.</p>
+<p><a href="http://pegasus.isi.edu">Pegasus</a> was used with LIGO data collected during the first scientific run of the instrument, which targeted a set of locations of known pulsars as well as random locations in the sky.  <a href="http://pegasus.isi.edu">Pegasus</a> generated end-to-end grid job workflows that were run over computing and storage resources at Caltech, University of Southern California, University of Wisconsin Milwaukee, University of Florida, and NCSA.</p>
+<p>The screenshot and movie above show a visualization of the results of a pulsar search.  The search ranges are specified by scientists on the lower left corner of the screen.  The top left corner shows the specific range displayed in this visualization.  The bright points represent the locations searched.  The red points are pulsars within the bounds specified for the search, the yellow ones are pulsars outside of those bounds.  Blue and green points are the random points searched, within and outside the bounds respectively.</p>
+
+<p><b>Acknowledgements:</b>  The LIGO application of <a href="http://pegasus.isi.edu">Pegasus</a> was developed at USC/ISI by Ewa Deelman, Jim Blythe, Yolanda Gil, and Carl Kesselman in collaboration with A. Arbree, R. Cavanaugh, K. Blackburn, A. Lazzarini, S. Koranda,  G. Mehta, K. Vahi, S. Patil, S. Rao, and G. Singh.  The visualization of LIGO data shown here was created by M. Thiebaux. The original picture of the sky comes from the 2MASS (The Two Micron All Sky Survey--NASA) collection.  For more information, please visit the GriPhyn project page, the <a href="http://pegasus.isi.edu">Pegasus</a> project page, and the <a href="http://www.globus.org">Globus</a> project page.</p>
+
+  </TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

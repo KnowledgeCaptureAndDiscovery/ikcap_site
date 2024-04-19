@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+@projdirs = ("calo", "cat", "cognitive-grids", "constable", "dialog-manager", "docker", "emed", "english-editor", "evaluation", "expect", "ikcap", "inspect", "jigsaw", "ka-scripts", "kamm", "kanal", "kasper", "nlg", "pegasus", "path-assembly", "phosphorus", "planet", "rosetta", "sadl", "scec-it", "template", "temple", "trellis", "slick","echo", "tailor", "learner", "windward", "beamer", "tellme", "mathtrust", "metalearning", "privateer", "wings", "howtodo", "shortipedia");
+
+#@files = `cd trellis; ls project*.xml`;
+#foreach $file(@files) {
+# chop($file);
+#}
+
+foreach $dir(@projdirs) {
+	if(! -e "$projdir/content.xml") {
+		  system("./xml2html $dir");
+	}
+#	foreach $file(@files) {
+#		 system("cp trellis/$file $dir/$file");
+#	}
+}
+
+# Logo creation:
+# convert -size 200x50 xc:transparent -font Verdana -pointsize 40 -draw "text 5,38 'Learner'" -channel RGBA -gaussian 0x5 -fill "#009" -stroke "#666" -draw "text 2,35 'Learner'" -background "#CCCCCC" -flatten learner/logo.jpg

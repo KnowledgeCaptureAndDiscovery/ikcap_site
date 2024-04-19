@@ -1,0 +1,38 @@
+#body { background-image:url(ripple.png) }
+
+#table.body { background-image:url(ripple_shaded.png) }
+
+#body { font-family:'Times New Roman',Times,serif }
+
+body { 
+    background:#eee; 
+    #background: #ecf3fe;
+    #background: #d5dce6;
+    color:#333; 
+    font:76%/1.6 "Lucida Grande","Bitstream Vera Sans",Verdana,sans-serif; 
+}
+
+a { color: #5b80b2; text-decoration:none; }
+
+a:hover { text-decoration:underline; }
+
+a img { border:none; }
+
+h1 { font-size:1.8em; color:#666; margin:0.4em 0 0.2em 0; }
+
+h2 { font-size:1.5em; color:#666; margin:1em 0 0.2em 0; }
+
+p { margin:0.5em 0 1em 0; }
+
+input { border:1; }
+
+
+td.content {
+    background: #FFFFFF;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    padding: 9px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+} }

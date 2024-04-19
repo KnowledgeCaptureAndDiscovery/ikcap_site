@@ -1,0 +1,59 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>HowToDo</name>
+  <title>HowToDo</title>
+
+  <status>
+    <short>
+ Currently in development
+  </short>
+  <long> 
+ Currently in development
+</long>
+ 
+  </status>
+
+  <description>
+    <short>
+ HowToDo is a system to match To-Do entries to How-To entries
+    </short>
+
+    <long>
+ HowToDo matches To-Do entries to How-To Entries and breaks down the How-Tos into a list of smaller, more actionable items. The system is implemented as a web service, and accessible by both agents and human users.
+    </long>
+  </description>
+
+  <research>
+    <short>
+     Breaking down human centered task descriptions into formalized processes and matching of To-Do items to How-Tos.
+    </short>
+    <long>
+    Our research has focused on evaluating out matching component with regards to coverage and correctness, on two different To-Do corpora.
+    </long>
+  </research>
+
+  <link>
+  Links
+<ul>
+  <li><a href="http://wikihow.org">WikiHow (currently the resource for the How-To descriptions)</a></li>
+</ul>
+  </link>
+
+<!-- Demo -->
+<demo>
+<a href="http://seagull.isi.edu/denny/howtodo">HowToDo Live Site</a>
+</demo>
+</project>

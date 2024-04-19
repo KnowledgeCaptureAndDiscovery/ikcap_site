@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
+    <!ENTITY p1 "http://www.owl-ontologies.com/assert.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY tlns "http://www.isi.edu/ikcap/Maven/taskOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/Maven/domainOntology.owl#"
+     xml:base="http://www.isi.edu/ikcap/Maven/domainOntology.owl"
+     xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+     xmlns:tlns="http://www.isi.edu/ikcap/Maven/taskOntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Maven/taskOntology.owl"/>
+    </owl:Ontology>
+    <Airport rdf:ID="lookupAirport_Output_Airport"/>
+    <owl:Class rdf:ID="Asset">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <tlns:PrimitiveMethod rdf:ID="createPatientMission1"/>
+    <Patient rdf:ID="setPatientMission_Input_Patient"/>
+    <owl:DatatypeProperty rdf:ID="hasSpecialNeeds">
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:ID="PatientSet">
+        <rdfs:subClassOf rdf:resource="&tlns;Set"/>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:ID="hasDestination">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <tlns:PrimitiveMethod rdf:ID="lookupAirport1">
+        <tlns:hasSignature rdf:resource="#lookupAirport_Signature"/>
+    </tlns:PrimitiveMethod>
+    <owl:Class rdf:ID="AssetSet">
+        <rdfs:subClassOf rdf:resource="&tlns;Set"/>
+    </owl:Class>
+    <owl:Class rdf:ID="RequirementSet">
+        <rdfs:subClassOf rdf:resource="&tlns;Set"/>
+    </owl:Class>
+    <tlns:PrimitiveMethod rdf:ID="lookupRequirements1">
+        <tlns:hasSignature rdf:resource="#lookupRequirements_Signature"/>
+    </tlns:PrimitiveMethod>
+    <owl:Class rdf:ID="Patient">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <tlns:PrimitiveMethod rdf:ID="lookupAsset1"/>
+    <Mission rdf:ID="setPatientMission_Input_Mission"/>
+    <owl:Class rdf:ID="Flight">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <tlns:MethodSignature rdf:ID="setPatientMission_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string"
+            >setPatientMission</tlns:hasName>
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#setPatientMission_Input_Mission"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#setPatientMission_Input_Patient"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:PrimitiveMethod rdf:ID="reserveSeat1"/>
+    <owl:Class rdf:ID="AirportSet">
+        <rdfs:subClassOf rdf:resource="&tlns;Set"/>
+    </owl:Class>
+    <PatientSet rdf:ID="lookupRequirements_Input_PatientSet"/>
+    <owl:DatatypeProperty rdf:ID="hasWoundType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <Location rdf:ID="lookupAirport_Input_Location"/>
+    <owl:Class rdf:ID="LocationSet">
+        <rdfs:subClassOf rdf:resource="&tlns;Set"/>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:ID="hasReadyForTransport">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="hasOrigin">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:ID="Seat">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <tlns:MethodSignature rdf:ID="lookupRequirements_Signature">
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#lookupRequirements_Input_PatientSet"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <owl:DatatypeProperty rdf:ID="hasLAT">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    <tlns:MethodSignature rdf:ID="lookupAirport_Signature">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#lookupAirport_Output_Airport"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#lookupAirport_Input_Location"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:PrimitiveMethod rdf:ID="lookupMission1"/>
+    <owl:DatatypeProperty rdf:ID="hasTriageCode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Patient"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:ID="Mission">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <owl:Class rdf:ID="MissionSet">
+        <rdfs:subClassOf rdf:resource="&tlns;Set"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Location">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Airport">
+        <rdfs:subClassOf rdf:resource="&tlns;Individual"/>
+    </owl:Class>
+    <tlns:PrimitiveMethod rdf:ID="setPatientMission1">
+        <tlns:hasSignature rdf:resource="#setPatientMission_Signature"/>
+    </tlns:PrimitiveMethod>
+    <rdf:Description rdf:about="&tlns;Set"/>
+</rdf:RDF>

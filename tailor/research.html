@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The Tailor Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Task learning by instruction in a procedural reasoning system</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Research</H2>
+	 <p />
+	 
+    <p>Tailor allows end users to modify procedure definitions 
+    through short sentences describing the desired change. For example,
+    given a definition of the procedure for purchasing a laptop within a
+    company that includes getting bids for the laptop, getting
+    authorization for the purchase and submitting the appropriate paper
+    work, a desired modification might be expressed as "You don't need
+    authorization when the cost is below $2000".</p>
+
+    <p>A system with the capability to follow instruction of this kind
+    will allow more end users to change the procedure that is followed,
+    but a number of challenges must be addressed to make this
+    feasible. First, the system must understand the sentence as a
+    precise modification to a portion of the procedural knowledge. This
+    may require interpreting incompletely specified tasks or roles. For
+    example, it is not clear what object's cost is referred to in the
+    above sentence.</p>
+
+    <p>Second, because the procedure knowledge is interconnected, a
+    modification like this may have a number of unintended
+    ramifications. For example, if the authorization subtask is skipped
+    in some situations, some later subtask that required it as a setup
+    step may fail. Tailor should notice this when it can, and either
+    take steps to repair the knowledge or warn the user and make
+    suggestions for how to repair it.</p>
+
+    <p>
+    The procedure knowledge is represented in the SPARK language and
+    shown to the user with a simple language generation interface.</p>
+
+    <p>
+    More details of our approach can be found in
+    <a href="blythe-06-21-04.ppt">these slides</a>
+    </p>
+    
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

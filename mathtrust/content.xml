@@ -1,0 +1,77 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>MathTrust</name>
+  <title>Mathematical Analysis of Trust and Deception</title>
+
+  <status>
+    <short>
+  This project started in November of 2005.
+    </short>
+
+    <long>
+  This project started in November of 2005.
+    </long>
+  </status>
+
+  <description>
+    <short>
+MathTrust is a formal, quantitative analysis of trust, which can be
+applied to determine trust in information sources.
+    </short>
+
+    <long>
+Information systems such as the Web often include open information
+sources that have very varying quality, and may be subject to deception.
+The information is often of unknown origins and there is often no prior
+history with many of the sources that may be used to assess their
+reputation. 
+
+This project will investigate how to represent, learn, and characterize
+the reputation and reliability of sources in an information system that
+collects from users their individual trust ratings and derives over time
+their collective consensus trust. This project will analyze the factors
+that affect trust in sources, study how to capture user feedback, and
+develop algorithms to derive source reputation. Based on this model of
+trust, a mathematical analysis of source trust and deception will relate
+formally a number of salient factors that influence trust in information
+systems.
+
+    </long>
+  </description>
+
+  <research>
+    <short>
+Trust, Semantic Web, Algorithms
+    </short>
+    <long>
+    The main research thrusts of this work are:
+	<ul>
+	<li>representing trust in information sources</li>
+	<li>capturing trust in information sources from users</li>
+	<li>learning and computing trust in information sources</li>
+	</ul>
+    </long>
+  </research>
+
+<!-- Demo -->
+<demo>
+     <center>
+	  <img src="tn_comingsoon.jpg"/>
+	  </center>
+
+
+</demo>
+</project>

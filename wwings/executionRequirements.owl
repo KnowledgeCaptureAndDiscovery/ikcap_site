@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.isi.edu/ikcap/wwings/executionRequirements.owl#"
+  xml:base="http://www.isi.edu/ikcap/wwings/executionRequirements.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ExecutionRequirements">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Specifies execution requirements for a component</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Software"/>
+  <owl:Class rdf:ID="OperatingSystem"/>
+  <owl:ObjectProperty rdf:ID="requiresSoftware">
+    <rdfs:range rdf:resource="#Software"/>
+    <rdfs:domain rdf:resource="#ExecutionRequirements"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="requiresScheduler">
+    <rdfs:domain rdf:resource="#ExecutionRequirements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="requiresOperatingSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ExecutionRequirements"/>
+    <rdfs:range rdf:resource="#OperatingSystem"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="requiresNodes">
+    <rdfs:domain rdf:resource="#ExecutionRequirements"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >binary or mpi </rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ExecutionRequirements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <Software rdf:ID="Python"/>
+  <Software rdf:ID="Perl"/>
+  <OperatingSystem rdf:ID="Linux"/>
+  <OperatingSystem rdf:ID="Unix"/>
+  <ExecutionRequirements rdf:ID="RemDupsExecRequs">
+    <requiresNodes rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</requiresNodes>
+    <requiresOperatingSystem rdf:resource="#Unix"/>
+    <requiresSoftware>
+      <Software rdf:ID="Java"/>
+    </requiresSoftware>
+    <requiresScheduler rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Condor</requiresScheduler>
+    <hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >binary</hasType>
+  </ExecutionRequirements>
+  <OperatingSystem rdf:ID="Windows"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.1, Build 284)  http://protege.stanford.edu -->

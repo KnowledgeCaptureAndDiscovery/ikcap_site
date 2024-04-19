@@ -1,0 +1,483 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Trellis</name>
+  <title>Capturing and Exploiting Semantic Relationships for Information and Knowledge Management</title>
+
+  <status>
+  <short>
+  Trellis supports three modes of analysis:
+  <ul>
+  <li><b><i>Rich</i></b>, a mode allowing detailed semantic annotation, rating of sources, and offering a rich vocabulary of semantic connectors</li>
+  <li><b><i>Tree</i></b>, a flavor aimed at easy-to-use analyis and which provides a simplified interface and only the basic argumentation connectors. It also supports collaborative discussion</li>
+  <li><b><i>Table</i></b>, which focuses on supporting decision making where several alternatives need to be compared and evaluated according to several user specified dimensions</li>
+  </ul>
+  
+  <b>ACE</b> is a tool for transparently (using only natural lanugage) interacting with the user to generate semantic markup of annotations in Trellis.  A walkthough of ACE is now available in the demos below.
+  <p>
+  
+All flavors are available on our Trellis preview web server, <a href="http://trellis.isi.edu">http://trellis.isi.edu</a> (this site presents the latest features, but is occasionally unavailable)
+  <p>
+Auxiliary Trellis (Rich format only) is available <a href="http://excalibur.isi.edu/newTrellis/">here</a>.
+<p>
+
+Trellis (currently rich flavor only) can also be <a href="http://www.isi.edu/licensed-sw/trellis/">downloaded here</a>. Let us know if you are interested in obtaining source code of and/or using latest versions of <n/>!</short>
+  <long>
+<b><n /></b> provides an interactive environment that allows users to add their observations, opinions, and conclusions as they analyze information by making semantic annotations to documents and other on-line resources. Our work to date has concentrated on three major areas: 1) designing a vocabulary to annotate information analysis, 2) creating semantic markup representations for this vocabulary and annotating analysis products, and 3) developing an initial prototype of the <n /> interface and tools.
+<p />
+
+<n /> (rich format) includes a vocabulary for semantic annotations of decisions and tradeoffs.  The initial version of this vocabulary is now available as a schema/ontology in XMLS, RDFS, and OWL. <n /> allows users to extend this vocabulary and its corresponding schemas.  For each analysis performed by a user with <n />, the system generates annotations in XML, RDF, and OWL according to the schemas and ontologies for the <n /> annotation vocabulary.  Users can extend the vocabulary using the <n /> interface, adding perhaps domain specific terms or constructs that are useful to their particular task.
+<p />
+We have exercised <n /> to date with a variety of scenarios to annotate tradeoffs and decisions (e.g., travel), organizing materials (e.g., search results), analyzing disagreements and controversies on a topic (e.g., political debates), and handling incomplete information (e.g., genealogy research).
+<p /><a href="http://www.isi.edu/licensed-sw/trellis/">Download</a> ("rich" flavor only). Contact us if you are interested in dowloading other flavors.
+<br />
+  </long>
+  </status>
+
+  <description>
+    <short>
+<n/> is an interactive web-based application for argumentation and decision-making. Using Trellis, users can come to individual and collaborative conclusions on virtually any topic, from scientific discourse to political and policy views to deciding which product to purcase or select the place to stay on a vacation.
+
+    </short>
+
+    <long>
+<n/> is an interactive web-based application for argumentation and decision-making. Using Trellis, uses can come to individual and collaborative conclusions on virtually any topic, from scientific discourse to political and policy views to deciding which product to purcase or select the place to stay on a vacation.
+
+<!-- something about arriving at this bottom-up -->
+<!-- diagram of the decision process -->
+
+     <p>The key innovative ideas behind our approach are:</p>
+     <ul>
+     <li>
+     Supporting users to create knowledge "snippets" (microcontent) from the original sources
+     as well as from other microcontent. The key is to capture how the user 
+     progressively generates new knowledge that results in added value to the
+     original raw information sources. Our goal is to support users to
+     highlight key salient information from large reports and documents, to
+     add new knowledge fragments based on their analysis and integration of
+     existing information, and to finally create semi-formal fragments.</li>
+
+     <li>
+     Capturing and exploiting interrelations between contributor-generated public semantic annotation of information. As part of their analysis, 
+     users are given the opportunity to annotate raw information sources with 
+     knowledge about the source's quality and relevance to given topics.
+     The users are also encouraged to enter their analysis in a form which facilitates retireval of relevant additional analyses, microcontent, and web sources.  The tool provides <i>incremental payoff</i> to the user -- the more the user annotates and helps the system understand the analysis, the more help the system can render.</li>
+
+     <li>
+     Extensible semantic markup of information items and their relationships.
+     Users will be able to draw from a core semantic markup language that will
+     contain a basic domain-independent vocabulary to formulate annotations.
+     They will also be able to extend this core language with additional terminology
+     useful in their particular domain. Using this language, users will
+     be able to annotate not only the information items themselves, but they
+     will also be able to annotate the relationships among them, which will
+     enable them to qualify and describe interdependencies between different
+     information sources and how they relate to a new conclusion or assessment
+     added by the developer. In essence, links between the information
+     items will be first class citizens in the knowledge base.</li>
+     </ul>
+
+     <p>Below is a diagram of the current <n/> architecture. A
+     User typically starts searching the Web for a certain document, or indicating
+     a pointer to a specific Web resource that contains useful information.
+     Each is considered an information item. Information items may include
+     raw information sources (an image, a text document, a video, etc.) as well
+     as products of previous analysis (by the user or by other users.)
+     All the information items are in some sense the knowledge base that <n/>
+     operates on, and we refer to it as the Semantically Marked Information
+     Base, or SMIB. We refer to an information item as an EI2 (Extended
+     Information Items).</p>
+
+     <center>
+	  <img src="arch.jpg"/>
+	  </center>
+
+     <p>Users extend the SMIB using two tools: the Annotation Tool and the Creation
+     Tool. They can use the EI2 Annotation Tool to add semantic annotations
+     to an EI2 to describe its contents and to relate them to other EI2.
+     For example, an EI2 may be annotated as containing a map, or an interesting
+     event. The Annotation tool can also be used to relate EI2.
+     The tool will provide an editor with a set of connectors. An example
+     is a connector to denote that two EI2s are contradictory. This way,
+     the user may link an EI2 that contains a description of a product as having
+     a tag price of $20 to another EI2 that has the same product with
+     a price of $25.</p>
+     <p>The Annotation tool draws on a library of semantic annotations and connectors
+     that will be based on a core domain-independent language defined by the
+     Semantic Annotation Vocabulary. An Interdependency Schema defines
+     a vocabulary for connectors based on a variety of dimensions: pertinence,
+     reliability, credibility, structural (x is example of y, x is part of y,
+     x describes y, etc.) causality (x1 x2...xn contribute to y, x1 x2...xn
+     indicate y, etc.) temporal ordering (x before y, x after y, x simultaneous
+     with y, etc.), argumentation (x may be reason for y, x supports y, etc.).
+     The Domain Schema contains a core vocabulary to annotate the content of
+     documents that extends the Interdependency Schema with domain terms.
+     Our plan is that <n/> will provide a core vocabulary, and users will
+     be able to extend it with additional terms.</p>
+     <p>The Creation Tool enables users to create new EI2. For example,
+     a user may create an EI2 as an assessment that he or she formulates based
+     on existing EI2. If a combination of some subparts of EI2 lets a
+     user conclude or decide on some definition, then the subparts can be captured
+     into a new Information Item, that drops all other irrelevant parts of the
+     original EI2. A new EI2 can be added by extracting or summarizing
+     some of the previous results.</p>
+     <p>Below is a snapshot of the current user interface of <n/>.
+     In this case, a user is using <n/> to decide whether a mission to take
+     Navy SEALs to Athens is feasible. Given the Web sources consulted
+     and the indicated capabilities of the SEAL team (shown on the left), the
+     user has entered the rationale for deciding that the operation is not feasible.</p>
+
+     <center>
+	  <img src="snapshot.jpg"/>
+	  </center>
+
+     <p/><p>We plan to extend <n/> with learning and adaptive techniques
+     in order to offer to the user improved and extended capabilities over time.
+     As users annotate more EI2 and create new EI2 that capture their analysis,
+     <n/> will be able to exploit this information and become increasingly
+     more proactive. We also plan to add a Query Facility that will allow
+     users to search the SMIB based on the semantic annotations of the EI2.
+     It will include a structured editor to guide users to formulate queries
+     using the semantic annotation vocabulary defined in the schemas.</p>
+     <p>In summary, <n/> provides users with tools that enable them to specify
+     information in increasingly more structured form, and to specify semantic
+     annotations that can be exploited for processing and integration of separate
+     information items.</p><br/>
+    </long>
+  </description>
+
+  <research>
+    <short>
+<n/> helps users marshall information available from multiple web sites, as well as add their observations, viewpoints, and conclusions. Trellis provides assistance in carrying out analysis about a particular decision by:
+<ul>
+ <li>helping generate a high-level overview of the decision,</li>
+ <li>capturing the decision rationale for convenient sharing with others, and </li>
+ <li>assisting with collaboratively determining quality and trustworthines of online resources.</li>
+</ul>
+    </short>
+    <long>
+	 <p />
+	 <ul>
+<li>Developing a vocabulary to support semantic annotations for information interdependencies to capture the rationale for decisions as well as traces to the original information sources used. Our initial version of this language draws from research in various areas, including argumentation and discourse relations, logic deduction, process and plan representations, and event understanding.<br /></li> 
+
+<li>Developing semantic annotations of decisions and tradeoffs through the use of markup languages.  The initial version of this vocabulary is now available as a schema/ontology in <a href="http://www.w3.org/XML/Schema">XMLS</a>, <a href="http://www.w3.org/TR/rdf-schema/">RDFS</a>, and <a href="http://www.daml.org">DAML+OIL</a>. TRELLIS allows users to extend this vocabulary and its corresponding schemas.
+A nice result of this work is a <a href="http://trellis.semanticweb.org/comparison.html">comparison table</a> of semantic markup languages that helped us the features and tradeoffs of existing markup languages.  This table compares the features of XML Schema, RDF Schema, and DAML+OIL and is linked to examples of use of each feature. We also have tutorial <a href="http://trellis.semanticweb.org">slides</a> on semantic markup languages that highlight their features.<br /></li>
+
+<li>Developing an <a href="http://excalibur.isi.edu:8888/trellis_web/">interface</a> that helps users annotate information analysis and decision rationale.  The first version of this interface was released in August 2000 and includes a creation tool, an annotation tool, and search and collaborative capabilities.  We have used it to developed several scenarios that demonstrate generality of the approach, including intelligence analysis, genealogy research, and travel planning.<br /></li>
+
+<li>Annotating the design rationale of knowledge bases, to create a new generation of "Resilient Hyper Knowledge Bases" (RHKBs) that contain pointers to the original sources of knowledge as well as the analysis and decisions of the knowledge engineers that built it.<br /></li>
+
+<li>Using the annotations to derive an assessment of the source based on the annotations of many individuals.<br /></li>
+    </ul>
+    </long>
+  </research>
+
+  <mainlink><a href="http://trellis.isi.edu">Live site</a></mainlink>
+  <link><a href="http://trellis.semanticweb.org/">http://trellis.semanticweb.org</a> (more information on Semantic Web aspects of Trellis</link>
+  <link><a href="http://trellis.isi.edu">Live site</a></link>
+  <link><a href="http://excalibur.isi.edu:8888/newTrellis/">Backup Server</a></link>
+  <link><a href="http://trellis.isi.edu/rich/toolHelp.htm">Trellis (Rich) Help</a></link>
+  <link><a href="http://trellis.isi.edu/table/help/table-trellis-help.html">Trellis (Table) Help</a></link>
+
+<!-- Demo -->
+
+<demo>
+
+<h3>ACE Walkthrough</h3>
+
+<b>ACE</b> is an augmentation to Trellis for transparently creating semantic markup of users' annotations.  ACE matches natural language annotations against an ontology, and presents the user with natural lanugage translations of plausible formal versions of the input.  The user, through interaction with ACE, can provide Trellis with semantic markup of annotations without knowing or seeing the underlying ontology.  
+<p>
+<div style="text-align: center;"><embed src="http://www.isi.edu/~blythe/ace1.wmv" type="video/x-ms-wmv" width="640" height="550" ></embed></div>
+<p>
+<h3>Trellis Web User Guide</h3>
+
+<p class="MainLine">
+<b>Trellis</b> is an interactive environment that allows users to add their 
+observations, viewpoints, and conclusions as they analyze information by making 
+semantic annotations to documents and other on-line resources. We view this as 
+a knowledge acquisition problem, where users are adding new knowledge to the 
+system based on their expertise as they analyze information.
+</p>
+
+<p />
+<object id="MediaPlayer1" width="640" height="550" 
+	classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95"
+	codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"
+    standby="Loading Microsoft Windows Media Player components..." 
+    type="application/x-oleobject" align="middle">
+    <param name="FileName" value="http://www.isi.edu/ikcap/misc/TrellisMovie.wmv"/>
+    <param name="ShowStatusBar" value="True"/>
+    <param name="autoplay" value="false"/>
+    <param name="DefaultFrame" value="mainFrame"/>
+    <embed type="application/x-mplayer2" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" src="http://www.isi.edu/ikcap/misc/TrellisMovie.wmv" align="middle" width="640" height="550" defaultframe="rightFrame" showstatusbar="true" autoplay="false">
+    </embed> 
+</object>
+<div style="font-size:11px;text-decoration:underline">Trellis demo video</div>
+
+<p>
+This document is a user manual that illustrates how to use Trellis. 
+For a more formal introduction to Trellis, you can visit 
+<a href="http://trellis.semanticweb.org">trellis.semanticweb.org</a>
+</p>
+
+<h3>Login Screen</h3>
+<img src="images/image002.gif"/>
+
+<h3>Main Page</h3>
+<p>
+If you are a first time user, you will see an example scenario (or a <i>purpose</i>)
+</p>
+<img src="images/image004.gif"/>
+
+<p>
+<ul>
+<li><u>What is a purpose ?</u></li>
+<ul>
+<li>Can be a decision that has to be made. Ex. a hiring decision</li>
+<li>Can be something you want to find out. Ex. tracing one's roots.</li>
+<li>Can be the end result of your analysis</li>
+</ul>
+</ul>
+</p>
+
+<p>
+<ul>
+<li><u>Possible Operations :</u></li>
+<ul>
+<li>Create a new purpose (click the "New purpose" button; you will be prompted
+for a brief statement of what the analysis is about)</li>
+<li>Edit/Rename/Delete an existing purpose</li>
+<li>Backup/Restore purposes</li>
+<li>View Markups of purposes</li>
+<li>View Schemas and ontologies used for those markups</li>
+</ul>
+</ul>
+</p>
+
+<h3>Purpose Editor</h3>
+<p>After you click on the "Edit/View" button you will see the purpose
+editor</p>
+<img src="images/image006.gif"/>
+
+<p>The Purpose Editor consists of 5 Frames</p>
+
+<h4>1. Purpose and Conclusion Frame</h4>
+<img src="images/image008.gif"/>
+
+<p>This frame shows the Current Purpose being edited.<br/>
+It also shows the conclusion (if any). You can click "Add conclusion" 
+after you are done with the analysis. The conclusion consists of a Title,
+some text explaining the conclusion and a link to some web document (optional).
+</p>
+
+<p>
+The "Main" button takes you back to the Main Page.<br/>
+The "Logout" button brings you back to the Login Page.
+</p>
+
+<h4>2. Sources Frame</h4>
+<p>The Sources Frame displays a list of Sources that the User has added so
+far. Sources are added using the "Add" button in the sources Frame. It
+brings up the "Add Sources Window":</p>
+
+<h4><i>Add Sources Window</i></h4>
+<img src="images/image014.gif"/>
+<p>This window consists of a query frame, from which a user can search the web 
+(basically searches Google using its SOAP api)</p>
+<p>The bototm frame consists of all the Search Results. A User can select 
+multiple search results and click on  "Add Sources" to add them. TRELLIS stores
+the URL of these sources, and also caches the HTML Pages. If the user is 
+caching a page, where the images in the page are important, and might change
+or disappear from the online web server, then it is recommended to check the 
+"Cache Images" box. This option will cache the online images in the web page
+as well. However, this takes much longer.</p>
+<p>The "Add URL" button asks the user for the Title and the URL of the source.
+This is equivalent to explicitly telling TRELLIS to go ahead and add/cache a 
+URL, rather than selecting it from the Search Results.</p>
+<p>The "Add User Source" button brings up a window like the one shown in the 
+screenshot. It asks the user for the Title of the source, a referring URL, 
+and some text. All this is converted into an HTML file and stored locally.</p>
+
+<h4><i>Back to the Sources Frame</i></h4>
+<img src="images/image010.gif"/>
+<p>Whenever a user adds a source, it is cached locally as well. The user 
+has an option of choosing to use either the actual web source, or the locally 
+cached copy. The "Toggle" button allows a user to do this.</p>
+<p>On selecting a Source, it is highlighted. So in the screenshot above, a user 
+selected the first source, and then clicked "Src Desc" button. This button 
+allows a user to store metadata information about the source, following the
+Dublin Core metadata.</p>
+<p>Deletion and Renaming are simply done by selecting the source (or maybe 
+sources in case of deletion) and clicking the "Delete" or the "Rename" button 
+respectively.</p>
+<img src="images/image012.gif"/>
+<p>Sometimes, there will be a fraction after the Source (ex. 9.3/10) as shown
+above. This shows the current global rating of the source. Clicking on this 
+fraction will open a window giving more details about its rating, and how it was 
+computed. For more details, refer to 'Trusting Information Sources One citizen 
+at a Time' in ISWC '02.</p>
+
+<h4>3. Statements Frame</h4>
+<img src="images/image016.gif"/>
+<p>The Statements frame displays a list of the Statements that the User has 
+added so far. A User can select a statement and Delete or Rename it (similar 
+to the sources interface above).</p>
+<p>The "Add Statement Window" allows a user to browse the web, select some 
+portion of a web page, and make a short statement about it.<br/>
+<i>Note</i>: Clicking on a statement also opens the "Add Statement Window" with the 
+details for that statement already filled in.</p>
+
+<h4><i>Add Statements Window</i></h4>
+<img src="images/image018.gif"/>
+<p>The Top frame is the main control frame for the Statement Editor. It provides 
+buttons for navigation, selection, and saving.</p>
+
+<p><u>Navigation</u>:<br/>
+The "Use Source" select box can be used to view the source page in the 
+"Browser frame" (bottom left frame).<br/>
+One can also directly type the URL in the "Browse" text box and click "Go" to 
+view that page in the "Browser Frame".<br/>
+The user can browse around in the "Browser frame" as he would normally do in 
+a browser.</p>
+
+<p><u>Selection</u>:<br/>
+If there is something relevant that the user finds in a web page, then he could 
+select that portion of the text, and click on the "Add Selection" button in 
+the top frame.<br/>
+This will highlight the selected text in the "Browser" and also display the 
+selected text in the "Selected Text" frame.<br/> 
+The user can make multiple selections and Delete them as well (using the "Del" 
+button in the "Selected Text" frame).
+</p>
+
+<p><u>Saving</u>:<br/>
+The user then enters the title of the statement in the "Statement" text box in 
+the top frame, and hits the "Save" button. One can also put some notes about 
+the statement that the user is adding in the "Notes" frame.<br/>
+In TRELLIS, all statements are associated with TRELLIS sources. So, in case the 
+web page being currently browsed isn't stored as a TRELLIS source, and the user 
+hits the "Save" button, he will be prompted to give a name for this source. As 
+in the case of "Add Sources", the "Cache Images" checkbox allows the user to 
+cache the images of the source locally as well.<br/>
+After adding a new Source, it doesn't automatically appear in the list of 
+sources in the "Use Source" Select box. The user has to click "Refresh" to get 
+the new source in the list<br/> 
+</p>
+
+<h4>4. Analysis Frame</h4>
+<img src="images/image020.gif"/>
+<p>This frame displays the units that the user has added so far.</p> 
+
+<p>The basic structure of a "Unit" is:
+<pre>
+<i> statement {and statement}* construct {and statement}*
+      is {not} likelihood-qualifier because
+      according to source-description which is 
+              reliability-qualifier because statement and
+              credibility-qualifier because statement 
+</i>
+</pre>
+</p>
+
+<p>Unlike statements and sources, units are displayed in a collapsible tree 
+structure. <br/>
+These units can be dragged around and dropped either "into" another 
+unit (to make it a subunit), or "between" 2 units (to reposition it).</p>
+
+<p>Clicking on a statement opens the statement editor for that statement</p>
+
+<h4>5. Edit Analysis Frame</h4>
+<img src="images/image022.gif"/>
+
+<p>This frame provides Controls to Edit the Units in the Analysis Window.</p>
+<p>The "Delete" and "DelTree" buttons are used to delete a single unit, or the 
+unit along with all its subunits respectively. These operations need the user 
+to select a unit from the Analysis frame first. A unit can be selected in the 
+analysis frame by clicking on it. (This can be tricky since you normally end up 
+opening a statement, as well as selecting the unit, so try to click on a spot 
+just to the left of the unit).</p>
+<p>The user can click the "Expand All" button to expand the collapsible tree 
+of units in the "Analysis" frame.</p>
+<p>"Add Unit", "Add Sub-Unit", and "Edit" buttons all open up the "Unit Editor 
+Window". However, for "Add Sub-unit" and "Edit", the user naturally needs to 
+select a unit in the analysis frame first (to edit, or to make a subunit of).</p>
+
+<h4><i>Unit Editor Window</i></h4>
+<img src="images/image024.gif"/>
+<p>The Unit Editor provides an interface for the "Basic Unit Structure" 
+described earlier.</p> 
+<p>The "Add" and "Del" buttons are used to add/delete statements from the 
+left/right hand side of the unit. The statements appear in a drop down 
+select box.</p>
+<p>Both sides of the unit are combined by a construct. These constructs come 
+from a standard library.</p>
+<p>To reduce the number of constructs appearing in the drop down list, one can 
+select the Type of construct to use. Selecting "New" brings about a text box in 
+which the user can enter his own construct. The "User" button brings up all 
+previously user created constructs.</p>
+<p>The second line contains the qualifier in the left side. These qualifiers 
+also come from a standard library. The right side again contains the list of 
+all statements. The user can choose this if he wants to give a reason statement 
+for the unit that he is creating.</p>
+<p>The third line allows the user to select a "source" for the unit. If a source 
+is selected the fourth and fifth lines which talk about the reliability and 
+credibility of the source become active.</p>
+
+<h4><i>Import Window</i></h4>
+<img src="images/image026.gif"/>
+<p>Clicking on the "Import" button in the Edit analysis frame brings up this 
+window.</p>
+
+<p>It consists of a "Search and Import" frame at the bottom and the "Results" 
+frame at the top.</p>
+
+<p>The user can search either the purpose titles, or even individual statement 
+names, for a match.</p>
+
+<p>On clicking a purpose in the search results in the top frame, the whole 
+analysis frame of that purpose is displayed in the "Results" frame. This 
+will be visible to the user in view only mode, and he won't be able to 
+move them around, or edit the units or the statements.</p>
+
+<p>However, the user can select a unit and import it, and optionally all its 
+subunits as well, by clicking on the "Import" or the "Import Tree" button 
+respectively. By doing so, he will also import the sources and statements 
+that are needed by those units into the current user's analysis.</p>
+
+<h4><i>Import Source Window</i></h4>
+<img src="images/image028.gif"/>
+<p>This window is opened by clicking on the "ImportSrc" button in the 
+"Edit Analysis" Frame. This window has 2 frames. The bottom frame is used 
+for searching and importing sources, while the top frame displays the 
+Search results.</p>
+
+<p>The Search only takes into account the sources that have been rated. Only 
+those sources are rated that have been used with a single statement (more 
+details can be found in "Trusting Sources one citizen at a time" ISWC '02.</p>
+
+<p>Clicking on the Details button brings up the details of how the source 
+has been rated (see screenshot above). A source is rated with respect to 
+the statement that it is used with, since credibility and reliability of 
+a source make sense only with respect to the statement that it is used 
+with.</p>
+
+<p>The user can then select the sources by clicking on the Checkboxes next 
+to them, and click on the "Import" button in the bottom frame to import 
+these sources into his list of sources.</p>
+
+<p>Once the analysis is finished, remember to add your conclusion using the
+Purpose editor</p>
+</demo>
+</project>

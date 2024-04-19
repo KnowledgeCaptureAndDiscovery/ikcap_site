@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+     xmlns="http://www.daml.org/2001/03/daml+oil#">
+
+
+<Ontology rdf:about="">
+  <versionInfo>$Id: trellis.daml,v 1.0 2002/10/16 varunr Exp $</versionInfo> 
+  <comment>The Trellis ontology</comment> 
+  <imports rdf:resource="http://www.daml.org/2001/03/daml+oil" /> 
+</Ontology>
+
+
+<!-- 
+   The trellis ontology objects are a part of this class
+-->
+
+<Class rdf:ID="trellis">
+   <comment>The Trellis main page</comment>
+</Class>
+   
+<DatatypeProperty rdf:ID="purpose">
+   <comment>The Purpose of the annotation</comment>
+   <rdfs:domain rdf:resource="#trellis" />
+   <rdfs:range rdf:resource="http://www.daml.org/2001/03/daml+oil#Literal" />
+</DatatypeProperty>
+    
+<DatatypeProperty rdf:ID="conclusion">
+   <comment>The conclusion arrived at</comment>
+   <rdfs:domain rdf:resource="#trellis" />
+   <rdfs:range rdf:resource="http://www.daml.org/2001/03/daml+oil#Literal" />
+</DatatypeProperty>
+
+   
+<!-- 
+   Main Classes
+-->
+
+<Class rdf:ID="source">
+   <comment>
+   A web source or user entered data. For each web source in trellis, there is also a corresponding cached web source.
+   A user can use any one of them.
+   </comment>
+</Class>
+
+<Class rdf:ID="statement">
+   <comment>
+   A statement pointing to portions of a web document (user entered data)
+   A statement basically points to some selected portion of an existing trellis source.
+   </comment>
+</Class>
+
+
+<Class rdf:ID="unit">
+   <comment>
+   A Unit normally depicts a relationship between multiple statements.
+   It might also be just one statement being further qualified (by talking about the 
+   credibility or reliability of its source) , or corroborated (by giving a reason).
+   </comment>
+</Class>
+
+
+<!--
+   Properties of sources
+-->
+
+<DatatypeProperty rdf:ID="source_title">
+   <rdfs:domain rdf:resource="#source"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<DatatypeProperty rdf:ID="url">
+   <rdfs:domain rdf:resource="#source"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<DatatypeProperty rdf:ID="cachedurl">
+   <rdfs:domain rdf:resource="#source"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<DatatypeProperty rdf:ID="cachedflag">
+   <comment>If set to 1, then cachedurl is used, otherwise url</comment>
+   <rdfs:domain rdf:resource="#source"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<!-- Note: The dublin core properties are also used for sources -->
+
+
+
+<!--
+   Properties of statements
+-->
+
+<DatatypeProperty rdf:ID="statement_title">
+   <rdfs:domain rdf:resource="#statement"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<ObjectProperty rdf:ID="statement_source">
+   <comment>The trellis source pointed to to while making the statement</comment>
+   <rdfs:domain rdf:resource="#statement" />
+   <rdfs:range rdf:resource="#source" />
+</ObjectProperty>
+
+<DatatypeProperty rdf:ID="selected_text">
+   <comment>The text selected in the source while making the statement</comment>
+   <rdfs:domain rdf:resource="#statement" />
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<DatatypeProperty rdf:ID="notes">
+   <comment>Notes describing the statement in detail</comment>
+   <rdfs:domain rdf:resource="#statement" />
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+
+
+<!--
+   Properties of units
+-->
+
+<ObjectProperty rdf:ID="left_statement">
+   <comment>The Left Statements of a Unit</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#statement"/>
+</ObjectProperty>
+
+<ObjectProperty rdf:ID="right_statement">
+   <comment>The Right Statements of a Unit</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#statement"/>
+</ObjectProperty>
+
+<DatatypeProperty rdf:ID="relation">
+   <comment>The relation between the left and the right statements</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<DatatypeProperty rdf:ID="qualifier">
+   <comment>The qualifier for the unit</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<ObjectProperty rdf:ID="reason">
+   <comment>Reason for the relationship between statements stated in the unit</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#statement" />
+</ObjectProperty>
+
+<ObjectProperty rdf:ID="unit_source">
+   <comment>The source for the unit</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#source" />
+</ObjectProperty>
+
+<DatatypeProperty rdf:ID="source_credibility">
+   <comment>The credibility of the source</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<DatatypeProperty rdf:ID="source_reliability">
+   <comment>The reliability of the statement</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</DatatypeProperty>
+
+<ObjectProperty rdf:ID="credibility_reason">
+   <comment>The reason for the stated credibility of the source</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#statement" />
+</ObjectProperty>
+
+<ObjectProperty rdf:ID="reliability_reason">
+   <comment>The reason for the stated reliability of the source</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#statement" />
+</ObjectProperty>
+
+<ObjectProperty rdf:ID="subunit">
+   <comment>Subunits of the Unit</comment>
+   <rdfs:domain rdf:resource="#unit" />
+   <rdfs:range rdf:resource="#unit" />
+</ObjectProperty>
+</rdf:RDF>
+

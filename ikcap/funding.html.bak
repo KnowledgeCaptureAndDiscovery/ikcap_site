@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The Interactive Knowledge Capture Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="http://www.isi.edu/ikcap/ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='http://www.isi.edu/ikcap/images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="http://www.isi.edu/ikcap/" style="border:0"><IMG border='0' SRC="http://www.isi.edu/ikcap/images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Home Page of the Interactive Knowledge Capture Research Group</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Funding</H2>
+We would like to acknowledge the following sources for funding the <b>Interactive Knowledge Capture</b> project:
+<p>
+<ul>
+<li><a href="http://arpi.isx.com/">DARPA / Rome Planning Initiative (ARPI)</a>, award number <font color="red">DABT 63-95-C-0059</font>, from May 1995 through May 1999<br/></li><br/>
+<li><a href="http://www.teknowledge.com/HPKB">DARPA High Performance Knowledge Bases  (HPKB)</a>, award number <font color="red">F30602-97-1-0195</font>, from April 1997 through December 2000<br/></li><br/>
+<li><a href="http://www.darpa.mil/">DARPA Joint Forces Air Component Commander  (JFACC)</a>, award number <font color="red">F30602-97-C-0118</font>, from April 1997 through September 2000<br/></li><br/>
+<li><a href="http://coabs.globalinfotek.com/">DARPA Control of Agent-Based Systems (CoABS)</a>, award number <font color="red">F30602-97-C-0068</font>, from June 1999 through December 2001<br/></li><br/>
+<li><a href="http://www.darpa.mil/iso">DARPA Information Systems Office (ISO) Technology  Integration Experiment</a>, award number <font color="red">F30602-97-1-0195</font>, from July 1999 through July 2000<br/></li><br/>
+<li><a href="http://schafercorp-ballston.com/active-templates">DARPA Active Templates (AcT)</a>, award number <font color="red">F30602-00-2-0513</font>, from April 2000 through April 2003<br/></li><br/>
+<li><a href="http://reliant.teknowledge.com/RKF/">DARPA Rapid Knowledge Formation (RKF)</a>, award number <font color="red">N66001-00-C-8018</font>, from April 2000 through November 2003<br/></li><br/>
+<li><a href="http://www.rl.af.mil/">Air Force Research Laboratory's Joint Defense Planner  (JDP)</a>, award number <font color="red">F30602-97-C-0118</font>, from April 2000 through September 2000<br/></li><br/>
+<li><a href="http://afosr.sciencewise.com/">Air Force Office of Scientific Research  (AFOSR)</a>, award number <font color="red">F49620-00-1-0337</font>, from August 2000 through November 2003<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">EAR-0122464</font>, from September 2001 through September 2006<br/></li><br/>
+<li><a href="http://www.defenselink.mil/">Department of Defense</a>, award number <font color="red">N66001-03-C-8006</font>, from December 2002 through December 2006<br/></li><br/>
+<li><a href="http://www.darpa.mil/ipto/programs/pal/index.htm">DARPA's Personalized Assistant that Learns  (PAL)</a>, award number <font color="red">NBCHD030010</font>, from May 2003 through May 2008<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">SCI-0455361</font>, from December 2004 through November 2006<br/></li><br/>
+<li><a href="http://www.afrl.gov/">Air Force Research Laboratory (AFRL)</a>, award number <font color="red">FA8750-06-C-0210</font>, from September 2006 through September 2010<br/></li><br/>
+<li><a href="http://www.darpa.mil">DARPA / Bootstrapped Learning</a>, award number <font color="red">HR0011-07-C-0060</font>, from August 2007 through July 2011<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">CCF-0725332</font>, from October 2007 through September 2011<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">CCF-0725332</font>, from October 2007 through September 2010<br/></li><br/>
+<li><a href="http://www.nih.gov/">National Institutes of Health (NIH)</a>, award number <font color="red">NIH U24 MH068457</font>, from May 2009 through December 2009<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">IIS-0948429</font>, from September 2009 through August 2011<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">IIS-0917328</font>, from September 2009 through August 2011<br/></li><br/>
+<li><a href="http://www.nsf.gov/">National Science Foundation (NSF)</a>, award number <font color="red">IIS-0948429</font>, from September 2009 through August 2011<br/></li><br/>
+<li><a href="http://www.afosr.af.mil/">US Air Force Office of Scientific Research (AFOSR)</a>, award number <font color="red">FA9550-11-1-0104</font>, from June 2011 through March 2015<br/></li><br/>
+<li><a href="http://www.darpa.mil">DARPA</a>, award number <font color="red">FA8750-13-C-0016</font>, from January 2013 through November 2014<br/></li><br/>
+</ul>
+
+</TD>
+</TR>
+</TABLE>
+<A HREF='http://www.isi.edu/ikcap/'><< Back to IKCAP</A>
+</BODY>
+</HTML>

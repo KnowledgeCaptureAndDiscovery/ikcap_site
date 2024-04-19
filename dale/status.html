@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The DALE Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Data Analytics by Learning and Exploration</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Status</H2>
+ 
+<p>The DALE framework currently has focused to date on workflows for text analytics tasks such as document classification, document clustering, and topic modeling.  These workflows are composed of workflow fragments that pre-process text, prepare the data, and set up the learning task.  
+
+<h4>Workflows and Workflow Fragments for Text Analytics</h4>
+
+<p>DALE contains workflow fragments that are common across text analytics tasks and are reused across workflows. They are composed of common workflow components, which can have several implementations, for example for term weighting there is a Chi Squared, a Mutual Information, and an Information Gain method.  The user can choose one of these methods for that step, otherwise the system makes the selection automatically. We have also defined workflow fragments for viewing certain types of data.
+
+<p>These predefined workflow fragments make text analytics expertise readily available to new users.  Workflow fragments can be executed independently from each other.  Users can run them to improve their understanding of the behavior of those steps. A good starting point for novices however is to use larger end-to-end workflows that are defined using the workflow fragments.  DALE has several pre-defined workflows for document classification, document clustering, and topic modeling
+
+<h4>Worfklow Components and Datasets</h4>
+
+<p>The workflows are currently composed of more than 50 workflow components that we built using popular machine learning and text processing packages, including Weka, Cluto, and Mallet among others.  These packages have very heterogeneous implementations but the components encapsulate the software with interfaces described with data types in the workflow system to make them reusable in different workflows. 
+
+<p>The system also includes several widely used datasets used in the text analytics community (WebKB, Reuters, 20 Newsgroups).  These datasets allow an end user to experiment with the workflows and learn how to use them with his or her own data.
+
+<p>In addition to the above 50 components, other components include widely-used MATLAB and R libraries (for example for sampling and visualizing datasets) and social network analysis algorithms and visualizations.
+
+<h4>Assisting End Users</h4>
+
+<p>DALE assists the end user to set up and execute workflows.  DALE is built on top of <a href="http://wings.isi.edu"> Wings workflow system</a>, which provides different kinds of assistance and automation during workflow creation.  It has a graphical workflow template editor that assists the user by enforcing the constraints specified for the workflow components.  It also has facilities for tracking execution progress, viewing execution results, and generating provenance. As users select and configure workflows to be executed, Wings ensures that workflows are correctly composed by checking that the data types and other constraints of the input and output types are consistent with the workflow. For example, multi-labeled data cannot be used for correlation scoring (only single-labeled data can be used), so a user would be alerted if using that workflow incorrectly. All the intermediate and final data products of workflow execution can be viewed, allowing the user to explore and understand how the methods work.  
+
+<h4>Usability of DALE for Non-Experts</h4>
+
+The first is a case of reuse by researchers not expert in machine learning or text analytics.  Their goal was to improve a question answering site by automating some of the current manual processes, for example to suggest best matches from the archives for an incoming question and find the best-suited scientist for incoming questions. Using workflows simplified the process of analysis significantly, by allowing calculation of standard statistics, visualization of document topics, and facilitating extensions of standard algorithms.
+
+<p>The second is a case of reuse by high-school students for an internship project to analyze twitter data. Over a period of a week, they were given tutorials and datasets. They had taken two semesters of introduction to programming in the eight and ninth grades, and were entering tenth grade in the coming year.  During the five days, the students: 1) Became familiar with workflows as a software paradigm; 2) Learned to use the system and run simple workflows to analyze data (e.g., compare sets of html files to see how they would be classified); 3) Learned to use pre-existing workflows for advanced text analytics (e.g., run workflows for document clustering and topic detection and compare their performance for different threshold parameters); 4) Extended existing workflows with new workflow components that they developed; and 5) Analyzed twitter data to detect topic trends by applying pre-existing advanced text analytic workflows.  A report describing these activities and their findings is available: <a href="http://workflow-sharing.isi.edu/workflow-sharing/index.php/Workflow_Usability">Usability Report</a>.  For example, they decided to run the same workflow with different amounts of training data to see how it affected accuracy.  They also analyzed twitter data from the timeframe of the Haiti earthquake, and detected popular topics in the dataset.  
+
+
+  </TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

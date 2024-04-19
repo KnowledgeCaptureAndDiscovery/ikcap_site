@@ -1,0 +1,106 @@
+<!-- ISD Personnel File -->
+<!-- <?xml version="1.0" ?> -->
+
+<personnel xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+  <person>
+    <userid>gil</userid>
+    <name>Yolanda Gil</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+    <project>Temple</project>
+    <project>Phosphorus</project>
+    <project>Rosetta</project>
+    <project>Kasper</project>
+    <project>Inspect</project>
+    <project>KANAL</project>
+    <project>SLICK</project>
+    <project>DOCKER</project>
+    <project>dialog-manager</project>
+    <project>Constable</project>
+    <project>Planet</project>
+    <project>Evaluation</project>
+    <project>Expect</project>
+    <project>SCEC/IT</project>
+    <project>Cognitive Grids</project>
+  </person>
+  <person>
+    <userid>blythe</userid>
+    <name>Jim Blythe</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+    <project>Temple</project>
+    <project>Kasper</project>
+    <project>SADL</project>
+    <project>English method editor</project>
+    <project>Constable</project>
+    <project>Rosetta</project>
+    <project>KANAL</project>
+    <project>dialog-manager</project>
+    <project>Planet</project>
+    <project>Evaluation</project>
+    <project>Expect</project>
+    <project>Cognitive Grids</project>
+  </person>
+  <person>
+    <userid>jihie</userid>
+    <name>Jihie Kim</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Kasper</project>
+    <project>KANAL</project>
+    <project>SLICK</project>
+    <project>Trellis</project>
+    <project>Temple</project>
+    <project>dialog-manager</project>
+    <project>SADL</project>
+    <project>Evaluation</project>
+    <project>Expect</project>
+    <project>Cognitive Grids</project>
+    <project>SCEC/IT</project>
+    <project>DOCKER</project>
+  </person>
+  <person>
+    <userid>varunr</userid>
+    <name>Varun Ratnakar</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>SLICK</project>
+    <project>KANAL</project>
+    <project>Trellis</project>
+    <project>SCEC/IT</project>
+    <project>DOCKER</project>
+  </person>
+  <person>
+    <userid>timc</userid>
+    <name>Timothy Chklovski</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+  </person>
+  <person>
+    <userid>marcs</userid>
+    <name>Marc Spraragen</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>DOCKER</project>
+    <project>KANAL</project>
+    <project>SCEC/IT</project>
+  </person>
+  <person>
+    <userid>kite</userid>
+    <name>Larry Kite</name>
+  </person>
+  <person>
+    <userid>hans</userid>
+    <name>Hans Chalupsky</name>
+  </person>
+  <person>
+    <userid>macgregor</userid>
+    <name>Robert MacGregor</name>
+  </person>
+  <person>
+    <userid>surya</userid>
+    <name>Surya Ramachandran</name>
+  </person>
+  <person>
+    <userid>swartout</userid>
+    <name>Bill Swartout</name>
+  </person>
+</personnel>

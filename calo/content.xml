@@ -1,0 +1,100 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+
+<project>
+<name>Calo</name>
+<title>Learning through user instruction for personal assistants and agents</title>
+<description>
+<short>
+
+
+<p> Calo (Cognitive assistant that learns and organizes) is a cognitive
+personal assistant with a flexible plan execution system at its
+heart. As part of the Calo project we are working to help users provide
+advice to the plan execution system to customize its behavior to their
+needs.
+</p>
+
+</short>
+<long>
+</long>
+</description>
+<status>
+<short>
+
+<p>We have developed the <a href="../tailor">Tailor</a> system to
+demonstrate how providing advice can customize the behaviour of the plan
+execution system in a deep way, modifying constraints and providing new
+action definitions.</p>
+
+</short>
+
+<long>
+
+<p>We have identified a set of interactions within a scenario where the
+user is purchasing a laptop computer that demonstrate how providing
+advice can customize the behaviour of the plan execution system in a
+deep way, modifying constraints and providing new action
+definitions.</p>
+
+<p>For more details, see the <a href="../tailor">Tailor</a> project pages.</p>
+
+<p>An initial set of sample interactions can be found 
+<a href="interactions-9-19-03.txt">here</a>. They are intended for use
+with Spark, a PRS-based plan execution system being developed as part of
+Calo.
+</p>
+
+<p>We are working to implement some of these interactions and provide an
+API to allow other modules within Calo to use the capabilities. We
+welcome comments on the approach.</p>
+
+</long>
+</status>
+<research>
+<short>
+Knowledge acquisition, advice for plan execution systems, KA scripts,
+acquiring constraints. 
+</short>
+<long>
+
+<p> Our work uses knowledge acquisition scripts, ontologies of
+constraints, dialog and simple user interfaces, although that is not the
+focus of our project. Some of our work is based on earlier projects such
+as 
+<a href="http://www.isi.edu/ikcap/temple">Temple</a> and 
+<a href="http://www.isi.edu/ikcap/expect">Expect</a>.
+</p>
+
+<p> <a href="acquiring-advice.ppt">These powerpoint slides</a> discuss
+some potential approaches to the project. Again, comments are most
+welcome!
+</p>
+
+</long>
+</research>
+
+<link>
+<a href="http://www.isi.edu/ikcap/echo"><b>The Echo project for memory-based
+meta level reasoning and learning</b></a>
+</link>
+
+<link>
+<a href="http://www.ai.sri.com/project/CALO"><b>SRI CALO project page (public access)</b></a>
+</link>
+
+<!-- Demo -->
+<demo>
+  <center>
+<img src="tn_comingsoon.jpg"/>
+</center>
+</demo>
+</project>
+

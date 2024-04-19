@@ -1,0 +1,197 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>EXPECT</name>
+  <title>A Reflective Architecture for Knowledge Acquisition</title>
+
+  <status>
+    <short>
+  This project started in 1993.
+    </short>
+
+    <long>
+  This project started in 1993.
+    </long>
+  </status>
+
+  <description>
+    <short>
+      The goal of the EXPECT project is to provide flexible tools for
+    building and maintaining knowledge-base systems that are accesible
+    to end-users. The key to this goal is EXPECT's reflective
+    capabilities to analyze the contents of its knowledge bases and
+    determine exactly what every piece of knowledge contributes to the
+    task domain.  
+    </short>
+
+    <long>
+<p /> 
+EXPECT is an environment for developing knowledge-based systems
+that includes knowledge acquisition (KA) tools to extend and modify
+knowledge bases. Successful knowledge acquisition tools use a
+role-limiting approach where they help users provide the
+domain-dependent knowledge needed for a given kind of problem. Several
+such tools have been built to support KA for a specific problem-solving
+strategy: SALT for propose-and-revise [Marcus &amp; McDermott 89], MOLE for
+cover-and-differentiate [Eshelman 1998], PROTEGE for skeletal plan
+refinement [Musen 1989], etc. Although having a role-limiting strategy
+provides very strong guidance for knowledge acquisition, these tools
+lack the flexibility that knowledge-based system construction needs
+[Musen 1992] because the problem-solving method is hard-coded and cannot
+be changed with the tool.
+
+<p />
+
+In contrast, EXPECT represents explicitly both factual knowledge and
+problem-solving knowledge and its knowledge acquisition tools can reason
+about each piece of knowledge and analyze its interactions with others
+in the context of problem solving. EXPECT is tightly integrated with
+Loom, a state-of-the-art knowledge representation system based on
+description logic.
+
+<p />
+
+EXPECT generates automatically an Interdependency Model (IM) that
+captures the relationships between different pieces of knowledge in a
+knowledge base. EXPECT's KA tool uses this IM to determine what KA tasks
+the user needs to complete. A basic type of interdependency occurs
+between ontologies and problem-solving knowledge, i.e., how the
+ontologies are used during problem solving and what problem-solving
+knowledge is required given the ontological knowledge about the
+domain. In effect, this basic IM determines which aspects of a very
+large background ontology are relevant to the problem at hand. For
+example, the class city may have attributes such as latitude, longitude,
+airports, seaports, mayor, subway-system, restaurant, etc. In a
+transportation application, when the user wants to add a city to the
+knowledge base, the IM would determine that only airport and seaport
+information is required and would not ask a user to specify any of the
+other attributes (such as the restaurants or the name of the mayor).
+
+<p />
+
+EXPECT's ontologies and factual knowledge includes concepts, instances,
+and the relations among them. Problem-solving knowledge is represented
+in a procedural-style language that is tightly integrated with the Loom
+representations. Subgoals that arise during problem solving are solved
+by methods. Each method description specifies: 1) its capability in
+terms of the kinds of goals that the method can achieve, 2) the type of
+result that the method returns, and 3) the method body that contains the
+procedure that must be followed in order to achieve the method's goal. A
+method body can contain nested expressions, including subgoal
+expressions that need to be resolved by other methods; control
+expressions such as conditional statements and some forms of iteration;
+and relational expressions to retrieve the fillers of a relation over a
+concept.
+
+<p />
+
+EXPECT's representation of problem-solving method capabilities and goals
+is tightly coupled with the domain ontologies in the knowledge base, can
+express task-related parameters explicitly, and is based on case
+grammars. This representation allows EXPECT to reason about goals and
+capabilities through subsumption and reformulation.
+
+<p />
+
+EXPECT's predecessor was the Explainable Expert Systems architecture
+[Swartout et al 1991], which exploited similar representations in order
+to generate adequate explanations of a knowledge base system's behavior
+in natural language.
+
+<p />
+
+In summary, EXPECT exploits explicit representations of knowledge to
+derive interdependency models that are useful to guide users in
+knowledge acquisition.
+
+<p /> 
+
+We have shown that this approach is more flexible than existing
+approaches by illustrating how EXPECT can acquire the same kinds of
+information as a well-known KA tool, and can support the acquisition of
+additional kinds of knowledge. EXPECT is unique in that it is able to
+guide the user to acquire and modify problem-solving knowledge, while
+other KA tools do not support these kinds of modifications.
+
+<p />
+
+Current research within the EXPECT project includes knowledge
+acquisition, knowledge modelling, problem solving and reasoning,
+ontologies and problem solving method repositories, and multi-agent
+coordination and communication.
+
+<p />
+
+"Knowledge Refinement in a Reflective Architecture". Y. Gil. Proceedings
+of AAAI-94. (PDF file)
+
+<p />
+
+"Towards Method-Independent Knowledge Acquisition". Y. Gil and
+C. Paris. Knowledge Acquisition 6(2), 1994. (PDF file)
+
+<p />
+
+"EXPECT: Explicit Representation for Flexible Acquisition". W. Swartout
+and Y. Gil. Proceedings of 1995 Knowledge Acquisition Workshop. (PDF
+file)
+
+<p />
+
+"Explicit Representations of Problem-Solving Strategies to Support
+Knowledge Acquisition". Y. Gil and E. Melz. Proceedings of AAAI-96. (PDF
+file )
+
+<p />
+
+"Representing Capabilities of Problem-Solving Methods." W. Swartout,
+Y. Gil, and A. Valente. Proceedings of 1999 IJCAI Workshop on Ontologies
+and Problem-Solving Methods. (PDF file )
+
+<p />
+
+Deriving Expectations to Guide Knowledge Base Creation". J. Kim and
+Y. Gil. Proceedings of AAAI-99. (PDF file)
+
+    </long>
+  </description>
+
+  <research>
+    <short>
+     Knowledge acquisition, knowledge modelling, problem-solving and
+    reasoning, problem-solving method repositories, knowledge-rich planning.
+    </short>
+    <long>
+    </long>
+  </research>
+
+  <link>
+	<a href="http://www.isi.edu/expect/web/path-assembly/">
+	Pathway Assembly Tool</a>
+  </link>
+  <link>
+	<a href="http://www.isi.edu/e-elves/">
+	Electric-Elves</a>
+  </link>
+
+<!-- Demo -->
+<demo>
+     <center>
+	  <img src="tn_comingsoon.jpg"/>
+	  </center>
+
+
+</demo>
+</project>

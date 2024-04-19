@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY flns "http://www.isi.edu/ikcap/Wingse/fileOntology.owl#" >
+    <!ENTITY wflns "http://www.isi.edu/ikcap/Wingse/workflowOntology.owl#" >
+    <!ENTITY clns "http://www.isi.edu/ikcap/Wingse/componentOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/fileOntology.owl#"
+     xml:base="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/fileOntology.owl"
+     xmlns:wflns="http://www.isi.edu/ikcap/Wingse/workflowOntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:clns="http://www.isi.edu/ikcap/Wingse/componentOntology.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:flns="http://www.isi.edu/ikcap/Wingse/fileOntology.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Wingse/fileOntology.owl"/>
+    </owl:Ontology>
+</rdf:RDF>

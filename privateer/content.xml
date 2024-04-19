@@ -1,0 +1,334 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Privateer</name>
+  <title>Privacy Protection through Computational Workflows</title>
+
+  <status>
+    <short>
+      We are currently looking for collaboration and funding
+      opportunities for this project.
+    </short>
+
+    <long>
+      We are currently looking for collaboration and funding
+      opportunities for this project.
+    </long>
+  </status>
+
+  <description>
+    <short>
+      While there is a plethora of mechanisms to ensure lawful access to
+      privacy-protected data, additional research is required in order to
+      reassure individuals that their personal data is being <b> used</b> for
+      the <b>purpose</b> that they consented to.  This is particularly
+      important in the context of new data mining approaches, as used, for
+      instance, in biomedical research and commercial data mining.
+      
+      In this project we investigate the use of computational workflows to
+      ensure and enforce appropriate use of sensitive personal
+      data.      
+    </short>
+
+    <long>
+
+      While there is a plethora of mechanisms to ensure lawful access to
+      privacy-protected data, additional research is required in order to
+      reassure individuals that their personal data is being <b> used</b> for
+      the <b>purpose</b> that they consented to.  This is particularly
+      important in the context of new data mining approaches, as used, for
+      instance, in biomedical research and commercial data mining.
+      
+      In this project we investigate the use of computational workflows to
+      ensure and enforce appropriate use of sensitive personal
+      data. Computational workflows describe in a declarative manner the
+      data processing steps and the expected results of complex data
+      analysis processes such as data mining. We see workflows as an
+      artifact that captures, among other things, how data is being used and
+      for what purpose.
+      
+      We therefore believe that computational workflow systems are a good
+      starting point and could be extended to support a variety of privacy
+      related tasks including:
+      
+      <ul>
+	<li><i>Ensuring compliance of a data analysis system</i> with
+	  specified privacy policies before enabling execution and during
+	  execution via monitoring.</li>
+	
+	<li><i>Assisting users to comply with required privacy policies</i>
+	  by selecting data analysis workflows that comply with those
+	  policies for the datasets to be analyzed.</li>
+	
+	<li><i>Enabling transparency of data analysis systems</i> that use
+	  sensitive information, including the generation of detailed
+	  provenance trails.</li>
+	
+	<li><i>Supporting accountability</i> with respect to the appropriate
+	  use of data in compliance with privacy policies.</li>
+	
+	<li><i>Supporting negotiation and relaxation of privacy policies</i>
+	  as well as access to data, by providing evidence for the ``need to
+	  know'' of sensitive data and, conversely, the ability to identify
+	  opportunities for an increase in privacy where such measures do not
+	  aversly affect quality.</li>
+      </ul>
+      
+      More specifically, we are extending the Wings Workflow System.
+
+
+      <h4>Reasoning about Privacy Policies in Wings</h4> 
+      
+      <p>
+	We created a prototype of a workflow system that checks privacy
+	policies for workflows based on Wings. The workflows describe how data
+	is used in terms of how it is analyzed and processed.  To exemplify
+	applications that could raise privacy concerns regarding use, we
+	modeled data mining algorithms that could be used as workflow steps,
+	called <i>components</i>, and created semantic representations of data
+	and workflows that use those components. Both, components and data
+	were described in OWL/RDF.</p>
+      
+      <p>
+	We first defined a <i>component catalog</i> that contained a range
+	of data mining algorithms as well as privacy preservation
+	techniques. The catalog was not meant to be exhaustive, but rather
+	be representative of the kinds of algorithms that are relevant to
+	reasoning about privacy. Data mining algorithms included
+	clustering methods (e.g., k-means, Gaussian mixture models),
+	manifold learning (e.g., GTM), and classification (e.g., SVM).
+	Privacy preservation techniques were divided into two subclasses:
+	per attribute and per dataset. The former had several subclasses
+	including anonymization, perturbation, and encryption. The class
+	of privacy preservation techniques per dataset included
+	generalization algorithms such as k-anonymity.</p>
+
+      <p>
+	We also defined a <i>data ontology</i> with semantic
+	representations of datasets, which essentially provided a meta-data
+	vocabulary that we could use to reason about how datasets are
+	transformed by the workflow components upon execution. Roughly,
+	attributes of datasets had associated properties that expressed
+	whether the attributes were protected by privacy preservation
+	methods (e.g., whether they were anonymized).
+	In addition, domain-specific ontologies were used to express the
+	use that was authorized by the individuals when the data was
+	collected. 
+
+	Using this data ontology, we populated a {\em data catalog} with
+	initial datasets and specified meta-data attributes and values
+	using the ontology. Finally, we defined workflows whose
+	computational steps were elements of the component catalog and
+	whose input datasets were elements of the data catalog.
+
+	We defined rules that would represent reasonable constraints to
+	address privacy protection.  Each rule had a context that referred to
+	the condition where the underlying policy was relevant, so that the
+	policy applied only if this condition was satisfied, and a set of
+	requirements that represented non-amendable conditions under which the
+	use of data was required or not allowed.
+      </p>
+
+
+
+
+    </long>
+  </description>
+
+  <research>
+    <short>
+
+      The goal is to enable the Wings Workflow Systems to support a
+      variety of privacy related tasks. This requires the development
+      of a usage-oriented policy language, the extension of the Wings
+      system in order to enforce such policies during workflow
+      generation and execution, and the development of a theory of
+      policy negotiation.      
+
+    </short>
+    <long>
+
+
+      <h3>Open Questions and Requirements</h3>
+
+      In our research we consider the following open questions and
+      requirements which we derived from our insights from use cases,
+      studied in conjunction with our prototype implementaiton.
+
+
+      <h4>A Usage-Oriented Policy Language</h4>
+
+      A language for representing privacy policies for workflows needs
+      to be developed, together with a semantics for reasoning about it. The
+      language needs to support a variety of aspects about private
+      information and privacy relevant algorithms and support novel
+      types of privacy policies, such as:
+
+      <ul>
+	<li> Algorithmic policies, to specify what kinds of data analysis
+	  algorithms are allowed. These could be allowed for specified data
+	  types, for specific data sources, or in a data-independent manner.
+	  For example, group detection algorithms could be disallowed for
+	  use with medical data sources. Another example would be to disable
+	  the use of group detection followed by event detection algorithms
+	  unless the accuracy of the data sources is above a certain level. This
+	  policy may be used to avoid positive identification of individuals as threats
+	  with an accuracy so low that it may be a concern for individuals' liberties.
+	  Algorithmic policies may be contingent on properties of
+	  intermediate data products. Such policies may also express that
+	  certain steps have to be performed before storing a result, or
+	  transmitting data over an unsecured network. Expressing and
+	  reasoning about these types of policies may build on Linear
+	  Temporal Logic which has proved useful in other areas
+	  of computer science, most notably software verification and more
+	  recently automated planning.</li>
+
+	  <li> Query-based policies, to specify what kinds of questions
+	    the system is allowed to act upon. These include both
+	    user-issued queries as well as system-generated intermediate
+	    sub-queries. For example, queries regarding payments may be
+	    allowed to the system in accessing any kind of sources including
+	    medical and financial sources, while any sub-queries regarding
+	    the nature or details of patient treatment may be disallowed.</li>
+
+	  <li> Data integration policies, to specify at the workflow
+	    level whether diverse data sources could be integrated through
+	    data mining steps. These would essentially control the legal
+	    joining of workflow strands.</li>
+	  
+	  <li> Data creation policies, to specify what kinds of data
+	    may be created by the workflow. This could be specified via
+	    attribute types, entity types, or specific values.</li>
+	  
+	  <li> Provenance policies, to specify what information needs to
+	    be recorded and for how long it needs to be kept. This would
+	    reflect privacy needs for auditing and the stature of
+	    limitations for such requirements. Without these policies, there
+	    are no limits to the amount of details that a system could be
+	    expected to provide well after a workflow is used, so it is best
+	    to state these expectations up front.</li>
+	  
+	  </ul>
+	    
+      These policies augment and are complementary to access policies
+      for specific data sources or services in the system.
+      
+      
+      
+      <h4>Extending Workflow Systems</h4>
+      
+      Given this language, existing workflow systems would need to be
+      extended in the following three ways.
+      
+      <ol>
+	
+	<li>
+	  
+	  Workflow creation and execution subsystem need to be
+	  extended.
+	  
+	  The workflow creation process that is responsible for selecting
+	  the data mining processes and data sources to be used in answering
+	  a query or line of inquiry needs to be governed by privacy
+	  policies that place constraints on the choices of data sources and
+	  algorithms.
+	  
+	  The extended workflow system should exercise full control over the
+	  design of the end-to-end data mining process before any
+	  computation occurs.
+	  
+	  The execution system needs to enforce privacy constraints that
+	  regard decisions about where data is being analyzed, and to
+	  enforce aspects that are only evaluable during execution itself.
+	  For example, a privacy policy may state that if the output of a
+	  clustering algorithm contains a cluster with less than k
+	  individuals then the analysis is not allowed. Generally the
+	  fidelity of the models of applied components will not be high
+	  enough to predict such situations ahead of execution.</li>
+
+
+	<li> Workflow systems need to leave detailed provenance trails of
+	  how data was processed and what mechanisms were used to ensure
+	  compliance with privacy policies by the workflow, both in its
+	  design and in its execution, in order to support transparency and
+	  accountability regarding violation of privacy policies that regard
+	  the use of data. Re-execution of workflows through provenance
+	  trails could be used to prove, during an audit, that a given
+	  result was obtained as advertised.</li>
+	
+	<li> Workflow system should support a distributed architecture
+	  for storage and retrieval of policy information. There may be
+	  several ways in which privacy requirements enter the system.
+	  Privacy rules need to be associated with different entities in the
+	  system. Some privacy policies should be associated with data when
+	  it is collected. Other privacy policies would be associated with
+	  collections or types of data (e.g., all the data collected by a
+	  clinical trial). Yet other policies may be application or system
+	  specific (e.g., federal or state privacy laws that may apply).</li>
+	
+      </ol>
+
+      An important open issue
+      is the trade-off between privacy and result quality. Many privacy
+      preserving operations abstract information from the data which
+      leads to less accurate results. Data descriptions and algorithm
+      models will have to be extended to represent the relative accuracy
+      of algorithms based on abstraction data features.
+      
+      
+      
+      <h4>Reasoning about Privacy and Privacy Policies</h4>
+      An important open question is the negotiation of policies.
+      Mechanisms need to be developed that support argumentation of
+      ``need to know'' to relax privacy requirements if needed. When the
+      privacy policies are too constraining for the system to find a
+      solution to a query, it is possible to explore relaxations of some
+      subset of policies that would enable the original request to be
+      fulfilled.
+      
+      By articulating the choices that the system rejected and the
+      privacy policies that forbid those analyses, the system would be
+      articulating its ``need to know'' for specific data sources and data
+      products.
+      
+      Conversely, the developed mechanisms could be used to check
+      whether existing information disclosure agreements are indeed
+      necessary for the purpose, or whether the level of privacy
+      could be increased, e.g., via the inclusion of additional
+      anonymization steps, without aversely affecting the quality of the
+      final result.
+      
+      Such mechanisms for reasoning about policies 
+      may also assist in
+      the design of privacy policies themselves, by enabling exploration
+      of allowable but undesirable workflows under a given set of
+      policies. This is important, because it may be difficult to design
+      policies that are complete, in the sense that there is no way to
+      exploit sensitive data when complying with them.
+
+    </long>
+  </research>
+
+  <link>
+	<a href="http://wings.isi.edu/">The Wings Workflow System</a>
+  </link>
+
+<!-- Demo -->
+<demo>
+     <center>
+	  <img src="tn_comingsoon.jpg"/>
+	  </center>
+</demo>
+</project>

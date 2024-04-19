@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="SymmetricTensor">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: Elements are symmetrical diagonally, and eij = eji, therefore it can be specified with fewer elements</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: Elements are symmetrical diagonally, and eij = eji, therefore it can be specified with fewer elements</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Tensor"/>
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</owl:hasValue>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="isSymmetric"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ThreeByThreeMatrix">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class which defines the actual elements of a Moment Tensor</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="NormalizedTensor">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:hasValue>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasEuclideanNorm"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#Tensor"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="IsotropicSeismicMomentTensor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Definition: It's diagonal elements are equal and its off-diagonal elements are 0
+Restriction: hasDeviatoricPart is 0</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SeismicMomentTensor"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LinearVectorDipoleSeismicMomentTensor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Restriction: has only 1 nonzero eigenvector
+</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SeismicMomentTensor"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SeismicMomentTensor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasElements"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasElements"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#ThreeByThreeMatrix"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="SecondOrderTensor"/>
+          <owl:Class rdf:about="#SymmetricTensor"/>
+          <owl:Class rdf:ID="RealValuedTensor"/>
+          <owl:Class rdf:ID="ThreeDimensionalTensor"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</owl:hasValue>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasNumberOfElements"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DeviatoricSeismicMomentTensor">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicMomentTensor"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasTrace"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >0</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Definition:: hasTrace should be 0 OR diagonalValues =0 OR eigenValues = 0
+Restriction: hasIsotropicComponent should be 0 (is that also an OR in the definition ?)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#RealValuedTensor">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: All Elements are Real numbers</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Tensor"/>
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</owl:hasValue>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="isRealValued"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="CompensatedLinearVectorDipoleSeismicMomentTensor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has determinant not equal to 0</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#DeviatoricSeismicMomentTensor"/>
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Class rdf:ID="DoubleCoupleSeismicMomentTensor"/>
+            </owl:complementOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasEpsilonValue"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >0.5</owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DoubleCoupleSeismicMomentTensor"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#SecondOrderTensor">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Tensor"/>
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >2</owl:hasValue>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasOrder"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#ThreeDimensionalTensor">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >3</owl:hasValue>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasDimension"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#Tensor"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="NormalizedSeismicMomentTensor">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#NormalizedTensor"/>
+          <owl:Class rdf:about="#SeismicMomentTensor"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#DoubleCoupleSeismicMomentTensor">
+    <owl:disjointWith rdf:resource="#CompensatedLinearVectorDipoleSeismicMomentTensor"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasNodalPlanes"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >0</owl:hasValue>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasDeterminant"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#DeviatoricSeismicMomentTensor"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#hasNodalPlanes">
+    <rdfs:domain rdf:resource="#DoubleCoupleSeismicMomentTensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasElements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Tensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSourceMechanism">
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasIsotropicPart">
+    <rdfs:range rdf:resource="#IsotropicSeismicMomentTensor"/>
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasNormalizedPart">
+    <rdfs:domain rdf:resource="#Tensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEigenvalues">
+    <rdfs:domain rdf:resource="#SecondOrderTensor"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="#hasNumberOfElements">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Tensor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMomentMagnitude">
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasEpsilonValue">
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasDimension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Tensor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#isRealValued">
+    <rdfs:domain rdf:resource="#Tensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasScalarMoment">
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasDeterminant">
+    <rdfs:domain rdf:resource="#SecondOrderTensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#isSymmetric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Tensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="e32">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasDiagonalElements">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: number of Elements in this list = hasSpaceDimensions</owl:versionInfo>
+    <rdfs:domain rdf:resource="#SecondOrderTensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e13">
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e21">
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasDeviatoricPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#DeviatoricSeismicMomentTensor"/>
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasOrder">
+    <rdfs:domain rdf:resource="#Tensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e12">
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e31">
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasNormalizedMomentTensor">
+    <rdfs:domain rdf:resource="#SeismicMomentTensor"/>
+    <rdfs:range rdf:resource="#NormalizedSeismicMomentTensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasEigenvectors">
+    <rdfs:domain rdf:resource="#SecondOrderTensor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ordered list</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e23">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e11">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e33">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasTrace">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#SecondOrderTensor"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="e22">
+    <rdfs:domain rdf:resource="#ThreeByThreeMatrix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasEuclideanNorm">
+    <rdfs:domain rdf:resource="#Tensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <SeismicMomentTensor rdf:ID="MT1">
+    <hasElements>
+      <ThreeByThreeMatrix rdf:ID="TBT1"/>
+    </hasElements>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An Example Moment Tensor</rdfs:comment>
+  </SeismicMomentTensor>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 1.3, Build 225.4)  http://protege.stanford.edu -->

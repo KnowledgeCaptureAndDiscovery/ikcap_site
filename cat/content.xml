@@ -1,0 +1,94 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag 
+below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+<name>CAT</name>
+<title>Intelligent Assistance for Interactive Workflow Composition</title>
+
+<status>
+<short>
+This project started in 2002.
+     </short>
+
+<long>
+This project started in 2002.
+     </long>
+</status>
+
+<description>
+<short>
+CAT (Composition Analysis Tool) is an ontology-based, mixed-initiative intelligent interface for Web service workflow composition.  It critiques partial workflows composed by users, and offers suggestions to fix composition errors and complete the workflows.
+     </short>
+
+<long>
+	The goal of our work is to develop an interactive approach for composing workflows, where users can select and configure components and the system assists the users by detecting errors and providing intelligent suggestions to solve them.  In order to provide intelligent assistance, the system maintains a knowledge base of all available individual components, and of their input and output data types. The system checks that workflows comply with a formally defined set of desirable properties. <a href="http://www.isi.edu/~marcs/catdiag.jpg">Architecture Diagram</a> 
+    
+<p>We are developing this approach to support composition of complex scientific workflows for <a href="http://www.scec.org/cme/">earthquake research</a> in the context of the <a href="http://www.isi.edu/ikcap/scec-it/">
+SCEC/IT project.</a></p>
+     </long>
+</description>
+
+<research>
+<short>
+planning, user interfaces, interactive knowledge capture, scientific collaboratories, grids.
+</short>
+<long>
+Composing computational workflows is essential in many areas, including scientific computations and business-related web services.  A new kind of science is emerging from the integration of models developed by individual scientists and groups: end-to-end scientific applications that result from the composition of those individual models.  Workflow composition poses challenges for an unassisted user, such as keeping detailed track of how large numbers of complex tasks can be joined together. At the other extreme, though a purely automatic planner can do composition, there may be a large number of equally valid workflows to compute and analyze.  Pruning the search might be enhanced by stepwise interaction with the user, who can specify preferences as needed.  
+<p>
+Our approach to interactive workflow composition incorporates 1) knowledge-rich descriptions of the individual components and their constraints; 2) a formalism based on well-defined semantics from known planning paradigms; and 3) a formal algorithmic understanding of partial workflows, based on AI planning techniques.  Using this approach, we have developed and implemented the Composition Analysis Tool (CAT) system, an ontology-backed, mixed-initiative approach to solving the task composition problem.  CAT allows the user to add and link domain tasks at will, but also includes a systematic stepwise algorithm for error checking and fix suggestion generation.  CAT can analyze a partial workflow composed by the user, notify the user of issues to be resolved in the current workflow, and suggest to the user what actions could be taken next.  If taken, CAT's suggestions help the user compose a workflow that the system considers correct, with the user's preferences being expressed throughout the process.  </p>
+<p>
+Screenshot of implemented CAT system:</p>
+<p><img src="http://www.isi.edu/~marcs/catss3a.bmp"/></p>
+</long>
+</research>
+
+<link>
+A set of <a href="http://www.isi.edu/~marcs/IKCAP-Yr2.5b.ppt">
+slides </a>that give a high-level overview of our approach and the Composition Analysis Tool (CAT)
+</link>
+Use<a href="http://excalibur.isi.edu:8080/cat-enhanced/servlet/pInterface?systype=e&amp;hostname=localhost&amp;port=6262">
+CAT</a> through your Web browser (NOTE: it takes a few minutes to set up the system)
+<link>
+<a href="http://www.isi.edu/ikcap/docker/">
+DOCKER Project</a> for publishing and using workflow components
+</link>
+<link>
+<a href="http://www.isi.edu/ikcap/scec-it/">
+SCEC/IT Project </a> for distributed earthquake simulation
+</link>
+<link>
+<a href="http://www.scec.org/cme/">
+The SCEC/IT project main web site </a>
+</link>
+
+<!-- Demo -->
+<demo>
+CAT demo movie and screenshots. 
+<p><a href="http://www.isi.edu/~marcs/cat1.avi">Movie part 1</a>
+<br/><a href="http://www.isi.edu/~marcs/catss1.jpg">Screenshot 1: Empty pathway</a></p>
+<p><a href="http://www.isi.edu/~marcs/cat2.avi">Movie part 2</a>
+<br/><a href="http://www.isi.edu/~marcs/catss2.jpg">Screenshot 2: Result and 1 module added</a></p>
+<p><a href="http://www.isi.edu/~marcs/cat3.avi">Movie part 3</a>
+<br/><a href="http://www.isi.edu/~marcs/catss3.jpg">Screenshot 3: Fixing an inconsistent link</a></p>
+<p><a href="http://www.isi.edu/~marcs/cat4.avi">Movie part 4</a>
+<br/><a href="http://www.isi.edu/~marcs/catss4.jpg">Screenshot 4: Filling in unsatisfied inputs with user data</a></p>
+<p><a href="http://www.isi.edu/~marcs/cat5.avi">Movie part 5</a>
+<br/><a href="http://www.isi.edu/~marcs/catss4a.jpg">Screenshot 5: Correct pathway specs</a>
+<br/><a href="http://www.isi.edu/~marcs/catss5.jpg">Screenshot 6: SCEC pathway grid configuration tool page </a></p>
+
+<br/>Use<a href="http://excalibur.isi.edu:8080/cat-enhanced/servlet/pInterface?systype=e&amp;hostname=localhost&amp;port=6262">
+CAT</a> through your Web browser (NOTE: it takes a few minutes to set up the system)
+</demo>
+</project>

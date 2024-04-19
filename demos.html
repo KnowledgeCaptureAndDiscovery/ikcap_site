@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Demo Gallery - Interactive Knowledge Capture</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="Stylesheet" href="./ikcap.css" type="text/css"/>
+<link rel="Stylesheet" type="text/css" href="./ikcap-basic.css">
+<style>
+  div li {
+     padding:0.1em;
+  }
+
+  div#mainProjects a {
+     text-decoration:none;
+     border-bottom: 1px dotted #069;
+     color: #069;
+     /*font-size:1.1em;
+     line-height:1.2em;
+     letter-spacing:.1em;*/
+  }
+
+</style>
+<script>
+  function openVid(file, width, height) {
+     var str = '';
+     str += '<video width="'+width+'" height="'+height+'" controls>';
+     str += '<source src="'+file+'" />';
+     str += 'Your browser does not support the video tag';
+     str += '</video>';
+  
+     var videowin = window.open("","videowin","width="+(width+20)+",height="+(height+50));
+     videowin.document.writeln(str);
+     videowin.document.close();
+  }
+</script>
+</head>
+
+<body>
+  <a style="border:0;" href="."><img border=0 src="images/kcap.jpg"/></a>
+  <h4>The "Interactive Knowledge Capture" Research Group at ISI</h4>
+
+  <h3 style="padding-top:0">Demo Pages</h3>
+  <div id="mainProjects">
+    <ul>
+    <li><a href="./tailor/demo.html"><b>Tailor</b></a></li>
+       <li><a href="./cat/demo.html"><b>CAT</b></a></li>
+       <li><a href="./trellis/demo.html"><b>TRELLIS</b></a></li>
+       <li><a href="./scec-it/demo.html"><b>SCEC/IT</b></a></li>
+       <li><a
+  href="./cognitive-grids/demo.html"><b>Cognitive
+  Grids</b></a></li>
+<li><a href="./constable/demo.html"><b>Constable</b></a></li>
+       <li><a href="./kanal/demo.html"><b>KANAL</b></a></li>
+       <li><a href="./calo/demo.html"><b>CALO</b></a></li>
+     </ul>
+  </div>
+
+  <p><a href="./">&lt;&lt; Main Page</a></p>
+
+  <div class="footer">
+    <a href="http://www.isi.edu"><img title="ISI" alt="ISI" src="images/isi.gif" align="left" border="0"></a>
+    <a href="http://www.usc.edu"><img title="USC" alt="USC" src="images/usc.gif" align="left" border="0"></a>
+    <a href="http://ai.isi.edu"><img title="AI@ISI" alt="AI@ISI" src="images/ai.jpg" align="left" border="0"></a>
+
+  </div>
+</body>
+</html>

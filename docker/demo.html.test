@@ -1,0 +1,1582 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./demo_files/filelist.xml">
+<link rel=Edit-Time-Data href="./demo_files/editdata.mso">
+<link rel=OLE-Object-Data href="./demo_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title> The Trellis Project at ISI </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>marcs</o:Author>
+  <o:LastAuthor>marcs</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>660</o:TotalTime>
+  <o:LastPrinted>2003-02-11T20:53:00Z</o:LastPrinted>
+  <o:Created>2003-03-05T19:19:00Z</o:Created>
+  <o:LastSaved>2003-03-05T19:19:00Z</o:LastSaved>
+  <o:Pages>28</o:Pages>
+  <o:Words>2601</o:Words>
+  <o:Characters>14831</o:Characters>
+  <o:Company>USC/ISI</o:Company>
+  <o:Lines>123</o:Lines>
+  <o:Paragraphs>29</o:Paragraphs>
+  <o:CharactersWithSpaces>18213</o:CharactersWithSpaces>
+  <o:Version>9.4402</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	background:#CCDDEE;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	color:#003399;
+	mso-font-kerning:18.0pt;
+	font-weight:bold;}
+h2
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	background:#CCDDEE;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	color:#003399;
+	font-weight:bold;}
+h3
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	border:none;
+	mso-border-bottom-alt:solid #3399CC .75pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 0in 0in;
+	font-size:14.5pt;
+	font-family:"Times New Roman";
+	color:#003399;
+	letter-spacing:6.0pt;
+	font-weight:bold;}
+h4
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	border:none;
+	mso-border-bottom-alt:solid brown .75pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 0in 0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:brown;
+	letter-spacing:3.6pt;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:#006699;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#006699;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";}
+p.heading, li.heading, div.heading
+	{mso-style-name:heading;
+	margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.mainline, li.mainline, div.mainline
+	{mso-style-name:mainline;
+	margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:11.0in 8.5in;
+	mso-page-orientation:landscape;
+	margin:.25in .25in .25in .25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:669531079;
+	mso-list-type:hybrid;
+	mso-list-template-ids:12360066 2137844408 566938358 -272858010 -903578850 -946825190 -1492228526 -284637646 330338984 -1657602880;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1
+	{mso-list-id:1414359195;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1360644114 277630074 2005553872 2102457048 127064766 1458849780 -544191990 -1369663622 -1923612142 -381154366;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white
+background="http://www.isi.edu/ikcap/images/kcap.gif" lang=EN-US
+link="#006699" vlink="#006699" style='tab-interval:.5in'>
+<!--[if gte mso 9]><xml>
+ <v:background id="_x0000_s1025" o:bwmode="white">
+  <v:fill src="http://www.isi.edu/ikcap/images/kcap.gif" type="tile"/>
+ </v:background></xml><![endif]-->
+
+<div class=Section1>
+
+<table border=0 cellspacing=1 cellpadding=0 width="204%" bgcolor=black
+ style='width:204.22%;mso-cellspacing:.7pt;margin-left:24.0pt;background:black;
+ mso-padding-alt:24.0pt 24.0pt 24.0pt 24.0pt'>
+ <tr>
+  <td width="7%" colspan=2 style='width:7.36%;background:#CCCCCC;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/"><img border=0 width=140 height=114
+  id="_x0000_i1025" src="http://www.isi.edu/ikcap/images/isi.jpg"></a><o:p></o:p></span></p>
+  </td>
+  <td width="92%" style='width:92.52%;background:#CCCCCC;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+  <div align=center>
+  <table border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+   mso-cellspacing:0in;mso-padding-alt:0in 0in 0in 0in'>
+   <tr>
+    <td width="11%" style='width:11.86%;background:#CCCCCC;padding:0in 0in 0in 0in'>
+    <p class=MsoNormal style='line-height:18.0pt;tab-stops:1.75in'><span
+    style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a href="/"><img
+    border=0 width=212 height=55 id="_x0000_i1026"
+    src="http://www.isi.edu/ikcap/docker/logo.jpg"></a><o:p></o:p></span></p>
+    </td>
+    <td width="95%" style='width:95.2%;background:#CCCCCC;padding:0in 0in 0in 0in'>
+    <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+    tab-stops:1.75in'><span style='font-size:10.5pt;font-family:"Trebuchet MS";
+    color:black'><a href="http://www.isi.edu/ikcap/"><img border=0 width=195
+    height=45 id="_x0000_i1027"
+    src="http://www.isi.edu/ikcap/images/kcap-small.jpg"></a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width="95%" colspan=2 style='width:95.2%;background:#CCCCCC;padding:
+    0in 0in 0in 0in'>
+    <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+    tab-stops:1.75in'><b><span style='font-size:10.5pt;font-family:"Trebuchet MS";
+    color:black'>Helping People Connect Software</span></b><span
+    style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=center style='margin-right:867.8pt;text-align:center;
+  line-height:18.0pt;tab-stops:1.75in'><span style='font-size:10.5pt;
+  font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:91.9pt'>
+  <td valign=top style='background:#CCCCCC;padding:24.0pt 24.0pt 24.0pt 24.0pt;
+  height:91.9pt'>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a href="./"><b>Main</b></a>
+  <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/description.html"><b>Description</b></a>
+  <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/status.html"><b>Status</b></a> <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/research.html"><b>Research</b></a> <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/publications.html"><b>Publications</b></a>
+  <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/demo.html"><b>Demo</b></a> <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/people.html"><b>People</b></a> <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/funding.html"><b>Funding</b></a> <o:p></o:p></span></p>
+  <p align=right style='text-align:right;line-height:18.0pt'><span
+  style='font-size:10.5pt;font-family:"Trebuchet MS";color:black'><a
+  href="http://www.isi.edu/ikcap/docker/links.html"><b>Links</b></a> <o:p></o:p></span></p>
+  </td>
+  <td colspan=2 valign=top style='background:white;padding:24.0pt 24.0pt 24.0pt 24.0pt;
+  height:91.9pt'>
+  <h2 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-family:"Trebuchet MS"'>Demo<o:p></o:p></span></h2>
+  <h2 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-family:"Trebuchet MS"'>Docker User Guide<o:p></o:p></span></h2>
+  <p class=mainline style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><b><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>DOCKER</span></b><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'> is an interactive environment that allows users to describe and
+  query models of seismological data and analysis.<span style="mso-spacerun:
+  yes">&nbsp; </span>It also helps users to connect various components of these
+  models in useful and informative ways.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This document
+  is a user manual that illustrates how to use the description and query
+  portions of Docker. <o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:11.0pt;font-family:"Trebuchet MS"'>Login Screen<a
+  name=login></a><o:p></o:p></span></h3>
+  </div>
+  <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>User IDs are used to keep separate sets of query results, though
+  model descriptions are shared.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:955.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+   o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+   stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1034" type="#_x0000_t75" style='width:292.5pt;
+   height:203.25pt' o:bordertopcolor="this" o:borderleftcolor="this"
+   o:borderbottomcolor="this" o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image001.png" o:title="" croptop="18912f"
+    cropbottom="9456f" cropleft="14746f" cropright="14746f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=390 height=271
+  src="./demo_files/image002.jpg" v:shapes="_x0000_i1034"><![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:11.0pt;font-family:"Trebuchet MS"'>Main Screen<o:p></o:p></span></h3>
+  </div>
+  <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+   style='width:6in;height:232.5pt' o:bordertopcolor="this" o:borderleftcolor="this"
+   o:borderbottomcolor="this" o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image003.png" o:title="" croptop="7565f"
+    cropbottom="6304f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=578 height=312
+  src="./demo_files/image004.jpg" v:shapes="_x0000_i1035"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  shows the available models currently available in the system. <o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.45pt;mso-margin-top-alt:auto;
+  margin-bottom:6.0pt;tab-stops:6.4pt 1.75in'><u><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'>What is a model?</span></u><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><span
+  style="mso-spacerun: yes">&nbsp; </span>Currently, Docker contains only
+  &#8220;classic IMR&#8221; (Intensity Measure Relationship) seismological models.<span
+  style="mso-spacerun: yes">&nbsp; </span>A fuller description is given <b><a
+  href="#_Query_Results_Graph">further on</a></b>.<span style="mso-spacerun:
+  yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:6.4pt 1.75in'><u><span style='font-size:
+  9.0pt;font-family:"Trebuchet MS";color:black'>Possible Operations:</span></u><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:.25in;text-indent:-.25in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Go buttons: <b><a href="#_Query_Screen">query a model</a></b>.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:.25in;text-indent:-.25in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Recent and Past Responses buttons: <b><a
+  href="#_Query_Results_History">check results of queries</a></b>.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.45pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.5in;text-indent:-1.5in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Describe Model buttons: <b><a href="#_Describe_Model_Screen">read
+  model documentation; annotate<span style='color:black;font-weight:normal'> </span>and<span
+  style="mso-spacerun: yes">&nbsp; </span>update model specifications</a></b>.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:.25in;text-indent:-.25in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Delete buttons: delete an existing model. <o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:.25in;text-indent:-.25in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>[Note &#8220;session&#8221; area of screen: see <b><a
+  href="#_Main_Screen_with">below</a></b> for details]<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:11.0pt;font-family:"Trebuchet MS"'>Query Screen<a
+  name="_Query_Screen"></a><o:p></o:p></span></h3>
+  </div>
+  <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+   style='width:367.5pt;height:200.25pt' o:bordertopcolor="this"
+   o:borderleftcolor="this" o:borderbottomcolor="this" o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image005.png" o:title="" croptop="7565f"
+    cropbottom="18912f" cropright="9830f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=490 height=267
+  src="./demo_files/image006.jpg" v:shapes="_x0000_i1036"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The query
+  screen, shown for classic IMR model &#8220;Campbell and Bozorgnia 2003&#8221;, consists
+  mainly of 2 tables: the <b><a href="#_Parameter_and_Constraint">parameter
+  table</a></b> (left), and the <b><a href="#_Parameter_and_Constraint">constraints
+  table</a></b> (right).<span style="mso-spacerun: yes">&nbsp; </span>These
+  tables are not directly related row by row, though each constraint in the
+  constraint table does refer to a parameter value in the parameter table.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><u><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>What is a
+  query?</span></u><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><span style="mso-spacerun: yes">&nbsp; </span>The only query
+  currently available for this model is &#8220;SA vs. Probability of
+  Exceedence&#8221;.<span style="mso-spacerun: yes">&nbsp; </span>This measurement
+  relationship refers to the probability of exceeding a level of spectral acceleration,
+  based on the characteristics (parameters) of a particular earthquake.<span
+  style="mso-spacerun: yes">&nbsp; </span>See the <b><a
+  href="#_Query_Results_History">results</a></b> screen for more details.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:.25in;text-indent:-.25in;mso-list:
+  l0 level1 lfo2;tab-stops:list .5in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;
+  color:black'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><u><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Possible Operations (aside from </span></u><b><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><a
+  href="#_Parameter_and_Constraint">table</a></span></b><u><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'> fields):</span></u><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.45pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Validate Parameters button (or simply switching focus between
+  editable table fields): validate parameter constraints.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list blank 1.0in left blank 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Send Request button: sends a query to the server to be
+  processed.<span style="mso-spacerun: yes">&nbsp; </span>A <b><a
+  href="#_Query_Reply_Screen">reply screen</a></b> will immediately notify the
+  user that the request has been sent, unless not all constraints have been
+  satisfied, in which case the following message will appear instead:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;tab-stops:
+  1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1037" type="#_x0000_t75" style='width:334.5pt;height:94.5pt'>
+   <v:imagedata src="./demo_files/image007.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=446 height=126
+  src="./demo_files/image008.jpg" v:shapes="_x0000_i1037"><![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Recent and Past Responses buttons: displays <b><a
+  href="#_Query_Results_History">results of queries</a></b>.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Models Ontology: displays <b><a
+  href="http://www.isi.edu/isd/LOOM/PowerLoom/index.html">PowerLoom</a> </b>ontological
+  structures and rules referring to <b><a href="#_SCEC_Constraints_/">specific
+  models</a></b>.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Seismology Ontology: displays <b><a
+  href="http://www.isi.edu/isd/LOOM/PowerLoom/index.html">PowerLoom</a> </b>ontological
+  structures and rules referring to <b><a href="#_Seismology_Ontology">seismology
+  in general</a></b>.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>IKRAFT Constraints: displays formalized set of <b><a
+  href="#_IKRAFT_(User)_Constraints">user constraints</a></b> for the current
+  model.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:1.75in;text-indent:-1.75in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>WSDL Description: displays <b><a href="http://www.w3.org/TR/wsdl">Web
+  Services Definition Language</a></b> format for query (shown <b><a
+  href="#_WSDL_Description">here</a></b>).<b><o:p></o:p></b></span></p>
+  <div style='border:none;border-bottom:solid brown .75pt;padding:0in 0in 0in 0in'>
+  <h4 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS"'>Parameter and Cons<a
+  name="_Parameter_and_Constraint"></a>traint Tables<o:p></o:p></span></h4>
+  </div>
+  <p class=MsoNormal style='margin-right:1045.55pt;line-height:18.0pt;
+  tab-stops:1.75in'><!--[if gte vml 1]><v:shape id="_x0000_i1038" type="#_x0000_t75"
+   style='width:468.75pt;height:203.25pt' o:ole="">
+   <v:imagedata src="./demo_files/image009.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=625 height=271
+  src="./demo_files/image010.jpg" v:shapes="_x0000_i1038"><![endif]><!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1038"
+    DrawAspect="Content" ObjectID="_1108368382">
+   </o:OLEObject>
+  </xml><![endif]--><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The parameters
+  table shows the list of parameters that must be entered before a query can be
+  made to the model.<span style="mso-spacerun: yes">&nbsp; </span>The current
+  table state contains the parameter set of IMR model &#8220;Campbell and Bozorgnia
+  2003&#8221;.<span style="mso-spacerun: yes">&nbsp; </span>The constraints on the
+  constraint table limit the possibilities of the parameter values.<span
+  style="mso-spacerun: yes">&nbsp; </span>The current table state shows the
+  satisfied constraints (white rows), the unsatisfied constraints (grey rows),
+  and the &#8220;soft&#8221; constraints that are unsatisfied but overridable (grey rows
+  with override checkbox).<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>For example,
+  the default value of the parameter &#8220;Moment Magnitude&#8221; is 0.<span
+  style="mso-spacerun: yes">&nbsp; </span>That value satisfies the constraint
+  &#8220;-1000 &lt; Moment Magnitude &lt; 12&#8221; but does not satisfy the constraint
+  &#8220;4.7 &lt; Moment Magnitude &lt; 12.0&#8221;.<span style="mso-spacerun: yes">&nbsp;
+  </span>To satisfy the latter constraint, the user could do one of two things:
+  change the Moment Magnitude parameter value to, say, 6.8, or else check the
+  constraint&#8217;s &#8220;Override&#8221; box to allow 0 to be accepted as the parameter&#8217;s
+  value when a <b><a href="#_Query_Screen">query</a></b> is made to the
+  model.<span style="mso-spacerun: yes">&nbsp; </span>When a constraint is
+  satisfied, its row will turn white, and similarly, a newly unsatisfied
+  constraint&#8217;s row will turn grey (and an override checkbox will appear if the
+  constraint is soft).<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>Note the
+  column &#8220;Dependencies&#8221; column in the constraints table.<span
+  style="mso-spacerun: yes">&nbsp; </span>This allows the user to easily check
+  which parameter(s) is/are being constrained.<span style="mso-spacerun:
+  yes">&nbsp; </span>The &#8220;Details&#8221; column allows the user to see whether the
+  constraint is a part of the general ontology (&#8220;SCEC Constraint&#8221; not editable)
+  or added by a user (editable via <b><a href="#_Describe_Model_Screen">describe
+  model screen</a></b>).<span style="mso-spacerun: yes">&nbsp; </span>Future
+  editions of Docker will blur this distinction as the ontology becomes
+  editable.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:2.0in;text-indent:-2.0in;mso-list:
+  l0 level1 lfo2;tab-stops:list .5in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;
+  color:black'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><u><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Possible Operations:</span></u><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:2.0in;text-indent:-2.0in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Parameter table value fields: enter/change values of query
+  parameters.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:2.0in;text-indent:-2.0in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Constraint table Override checkbox: allow/disallow current
+  values to satisfy unsatisfied soft constraints.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:2.0in;text-indent:-2.0in;mso-list:
+  l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Details Column buttons: see details of<b> <a
+  href="#_SCEC_Constraints_/">ontology</a> </b>or <b><a
+  href="#_User_Constraint_Screen">user</a> </b>constraints.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>User
+  Constraint Screen<a name="_User_Constraint_Screen"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1039" type="#_x0000_t75" style='width:423pt;height:66.75pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image011.png" o:title="" croptop="25400f"
+    cropbottom="9769f" cropleft="650f" cropright="650f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=564 height=89
+  src="./demo_files/image012.jpg" v:shapes="_x0000_i1039"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This shows a
+  description of a user constraint (read-only).<span style="mso-spacerun:
+  yes">&nbsp; </span>The user can update the constraint in the <b><a
+  href="#_Describe_Model_Screen">describe model<span style='font-weight:normal'>
+  </span>screen</a></b>, which is accessible from here via the &#8220;Go&#8221; button in
+  the &#8220;Documentation&#8221; column.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>SCEC
+  Constraints / Models Ontology <a name="_SCEC_Constraints_/"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1040" type="#_x0000_t75" style='width:415.5pt;height:281.25pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image013.png" o:title="" croptop="7565f"
+    cropbottom="3152f" cropright="2458f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=375
+  src="./demo_files/image014.jpg" v:shapes="_x0000_i1040"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  shows the <b><a href="http://www.isi.edu/isd/LOOM/PowerLoom/index.html">PowerLoom</a></b>-based
+  ontology referring to specific seismological models.<span
+  style="mso-spacerun: yes">&nbsp; </span>Currently, even if this screen is
+  arrived at via a &#8220;SCEC Constraint&#8221; button in the <b><a
+  href="#_Parameter_and_Constraint">query screen&#8217;s<span style='font-weight:
+  normal'> </span>constraints table</a></b>, the chosen constraint is not
+  highlighted or editable.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Seismology
+  Ontology <a name="_Seismology_Ontology"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1041" type="#_x0000_t75" style='width:415.5pt;height:262.5pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image015.png" o:title="" croptop="8195f"
+    cropbottom="6304f" cropright="2458f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=554 height=350
+  src="./demo_files/image016.jpg" v:shapes="_x0000_i1041"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  shows the <b><a href="http://www.isi.edu/isd/LOOM/PowerLoom/index.html">PowerLoom</a></b>-based
+  ontology referring to seismology in general.<span style="mso-spacerun:
+  yes">&nbsp; </span>Functions, parameters, and constraints relating to all
+  models are defined here, but not currently editable by a Docker user.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>IKRAFT
+  (User) <a name="_IKRAFT_(User)_Constraints"></a>Constraints </span><span
+  style='font-size:9.0pt;color:black'><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1042" type="#_x0000_t75" style='width:409.5pt;height:48pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image017.png" o:title="" croptop="12461f"
+    cropbottom="43570f" cropleft="328f" cropright="3277f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=546 height=64
+  src="./demo_files/image018.jpg" v:shapes="_x0000_i1042"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  shows (read-only) all of the user constraints of a model&#8217;s parameters, as
+  stored in a plain text file on the server.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>WSDL
+  Description <a name="_WSDL_Description"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1043" type="#_x0000_t75" style='width:415.5pt;height:132.75pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image019.png" o:title="" croptop="8195f"
+    cropbottom="31520f" cropright="2458f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=556 height=179
+  src="./demo_files/image020.jpg" v:shapes="_x0000_i1043"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  shows (read-only) the <b><a href="http://www.w3.org/TR/wsdl">WSDL</a></b>
+  format of a query for the current model, as it appears to the server.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Query
+  Reply Screen<a name="_Query_Reply_Screen"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1044" type="#_x0000_t75" style='width:240.75pt;height:96pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image021.png" o:title="" croptop="8228f"
+    cropbottom="47471f" cropleft="936f" cropright="28087f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=321 height=128
+  src="./demo_files/image022.jpg" v:shapes="_x0000_i1044"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  notifies the user that the server has received a <b><a href="#_Query_Screen">query</a></b>.<span
+  style="mso-spacerun: yes">&nbsp; </span>The &#8220;Recent and Past Responses&#8221;
+  button can be used here to check the <b><a href="#_Query_Results_Graph">graph</a></b>
+  and <b><a href="#_Query_Results_Text">text data</a></b> of the current user&#8217;s
+  query results.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Query
+  Results History<a name="_Query_Results_History"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1045" type="#_x0000_t75" style='width:302.25pt;height:249.75pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image023.png" o:title="" croptop="8228f"
+    cropbottom="31647f" cropleft="936f" cropright="18725f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=403 height=333
+  src="./demo_files/image024.jpg" v:shapes="_x0000_i1045"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This screen
+  gives a history of the current user&#8217;s queries of the server.<span
+  style="mso-spacerun: yes">&nbsp; </span>The query time and ID (&#8220;Dataset ID&#8221;),
+  the model queried, its parameters, and the results are here (barring server
+  error).<span style="mso-spacerun: yes">&nbsp; </span>For any particular
+  query, the <b><a href="#_Query_Results_Graph">graph</a></b> and <b><a
+  href="#_Query_Results_Text">data</a></b> (text data) hyperlinks display the
+  results.<span style="mso-spacerun: yes">&nbsp; </span>The &#8220;Dataset ID&#8221; comes
+  in handy when <b><a href="#_Compare_Graphs">comparing graphs</a></b>.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Query
+  Results Graph <a name="_Query_Results_Graph"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1046" type="#_x0000_t75" style='width:285.75pt;height:232.5pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image025.png" o:title="" croptop="7565f"
+    cropbottom="12608f" cropright="22118f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=381 height=310
+  src="./demo_files/image026.jpg" v:shapes="_x0000_i1046"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The graph has
+  SA (spectral Acceleration) as its x-axis, and the curve shows the probability
+  (0 = low, 1 = high) of the input earthquake&#8217;s SA exceeding the x-axis SA.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:5.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Query
+  Results Text Data <a name="_Query_Results_Text"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1047" type="#_x0000_t75" style='width:210pt;height:268.5pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image027.png" o:title="" croptop="8228f"
+    cropbottom="29748f" cropleft="936f" cropright=".5"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=282 height=360
+  src="./demo_files/image028.jpg" v:shapes="_x0000_i1047"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The text data
+  shows the range of x-axis SA values (0.01 - 2.0, ~.08 increment) and the
+  corresponding values of the probability of exceedence.<span
+  style="mso-spacerun: yes">&nbsp; </span>See the <b><a
+  href="#_Query_Results_Graph">graph</a></b> for more details.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:11.0pt;font-family:"Trebuchet MS"'>Main Screen with Session
+  data<a name="_Main_Screen_with"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1048" type="#_x0000_t75" style='width:6in;height:249pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image029.png" o:title="" croptop="7250f"
+    cropbottom="9456f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=576 height=332
+  src="./demo_files/image030.jpg" v:shapes="_x0000_i1048"><![endif]></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>After a query
+  has been run, the Main Screen shows its parameters in the &#8220;Session&#8221; area of
+  the screen.<span style="mso-spacerun: yes">&nbsp; </span>This is cleared each
+  time the user logs out.<span style="mso-spacerun: yes">&nbsp; </span>Note
+  that the &#8220;Campbell Site Type&#8221; parameter was overridden in the query, and that
+  Docker has offered a suggestion: query the model &#8220;Campbell 1997&#8221; when the
+  &#8220;Campbell Site Type&#8221; parameter is &#8220;Firm-Soil&#8221;.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Compare
+  Graphs<a name="_Compare_Graphs"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1049" type="#_x0000_t75" style='width:275.25pt;height:450.75pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image031.png" o:title="" croptop="10581f"
+    cropbottom="4070f" cropleft="1553f" cropright="4660f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=367 height=601
+  src="./demo_files/image032.jpg" v:shapes="_x0000_i1049"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>From here, the
+  user can choose to run one or more query results on the same graph.<span
+  style="mso-spacerun: yes">&nbsp; </span>Selections are made based on the &#8220;<b><a
+  href="#_Query_Results_History">Dataset ID</a></b>&#8221; of the query, and the most
+  recent queries are at the bottom of the list.<span style="mso-spacerun:
+  yes">&nbsp; </span>The &#8220;Graph&#8221; button displays the <b><a
+  href="#_Combined_Graph">combined graph</a>.<o:p></o:p></b></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:11.0pt;font-family:"Trebuchet MS"'>Combined Graph<a
+  name="_Combined_Graph"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1050" type="#_x0000_t75" style='width:287.25pt;height:216.75pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image033.png" o:title="" croptop="7565f"
+    cropbottom="15760f" cropright="22118f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=383 height=289
+  src="./demo_files/image034.jpg" v:shapes="_x0000_i1050"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>This is the
+  result of comparing a new query (with different parameter values) to the
+  query defined in <b><a href="#_Query_Results_History">earlier screens</a></b>.<span
+  style="mso-spacerun: yes">&nbsp; </span>It would appear that the most recent
+  query simulated a stronger earthquake.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:11.0pt;font-family:"Trebuchet MS"'>D<a
+  name="_Describe_Model_Screen"></a>escribe Model Screen<o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><!--[if gte vml 1]><v:rect
+   id="_x0000_s1049" style='position:absolute;margin-left:306.3pt;margin-top:64.7pt;
+   width:118.8pt;height:36pt;z-index:1' stroked="f"/><![endif]--><![if !vml]><span
+  style='mso-ignore:vglayout;position:absolute;z-index:0;margin-left:408px;
+  margin-top:86px;width:159px;height:48px'><img width=159 height=48
+  src="./demo_files/image035.gif" v:shapes="_x0000_s1049"></span><![endif]><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1051" type="#_x0000_t75" style='width:431.25pt;height:233.25pt'
+   o:ole="">
+   <v:imagedata src="./demo_files/image036.wmz" o:title="" croptop="7250f"
+    cropbottom="12608f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=577 height=313
+  src="./demo_files/image037.gif" v:shapes="_x0000_i1051"><![endif]><!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Word.Picture.8" ShapeID="_x0000_i1051"
+    DrawAspect="Content" ObjectID="_1108368385">
+   </o:OLEObject>
+  </xml><![endif]--><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The other
+  current main feature of Docker (besides running queries) is the description
+  and annotation of models, accessible from this screen.<span
+  style="mso-spacerun: yes">&nbsp; </span>The top left frame in the screen,
+  &#8220;Statements&#8221;, shows all statements currently describing the model.<span
+  style="mso-spacerun: yes">&nbsp; </span>It is in hierarchical tree format,
+  and by default, fully expanded.<span style="mso-spacerun: yes">&nbsp;
+  </span>Clicking on one of the triangular &#8220;parent node&#8221; icons (circled above)
+  will toggle that portion of the tree between expanded / unexpanded.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level1 lfo2;tab-stops:list .5in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;
+  color:black'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><u><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Statements Frame Operations:</span></u><span style='font-size:
+  9.0pt;font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Mouse-over a statement: the statement is highlighted in yellow,
+  and its source text appears in a tan tool-tip-text box near it, as above.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Click white area near a statement: select that statement
+  (statement background turns grey).<span style="mso-spacerun: yes">&nbsp;
+  </span>Statement can then receive <b><a href="#_Formalization">formal
+  constraints</a></b><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Click statement itself: <b><a href="#_Statement_Editor_(add/edit">edit
+  statement</a></b>.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Add button: <b><a href="#_Add_Statement">create a new statement</a></b>.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Delete button: delete selected statement.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>DelTree button: delete selected statement and all of its &#8220;child&#8221;
+  statements in the tree.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Rename button: calls up a dialog box to change the displayed
+  text of the statement:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><span style="mso-spacerun:
+  yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><!--[if gte vml 1]><v:shape id="_x0000_i1052" type="#_x0000_t75"
+   style='width:366pt;height:99.75pt'>
+   <v:imagedata src="./demo_files/image038.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=488 height=133
+  src="./demo_files/image039.jpg" v:shapes="_x0000_i1052"><![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Refresh button: refreshes screen to display any new updates.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:121.65pt;text-indent:-121.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Expand All button: reverts entire tree to fully expanded (show
+  all statements).<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The &#8220;Sources&#8221;
+  frame (upper right corner of screen) shows the titles of the model&#8217;s source
+  texts, from which statements can be derived.<span style="mso-spacerun:
+  yes">&nbsp; </span>Note that sources are considered read-only from the Docker
+  interface.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level1 lfo2;tab-stops:list .5in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;
+  color:black'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><u><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Sources Frame Operations:</span></u><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Click check box near a source title: select/unselect that
+  source.<span style="mso-spacerun: yes">&nbsp; </span>The top row check box
+  beside the buttons selects all sources.<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Click source itself: <b><a href="#_View_Source_Screen">view
+  source</a></b>.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Add button: <b><a href="#_Add_Source_Dialog">add a new source</a></b>.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Delete button: delete selected source(s).<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Rename button: calls up a dialog box (similar to Rename
+  Statement button above) to change the displayed title of the source.<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;margin-left:139.65pt;text-indent:-139.65pt;
+  mso-list:l0 level2 lfo2;tab-stops:list 1.0in left 1.75in'><![if !supportLists]><span
+  style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+  mso-bidi-font-family:"Times New Roman";color:black;mso-bidi-font-weight:bold'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>Toggle button: switches selected source, when viewed, between
+  cached version (source title turns blue) and original location (source title
+  turns black).<b><o:p></o:p></b></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><b><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><b><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><b><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+  <div style='border:none;border-bottom:solid brown .75pt;padding:0in 0in 0in 0in'>
+  <h4 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS"'>Formalization<a
+  name="_Formalization"></a><o:p></o:p></span></h4>
+  </div>
+  <p class=MsoNormal style='margin-right:1045.55pt;mso-margin-top-alt:auto;
+  mso-margin-bottom-alt:auto;tab-stops:1.75in'><b><span style='font-size:9.0pt;
+  font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1053"
+   type="#_x0000_t75" style='width:6in;height:174.75pt' o:bordertopcolor="this"
+   o:borderleftcolor="this" o:borderbottomcolor="this" o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image040.png" o:title="" croptop="18912f"
+    cropbottom="12608f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=576 height=233
+  src="./demo_files/image041.jpg" v:shapes="_x0000_i1053"><![endif]><o:p></o:p></span></b></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>The formalization of user constraints takes place here. <span
+  style="mso-spacerun: yes">&nbsp;</span>There are two preliminary steps: 1)
+  select a statement from the &#8220;Statements&#8221; frame.<span style="mso-spacerun:
+  yes">&nbsp; </span>Shown: &#8220;maximum moment magnitude 7.7&#8221;.<span
+  style="mso-spacerun: yes">&nbsp; </span>2) Select a parameter from the list
+  &#8220;Constraint on Parameter&#8221; (currently, the &#8220;Use Free-Text&#8221; option is not
+  valid).<span style="mso-spacerun: yes">&nbsp; </span>Shown: &#8220;Moment
+  Magnitude&#8221;.<span style="mso-spacerun: yes">&nbsp; </span>Then, the constraint
+  values appear below.<span style="mso-spacerun: yes">&nbsp; </span>To make the
+  parameter match the statement, change the<span style="mso-spacerun:
+  yes">&nbsp;&nbsp; </span>&#8220;&lt; 12&#8221;<span style="mso-spacerun:
+  yes">&nbsp;&nbsp; </span>to &#8220;&lt;= 7.7&#8221;.<span style="mso-spacerun:
+  yes">&nbsp; </span>Allow the users to override the constraint, and this will
+  be a &#8220;soft constraint&#8221;.<span style="mso-spacerun: yes">&nbsp; </span>Leave the
+  &#8220;is-a&#8221; and &#8220;is-related-to&#8221; fields alone; that is for ontological editing
+  which is not currently usable.<span style="mso-spacerun: yes">&nbsp;
+  </span>Then click the &#8220;Save&#8221; button, and the screen will look like this:<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1054" type="#_x0000_t75" style='width:6in;height:175.5pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image042.png" o:title="" croptop="18912f"
+    cropbottom="12608f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=578 height=236
+  src="./demo_files/image043.jpg" v:shapes="_x0000_i1054"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>Note that the
+  &#8220;maximum moment magnitude 7.7&#8221; statement above is now green.<span
+  style="mso-spacerun: yes">&nbsp; </span>That means that the statement has
+  been formalized with a constraint.<span style="mso-spacerun: yes">&nbsp;
+  </span>There is now also a &#8220;Delete&#8221; button available on the &#8220;Formalization&#8221;
+  screen that can remove the constraint, though the statement itself will
+  remain (it will turn black like the other non-formalized statements).<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>There are currently two types of <b><a
+  href="#_Parameter_and_Constraint">model parameters</a></b>: a numeric range,
+  such as &#8220;Moment Magnitude&#8221;, and an enumeration, such as &#8220;Campbell Site
+  Type&#8221;.<span style="mso-spacerun: yes">&nbsp; </span>If an enumeration
+  parameter is to be constrained, the Formalization frame looks like this:<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1055" type="#_x0000_t75" style='width:6in;height:159pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image044.png" o:title="" croptop="25216f"
+    cropbottom="9456f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=576 height=212
+  src="./demo_files/image045.jpg" v:shapes="_x0000_i1055"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>&#8220;Campbell Site
+  Type&#8221; is an enumeration parameter, consisting of the four values on the list
+  in the bottom left corner of the screen.<span style="mso-spacerun:
+  yes">&nbsp; </span>To constrain the parameter, the valid elements of the list
+  are highlighted (blue background).<span style="mso-spacerun: yes">&nbsp;
+  </span>Then, while running a <b><a href="#_Query_Screen">query</a></b>, if
+  the user selects one of the non-valid elements, there is a constraint
+  violation (overridable in this case).<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Query
+  Screen Tables with new Constraint<o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1056" type="#_x0000_t75" style='width:657pt;height:240.75pt'
+   o:ole="" o:bordertopcolor="this" o:borderleftcolor="this"
+   o:borderbottomcolor="this" o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image046.png" o:title=""/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=876 height=321
+  src="./demo_files/image047.jpg" v:shapes="_x0000_i1056"><![endif]><!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1056"
+    DrawAspect="Content" ObjectID="_1108368386">
+   </o:OLEObject>
+  </xml><![endif]--></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>The <b><a href="#_Formalization">newly added soft user
+  constraint</a></b>, &#8220;-1000 &lt; Moment Magnitude &lt; 7.7&#8221; is now shown
+  here.<span style="mso-spacerun: yes">&nbsp; </span>As the parameter value of
+  &#8220;Moment magnitude&#8221; is<span style="mso-spacerun: yes">&nbsp; </span>8, the
+  constraint has a grey background and an override checkbox.<span
+  style="mso-spacerun: yes">&nbsp; </span>Note that the hard ontological SCEC
+  constraint, &#8220;-1000 &lt; Moment Magnitude &lt; 12&#8221; still remains, even though
+  the new user constraint was based on it.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>View
+  Source Screen<a name="_View_Source_Screen"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1057" type="#_x0000_t75"
+   style='width:330pt;height:255pt' o:bordertopcolor="this" o:borderleftcolor="this"
+   o:borderbottomcolor="this" o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image048.png" o:title="" croptop="9494f"
+    cropbottom="6329f" cropleft="737f" cropright="14746f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=440 height=340
+  src="./demo_files/image049.jpg" v:shapes="_x0000_i1057"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>A model&#8217;s descriptive source is shown (either original or
+  cached) when its title is clicked on in the &#8220;Sources&#8221; frame of the <b>&#8220;<a
+  href="#_Describe_Model_Screen">Describe Model</a>&#8221;</b> screen.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Add
+  Source Dialog<a name="_Add_Source_Dialog"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1058" type="#_x0000_t75"
+   style='width:307.5pt;height:102pt'>
+   <v:imagedata src="./demo_files/image050.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=410 height=136
+  src="./demo_files/image051.jpg" v:shapes="_x0000_i1058"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>This dialog appears when the &#8220;Add&#8221; button is clicked on the
+  &#8220;Sources&#8221; frame of the <b>&#8220;<a href="#_Describe_Model_Screen">Describe Model</a>&#8221;</b>
+  screen.<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>The new source
+  will immediately appear below the existing sources in the frame.<span
+  style="mso-spacerun: yes">&nbsp; </span>The three add options, with their
+  correspondingly appearing dialog windows, are detailed below.<span
+  style="mso-spacerun: yes">&nbsp; </span>In any case, the user should identify
+  a relevant source for the model before using this dialog.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid brown .75pt;padding:0in 0in 0in 0in'>
+  <h4 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS"'>Use
+  URL <a name="_Use_URL"></a><o:p></o:p></span></h4>
+  </div>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1059" type="#_x0000_t75"
+   style='width:309pt;height:193.5pt'>
+   <v:imagedata src="./demo_files/image052.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=412 height=258
+  src="./demo_files/image053.jpg" v:shapes="_x0000_i1059"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>The URL option allows the user to enter a url and a name for
+  it.<span style="mso-spacerun: yes">&nbsp; </span>Click Submit to save.<span
+  style="mso-spacerun: yes">&nbsp; </span>The url&#8217;s page will be cached on the
+  Docker server (images on the url&#8217;s page are also cached if the user selects
+  the &#8220;Cache Images&#8221; checkbox; otherwise, when viewing the page in Docker, the
+  images are always loaded from the original url&#8217;s site.<span
+  style="mso-spacerun: yes">&nbsp; </span>From here, I have added the Campbell
+  &amp; Bozorgnia Java model API, for use with an &#8220;<b><a href="#_Add_Statement">Add
+  Statement</a>&#8221; </b>example further on in this walkthrough.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid brown .75pt;padding:0in 0in 0in 0in'>
+  <h4 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS"'>Write
+  Data <o:p></o:p></span></h4>
+  </div>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1060" type="#_x0000_t75"
+   style='width:284.25pt;height:226.5pt'>
+   <v:imagedata src="./demo_files/image054.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=379 height=302
+  src="./demo_files/image055.jpg" v:shapes="_x0000_i1060"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>This is a free-form text field, in which the user can enter and
+  submit source text (for example, text that cannot be found online could be
+  entered here).<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid brown .75pt;padding:0in 0in 0in 0in'>
+  <h4 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS"'>Upload
+  PDF<o:p></o:p></span></h4>
+  </div>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'><!--[if gte vml 1]><v:shape id="_x0000_i1061" type="#_x0000_t75"
+   style='width:309pt;height:141pt'>
+   <v:imagedata src="./demo_files/image056.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=412 height=188
+  src="./demo_files/image057.jpg" v:shapes="_x0000_i1061"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>This screen allows the user to upload/cache a PDF file to the
+  Docker server from his/her own file system.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Statement
+  Editor (add/edit statements)<a name="_Statement_Editor_(add/edit"></a><o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1062" type="#_x0000_t75" style='width:428.25pt;height:290.25pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image058.png" o:title="" croptop="7595f"
+    cropbottom="1899f" cropleft="492f" cropright="492f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=571 height=387
+  src="./demo_files/image059.jpg" v:shapes="_x0000_i1062"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>When a
+  statement from the &#8220;<b><a href="#_Describe_Model_Screen">Describe Model</a>&#8221;</b>
+  screen is clicked on, this screen appears.<span style="mso-spacerun:
+  yes">&nbsp; </span>(The screen also appears, though blank, when the &#8220;Describe
+  Model&#8221; &#8220;Add&#8221; button is clicked).<span style="mso-spacerun: yes">&nbsp;
+  </span>The source name and url appear at the top of the screen, and the
+  relevant statement appears highlighted and scrolled-to in the text below.<span
+  style="mso-spacerun: yes">&nbsp; </span>Note that in the &#8220;Selected Text&#8221;
+  frame, the statement text can be removed (and un-highlighted) via the &#8220;Del&#8221;
+  button.<span style="mso-spacerun: yes">&nbsp; </span>The &#8220;Notes&#8221; frame is
+  used to show general notes on the statement that will not appear in the
+  &#8220;Describe Model&#8221; screen.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS";
+  color:black'>To show the features of this screen fully, a good place to start
+  is with the &#8220;Add Statement&#8221; button back on the &#8220;Describe Model&#8221; screen.<o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid brown .75pt;padding:0in 0in 0in 0in'>
+  <h4 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:9.0pt;font-family:"Trebuchet MS"'>Add
+  Statement<a name="_Add_Statement"></a><o:p></o:p></span></h4>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1063" type="#_x0000_t75" style='width:427.5pt;height:266.25pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image060.png" o:title="" croptop="7595f"
+    cropbottom="6329f" cropleft="492f" cropright="492f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=570 height=355
+  src="./demo_files/image061.jpg" v:shapes="_x0000_i1063"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>Select a
+  source from the &#8220;Use Source&#8221; list (shown: the newly added source &#8220;C&amp;B
+  API&#8221;).<span style="mso-spacerun: yes">&nbsp; </span>The &#8220;Go&#8221; button next to
+  &#8220;Use Source&#8221; brings the cached version of the source into the screen, and its
+  cached url into the &#8220;Browse&#8221; field.<span style="mso-spacerun: yes">&nbsp;
+  </span>Note that the &#8220;Browse&#8221; field can be used to add a new source on the
+  fly; hence the presence here of the &#8220;Cache Images&#8221; checkbox, which is also
+  seen on the <b><a href="#_Use_URL">Use URL</a></b> add source dialog.<span
+  style="mso-spacerun: yes">&nbsp; </span><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>The next step
+  in creating a statement is to choose the relevant text from the source, drag
+  the mouse over it to select, and then click the &#8220;Add Selection&#8221; button.<span
+  style="mso-spacerun: yes">&nbsp; </span>I have chosen the text concerning the
+  &#8220;Hanging Wall&#8221; parameter of Campbell and Bozorgnia 2003.<span
+  style="mso-spacerun: yes">&nbsp; </span>The screen then looks like this, with
+  the relevant text highlighted and also appearing in the &#8220;Selected Text&#8221;
+  frame:<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1064" type="#_x0000_t75" style='width:427.5pt;height:200.25pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image062.png" o:title="" croptop="7595f"
+    cropbottom="18988f" cropleft="492f" cropright="492f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=570 height=267
+  src="./demo_files/image063.jpg" v:shapes="_x0000_i1064"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>Finally, enter
+  the statement description itself in the &#8220;Statement&#8221; field and click the
+  &#8220;Save&#8221; button.<span style="mso-spacerun: yes">&nbsp; </span>Note the
+  &#8220;Refresh&#8221; button which will update the screen with the most recent changes.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <div style='border:none;border-bottom:solid #3399CC .75pt;padding:0in 0in 0in 0in'>
+  <h3 style='margin-right:1045.55pt;margin-bottom:6.0pt;line-height:18.0pt;
+  tab-stops:1.75in'><span style='font-size:11.0pt;font-family:"Trebuchet MS"'>Describe
+  Model Screen with new Source and Statement<o:p></o:p></span></h3>
+  </div>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1065" type="#_x0000_t75" style='width:6in;height:206.25pt'
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="./demo_files/image064.png" o:title="" croptop="12608f"
+    cropbottom="12608f"/>
+   <w:bordertop type="single" width="4"/>
+   <w:borderleft type="single" width="4"/>
+   <w:borderbottom type="single" width="4"/>
+   <w:borderright type="single" width="4"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=578 height=277
+  src="./demo_files/image065.jpg" v:shapes="_x0000_i1065"><![endif]><o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'>Note the new
+  statement, and (when moused-over) its source text in the tan box.<span
+  style="mso-spacerun: yes">&nbsp; </span>Also note the new source, &#8220;Campbell
+  and Bozorgnia API&quot;.<o:p></o:p></span></p>
+  <p style='margin-right:1045.55pt;line-height:18.0pt;tab-stops:1.75in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><o:p></o:p></span></p>
+  </td>
+  <a name="_New_Model_/"></a>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=151 style='border:none'></td>
+  <td width=2 style='border:none'></td>
+  <td width=1933 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal style='margin:24.0pt;line-height:18.0pt'><span
+style='font-size:9.0pt;font-family:"Trebuchet MS";color:black'><a
+href="http://www.isi.edu/ikcap/">&lt;&lt; Back to IKCAP</a> <o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

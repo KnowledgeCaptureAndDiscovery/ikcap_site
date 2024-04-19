@@ -1,0 +1,71 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Learner</name>
+  <title>Acquiring Common Knowledge from Web Volunteers</title>
+
+  <status>
+    <short>
+ Research on Learner proceeded until 2005. 
+    </short>
+
+    <long>
+Research on Learner proceeded until 2005. While it was deployed, Learner collected more than 600,000 facts from volunteer contributors about common knowledge, was <a href="http://www3.isi.edu/about-news_story.htm?s=111"> exhibited at several science museums</a>, and was found to be one of the <a href="http://ebiquity.umbc.edu/blogger/big-owl-documents-on-the-semantic-web/">largest RDF documents on the web at the time</a>
+    </long>
+  </status>
+
+  <description>
+    <short>
+    The Learner system is a framework for social knowledge collection.  While it was deployed, Learner collected more than 600,000 facts from volunteer contributors about common knowledge.
+    </short>
+
+    <long>
+    The Learner system is a framework for social knowledge collection.  While it was deployed, Learner collected more than 600,000 facts from volunteer contributors about common knowledge, was <a href="http://www3.isi.edu/about-news_story.htm?s=111"> exhibited at several science museums</a>, and was found to be one of the <a href="http://ebiquity.umbc.edu/blogger/big-owl-documents-on-the-semantic-web/">largest RDF documents on the web at the time</a>.
+    </long>
+  </description>
+
+  <research>
+    <short>
+      The research conducted in Leaner includes: 1) analysis on quality of knowledge, 2) user interface design to collect structured knowledge, 3) techniques to maximize the breadth of contributions as well as the automated reasoning they enable, and 4) incentivizing contributors.
+    </short>
+    <long>
+<p>Our research in this area focused on how to acquire common knowledge from volunteer contributors. A broad repository of common knowledge would allow knowledge systems to be less brittle. We investigated how to keep volunteers engaged in contributing, and developed techniques to validate the knowledge acquired. An interesting aspect of this work is to accommodate natural language statements, which are very easy for users to provide, while constraining them to be in a form that makes their processing possible. We also designed user interfaces that facilitated the collection of specific types of knowledge from users, including process knowledge and argumentation structures.</p>
+
+<p>By 2006, our knowledge repository contained more than 700,000 statements concerning common knowledge, becoming one of the <a href="http://ebiquity.umbc.edu/blogger/big-owl-documents-on-the-semantic-web/">largest RDF documents on the web at the time</a>.</p>
+
+<p>Through the work on Learner, it became clear very quickly that there are very few universally agreed upon truths, and therefore accommodating different views is important. We are currently working on novel frameworks to create knowledge resources that incorporate alternative views within a community of contributors, see the <a href="http://www.isi.edu/ikcap/shortipedia">Shortipedia</a> project.</p>
+
+    </long>
+  </research>
+
+<mainlink> <a href=”http://pal.sri.com”>DARPA Personalized Assistant that Learns</a> </mainlink>
+<mainlink> <a href=”http://www.ai.sri.com/project/CALO/”> Cognitive Agent that Learns and Organizes (CALO) </a> </mainlink>
+<mainlink> <a href=”http://en.wikipedia.org/wiki/CALO”>About CALO</a> </mainlink>
+
+<link> <a href=”http://pal.sri.com”>DARPA Personalized Assistant that Learns</a> </link>
+<link> <a href=”http://www.ai.sri.com/project/CALO/”> Cognitive Agent that Learns and Organizes (CALO) </a> </link>
+<link> <a href=”http://en.wikipedia.org/wiki/CALO”>About CALO</a> </link>
+
+<!-- Demo -->
+<demo>
+Leaner provided structured interfaces to collect and validate different kinds of knowledge.  
+
+<p>An example of Leaner collecting information about common objects:</p>
+<img src="learner1.png"/>
+
+<p>Learner also collected knowledge about common tasks, including subtasks, objects involved, and possible failures and repairs:</p>
+<img src="learner2.png"/>
+</demo>
+</project>

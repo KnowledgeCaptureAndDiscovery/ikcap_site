@@ -1,0 +1,233 @@
+  <publication>
+    <title>Ten Simple Rules for the Care and Feeding of Scientific Data</title>
+    <url>http://arxiv.org/abs/1401.2134</url>
+    <person>Alyssa Goodman</person>
+    <person>Alberto Pepe</person>
+    <person>Alexander W. Blocker</person>
+    <person>Christine L. Borgman</person>
+    <person>Kyle Cranmer</person>
+    <person>Merce Crosas</person>
+    <person>Rosanne Di Stefano</person>
+    <person>Yolanda Gil</person>
+    <person>Paul Groth</person>
+    <person>Margaret Hedstrom</person>
+    <person>David W. Hogg</person>
+    <person>Vinay Kashyap</person>
+    <person>Ashish Mahabal</person>
+    <person>Aneta Siemiginowska</person>
+    <person>Aleksandra Slavkovic</person>
+    <where>To appear in PLOS Computational Biology, 2014</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Human Tutorial Instruction in the Raw</title>
+    <person>Yolanda Gil</person>
+    <where>ACM Transactions on Interactive Intelligent Systems, 2014</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome</title>
+    <person>Daniel Garijo</person>
+    <person>Sarah Kinnings</person>
+    <person>Li Xie</person>
+    <person>Lei Xie</person>
+    <person>Yinliang Zhang</person>
+    <person>Philip E. Bourne</person>
+    <person>Yolanda Gil</person>
+    <where>PLOS ONE, 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Common Motifs in Scientific Workflows: An Empirical Analysis</title>
+    <person>Daniel Garijo</person>
+    <person>Pinar Alper</person>
+    <person>Khalid Belhajjame</person>
+    <person>Oscar Corcho</person>
+    <person>Yolanda Gil</person>
+    <person>Carole Goble</person>
+    <where>Future Generation Computer Systems, 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Structured Analysis of the ISI Atomic Pair Actions Dataset Using Workflows</title>
+    <person>Ricky J. Sethi</person>
+    <person>Hyunjoon Jo</person>
+    <person>Yolanda Gil</person>
+    <where>Pattern Recognition Letters 34(15), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>The Democratization of Semantic Properties: An Analysis of Semantic Wikis</title>
+    <url>http://www.isi.edu/~gil/papers/gil-etal-icsc13.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Angela Knight</person>
+    <person>Kevin Zhang</person>
+    <person>Larry Zhang</person>
+    <person>Varun Ratnakar</person>
+    <person>Ricky Sethi</person>
+    <where>Seventh IEEE International Conference on Semantic Computing (ICSC), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Knowledge Capture in the Wild: A Perspective from Semantic Wiki Communities</title>
+    <url>http://www.isi.edu/~gil/papers/gil-ratnakar-kcap13.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Varun Ratnakar</person>
+    <where>Seventh ACM International Conference on Knowledge Capture (K-CAP), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Detecting Common Scientific Workflow Fragments Using Templates and Execution Provenance</title>
+    <url>http://www.isi.edu/~gil/papers/garijo-etal-kcap13.pdf</url>
+    <person>Daniel Garijo</person>
+    <person>Oscar Corcho</person>
+    <person>Yolanda Gil</person>
+    <where>Seventh ACM International Conference on Knowledge Capture (K-CAP), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Social Knowledge Collection</title>
+    <url>http://www.isi.edu/~gil/papers/gil-handbookhc13.pdf</url>
+    <person>Yolanda Gil</person>
+    <where>Handbook of Human Computation, 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Using Semantic Workflows to Disseminate Best Practices and Accelerate Discoveries in Multi-Omic Data Analysis</title>
+    <url>http://www.isi.edu/~gil/papers/gil-etal-hiai13.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Shannon McWeeney</person>
+    <person>Christopher E. Mason</person>
+    <where>AAAI Workshop on Expanding the Boundaries of Health Informatics using AI (HIAI), held in conjunction with the Conference of the Association for the Advancement of Artificial Intelligence (AAAI), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Intelligent Assistance to Disseminate Best Practices and Accelerate Discoveries in Cancer Omics</title>
+    <url>http://www.isi.edu/~gil/papers/gil-etal-cbbw13.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Christopher E. Mason</person>
+    <person>Christina Zheng</person>
+    <person>Shannon McWeeney</person>
+    <where>2013 NCI EDRN Cancer Biomarkers Bioinformatics Workshop, Pasadena, CA, 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Towards Task-Centered Network Models through Semantic Workflows</title>
+    <url>http://www.isi.edu/~gil/papers/gil-isi13.pdf</url>
+    <person>Yolanda Gil</person>
+    <where>Proceedings of the IEEE Conference on Intelligence and Security Informatics (ISI), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>An Initial Analysis of Semantic Wikis</title>
+    <url>http://www.isi.edu/~gil/papers/gil-etal-iui13.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Angela Knight</person>
+    <person>Kevin Zhang</person>
+    <person>Larry Zhang</person>
+    <person>Ricky Sethi</person>
+    <where>Proceedings of the ACM International Conference on Intelligent User Interfaces (IUI), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>The AAAI Fall Symposium on "Discovery Informatics: The Role of AI Research in Innovating Scientific Processes</title>
+    <url>http://www.isi.edu/~gil/papers/gil-hirsh-aimag13.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Haym Hirsh</person>
+    <where>AI Magazine 34(1), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>PROV-DM: The PROV Data Model</title>
+    <url>http://www.w3.org/TR/prov-dm/</url>
+    <person>Luc Moreau</person>
+    <person>Paolo Missier</person>
+    <person>Khalid Belhajjame</person>
+    <person>Reza B'Far</person>
+    <person>James Cheney</person>
+    <person>Sam Coppens</person>
+    <person>Stephen Cresswell</person>
+    <person>Yolanda Gil</person>
+    <person>Paul Groth</person>
+    <person>Graham Klyne</person>
+    <person>Timothy Lebo</person>
+    <person>Jim McCusker</person>
+    <person>Simon Miles</person>
+    <person>James Myers</person>
+    <person>Satya Sahoo</person>
+    <person>Curt Tilmes</person>
+    <where>World Wide Web (W3C), 2013</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Scientific Workflows: The Key to Convergence?</title>
+    <person>Mike P. McCann</person>
+    <person>Andreas F. Hofmann</person>
+    <person>Thomas C. Harmon</person>
+    <person>Yolanda Gil</person>
+    <where>Ocean Sciences Meeting, Salt Lake City, Utah, 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Designing a Roadmap for Workflow Cyberinfrastructure in the Geosciences: From Big Data to the Long Tail</title>
+    <person>Yolanda Gil</person>
+    <person>Ewa Deelman</person>
+    <person>Ibrahim Demir</person>
+    <person>Chris Duffy</person>
+    <person>Marlon Pierce</person>
+    <person>Suresh Marru</person>
+    <person>Gerry Wiener</person>
+    <where>American Geophysical Union Fall Meeting, San Francisco, CA, 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Using Semantic Workflows for Genome-Scale Analysis</title>
+    <person>Yolanda Gil</person>
+    <person>Varun Ratnakar</person>
+    <person>Ewa Deelman</person>
+    <person>Christopher Mason</person>
+    <where>International Conference on Intelligent Systems for Molecular Biology (ISMB), Long Beach, CA, 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Designing a Roadmap for Geoscience Workflows</title>
+    <url>http://www.agu.org/pubs/crossref/2012/2012EO240002.shtml</url>
+    <person>Christopher Duffy</person>
+    <person>Yolanda Gil</person>
+    <person>Ewa Deelman</person>
+    <person>Suresh Marru</person>
+    <person>Marlon Pierce</person>
+    <person>Ibrahim Demir</person>
+    <person>Gerry Wiener</person>
+    <where>Eos Transactions of the American Geophysical Union 93(24), 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>EarthCube Report on a Workflows Roadmap for the Geosciences</title>
+    <url>http://www.isi.edu/~gil/EarthCube/EC-WorkflowsRoadmap-September2012.pdf</url>
+    <person>Ewa Deelman</person>
+    <person>Chris Duffy</person>
+    <person>Yolanda Gil</person>
+    <person>Suresh Marru</person>
+    <person>Marlon Pierce</person>
+    <person>Gerry Wiener</person>
+    <where>National Science Foundation, Arlington, VA., 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Final Report of the 2012 NSF Workshop on Discovery Informatics</title>
+    <url>http://www.isi.edu/~gil/diw2012/NSFDiscoveryInformatics2012-FinalReport.pdf</url>
+    <person>Yolanda Gil</person>
+    <person>Haym Hirsh</person>
+    <where>National Science Foundation, Arlington, VA., 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>
+  <publication>
+    <title>Reusing Workflow Fragments Across Multiple Data Domains</title>
+    <url>http://www.isi.edu/~gil/papers/sethi-etal-works12.pdf</url>
+    <person>Ricky J. Sethi</person>
+    <person>Hyunjoon Jo</person>
+    <person>Yolanda Gil</person>
+    <where>Proceedings of the Seventh Workshop on Workflows in Support of Large-Scale Science (WORKS'12), held in conjunction with SC 2012, 2012</where>
+    <project>Interactive Knowledge Capture</project>
+  </publication>

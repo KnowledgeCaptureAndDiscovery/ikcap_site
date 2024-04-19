@@ -1,0 +1,22 @@
+<h2>Description</h2> 
+
+<p> The Active Templates program (AcT) is developing a robust,
+lightweight software technology for aiding in the automation of detailed
+planning and execution for military operations and other
+highly-coordinated activities using a plan spreadsheet metaphor. Active
+Templates are distributed data structures whose variables can be linked
+to live data feeds or problem-solving methods. Active Templates assist
+with automated planning and execution by capturing, improving and
+updating critical information such as current state, goals, constraints,
+alternative actions, standard defaults, problem-solving context over
+time, decisions, and rationale. Active Templates are designed to be
+user-tailorable, networked, noise-tolerant, user-supported, scalable and
+widely adopted.  </p>
+
+<p>Within AcT, the <b>TEMPLE</b> project is developing software tools to
+aid a user in adding new constraints to active templates. This work
+makes use of prior work on problem-solving methods and script-based
+acquisition for plan evaluation performed under HPKB and ARPI.
+</p>
+
+

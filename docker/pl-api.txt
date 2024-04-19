@@ -1,0 +1,95 @@
+;;************************************************************************
+;; POWERLOOM API
+;;************************************************************************
+
+o: any object
+x: any pl object
+i-name: instance name (string)
+c-name: concept name  (string)
+r-name: relation name  (string)
+m-name: powerloom module name (string)
+name: (string)
+set: pl set
+-------------------------------
+
+pl-object? (o) : returns t/nil: check if x is a pl object
+
+pl-concept-p (x) : returns t/nil: check if x is a concept
+pl-relation-p (x) : returns t/nil: check if x is a relation
+pl-instance-p (x) : returns t/nil: check if x is an instance
+pl-instance-of-p (i-name c-name )
+      : returns t/nil: check if i is an instace of c
+pl-single-valued-p (r-name  (m-name pli::null-string)) 
+      : returns t/nil: check r is single-valued
+
+pl-find-object-name (x)
+      : returns a string:
+pl-find-or-create-object (o-name &optional (m-name pli::null-string))
+      : returns pl object:
+pl-find-object (name)
+      : returns pl object:
+pl-define-instance (i-name c-name &optional (m-name pli::null-string))
+      : returns pl instance:
+pl-create-binary-relation (r-name &optional (m-name pli::null-string))
+      : returns pl relation:
+pl-create-concept (c-name parent-name &optional (m-name pli::null-string))
+      : returns pl concept:
+
+pl-delete-object (o-name)
+
+pl-add-value (r-name o-name v-name &optional (m-name pli::null-string))
+      :: assert a value
+pl-add-value-n (r-name o-names val &optional (m-name pli::null-string))
+      :: assert n-ary relation value
+pl-add-type (i-name c-name &optional (m-name pli::null-string))
+      :: assert that i is an instance of c
+
+pl-get-values (r-name o-name  &optional (m-name pli::null-string))
+      :returns pl objects : retrieve a value give relation r and object o
+pl-get-values-n (r-name o-names &optional (m-name pli::null-string))
+      :returns pl objects : retrieve a n-ary relation value
+
+pl-get-inverse-values (r-name o-name &optional (m-name pli::null-string))
+      :returns pl objects: use inverse relation r given o 
+pl-get-range (r-name )
+      :returns pl concept:
+pl-get-domain (r-name)
+      :returns pl concept:
+pl-get-instances (c-name)
+
+
+pl-get-subconcepts (o-name &optional (m-name pli::null-string))
+      :returns concept names:
+pl-get-superconcepts (o-name &optional (m-name pli::null-string))
+      :returns concept names:
+pl-get-members (set)
+      :returns pl objects in the set:
+
+
+examples:------------------------------------------------------------------
+
+(pl-find-object "field-2000")
+-> |i|FIELD-2000
+
+(pl-get-domain  "the-fault-length")
+-> |c|FAULT
+
+(pl-get-instances "acceleration-parameter")
+-> ("FIELD-2000-SA" "BOORE-ET-AL-1997-SA" "ABRAHAMSON-AND-SILVA-1997-SA"
+ "SADIGH-ET-AL-1997-SA" "CAMPBELL-1997-SA" "CAMPBELL-AND-BOZORGNIA-2003-SA")
+
+other examples from DOCKER implementation: ----------------------------------
+
+(find-all-parameters "FIELD-2000")
+-> ("FIELD-2000-SA" "SA-PERIOD" "SA-DAMPING" "PARAMETER-MOTION-COMPONENT"
+ "STANDARD-DEVIATION-TYPE" "PROBABILITY-OF-EXCEEDENCE"
+ "GAUSSIAN-TRUNCATION-TYPE" "GAUSSIAN-TRUNCATION-LEVEL" "BASIN-DEPTH-2.5"
+ "VS30-OF-SOIL" "FAULT-TYPE-PARAMETER" "DISTANCE-JB"
+"SOURCE-MOMENT-MAGNITUDE")
+
+(find-range "field-2000" "distance-jb")
+-> (((0.0 "km")) ((150.0 "km")))
+
+(find-enumerations "field-2000" "FAULT-TYPE-PARAMETER")
+-> (("FIELD-2000-OTHER-FAULT" "Other/Unknown") ("FIELD-2000-REVERSE-FAULT"
+ "Reverse")) 

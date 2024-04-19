@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	<!ENTITY ts "http://www.isi.edu/ikcap/geosoft/ontology/software.owl#" >
+]>
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/geosoft/ontology/CF.owl#"
+	xml:base="http://www.isi.edu/ikcap/geosoft/ontology/CF.owl"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:ts="http://www.isi.edu/ikcap/geosoft/ontology/software.owl#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+	<owl:Ontology rdf:about="http://www.isi.edu/ikcap/geosoft/ontology/CF.owl">
+		<owl:imports rdf:resource="http://www.isi.edu/ikcap/geosoft/ontology/software.owl"/>
+	</owl:Ontology>
+
+	<!-- Objects -->
+	<ts:Object rdf:ID="CFObject1">
+		<rdfs:label>example_object_from_cf</rdfs:label>
+	</ts:Object>
+
+	<!-- Quantities -->
+	<ts:Quantity rdf:ID="CFQuantity1">
+		<rdfs:label>example_quantity_from_cf</rdfs:label>
+	</ts:Quantity>
+
+	<!-- Operators -->
+	<ts:Operator rdf:ID="CFOperator1">
+		<rdfs:label>example_operator_from_cf</rdfs:label>
+	</ts:Operator>
+
+	<!-- Standard Names -->
+	<ts:StandardName rdf:ID="CFStandardName1">
+		<rdfs:label>example_standard_name_from_cf</rdfs:label>
+		<ts:hasObject rdf:resource="#CFObject1" />
+		<ts:hasQuantity rdf:resource="#CFQuantity1" />
+		<ts:hasOperator rdf:resource="#CFOperator1" />
+	</ts:StandardName>
+
+	<!-- Assumption Types -->
+	<owl:Class rdf:ID="ExampleCFCategory">
+		<rdfs:label>Example Assumption Category from CF</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&ts;Assumption" />
+	</owl:Class>
+
+	<!-- Assumptions -->
+	<ExampleCFCategory rdf:ID="CFAssumption1">
+		<rdfs:label>example_assumption_from_cf</rdfs:label>
+	</ExampleCFCategory>
+	<ExampleCFCategory rdf:ID="CFAssumption2">
+		<rdfs:label>example_assumption_2_from_cf</rdfs:label>
+	</ExampleCFCategory>
+
+</rdf:RDF>

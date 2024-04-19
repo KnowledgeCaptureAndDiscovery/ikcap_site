@@ -1,0 +1,763 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>TellMe</name>
+  <title>Learning from natural tutorial instruction</title>
+
+  <status>
+    <short>
+
+  We are currently focusing on two aspects of this work:
+  <ol>
+    <li><a href="status.html#tellme">Learning Procedures from Tutorial
+    Instruction</a>, where we extend the <a href="/ikcap/wings/">Wings
+    Workflow System</a> to enable users to teach new procedures using
+    natural language instructions. We have run formative user studies.
+    </li>
+    
+    <li><a href="status.html#wargus">A Framework for Combining
+    Instruction and Demonstration</a>, where we investigate the formal
+    requirements and possibilities for combining these two instruction
+    methods to teach more effectively. We have implemented a prototype
+    of the formal framework we have developed and tested it on a
+    number of example instructions together with demonstrations for
+    teaching new game playing procedures on a real-time strategy
+    game.  </li>
+  </ol>
+
+    </short>
+
+
+
+    <long>
+
+ We are currently focusing on two aspects of this work:
+ <ol>
+   <li><a href="#tellme">Learning Procedures from Tutorial Instruction.</a></li>
+   <li><a href="#wargus">A Framework for Combining Instruction and Demonstration.</a></li>
+ </ol>
+
+<a name="tellme"></a>
+ <h3>Learning Procedures from Tutorial Instruction</h3>
+
+ <p>
+ We have implemented an extension to the <a href="/ikcap/wings/">Wings
+ Workflow System</a> that allows users to author new procedures and
+ edit existing procedures using natural language instruction.
+ </p>
+
+ <p>
+ To illustrate how this works, consider a scenarios where the system
+ learns procedures executed by airplane pilots to patrol an area
+ looking for oil pollution from ships.  The user is teaching the kinds
+ of reconnaissance tasks that pilots do in the Belgian Navy, which are
+ scenarios that we chose for our evaluation, as we will describe later
+ on.  The system starts off having a number of primitive actions for
+ recording the situation with a variety of instruments, including
+ infrared and ultraviolet cameras, SLAR cameras, and digital picture
+ and video cameras.  There are also primitive actions to send alerts
+ and reports back to the base, and to generate initial estimates of
+ the volume of the spill.
+ </p>
+
+ <p>
+ The following is an example of the utterances and the interaction of
+ a user with the system to teach a procedure where a plane is to
+ descend closer once a spill is found, then take videos and send them
+ to the headquarters, and to record the GPS readings and send them
+ along as well.
+ </p>
+
+ <blockquote>
+
+   User: "find oil spill, descend to a position of height 200"
+   
+   <p><i>The system shows the user that it assumes that meant to
+       descend after finding the spill. It also shows the user an
+       alternative interpretation where the descent was meant to
+       happen before finding the spill. It asks the user to either
+       accept the assumed interpretation and if not to choose the
+       alternative.</i></p>
+
+   User: "film the spill"
+   
+   <p><i>The system indicates it did not understand that</i></p>
+
+   User: "record videos and send them"
+
+   <p><i>The system shows the user that it assumes that meant to
+     iterate over each of the videos and send each in turn, since the
+     send action is defined for sending one document at a
+     time.</i></p>
+
+   <p><i>The system shows the user that the result of sending the
+     videos is a series of message receipts.</i></p>
+
+   <p><i>The system shows that it assumes the position to be after the
+     descent, it also shows the alternative interpretation that it is
+     the position before descending. </i></p>
+
+   User: "record GPS reading"
+
+   <p><i>The system shows the user that it assumes that the
+     instruction meant to record the GPS reading over the position
+     after descending.  It also shows the user an alternative
+     interpretation which is to record the GPS reading at the position
+     when the spill was first found.  It asks the user to either
+     accept the assumed interpretation and if not to choose the
+     alternative.</i></p>
+
+   User: <i>(selects the latter option)</i><br/>
+
+   User: "record image"
+   
+   <p><i>The system shows three interpretations, one for the action to
+     record IR image, another for record UV image, and another to
+     record SLR image</i></p>
+
+   User: "send thickness image"
+
+   <p><i>The system shows the user that it is not familiar with the
+     term high level alert, but that it assumes it is a kind of alert
+     given the context in which the term is used.  The user does not
+     have to interrupt the instruction and define it now.</i></p>
+
+   <p><i>The system shows the user that the send action requires some
+     evidence as input, and that it assumes that to be the output of
+     the record GPS reading action.</i></p>
+
+ </blockquote>
+
+The following is a screeshot of TellMe, documenting the state of
+ teaching after going through the steps of this interaction.
+
+<img src="tellme_oilspill1.png"/>
+
+<p>
+The current procedure hypothesis is shown on the right hand side: At
+the bottom a dataflow diagram is shown.  At the top, a set of
+constraints is shown, most of which were inferred by the system from
+the utterances of the user and any available domain knowledge.  In
+many cases, the user's instruction is ambiguous and the system creates
+alternative interpretations, each resulting in a different procedure
+hypotheses.  To show that it is considering these hypotheses, it shows
+them in the History panel, where the user can view them (e.g., in the
+figure after five utterances: "TellMeTemplate.1.1.1.1.1" -
+"TellMeTemplate.1.1.1.1.4"). The user is always asked to select one of
+them.
+</p>
+
+
+<h4>Can Non-Programmers Use TellMe?</h4>  
+
+We conducted initial formative user studies.  The goal was to collect
+feedback on the overall approach and to find out whether there were
+any major barriers for users to communicate procedural knowledge with
+our interface.
+
+
+<!-- b>Set Up</b><br/>
+<p>
+We tested six subjects with ages ranging from 11 to 55.  Six subjects
+is typically sufficient for the kind of information that we were
+seeking about our system [Hwang and Salvendy 10].  None of the
+subjects had programming experience, except one of the younger ones
+who had used Scratch [Resnick et al 09].  Subjects spent between
+15mins and 1hr using the system.
+</p>
+
+<p>
+We wanted to avoid giving the subjects extensive training on our
+system.  If our goal is to show that it is natural to give this kind
+of instruction, then any substantial training would defeat that
+purpose.  The instructions to the subjects were limited to one page
+that described the different features and buttons of the TellMe
+interface, and are available on our web site.
+</p>
+
+<p>
+We also wanted to avoid giving them descriptions of what procedures to
+teach because then they would likely just utter to the system the
+procedure in the way we described it to them.  Therefore, we choose a
+Web site not developed by us that explains activities that are carried
+out by pilots that detect oil spills that pollute the sea off the
+coast of Belgium, without describing explicitly the procedures to be
+followed . We coded basic actions and object types, as well as the
+paraphrases based on the text that appears on that site.  We asked the
+subjects to begin by looking at the actions that were already defined
+in the system.  We then asked them to think of possible procedures
+that they would think are reasonable for a pilot to carry out, and to
+teach them to the system.  As a result, the procedures that different
+subjects created were unique and not comparable.  We noted that some
+subjects designed the procedure as they went along rather than
+beforehand, so in those cases they had to adjust the procedure that
+they had previously created, which they were able to do.
+</p  -->
+
+
+<!-- b>Results</b></br  -->
+
+<!--p>
+The full details of these studies are included in a paper currently
+under review. 
+But in order to convey the results, consider the
+following table. In addition
+We show a number of procedures that were
+generated by our test users. These show what non-programmers are
+capable of achieving using TellMe.
+</p -->
+
+The following example procedures were generated by non-programmers,
+and show what non-programmers are capable of achieving using TellMe.
+
+<!-- table>
+  <tr><th>Subject</th> <th>Total utterances</th> <th>Accepted</th></tr>
+  <tr><td align="center">S1</td> <td align="right">9</td> <td align="right">6</td></tr>
+  <tr><td align="center">S2</td> <td align="right">15</td> <td align="right">14</td></tr>
+  <tr><td align="center">S3</td> <td align="right">39</td> <td align="right">17</td></tr>
+  <tr><td align="center">S4</td> <td align="right">3</td> <td align="right">3</td></tr>
+  <tr><td align="center">S5</td> <td align="right">41</td> <td align="right">19</td></tr>
+  <tr><td align="center">S5</td> <td align="right">15</td> <td align="right">13</td></tr>
+  <tr><td align="center">S6</td> <td align="right">27</td> <td align="right">10</td></tr>
+</table -->
+
+
+<img src="tellme_ex3.png" width=700px/><br/>
+<img src="tellme_ex4.png" width=400px/><br/>
+
+The following procedure is accompandied by the
+instructions that were used to create it.
+
+<img src="tellme_ex1.png" width=700px />
+<img src="tellme_ex1_inst.png" width=400px /><br/>
+
+<!-- img src="tellme_ex2.png" width=700px />
+<img src="tellme_ex2_inst.png" width=300px /><br/ -->
+
+
+
+<a name="wargus"></a>
+ <h3>A Framework for Combining Instruction and Demonstration</h3>
+
+<p>
+We have developed a formal framework that allows for the use of
+program demonstrations to resolve several types of ambiguities and
+omissions that are common in such instructions. The framework
+effectively combines some of the benefits of programming by
+demonstration and programming by natural instruction.The key idea of
+our approach is to use non-deterministic programs to compactly
+represent the (possibly infinite) set of candidate programs for given
+instructions, and to filter from this set by means of simulating the
+execution of these programs following the steps of a given
+demonstration. Due to the rigorous semantics of our framework we can
+prove that this leads to a sound algorithm for identifying the
+intended program, making assumptions only about the types of
+ambiguities and omissions occurring in the instruction. 
+</p>
+
+<p>
+We have implemented our approach and demonstrate its ability to
+resolve ambiguities and omissions by considering a list of classes of
+such issues and how our approach resolves them in a concrete example
+domain. Our empirical results show that our approach can effectively
+and efficiently identify programs that are consistent with both the
+natural instruction and the given demonstrations.
+</p>
+
+Currently our system is able to resolve the following kinds of issues
+commonly occurring in human instruction, when combined with a
+demonstration of the target program in an example scenario:
+<ul>
+<li> mapping of objects to action arguments, 
+<li> missing action arguments,
+<li> ambiguous references like "him" or "it", 
+<li> ambiguous scoping of conditionals and iterations, and 
+<li> unknown terms to refer to known actions or functions.
+</ul>
+
+
+
+<h4>Learning Complex Game Playing Procedures</h4> 
+<p>
+To evaluate our approach's ability to resolve types of omissions and
+ambiguities that are common in human instruction we consider
+procedures in the open-source real-time strategy game
+Stratagus/Wargus1. In this game, the goal of the player is to defeat
+all of the opponent's agents using his own footmen. Footmen units can
+be built in barracks, which in turn can be built by peasants. In order
+to provide food for his units, the player also needs sufficient
+supplies, which are provided by farms. Farms can, again, be built by
+peasants and each farm provides enough supply for four units. As an
+example, we consider a family of scenarios where initially the player
+only has one peasant, and the opponent, controlled by the computer,
+has N footmen. In order to win, the player has to first use his
+peasant to build barracks where he then can build footmen. In order to
+do so, he also needs to build farms to create the supplies for the
+footmen. The following screen-shot shows the situation where the
+player completed building barracks, farms, and four footmen (twice as
+many as the opponent's) and is now ready to attack the
+opponent. Outnumbering the opponent by a factor of two he is certain
+to win the game.
+</p>
+
+<img src="stratagus_annotated.png" width=400px/><br/>
+
+
+<p>
+As a running example in this paper, we will show how a user can teach
+this general procedure to the computer by combining natural
+instruction and a demonstration in an example scenario with two
+opponent footmen. The procedure that will be taught will be applicable
+to any scenario where there is at least one peasant and any number of
+opponent footmen. The strategy is to always build twice as many
+footmen before attacking the opponent. This procedure contains
+several loops and iterations over sets. </p>
+
+<p>
+Instructions generally contain several types of omissions and
+ambiguities simultaneously. Consider the following text, which is
+understood by our interface. These instructions omit action arguments,
+lack scopes for loops and iterations, use unknown terms, and contain
+ambiguous references. </p>
+
+<p>
+<b>Example:</b> <i>"Build barracks using bestPeasant then wait until
+bestPeasant is ready, while noOfFootmen is less than noOfOppFootmen
+times 2, if supply is less than 1 then build farm, wait until
+bestPeasant is ready, create footman, wait until bestBarracks is
+ready, while there is an opponent who is alive, take the
+closestOpponent, forall footman attack him, wait until he is
+dead."</i>
+</p>
+
+Using our current implementation, we can take this instruction and
+combine it with <a href="../wargus/demonstration.avi">this
+demonstration</a> to generate the following target program:
+
+<img src="target_program.png" width=300px/><br/>
+
+A full log of our current set of evaluation experiments can be found 
+<a href="../wargus/experiments.txt">here</a>. This file contains for
+each experiment: the utterances of the user, the representation of
+these utterances as a non-deterministic program, and the refined
+program created from this via consideration of the given
+demonstration.
+
+
+
+<h4>Approach</h4>
+
+The key ideas of our approach are as follows:
+<ol>
+<li> We can represent (infinite) sets of program hypotheses using
+non-deterministic programs, in particular we can represent the
+incomplete procedures that can result from a PbI system. These are
+used to represent uncertainty about the target program being
+learned. In particular, we use the logical programming language Golog
+which readily allows us to represent and reason about such
+non-deterministic programs. A Golog program can be understood to
+represent sets of deterministic programs, namely all those that would
+result by resolving the non-determinism in one way or another. We have
+developed a simple, controlled grammar based interface that generates
+Golog programs from English instructions. This PbI system uses Golog's
+non-deterministic programming constructs in places where instructions
+are ambiguous or incomplete.</li>
+
+<li>We can refine these program hypotheses learned through PbI based
+on an example from a PbD system. We extend Golog's semantics to
+implement the update function that removes from a set of hypotheses
+all those that are inconsistent with newly given demonstrations. This
+is implemented as refinements to the program representing the version
+space, resolving some of the uncertainty, i.e., making some
+non-deterministic parts of the program deterministic. In many cases, a
+single example can be sufficient to resolve all nondeterminism,
+resulting in the following data-flow:</li>
+
+<img src="diagram.png" width=300px/><br/>
+
+<li>We can integrate any two program hypotheses into a single one, for
+example to integrate the output of a PbI system with the output of a
+PbD system that has learned from several demonstrations. We accomplish
+this by defining a mechanism for Golog program synchronization that
+implements a provably sound and complete means of computing symbolic
+intersection of (possibly infinite) sets of hypotheses.
+</li>
+
+
+    </long>
+  </status>
+
+
+
+
+
+
+
+
+
+
+
+  <description>
+    <short>
+      The aim of this project is to develop an electronic student that can learn from instruction that is increasingly more natural (i.e. instruction that increasingly resembles the instruction that a human teacher provides a human student).  
+    </short>
+
+    <long>
+
+      The aim of this project is to develop an electronic student that can learn from instruction that is increasingly more natural (i.e. instruction that increasingly resembles the instruction that a human teacher provides a human student). The development of such an electronic student involves the development of heuristics and approaches to deal with the inherent  ambiguity and imprecision of natural instruction. Additionally, we are researching mechanisms for ranking and comparing hypotheses that the electronic student generates from provided instruction. </long>
+  </description>
+
+  <research>
+    <short>
+      <!--        learning from instruction, procedures, knowledge acquisition, process models         -->
+
+      Natural instruction is inherently error prone and
+      incomplete. Human teachers regularly omit important details,
+      either because for a human such details might be obvious, or
+      because they simply forgot about them. We are developing a
+      system that is able to semantically reason about the consistency
+      of instruction, capable of hypothesizing ways to correct errors
+      or fill gaps in instructions, and rank such hypotheses in terms
+      of their likelihood.
+
+    </short>
+    <long>
+
+      Natural instruction is inherently error prone and
+      incomplete. Human teachers regularly omit important details,
+      either because for a human such details might be obvious, or
+      because they simply forgot about them. We are developing a
+      system that is able to semantically reason about the consistency
+      of instruction, capable of hypothesizing ways to correct errors
+      or fill gaps in instructions, and rank such hypotheses in terms
+      of their likelihood.
+
+
+      <h3>TellMe: Allowing Non-Programmers to TEACH Procedures through Natural
+      Tutorial Instruction</h3>
+
+      <p>We describe the main features of our approach using an
+      example of the interaction experienced by one of our users who
+      is a non-programmer and used our TellMe system to create a
+      procedure. </p>
+
+      <p>The following gives an overview of the interaction of TellMe
+      with a user. The utterances are verbatim what the user would
+      type. We use scenarios where the system learns procedures
+      executed by airplane pilots to patrol an area looking for oil
+      pollution from ships.  The user is teaching the kinds of
+      reconnaissance tasks that pilots do in the Belgian Navy, which
+      are scenarios that we chose for our evaluation, as we will
+      describe later on.  The system starts off having a number of
+      primitive actions for recording the situation with a variety of
+      instruments, including infrared and ultraviolet cameras, SLAR
+      cameras, and digital picture and video cameras.  There are also
+      primitive actions to send alerts and reports back to the base,
+      and to generate initial estimates of the volume of the
+      spill.</p>
+
+	<blockquote>
+
+	  User: "find oil spill, descend to a position of height 200"
+	  
+	  <p><i>The system shows the user that it assumes that meant to
+	      descend after finding the spill. It also shows the user an
+	      alternative interpretation where the descent was meant to
+	      happen before finding the spill. It asks the user to either
+	      accept the assumed interpretation and if not to choose the
+	      alternative.</i></p>
+
+	  User: "film the spill"
+	  
+	  <p><i>The system indicates it did not understand that</i></p>
+
+	  User: "record videos and send them"
+
+	  <p><i>The system shows the user that it assumes that meant to
+	      iterate over each of the videos and send each in turn, since the
+	      send action is defined for sending one document at a
+	      time.</i></p>
+
+	  <p><i>The system shows the user that the result of sending the
+	      videos is a series of message receipts.</i></p>
+
+	  <p><i>The system shows that it assumes the position to be after the
+	      descent, it also shows the alternative interpretation that it is
+	      the position before descending. </i></p>
+
+	  User: "record GPS reading"
+
+	  <p><i>The system shows the user that it assumes that the
+	      instruction meant to record the GPS reading over the position
+	      after descending.  It also shows the user an alternative
+	      interpretation which is to record the GPS reading at the position
+	      when the spill was first found.  It asks the user to either
+	      accept the assumed interpretation and if not to choose the
+	      alternative.</i></p>
+
+	  User: <i>(selects the latter option)</i><br/>
+
+	  User: "record image"
+	  
+	  <p><i>The system shows three interpretations, one for the action to
+	      record IR image, another for record UV image, and another to
+	      record SLR image</i></p>
+
+	  User: "send thickness image"
+
+	  <p><i>The system shows the user that it is not familiar with the
+	      term high level alert, but that it assumes it is a kind of alert
+	      given the context in which the term is used.  The user does not
+	      have to interrupt the instruction and define it now.</i></p>
+
+	  <p><i>The system shows the user that the send action requires some
+	      evidence as input, and that it assumes that to be the output of
+	      the record GPS reading action.</i></p>
+
+	</blockquote>
+
+
+      <p>This is an example of how a user might teach a procedure
+      where a plane is to descend closer once a spill is found, then
+      take videos and send them to the headquarters, and to record the
+      GPS readings and send them along as well.</p>
+
+      <p>We now discuss the main features of our approach and
+      referring to the screenshot example below to illustrate how the
+      features manifest in the user interface.</p>
+
+
+
+      <h4>Key Feature: Exposing Prior Knowledge</h4>
+
+      <p>A challenge that users face when teaching a system is to
+      figure out what the system already knows or what capabilities it
+      has.  Lessons always build on prior knowledge, using it as
+      building blocks to the instruction.</p>
+
+      <p>Our approach is to constrain the user's input with a command
+      line interface that completes the user's utterance based on the
+      objects and actions that are already known to the system [Groth
+      and Gil 2009].  In this way the system exposes known actions and
+      object types, which serve as building blocks to the user's
+      expression of each instruction command.</p>
+
+      <p>Here is an example of how the system is exposing what it knows
+      about properties of positions:<br/>
+	<img src="tellme_expose.png" width=300px />
+      </p>
+
+
+
+      <h4>Key Feature: User Input as Controlled Natural Language</h4>
+
+      <p>One important challenge that we need to address is that while
+      natural language is a very natural way to provide tutorial
+      instruction, interpreting unconstrained natural language is far
+      beyond the state of the art. </p>
+
+      <p>Our approach is to use a paraphrase-based interpretation
+      system that matches the user's utterance against a set of
+      pre-defined paraphrase patterns, following the approach in [Gil
+      and Ratnakar 2008].  Each paraphrase pattern is associated with
+      a set of primitive commands that the user would have to use in
+      order to have the intended effect that is described with the
+      paraphrase pattern.  The paraphrase patterns are exposed to the
+      user through the command line interface described above.</p>
+
+      <p>For example, the utterance "descend to a position with
+      altitude 200" is mapped to a paraphrase pattern
+      component-as-verb +output-object +output-property +
+      output-property-value.  This paraphrase pattern is tied to a
+      command that finds a component whose name matches the verb and
+      adds it to the procedure. It further determines which of its
+      defined outputs matches the uttered output and asserts the utter
+      value for the uttered property of the object corresponding to
+      that output.</p>
+
+      <p>When an utterance cannot be mapped to any paraphrase pattern,
+      the system indicates so to the user and then the user has to
+      reformulate that instruction.  This is the case with the
+      utterance "film the spill" in the above example.</p>
+
+      <p>Many studies have found that users bring up new terms in any
+      domain following a Zipf's law and there are always new terms
+      that come up [Bugmann et al 01].  When a new term appears in an
+      utterance, TellMe will make assumptions about what it might
+      mean. For example, when the user utters "send thickness image"
+      and the system is not familiar with that term, it will assume
+      that the term refers to an object (as opposed to an action or a
+      property), and that it is a type of image since only images are
+      sent.</p>
+
+      <p>The combination of the command line interface and the
+      paraphrase-based interpretation system gives the user the
+      illusion of entering free text while the system actually is
+      controlling what the user can input in ways that are amenable to
+      understanding and interpretation.</p>
+
+
+
+      <h4>Key Feature: Share Learning State to Establish Trust</h4>
+      
+      <p>An important principle in user interface design is
+      establishing user trust.  A user needs to understand what the
+      system is doing about the input she provided, and trust that the
+      system is taking appropriate action. In our case, the system
+      should give feedback to the user about what it is learning from
+      the instruction.  It must do so unintrusively, more as a nod
+      than a detailed report, so that the user can focus on continuing
+      with the lesson. Users need to know what the system has
+      understood and learned so far as the lesson progresses.</p>
+
+      <p>Our approach is that the system always shares its internal
+      learning state. The below screen-shot of TellMe
+      corresponds to the interaction above. Its current
+      procedure hypothesis is shown on the right hand side.  At the
+      bottom a dataflow diagram is shown.  At the top, a set of
+      constraints is shown, most of which were inferred by the system.
+      In many cases, the user's instruction is ambiguous and the
+      system creates alternative interpretations, each resulting in a
+      different procedure hypotheses.  To show that it is considering
+      these hypotheses, it shows them in the History panel, where the
+      user can view them.  She is always asked to select one of
+      them.</p>
+
+      <p>For example, in the third utterance the user specifies to
+      "record GPS reading".  The user did not say from what position
+      to take the reading.  In this case, the system generates three
+      interpretations and shows them as options in the history
+      window. The first interpretation is that the image should be
+      taken at the position after the descent.  But it is possible
+      that the user meant the position before the descent, and that is
+      presented as a second option.  The third interpretation
+      considers taking the reading from yet another position that the
+      user may want to describe later. The user has to select one
+      before continuing, and the top option is selected by default.
+      As we will see next, TellMe uses heuristics to rank these
+      options, and because it considers the first interpretation of
+      the three to be more likely it will rank it first.</p>
+
+
+      <h4>Key Feature: Deductive and Heuristic Reasoning</h4>
+      
+      <p>One important challenge is that natural instruction is often
+      incomplete.  Therefore, the system has to address those
+      shortcomings if it is to learn the complete procedure.  Our
+      approach is to use deductive and heuristic reasoning.</p>
+
+      <p>Deductive reasoning is used to make assumptions about the
+      objects and steps in the procedure in order to create
+      constraints on objects that are underspecified.  The system is
+      effectively performing deductive reasoning to infer what is not
+      mentioned in the instruction.  All the constraints shown in the
+      top right panel were deduced by the system, and most refer to
+      objects that were not mentioned in the instruction.  For
+      example, the user does not mention that the input to the
+      procedure is an area to survey to find the spill, but the system
+      deduces that from what the instruction says.  Also, the fact
+      that taking a picture results in a new image being created is
+      not mentioned in the instruction, but the system adds that to
+      its knowledge.</p>
+
+      <p>Deductive reasoning is also used to interpret new terms that
+      the system has never seen before.  Recall that based on their
+      role in the paraphrase patterns the system assigns a syntactic
+      category.  Through deduction, the system infers what is the type
+      of that new entity and possibly other constraints. In our
+      example, "thickness image" will be classified as a type of
+      image.</p>
+
+      <p>The second kind of reasoning used in TellMe is heuristic.
+      Heuristic reasoning is used to figure out how those issues could
+      be resolved.  These heuristics essentially create possible
+      completions or corrections of the procedure hypothesis that the
+      system created from the user instruction.  TellMe shows the user
+      options that are ranked heuristically.</p>
+
+      <p>Heuristic reasoning makes the instruction more natural in
+      that the system not only has identified what issues to resolve,
+      which would result in questions to the user.  The system has
+      gone further in taking the initiative to formulate possible
+      answers to those questions.  This makes the instruction more
+      natural because this is something that teachers expect from
+      human students.</p>
+
+
+      <h4>Key Feature: Selective QuestionsM</h4>
+
+      <p>An important principle in designing effective user interfaces
+      is to take into account the cost of requesting user
+      interventions. Because instruction is incomplete, the system may
+      have many possible interpretations and therefore it could ask
+      many questions to the user to determine which is the one that
+      the user intended.  Yet, later instruction may address those
+      questions and so the user intervention was unnecessary and would
+      not be considered natural.  Although a user in teaching mode can
+      be expected to be more willing to cooperate than in other
+      circumstances, the system should not insist on asking questions
+      constantly just to satisfy its learning goals to disambiguate
+      and to complete the instruction.</p>
+
+      <p>Addressing this challenge is difficult, because if the system
+      postpones all its questions then there may be a large space of
+      possible candidate interpretations that would make learning very
+      unmanageable.</p>
+
+      <p>We use eager questioning to ensure that a single procedure
+      hypothesis can be shown to the user as a single procedure
+      sketch.  The system asks the user to select among procedure
+      sketches when several are possible. We use lazy questioning for
+      other matters. For example when an unknown term is used in the
+      instructions, the system makes assumptions about it and proceeds
+      without interrupting the user with questions. This is the case
+      in the example interaction above when the user refers to a
+      "thickness image" which is an unknown term.</p>
+
+
+
+      <img src="tellme_oilspill1.png" width="600px"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </long>
+  </research>
+
+
+<!-- Demo -->
+<demo>
+	<center>
+     <h4>Introduction</h4>
+     <iframe width="425" height="349" src="http://www.youtube.com/embed/3kbYcF-2BAo" frameborder="0" allowfullscreen></iframe>
+     <h4>User Interaction</h4>
+     <iframe width="425" height="349" src="http://www.youtube.com/embed/0lQ-0lutN2s" frameborder="0" allowfullscreen></iframe>
+     <h4>Addition of Missing Steps</h4>
+     <iframe width="425" height="349" src="http://www.youtube.com/embed/gf6sxLYaGcE" frameborder="0" allowfullscreen></iframe>
+     <h4>Addition of Iterations</h4>
+     <iframe width="425" height="349" src="http://www.youtube.com/embed/3UemmIj2DDU" frameborder="0" allowfullscreen></iframe>
+     <h4>User Interaction [Satellite Imagery Domain]</h4>
+     <iframe width="425" height="349" src="http://www.youtube.com/embed/vzEdxR-q5Ic" frameborder="0" allowfullscreen></iframe>
+	</center>
+</demo>
+</project>

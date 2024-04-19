@@ -1,0 +1,64 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Windward</name>
+  <title>Project tagline ...</title>
+
+  <status>
+    <short>
+  This project started in ...
+    </short>
+
+    <long>
+  This project started in ...
+    </long>
+  </status>
+
+  <description>
+    <short>
+      Short description of the project ..
+    </short>
+
+    <long>
+	   Long description of the project .. (HTML embedding is allowed)
+    </long>
+  </description>
+
+  <research>
+    <short>
+      Research topics (search keywords) ...
+    </short>
+    <long>
+     Explantion of the main points of the research.. (HTML embedding is allowed)
+    </long>
+  </research>
+
+  <link>
+	<a href="http://www.isi.edu/">Link 1</a>
+  </link>
+  <link>
+	<a href="http://www.isi.edu/">Link 2</a>
+  </link>
+  <link>
+	<a href="http://www.isi.edu/">Link 3</a>
+  </link>
+
+<!-- Demo -->
+<demo>
+     <center>
+	  <img src="tn_comingsoon.jpg"/>
+	  </center>
+</demo>
+</project>

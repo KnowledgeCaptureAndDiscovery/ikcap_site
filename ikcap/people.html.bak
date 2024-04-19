@@ -1,0 +1,199 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The Interactive Knowledge Capture Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="http://www.isi.edu/ikcap/ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='http://www.isi.edu/ikcap/images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="http://www.isi.edu/ikcap/" style="border:0"><IMG border='0' SRC="http://www.isi.edu/ikcap/images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Home Page of the Interactive Knowledge Capture Research Group</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>People</H2>
+<h3 style='clear:both'>Group Members:</h3>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~dgarijo"><b>Daniel Garijo</b></a><br />
+<a href="http://www.isi.edu/~dgarijo"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/dgarijo.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~varunr"><b>Varun Ratnakar</b></a><br />
+<a href="http://www.isi.edu/~varunr"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/varunr.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~gil"><b>Yolanda Gil</b></a><br />
+<a href="http://www.isi.edu/~gil"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/gil.jpg"></a><br />
+</div>
+<h3 style='clear:both'>Alumni and Former Members:</h3>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~fritz"><b>Christian Fritz</b></a><br />
+<a href="http://www.isi.edu/~fritz"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/fritz.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.aifb.kit.edu/web/Denny_Vrandecic/en"><b>Denny Vrandecic</b></a><br />
+<a href="http://www.aifb.kit.edu/web/Denny_Vrandecic/en"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/dennyv.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Dipsy Kapoor</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Artz:Donovan.html"><b>Donovan Artz</b></a><br />
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Artz:Donovan.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/dono.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Hyunjoon Jo</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~jihie"><b>Jihie Kim</b></a><br />
+<a href="http://www.isi.edu/~jihie"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/jihie.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~blythe"><b>Jim Blythe</b></a><br />
+<a href="http://www.isi.edu/~blythe"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/blythe.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~moody"><b>Joshua Moody</b></a><br />
+<a href="http://www.isi.edu/~moody"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/moody.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Spraragen:Marc.html"><b>Marc Spraragen</b></a><br />
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Spraragen:Marc.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/marcs.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.few.vu.nl/~pgroth/Site/Welcome.html"><b>Paul Groth</b></a><br />
+<a href="http://www.few.vu.nl/~pgroth/Site/Welcome.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/pgroth.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Sonal Jain</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chklovski:Timothy.html"><b>Timothy Chklovski</b></a><br />
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chklovski:Timothy.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/timc.jpg"></a><br />
+</div>
+<h3 style='clear:both'>Collaborators:</h3>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Andrew Hart</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Arni Sumarlidason</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Chris Duffy</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Christina Zheng</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.yale.edu/state/Christopher_Mason.html"><b>Christopher Mason</b></a><br />
+<a href="http://www.yale.edu/state/Christopher_Mason.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~deelman"><b>Ewa Deelman</b></a><br />
+<a href="http://www.isi.edu/~deelman"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/deelman.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html"><b>Gonzalo Florez Puga</b></a><br />
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://cci.emory.edu/cms/people/pages/saltz_joel.html"><b>Joel Saltz</b></a><br />
+<a href="http://cci.emory.edu/cms/people/pages/saltz_joel.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/saltz.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.isi.edu/~hauder"><b>Matheus Hauder</b></a><br />
+<a href="http://www.isi.edu/~hauder"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Paul Hanson</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Paul Ramirez</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://gaia.fdi.ucm.es/people/pedro/"><b>Pedro Gonzalez Calero</b></a><br />
+<a href="http://gaia.fdi.ucm.es/people/pedro/"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/pedro.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://pharmacology.ucsd.edu/faculty/bourne.shtml"><b>Phillip Bourne</b></a><br />
+<a href="http://pharmacology.ucsd.edu/faculty/bourne.shtml"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/bourne.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.uni-trier.de/index.php?id=12983"><b>Ralph Bergmann</b></a><br />
+<a href="http://www.uni-trier.de/index.php?id=12983"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/bergmann.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://research.sethi.org/ricky/"><b>Ricky Sethi</b></a><br />
+<a href="http://research.sethi.org/ricky/"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/ricky.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Rishi Verma</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Sam Park</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Sandra Villamizar</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Shannon McWeeney</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www-bcf.usc.edu/~macskass"><b>Sofus Macskassy</b></a><br />
+<a href="http://www-bcf.usc.edu/~macskass"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://cci.emory.edu/cms/people/pages/kurc_tahsin.html"><b>Tahsin Kurc</b></a><br />
+<a href="http://cci.emory.edu/cms/people/pages/kurc_tahsin.html"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="https://eng.ucmerced.edu/harmongroup/harmon"><b>Tom Harmon</b></a><br />
+<a href="https://eng.ucmerced.edu/harmongroup/harmon"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www.comp.hkbu.edu.hk/~william/"><b>William Cheung</b></a><br />
+<a href="http://www.comp.hkbu.edu.hk/~william/"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/william.jpg"></a><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><a href="http://www-bcf.usc.edu/~liu32/"><b>Yan Liu</b></a><br />
+<a href="http://www-bcf.usc.edu/~liu32/"><img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"></a><br />
+</div>
+<h3 style='clear:both'>Student Interns:</h3>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Angela Knight</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Cynthia Nava</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Emelie Knight</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Kevin Zhang</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Larry Zhang</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Molly Cinnamon</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Naveen Kothamasu</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+<div style='height:200px;background:#ddd;padding:5px;margin:2px;vertical-align:middle;text-align:center;border:1px solid #999;float:left'><p><b>Victoria Knight</b><br />
+<img width="120" style='border:1px solid #999' src="http://www.isi.edu/ikcap/images/default-person.jpg"><br />
+</div>
+
+</TD>
+</TR>
+</TABLE>
+<A HREF='http://www.isi.edu/ikcap/'><< Back to IKCAP</A>
+</BODY>
+</HTML>

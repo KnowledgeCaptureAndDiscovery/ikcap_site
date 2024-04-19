@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ConverterService" targetNamespace="urn:target-converter-service" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:tns="urn:target-converter-service" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd1="http://xmlbus.com/ConverterService/xsd">
+    <message name="inchToMM">
+        <part name="param0" type="xsd:float"/>
+    </message>
+    <message name="inchToMMResponse">
+        <part name="return" type="xsd:float"/>
+    </message>
+    <message name="mmToInch">
+        <part name="param0" type="xsd:float"/>
+    </message>
+    <message name="mmToInchResponse">
+        <part name="return" type="xsd:float"/>
+    </message>
+    <portType name="ConverterPortType">
+        <operation name="inchToMM">
+            <input message="tns:inchToMM" name="inchToMM"/>
+            <output message="tns:inchToMMResponse" name="inchToMMResponse"/>
+        </operation>
+        <operation name="mmToInch">
+            <input message="tns:mmToInch" name="mmToInch"/>
+            <output message="tns:mmToInchResponse" name="mmToInchResponse"/>
+        </operation>
+    </portType>
+    <binding name="ConverterPortBinding" type="tns:ConverterPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="inchToMM">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="inchToMM">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-converter-service" use="encoded"/>
+            </input>
+            <output name="inchToMMResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-converter-service" use="encoded"/>
+            </output>
+        </operation>
+        <operation name="mmToInch">
+            <soap:operation soapAction="" style="rpc"/>
+            <input name="mmToInch">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-converter-service" use="encoded"/>
+            </input>
+            <output name="mmToInchResponse">
+                <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                    namespace="urn:target-converter-service" use="encoded"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ConverterService">
+        <port binding="tns:ConverterPortBinding" name="ConverterPort">
+            <soap:address 
+                location="http://www.xmlbus.com:9010/xmlbus/container/Converter/ConverterService/ConverterPort/"/>
+        </port>
+    </service>
+</definitions>

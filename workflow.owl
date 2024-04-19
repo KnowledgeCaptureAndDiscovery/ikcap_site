@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.isi.edu/2007/08/workflow.owl#"
+  xml:base="http://www.isi.edu/2007/08/workflow.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="DataVariable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Variable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WorkflowInstance">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Workflow"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="InOutLink">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Link"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasDestinationNode"/>
+            </owl:onProperty>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:minCardinality>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasOriginNode"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="WorkflowTemplate">
+    <rdfs:subClassOf rdf:resource="#Workflow"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CollectionParameterVariable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ParameterVariable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CollectionDataVariable">
+    <rdfs:subClassOf rdf:resource="#DataVariable"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Node"/>
+  <owl:Class rdf:ID="OutputLink">
+    <rdfs:subClassOf rdf:resource="#Link"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDestinationNode"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:maxCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#ParameterVariable">
+    <rdfs:subClassOf rdf:resource="#Variable"/>
+  </owl:Class>
+  <owl:Class rdf:ID="InputLink">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasOriginNode"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Link"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasDataBinding">
+    <rdfs:domain rdf:resource="#DataVariable"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasNode">
+    <rdfs:range rdf:resource="#Node"/>
+    <rdfs:domain rdf:resource="#Workflow"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasLink">
+    <rdfs:range rdf:resource="#Link"/>
+    <rdfs:domain rdf:resource="#Workflow"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasParameterValue">
+    <rdfs:domain rdf:resource="#ParameterVariable"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="#hasDestinationNode">
+    <rdfs:domain rdf:resource="#Link"/>
+    <rdfs:range rdf:resource="#Node"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Node"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasVariable">
+    <rdfs:domain rdf:resource="#Link"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#Variable"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasOriginNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Link"/>
+    <rdfs:range rdf:resource="#Node"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasOriginParameter">
+    <rdfs:domain rdf:resource="#Link"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasDestinationParameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Link"/>
+  </owl:FunctionalProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3, Build 411)  http://protege.stanford.edu -->
+

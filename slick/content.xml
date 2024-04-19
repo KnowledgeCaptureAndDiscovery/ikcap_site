@@ -1,0 +1,204 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>SLICK</name>
+  <title>Skills for Learning to Interactively Capture Knowledge</title>
+ 
+  <status>
+  <short>
+  A prototype KA dialogue is implemeted for  acquiring two very different
+types of knowledge: military plans and biological process models.
+  </short>
+  <long>
+
+<ul>
+
+<li> Acquiring Process Description: A SLICK prototype is built for SHAKEN 
+(Clark et al 2002) where the users specify
+specify process 
+models in terms of their substeps and the objects involved.  Users model a
+substep as a type of action from the actions available in the knowledge base
+(e.g., `Collide', `Move', etc), and specifies the objects that fill the
+required roles for that action (e.g., `agent', `object', `location', etc).
+SLICK is built to help users entering  such process models. The slides show the
+<a href="slides/slick-for-entering-bio-process-models.ppt">interfaces</a>.
+This particular scenario shows how SLICK reports some of the issues in the KB
+that went unnoticed by users. SLICK keeps track of the progress based on
+learning goals and maintain annotations to the KB accordingly.
+The histroy shows the issues resolved and the new issues arisen.</li>
+
+<li> Acquiring Courses of Actions: A SLICK prototype is built to help
+military officers enter their plans (courses of actions).
+ <a
+href="http://www.isi.edu/ikcap/slick/slides/slick-for-coa-entry-interfaces.ppt"> These slides show
+the current interfaces.</a> </li>
+</ul>
+
+  </long>
+  </status>
+
+  <description>
+    <short>
+Developing acquisition interfaces that are proactive
+learners, able to reason about learning activities and with initiative in
+participating in the process accordingly.
+    </short>
+
+    <long>
+The goal of our work is to develop acquisition interfaces that are proactive
+learners, able to reason about learning activities and with initiative in
+participating in the process accordingly.  Our approach is to enable
+acquisition tools to have acquisition goals and be aware of the level of
+competence and confidence of the knowledge they are acquiring.  Drawing from
+limitations shown by previous tools in their interactions with users and from
+learning/teaching strategies that are typically used in tutoring systems, we
+formulated goals and strategies to turn acquisition tools into better
+students.  
+ <br />
+  <img src="images/slick-architecture.gif"/>
+	 
+
+    </long>
+  </description>
+
+  <research>
+    <short>
+    Interactive Knowledge Acquisition Dialogue, Deriving Acquisition
+Principles from Tutoring Principles
+    </short>
+    <long>
+ <p />
+Current tools for interactive knowledge capture have little or no learning
+aptitude.  They are mostly oblivious to the process or strategy that the user
+may be following in entering new knowledge, unaware of their progress during a
+session, and ignorant of typical skills expected from a good student.  A user
+has to make up for these shortcomings by tracking the status, progress,
+potential problems, and possible courses of action themselves.  We present an
+approach to make acquisition interfaces more proactive by extending them with:
+1) goals that represent what remains to be learned, 2) strategies to achieve
+these goals and acquire further knowledge, and 3) awareness of the current status
+of the body of knowledge learned.  The resulting interaction shows that the
+system is aware of its progress towards acquiring the new knowledge, and moves
+forward by understanding what acquisition goals and strategies to pursue.
+<br />
+<ul>
+<li>Analyzed the
+literature on tutorial dialogues and compiled useful principles
+that students and teachers typically follow in making tutoring/learning interactions
+successful. The result of this work is presented in the <a
+href="papers/Tutoring-Learning-Principles-Kim-Gil-02.pdf">ITS-2002 paper (in
+proceedings of the Intelligent
+Tutoring Systems Conference)</a>
+ <br />
+<img src="images/learning-and-tutoring-goals.gif"/></li> 
+
+<li>Examined what tutoring and learning principles have been
+used to date in the acquisition literature, though unintentionally and
+implicitl and how a more thorough and explicit representation of
+these principles would help improve enormously how computers learn from users. <a
+href="papers/KA-Dialog-Kim-Gil-02.pdf">CogSci-2002 paper (in proceedings of the 24th Annual
+Meeting of the Cognitive Science Society)</a>
+ <br />
+<img src="images/lg-used-in-ka.gif"/>
+</li> 
+
+<li> Developed an
+approach to make acquisition interfaces more proactive by extending them with:
+1) goals that represent what remains to be learned, 2) strategies to achieve
+these goals and acquire further knowledge, and 3) awareness of the current
+status of the body of knowledge learned.  
+A prototype KA dialog system for acquiring military plans is described in <a
+href="http://www.isi.edu/ikcap/slick/slides/slick-pi-nov-02.ppt">slides
+</a>
+ <br /></li> 
+
+
+    </ul>
+    </long>
+  </research>
+
+  
+  <link>
+  <b>slides in various meetings</b>
+  <ul>
+  <li><a
+href="http://www.isi.edu/ikcap/slick/slides/slick-pi-nov-02.ppt">PI meeting
+(Nov 02)</a></li>
+<li><a
+href="http://www.isi.edu/ikcap/slick/slides/Dialog-Feb-02-pi.ppt">PI meeting
+(Feb 02)</a></li>
+
+  </ul> 
+  </link>
+
+<link>
+<a href="http://www.isi.edu/ikcap/echo"><b>The Echo project for memory-based
+meta level reasoning</b></a>
+  </link>
+
+
+<!-- Demo -->
+<demo>
+<center>
+<b><font face="Arial,Helvetica" size="+1">A Screen Walkthrough
+Demonstration of <n /></font></b>
+<p /><b><font face="Arial,Helvetica">Version 1.0, November 2002</font></b></center>
+
+<br />
+<p /><b><font face="Arial,Helvetica" size="-1">User enters a plan
+(courses of action sketch) using nuSketch.
+ </font></b>
+<p /><img src="demoimages/bh-len.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1">When user start entering
+a new plan (COA), all the objects are not assigned to any task (shown in red).
+The goals and expected effects can provide the purpose of the lesson.
+ </font></b>
+<p /><img src="demoimages/slick-0.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1">Slick shows the task
+descriptions being built, issues resolved over time.
+ </font></b>
+<p /><img src="demoimages/slick1.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1">Slick shows the remaining 
+tasks and suggestions.  Based on the number of times tested/used by the user,
+SLICK computes the confidence level on a given subtopic.
+Users can check the details on each objects
+introduced during the KA session. 
+ </font></b>
+<p /><img src="demoimages/slick2.gif" />
+<br />
+<br />
+<br />
+<p /><b><font face="Arial,Helvetica" size="-1">Slick maintains history:
+changes in the KB. User can check the progress over time.
+ </font></b>
+<p /><img src="demoimages/slick-history.gif" />
+<br />
+<br />
+<br />
+
+</demo>
+</project>

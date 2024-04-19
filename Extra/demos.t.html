@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Demo Gallery - Interactive Knowledge Capture</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="Stylesheet" href="./ikcap.css" type="text/css"/>
+<link rel="Stylesheet" type="text/css" href="./ikcap-basic.css">
+<style>
+  div li {
+     padding:0.1em;
+  }
+
+  div#mainProjects a {
+     text-decoration:none;
+     border-bottom: 1px dotted #069;
+     color: #069;
+     /*font-size:1.1em;
+     line-height:1.2em;
+     letter-spacing:.1em;*/
+  }
+
+</style>
+<script>
+  function openVid(file, width, height) {
+     var str = '';
+     str += '<video width="'+width+'" height="'+height+'" controls>';
+     str += '<source src="'+file+'" />';
+     str += 'Your browser does not support the video tag';
+     str += '</video>';
+  
+     var videowin = window.open("","videowin","width="+(width+20)+",height="+(height+50));
+     videowin.document.writeln(str);
+     videowin.document.close();
+  }
+</script>
+</head>
+
+<body>
+  <a style="border:0;" href=".."><img border=0 src="images/kcap.jpg"/></a>
+  <h4>The "Interactive Knowledge Capture" Research Group at ISI</h4>
+
+  <h3 style="padding-top:0">Demo Gallery</h3>
+  <div id="mainProjects">
+<table width="80%" cellpadding="1" cellspacing="20">
+    <tr>
+       <td>
+<font size="+2"><strong>Constable</strong></font><br/>
+ <img width="476" height="307" alt="constable screenshot" src="constable/screenshot1.png" /><br/>
+<small><a
+href="javascript:openVid('constable/constable-take-1.m4v',640,550)"><b>Demo (streaming movie)</b></a><br/>
+</small>
+</td>
+       <td><small><br />
+When an end user specifies a plan in a planning system, 
+it can be difficult for the user to both 
+(i) keep track of all the constraints, 
+and (ii) to know where and how to specify constraints.  
+Constable helps users specify new constraints to a planning system - 
+it provides automatic help in specifying constraints, 
+and provides a paraphrasing text editor.  
+<a href="../constable/">More about Constable </a>
+</small></td>
+ </tr>
+    <tr>
+       <td><small>Entering elaborate models of processes and events
+       into a computer is a complex task.  KANAL is a tool that helps
+       end users (for example, experts in biology) enter a model by
+       using knowledge-based techniques to check the model for
+       inconsistencies.  Kanal can also suggest ways to automatically 
+       fix the inconsistencies it finds.
+<a href="../kanal/">More about Kanal </a>
+</small></td>
+       <td>
+<font size="+2"><strong>Kanal</strong></font><br/>
+ <img width="450" height="260" alt="kanal architecture" src="kanal/images/kanal-architecture.gif" /><br/>
+<small>
+A video walkthrough of KANAL critiquing a "Virus Invasion" model
+defined by end users (subject experts) in an end-to-end system called Shaken.<br/> 
+<a href="javascript:openVid('kanal/kanal-second-pass.m4v',1000,800)">
+<b>Demo (streaming movie)</b></a><br/>
+</small>
+</td></tr>
+<tr><td>
+<font size="+2"><strong>CAT</strong></font><br/>
+<img width="300" height="260" src="kanal/tn_comingsoon.jpg" /><br/>
+<a
+href="javascript:openVid('misc/cat-scec-demo.m4v',1000,800)"><b>Demo (streaming movie)</b></a><br/>
+    </td><td>
+        A video showing composition of a SCEC Pathway using CAT (Composition Analysis Tool).
+</td></tr>
+<tr><td><small>
+       TRELLIS is a tool that helps end users analyze and draw
+       conclusions about topics which are new to them.  It allows users
+       to enter semi-structured statements.
+       It exports semantic annotation.
+       It ties stuff to documents.
+       </small></td>
+       <td><font size="+2"><strong>Trellis</strong></font><br/>
+       <img width="420" height="294" src="trellis/images/image006.gif"
+       /><br/>
+       <a href="javascript:openVid('misc/TrellisMovie.m4v',640,550)"><b>Demo</b></a><br/>
+       </td></tr>
+<tr><td><font size="+2"><strong>ACE</strong></font><br/>
+       <img width="300" height="260" src="kanal/tn_comingsoon.jpg"
+       /><br/>
+       <a
+       href="javascript:openVid('misc/ace1.m4v',640,550)"><b>Demo</b><br/>
+</td>
+</tr>
+</table>
+
+  </div>
+
+  <p><a href="../">&lt;&lt; Main Page</a></p>
+
+  <div class="footer">
+    <a href="http://www.isi.edu"><img title="ISI" alt="ISI" src="images/isi.gif" align="left" border="0"></a>
+    <a href="http://www.usc.edu"><img title="USC" alt="USC" src="images/usc.gif" align="left" border="0"></a>
+    <a href="http://ai.isi.edu"><img title="AI@ISI" alt="AI@ISI" src="images/ai.jpg" align="left" border="0"></a>
+  </div>
+</body>
+</html>

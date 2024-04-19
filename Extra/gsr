@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+
+
+$s = $ARGV[0];
+$r = $ARGV[1];
+
+for ($i = 2; $i <= $#ARGV; $i++) {
+
+    $file = $ARGV[$i];
+
+    undef @d;
+
+    open(f,"<$file");
+    @d = <f>;
+    close(f);
+
+    print $#d." lines in $file\n";
+
+    for ($j = 0; $j <= $#d; $j++) {
+
+        $d[$j] =~ s/$s/$r/g;
+
+    }
+
+    open(f, ">$file");
+    print f @d;
+    close(f);
+}
+
+exit 0;
+

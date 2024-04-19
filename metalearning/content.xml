@@ -1,0 +1,145 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Maven</name>
+  <title>Moderating ActiVitiEs of iNtegrated (Maven)</title>
+
+  <status>
+    <short>
+
+The initial protype of Maven was developed on the Spark system that supports a
+BDI agent model.  
+    </short>
+
+    <long> In the initial prototype, Maven applies a very simple control
+strategy based on the capabilities of the participating agents, and intends
+the subgoals with a simple goal selection strategy. We are currently extending
+the control procedure to support more flexible approach to activate learning
+goals and tasks based on learning status, and supporting workflow validation
+with experiment and practice problems.  learning goals.
+
+
+    </long>
+  </status>
+
+  <description>
+    <short>
+      Maven is a meta-level reasoner that coordinates different agents in
+an integrated learning system based on their capabilities and
+status of learning.
+    </short>
+
+    <long>
+Developing systems that learn how to perform complex
+tasks is a challenging task. As the knowledge to learn
+becomes complex, with diverse procedural constructs and
+uncertainties to be validated, the system needs to integrate a
+wider range of learning methods with different strengths.
+The Poirot system pursues such a multi-strategy learning
+methodology that employs multiple integrated learners and
+knowledge validation modules <a href="http://mcox.org/Papers/WS01_BursteinM.pdf">Burstein et al., 2007</a>.
+<p>
+
+In such an integrated learning system, activities of
+participating agents have to be coordinated systematically,
+especially to ensure that the overall system acquires the
+desired procedural knowledge. This can be done through a
+meta reasoning capability that monitors and controls the
+learning process.
+The meta-level reasoner may solve a given learning problem
+with a set of meta-level plans for coordinating and
+prioritizing the activities of the agents based on their
+capabilities and on the status of learning.
+<p>
+
+Maven is a meta-level reasoner that coordinates activities of different
+learners in an integrated learning system.
+ Maven is developed based on our early work on learning goals and meta-level
+reasoning for interactive knowledge capture <a
+href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6WGR-4P29KJG-1&_user=1181656&_coverDate=10%2F31%2F2007&_rdoc=1&_fmt=&_orig=search&_sort=d&view=c&_acct=C000051901&_version=1&_urlVersion=0&_userid=1181656&md5=68345414b6dd6944eee1e40513b2d377">Kim
+and Gil, IJHCS-2007</a> and
+ <a
+href="http://www.isi.edu/ikcap/slick/papers/kim-gil-AIEd-2003.pdf"> Kim and
+Gil, AIEd-2003</a>.
+<p>
+
+The system explicitly represents learning goals, a set of
+plans for achieving learning goals, and high-level learning
+strategies that prioritize learning goals. Maven includes both
+top-down and bottom-up control strategies, and therefore
+supports flexible interactions among learners. The status of
+desired learning goals and goal achievement history enables
+assessment of learning progress over time. Our current work focuses on
+developing a meta reasoner for
+Poirot <a href="http://mcox.org/Papers/WS01_BursteinM.pdf">Burstein et al., 2007</a>.
+
+    </long>
+  </description>
+
+  <research>
+    <short>
+     Learning Moderator, Meta-Level Reasoning, Integrated Learning
+    </short>
+    <long>
+Maven is a meta-level reasoner that organizes activities by learners and other
+agents to learn how to perform complex tasks. Maven models
+<ul>
+<li>External state: the Poirot blackboard where all agents post results of their activities
+<li>Effectors: Maven posts meta-goals (tasks) to blackboard that can be achieved by other Poirot agents
+<li>Sensors: Maven subscribes to events on the Poirot BBD
+<li>Meta-Plans: Maven uses meta-plans to reason about the situation and about what should be done next
+<li>Internal state: Maven forms its internal state from what it senses, and uses it to assess learning status and reason about what to do next (what goals to post)
+ In particular, <b>Maven reasons about <i>Task Models</i> </b> that represent body of
+knowledge about a domain.
+</ul>
+
+<p>
+<b>Task Models</b>
+<p>
+A Task Model is a body of knowledge about a domain which is assembled from learned models of methods (method hypotheses).
+Maven creates Task Models and assesses individual Task Models.  It also
+relates TMs to one another and identifies which models supersedes others.<p>
+
+<img src="images/tm.jpg" width="600" height="200"/>
+
+<p>
+Maven keeps track of <i>issues</i> and <i>credits</i> with a task model. Issues
+include gaps (e.g. no method for action a3, no preference for a3 vs a7),
+failures (e.g. failed execution of step7 for Problem2), and failure diagnoses
+(e.g. model of step6 is faulty, model of s5 faulty)
+Credits of models include<i> success</i> (e.g. successful plan for Problem1) and
+<i>agreement</i> (e.g. all models that succeed at Problem1 use (A,a1).
+
+<p>
+Maven assess learning status with task models and decide which learning goal
+to achieve next. When new knowledge is created or validated by participating
+agents, new task models (TM) are created and assessed.  The cycle of TM
+creation, TM assessment and meta goal activation derives the learning process.
+
+    </long>
+  </research>
+
+  <link>
+	<a href="http://mcox.org/Papers/WS01_BursteinM.pdf">A Poirot System Description</a>
+  </link>
+
+
+<!-- Demo -->
+<demo>
+     <center>
+	  <img src="tn_comingsoon.jpg"/>
+	  </center>
+</demo>
+</project>

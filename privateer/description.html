@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The Privateer Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Privacy Protection through Computational Workflows</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Description</H2>
+<P>    	   	 
+
+
+      While there is a plethora of mechanisms to ensure lawful access to
+      privacy-protected data, additional research is required in order to
+      reassure individuals that their personal data is being <b> used</b> for
+      the <b>purpose</b> that they consented to.  This is particularly
+      important in the context of new data mining approaches, as used, for
+      instance, in biomedical research and commercial data mining.
+      
+      In this project we investigate the use of computational workflows to
+      ensure and enforce appropriate use of sensitive personal
+      data. Computational workflows describe in a declarative manner the
+      data processing steps and the expected results of complex data
+      analysis processes such as data mining. We see workflows as an
+      artifact that captures, among other things, how data is being used and
+      for what purpose.
+      
+      We therefore believe that computational workflow systems are a good
+      starting point and could be extended to support a variety of privacy
+      related tasks including:
+      
+      <ul>
+	<li><i>Ensuring compliance of a data analysis system</i> with
+	  specified privacy policies before enabling execution and during
+	  execution via monitoring.</li>
+	
+	<li><i>Assisting users to comply with required privacy policies</i>
+	  by selecting data analysis workflows that comply with those
+	  policies for the datasets to be analyzed.</li>
+	
+	<li><i>Enabling transparency of data analysis systems</i> that use
+	  sensitive information, including the generation of detailed
+	  provenance trails.</li>
+	
+	<li><i>Supporting accountability</i> with respect to the appropriate
+	  use of data in compliance with privacy policies.</li>
+	
+	<li><i>Supporting negotiation and relaxation of privacy policies</i>
+	  as well as access to data, by providing evidence for the ``need to
+	  know'' of sensitive data and, conversely, the ability to identify
+	  opportunities for an increase in privacy where such measures do not
+	  aversly affect quality.</li>
+      </ul>
+      
+      More specifically, we are extending the Wings Workflow System.
+
+
+      <h4>Reasoning about Privacy Policies in Wings</h4> 
+      
+      <p>
+	We created a prototype of a workflow system that checks privacy
+	policies for workflows based on Wings. The workflows describe how data
+	is used in terms of how it is analyzed and processed.  To exemplify
+	applications that could raise privacy concerns regarding use, we
+	modeled data mining algorithms that could be used as workflow steps,
+	called <i>components</i>, and created semantic representations of data
+	and workflows that use those components. Both, components and data
+	were described in OWL/RDF.</p>
+      
+      <p>
+	We first defined a <i>component catalog</i> that contained a range
+	of data mining algorithms as well as privacy preservation
+	techniques. The catalog was not meant to be exhaustive, but rather
+	be representative of the kinds of algorithms that are relevant to
+	reasoning about privacy. Data mining algorithms included
+	clustering methods (e.g., k-means, Gaussian mixture models),
+	manifold learning (e.g., GTM), and classification (e.g., SVM).
+	Privacy preservation techniques were divided into two subclasses:
+	per attribute and per dataset. The former had several subclasses
+	including anonymization, perturbation, and encryption. The class
+	of privacy preservation techniques per dataset included
+	generalization algorithms such as k-anonymity.</p>
+
+      <p>
+	We also defined a <i>data ontology</i> with semantic
+	representations of datasets, which essentially provided a meta-data
+	vocabulary that we could use to reason about how datasets are
+	transformed by the workflow components upon execution. Roughly,
+	attributes of datasets had associated properties that expressed
+	whether the attributes were protected by privacy preservation
+	methods (e.g., whether they were anonymized).
+	In addition, domain-specific ontologies were used to express the
+	use that was authorized by the individuals when the data was
+	collected. 
+
+	Using this data ontology, we populated a {\em data catalog} with
+	initial datasets and specified meta-data attributes and values
+	using the ontology. Finally, we defined workflows whose
+	computational steps were elements of the component catalog and
+	whose input datasets were elements of the data catalog.
+
+	We defined rules that would represent reasonable constraints to
+	address privacy protection.  Each rule had a context that referred to
+	the condition where the underlying policy was relevant, so that the
+	policy applied only if this condition was satisfied, and a set of
+	requirements that represented non-amendable conditions under which the
+	use of data was required or not allowed.
+      </p>
+
+
+
+
+    
+<P><A HREF='research.html'>More (Research)</A>
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

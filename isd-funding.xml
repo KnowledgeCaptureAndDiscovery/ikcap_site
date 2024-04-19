@@ -1,0 +1,253 @@
+<isdfunds>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>CCF-0725332</awardnumber>
+    <startdate>October 2007</startdate>
+    <enddate>September 2011</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>DALE</project>
+  </funding>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>IIS-0948429</awardnumber>
+    <startdate>September 2009</startdate>
+    <enddate>August 2011</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>DALE</project>
+    <project>Shortipedia</project>
+  </funding>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>CCF-0725332</awardnumber>
+    <startdate>October 2007</startdate>
+    <enddate>September 2010</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+  </funding>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>IIS-0917328</awardnumber>
+    <startdate>September 2009</startdate>
+    <enddate>August 2011</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+  </funding>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>IIS-0948429</awardnumber>
+    <startdate>September 2009</startdate>
+    <enddate>August 2011</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+    <project>HowToDo</project>
+  </funding>
+  <funding>
+    <program>National Institutes of Health (NIH)</program>
+    <url>http://www.nih.gov/</url>
+    <awardnumber>NIH U24 MH068457</awardnumber>
+    <startdate>May 2009</startdate>
+    <enddate>December 2009</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+  </funding>
+  <funding>
+    <program>Air Force Office of Scientific Research
+    (AFOSR)</program>
+    <url>http://www.afosr.af.mil/</url>
+    <awardnumber></awardnumber>
+    <startdate>November 2005</startdate>
+    <enddate></enddate>
+    <project>MathTrust</project>
+  </funding>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>SCI-0455361</awardnumber>
+    <startdate>December 2004</startdate>
+    <enddate>November 2006</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Pegasus</project>
+    <project>Cognitive Grids</project>
+  </funding>
+  <funding>
+    <program>DARPA's Personalized Assistant that Learns
+    (PAL)</program>
+    <url>http://www.darpa.mil/ipto/programs/pal/index.htm</url>
+    <awardnumber>NBCHD030010</awardnumber>
+    <startdate>May 2003</startdate>
+    <enddate>May 2008</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Tailor</project>
+    <project>Learner</project>
+    <project>ECHO</project>
+  </funding>
+  <funding>
+    <program>Air Force Office of Scientific Research
+    (AFOSR)</program>
+    <url>http://afosr.sciencewise.com/</url>
+    <awardnumber>F49620-00-1-0337</awardnumber>
+    <startdate>August 2000</startdate>
+    <enddate>November 2003</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+  </funding>
+  <funding>
+    <program>Department of Defense</program>
+    <url>http://www.defenselink.mil/</url>
+    <awardnumber>N66001-03-C-8006</awardnumber>
+    <startdate>December 2002</startdate>
+    <enddate>December 2006</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+    <project>ECHO</project>
+  </funding>
+  <funding>
+    <program>National Science Foundation (NSF)</program>
+    <url>http://www.nsf.gov/</url>
+    <awardnumber>EAR-0122464</awardnumber>
+    <startdate>September 2001</startdate>
+    <enddate>September 2006</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>SCEC/IT</project>
+    <project>Pegasus</project>
+    <project>DOCKER</project>
+    <project>CAT</project>
+    <project>Wings</project>
+    <project>Cognitive Grids</project>
+  </funding>
+  <funding>
+    <program>DARPA Active Templates (AcT)</program>
+    <url>http://schafercorp-ballston.com/active-templates</url>
+    <awardnumber>F30602-00-2-0513</awardnumber>
+    <startdate>April 2000</startdate>
+    <enddate>April 2003</enddate>
+    <project>Temple</project>
+    <project>Interactive Knowledge Capture</project>
+    <project>English method editor</project>
+    <project>Constable</project>
+    <project>Expect</project>
+  </funding>
+  <funding>
+    <program>DARPA Control of Agent-Based Systems (CoABS)</program>
+    <url>http://coabs.globalinfotek.com/</url>
+    <awardnumber>F30602-97-C-0068</awardnumber>
+    <startdate>June 1999</startdate>
+    <enddate>December 2001</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Phosphorus</project>
+    <project>Expect</project>
+  </funding>
+  <funding>
+    <program>DARPA Rapid Knowledge Formation (RKF)</program>
+    <url>http://reliant.teknowledge.com/RKF/</url>
+    <awardnumber>N66001-00-C-8018</awardnumber>
+    <startdate>April 2000</startdate>
+    <enddate>November 2003</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Kasper</project>
+    <project>KANAL</project>
+    <project>SLICK</project>
+  </funding>
+  <funding>
+    <program>Air Force Research Laboratory's Joint Defense Planner
+    (JDP)</program>
+    <url>http://www.rl.af.mil/</url>
+    <awardnumber>F30602-97-C-0118</awardnumber>
+    <startdate>April 2000</startdate>
+    <enddate>September 2000</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Kamm</project>
+  </funding>
+  <funding>
+    <program>DARPA High Performance Knowledge Bases
+    (HPKB)</program>
+    <url>http://www.teknowledge.com/HPKB</url>
+    <awardnumber>F30602-97-1-0195</awardnumber>
+    <startdate>April 1997</startdate>
+    <enddate>December 2000</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Sherpa</project>
+    <project>Planet</project>
+    <project>Evaluation</project>
+    <project>EMeD</project>
+    <project>English method editor</project>
+    <project>Expect</project>
+  </funding>
+  <funding>
+    <program>DARPA Joint Forces Air Component Commander
+    (JFACC)</program>
+    <url>http://www.darpa.mil/</url>
+    <awardnumber>F30602-97-C-0118</awardnumber>
+    <startdate>April 1997</startdate>
+    <enddate>September 2000</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Inspect</project>
+    <project>Expect</project>
+  </funding>
+  <funding>
+    <program>DARPA Information Systems Office (ISO) Technology
+    Integration Experiment</program>
+    <url>http://www.darpa.mil/iso</url>
+    <awardnumber>F30602-97-1-0195</awardnumber>
+    <startdate>July 1999</startdate>
+    <enddate>July 2000</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Rosetta</project>
+  </funding>
+  <funding>
+    <program>DARPA / Rome Planning Initiative (ARPI)</program>
+    <url>http://arpi.isx.com/</url>
+    <awardnumber>DABT 63-95-C-0059</awardnumber>
+    <startdate>May 1995</startdate>
+    <enddate>May 1999</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Expect</project>
+  </funding>
+  <funding>
+    <program>DARPA / Bootstrapped Learning</program>
+    <url>http://www.darpa.mil</url>
+    <awardnumber>HR0011-07-C-0060</awardnumber>
+    <startdate>August 2007</startdate>
+    <enddate>July 2011</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>TellMe</project>
+  </funding>
+  <funding>
+    <program>CALO Project at SRI</program>
+    <url>http://caloproject.sri.com/</url>
+    <enddate>March 2009</enddate>
+    <project>Beamer</project>
+  </funding>
+  <funding>
+    <program>Air Force Research Laboratory (AFRL)</program>
+    <url>http://www.afrl.gov/</url>
+    <awardnumber>FA8750-06-C-0210</awardnumber>
+    <startdate>September 2006</startdate>
+    <enddate>September 2010</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+  </funding>
+  <funding>
+    <program>US Air Force Office of Scientific Research (AFOSR)</program>
+    <url>http://www.afosr.af.mil/</url>
+    <awardnumber>FA9550-11-1-0104</awardnumber>
+    <startdate>June 2011</startdate>
+    <enddate>March 2015</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>WOOT</project>
+  </funding>
+  <funding>
+    <program>DARPA</program>
+    <url>http://www.darpa.mil</url>
+    <awardnumber>FA8750-13-C-0016</awardnumber>
+    <startdate>January 2013</startdate>
+    <enddate>November 2014</enddate>
+    <project>Interactive Knowledge Capture</project>
+    <project>WOOT</project>
+  </funding>
+</isdfunds>

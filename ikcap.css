@@ -1,0 +1,65 @@
+b,u {
+   color:#070;
+   font-weight: bold;
+   font-size: 1.1em;
+   background-color: transparent;
+}
+
+a.research {
+   font-size: 3em;
+   line-height: 1.5em;
+   letter-spacing: .3em;
+   text-decoration:none;
+   color:#039;
+   border-bottom: 0px;
+}
+
+a.projects {
+   font-size: 3em;
+   padding-left: 3em;
+   line-height: 1.5em;
+   letter-spacing: .2em;
+   text-decoration:none;
+   color:brown;
+   border-bottom: 0px;
+}
+
+a.people {
+   font-size: 3em;
+   padding-left: 1em;
+   line-height: 1.5em;
+   letter-spacing: .2em;
+   text-decoration:none;
+   color:black;
+   border-bottom: 0px;
+}
+
+a.publications {
+   font-size: 3em;
+   padding-left: 0em;
+   line-height: 1.5em;
+   letter-spacing: .2em;
+   text-decoration:none;
+   color:#06a;
+   border-bottom: 0px;
+}
+
+a.demos {
+   font-size: 2.5em;
+   padding-left: 0em;
+   line-height: 1.5em;
+   letter-spacing: .2em;
+   text-decoration:none;
+   color:#d78b1a;
+   border-bottom: 0px;
+}
+
+a.news {
+   font-size: 2em;
+   padding-left: 0em;
+   line-height: 1.5em;
+   letter-spacing: .2em;
+   text-decoration:none;
+   color:green;
+   border-bottom: 0px;
+}

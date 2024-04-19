@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY flns "http://www.isi.edu/ikcap/Wingse/fileOntology.owl#" >
+    <!ENTITY wflns "http://www.isi.edu/ikcap/Wingse/workflowOntology.owl#" >
+    <!ENTITY clns "http://www.isi.edu/ikcap/Wingse/componentOntology.owl#" >
+    <!ENTITY domns_flns "http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/fileOntology.owl#" >
+    <!ENTITY domns_clns "http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/componentLibrary.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/templates/_template_.owl#"
+     xml:base="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/templates/_template_.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+
+     xmlns:flns="http://www.isi.edu/ikcap/Wingse/fileOntology.owl#"
+     xmlns:clns="http://www.isi.edu/ikcap/Wingse/componentOntology.owl#"
+     xmlns:wflns="http://www.isi.edu/ikcap/Wingse/workflowOntology.owl#"
+
+     xmlns:domns_clns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/componentLibrary.owl#"
+     xmlns:domns_flns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/fileOntology.owl#">
+
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Wingse/workflowOntology.owl"/>
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/componentLibrary.owl"/>
+    </owl:Ontology>
+    <wflns:WorkflowTemplate rdf:ID="_template_"/>
+</rdf:RDF>

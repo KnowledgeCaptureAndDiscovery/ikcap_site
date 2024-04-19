@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+    xmlns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/fileLibrary.owl#"
+    xmlns:flns="http://www.isi.edu/ikcap/Wingse/fileOntology.owl#"
+    xmlns:clns="http://www.isi.edu/ikcap/Wingse/componentOntology.owl#"
+    xmlns:wflns="http://www.isi.edu/ikcap/Wingse/workflowOntology.owl#"
+    xmlns:domns_clns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/componentLibrary.owl#"
+    xmlns:domns_flns="http://www.isi.edu/ikcap/Wingse/domains/_DOMAIN_/fileOntology.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="componentLibrary.owl"/>
+  </rdf:Description>
+
+</rdf:RDF>

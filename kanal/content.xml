@@ -1,0 +1,389 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>KANAL</name>
+  <title>Knowledge Analysis on Process Models</title>
+
+  <status>
+    <short>
+  KANAL is currently used within an end-to-end KA system called SHAKEN. We
+have performed several evaluations with end users which are reported in <a 
+href="http://www.isi.edu/expect/papers/kim-blythe-iui-2003.pdf">Kim and
+Blythe, IUI-2003</a>.  
+
+  </short>
+  <long>
+Our initial evaluation of <n /> as a stand-alone system shows its usefulness
+in finding errors and suggesting fixes.  It also has been
+successfully integrated within an end-to-end system that support users
+entering domain knowledge as a part of DARPA Rapid Knowledge Formation (RKF)
+program. 
+<b><n /></b> is a tool for building and checking process models.  By
+relating different pieces of information in process models among themselves
+and to the existing KB, it performs a variety of verification and validation
+checks and propose useful fixes.
+  <p />
+
+We performed an initial evaluation in December 2000, which has been reported in
+<a 
+href="http://www.isi.edu/expect/papers/kim-gil-ijcai01.pdf">Kim and
+Gil, IJCAI-01</a>.  The results show that <n /> can find most of the errors in
+the process models and suggest useful fixes including the fixes that directly
+point to the sources of the errors.
+<p />
+
+<n /> has been successfully integrated within an end-to-end system (called
+SHAKEN) that supports subject matter experts entering domain knowledge as part
+of the DARPA <a href="http://reliant.teknowledge.com/RKF/">Rapid Knowledge
+Formation (RKF)</a> program.  During summer 2001 and January 2002, the SHAKEN
+system has been evaluated by lightly trained biologists where they author
+biology textbook knowledge using the system.  The resulting knowledge bases 
+answer questions that a student might be asked based on the
+chapter's contents.  
+<p />
+
+We have recently built an Action Editor in order to support interleaving of process
+model authoring and checking while extending background knowledge of actions.
+Also we have refined the KANAL interface based on feedback from end users.
+The improved system was evaluated by military officers in describing
+and checking their plans (courses of actions) during Fall 2002. The details
+are desribed in <a 
+href="http://www.isi.edu/expect/papers/kim-blythe-iui-2003.pdf">Kim and
+Blythe, IUI-2003</a>.
+
+</long>
+ 
+ </status>
+
+  <description>
+    <short>
+     <n/> is a tool for checking process models entered by users.  By
+relating different pieces of information in process models among themselves
+and to the existing KB, it performs a variety of verification and validation
+checks and propose useful fixes.  
+    </short>
+
+    <long>
+<p />
+<n/> relates pieces of information in process models among themselves
+and to the existing KB, analyzing how different pieces of input are put
+together to achieve some effect.  It builds interdependency models from this
+analysis and uses them to find errors and propose fixes.  
+(<a
+href="http://www.isi.edu/expect/papers/kim-gil-ijcai01.pdf">Kim and Gil, IJCAI-01</a>)
+
+<p />
+<n /> builds upon previous work on <a
+href="http://www.isi.edu/expect/">EXPECT</a> using Interdependency Models (<a
+href="http://www.isi.edu/expect/link/publications.html#Kim-Gil-AAAI-99">Kim and Gil
+AAAI-99</a>, <a
+href="http://www.isi.edu/expect/link/publications.html#Kim-Gil-AAAI-2000">Kim and Gil
+AAAI-2000</a>).  The work on EXPECT analyzed problem-solving interdependencies,
+which model how different pieces of problem solving (procedural) knowledge
+relate to each other and to the class definitions in domain ontologies.  Our
+initial work concentrates on <i>process models</i>, i.e., knowledge
+describing activities and subprocesses as well as their relationships.
+
+<p />
+<n />'s checks are done on the simulated execution of the process
+model.  Using skolem instances, we can check general scenarios of the
+animation of a process. The result of each animation are used as a model of
+interdependencies among the sub-steps of the process model.  <n /> performs a
+variety of verification checks to process models, including <i>unachieved
+conditions of steps</i> in a process model, <i>expected and unexpected
+effects, potential loops</i>, and <i>disjunctive model branches</i>.  <n />
+will also help users with validation checks of <i> redundancies</i>, and
+<i>resource use</i> within a process model.
+
+  <img src="images/kanal-architecture.gif"/>
+	 
+
+<p />
+KANAL has been used by various end users including biologists who built and
+tested models of complex molecular biology processes and army officers who
+used KANAL to critique their plans, i.e., courses of action (COAs). We
+found that its analysis report was very useful for checking the plans that
+were entered by users and often suggested useful ways of improving the
+plans. However we also found that sometimes users wish to extend the
+background knowledge that is used to produce the analysis report. For
+example, they may want to define various special cases of actions that are
+relevant for different situations, or exceptions that were not specifically
+addressed in the general background knowledge. In general, knowledge bases are
+never complete and it is important to provide a capability of adapting the
+knowledge base for varying needs. To support this capability we have extended
+our authoring environment so that the user can choose to enter special cases
+of critiquing knowledge as well as to change the description of the process
+itself in order to improve the resulting report. In this extension,
+instead of describing different cases in a single definition, we make use of
+the inheritance mechanism in the given knowledge representation system to
+represent each special case as a separate entity.  We believe that this
+approach provides a more a natural view of special cases for end users and has
+efficiency advantages.
+The details are described in <a 
+href="http://www.isi.edu/expect/papers/kim-blythe-iui-2003.pdf">Kim and
+blythe, IUI-2003</a>.
+
+<p /> 
+
+    </long>
+  </description>
+
+  <research>
+    <short>
+     Process Models, Verification and Validation, Knowledge Acquisition
+    </short>
+    <long>
+<n /> checks process models specified by a user reports possible errors in
+the models, and generates specific suggestions to the user about how to fix
+those errors.  Our approach is inspired on previous work on <a
+href="http://www.isi.edu/expect/">EXPECT</a> using Interdependency Models (<a
+href="http://www.isi.edu/expect/papers/kim-gil-aaai99.pdf">Kim and Gil
+AAAI-99</a>, <a
+href="http://www.isi.edu/expect/papers/kim-gil-aaai-2000.pdf">Kim and Gil
+AAAI-2000</a>).  KANAL analyzes the interdependencies among the individual
+steps of a process model.  For example, a simulation of the execution of the
+steps allows KANAL to anlayze interdependencies between the conditions and
+effects of different steps, such as that the required conditions for each step
+are met when the step is supposed to take place, and that the expected effects
+of the overall process are in fact obtained.
+
+<p /> The kinds of checks performed and the kinds of fixes proposed by <n /> include
+
+<ul>
+<li> Unachieved Preconditions
+</li>
+<li> Unachieved Expected Effects
+</li>
+<li> Unordered Steps
+</li>
+<li> Inappropriate Execution of Steps
+</li>
+<li> Inappropriate Loops
+</li>
+<li> Inappropriate Disjunctive Branches
+</li>
+<li> Inappropriate Branches
+</li>
+
+</ul>
+
+The KANAL has been used by
+various end users including biologists who built and tested models of complex
+molecular biology processes and army officers who used KANAL to critique their
+plans, i.e., courses of action (COAs). We found that its analysis report was
+very useful for checking the plans that were entered by users and often
+suggested useful ways of improving the plans. However we also found that
+sometimes users wish to extend the background knowledge that is used to
+produce the analysis report. For example, they may want to define various
+special cases of actions that are relevant for different situations, or
+exceptions that were not specifically addressed in the general background
+knowledge. In general, knowledge bases are never complete and it is important
+to provide a capability of adapting the knowledge base for varying needs. To
+support this capability we have extended our authoring environment so that the
+user can choose to enter special cases of critiquing knowledge as well as to
+change the description of the process itself in order to improve the resulting
+report. In this extension, instead of describing different cases in a single
+definition, we make use of the inheritance mechanism in the given knowledge
+representation system to represent each special case as a separate entity. We
+believe that this approach provides a more a natural view of special cases
+for end users and has efficiency advantages. The details are described in 
+<a 
+href="http://www.isi.edu/expect/papers/kim-blythe-iui-2003.pdf">Kim and
+blythe, IUI-2003</a>.
+
+
+    </long>
+
+  </research>
+
+<link>
+<b> KANAL design and implementation</b>
+  <ul>
+  <li>
+   <a href="http://www.isi.edu/expect/projects/KANAL/api.txt">KANAL API</a> </li>
+  <li>
+   <a href="http://www.isi.edu/expect/projects/KANAL/releases.html">KANAL Implementation on KM</a></li>
+  </ul>
+
+<p /> 
+<b> KANAL slides in various meetings </b>
+  <ul>
+  <li><a
+href="http://www.isi.edu/ikcap/kanal/slides/kanal-ae-pi-nov-02.ppt">PI meeting
+(Nov 02)</a></li> 
+  <li><a
+href="http://www.isi.edu/ikcap/kanal/slides/kanal-10-01.ppt">PI meeting
+(Oct 02)</a></li>
+ <li><a
+href="http://www.isi.edu/ikcap/kanal/slides/kanal-feb-02-pi.ppt">PI meeting
+(Feb 02)</a></li>
+  <li><a href="http://www.isi.edu/expect/projects/KANAL/slides/KANAL-SRI-meeting-10-00.ppt">SRI RKF meeting (10/11/00)</a></li>
+  <li><a href="http://www.isi.edu/expect/projects/KANAL/slides/KANAL-jan-01-rkf.ppt">RKF PI meeting (Jan/01)</a></li>
+  <li><a href="http://www.isi.edu/expect/projects/KANAL/slides/test-k-intro-in-training.ppt">Test Knowledge (intro)
+(April)</a></li>
+  <li><a href="http://www.isi.edu/expect/projects/KANAL/slides/Virus-Invades-Cell-trial-in-shaken.ppt"> design of the KANAL
+interface (a) (Mar/01)</a></li> 
+  <li><a href="http://www.isi.edu/expect/projects/KANAL/slides/Virus-Invades-Cell-in-shaken.ppt"> design of the KANAL
+interface (b) (Mar/01)</a></li>
+  </ul>
+</link>
+
+ 
+  <link>
+
+<p /> 
+  <b>Related Project Links</b>
+  <ul>
+
+  <li><a href="http://www.ai.sri.com/~rkf/">SHAKEN homepage</a></li>
+  <li><a href="http://www.iet.com/Projects/RKF/">IET RKF page</a></li>
+  <li><a href="http://www.cs.utexas.edu/users/mfkb/RKF/">University of Texas
+RKF participation</a></li>
+  </ul>
+  </link>
+
+
+ 
+
+<!-- Demo -->
+<demo>
+<p />
+<video width="1000" height="800" controls>
+  <source src="kanal-demo-video.m4v" />
+Your browser does not support the video tag.
+</video>
+<div style="font-size:11px;text-decoration:underline">Kanal demo video</div>
+
+<center>
+<b><font face="Arial,Helvetica" size="+1">A Screen Walkthrough
+Demonstration of <n /></font></b>
+<p /><b><font face="Arial,Helvetica">KANAL November 2002</font></b></center>
+
+<br />
+<p /><b><font face="Arial,Helvetica" size="-1">Start with the SHAKEN Login
+Screen. KANAL is currently used
+within an end-to-end KA system called SHAKEN. </font></b>
+<p /><img src="demoimages/shaken-login.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1">
+You can start KANAL by
+selecting "Test Knowledge" from the SHAKEN main window. </font></b>
+<p /><img src="demoimages/shaken-main-window.gif" />
+<br />
+<br />
+<br />
+
+
+<p /><b><font face="Arial,Helvetica" size="-1">You can select or search for
+the name of the process model you want to test.</font></b>
+<p /><img src="demoimages/kanal-test-knowledge-main.gif" />
+<br />
+<br />
+<br />
+
+
+<p /><b><font face="Arial,Helvetica" size="-1"> Before you run KANAL, you can
+specify the effects you intend to achieve from the process model.
+You can either check if intermediate steps achieve intended effects or the
+overall plan (process model) achieve the effects using these. </font></b>
+<p /><img src="demoimages/kanal-expected-effects.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> This window shows the KANAL
+results. The summary section at the top lists the steps where KANAL found
+some errors (or warnings). By clicking each step listed on the left, you can
+see the detailed results from KANAL. This destroy step seems fine.
+You can see that an expected effect (remaining strength of unit 4 being
+greater than 0.7) was not achieved.</font></b>
+<p /><img src="demoimages/kanal-first-run.gif" />
+<p /><img src="demoimages/kanal-step-info.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> KANAL found a failed
+precondition: the available force ratio is not greater than or equal to 5.
+The "force ratio explanation" provides the details.</font></b>
+<p /><img src="demoimages/kanal-first-run-warnings-found.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> KANAL provide several general
+suggestions for this problem.  (In other cases, KANAL can produce
+more specific suggestions on how to fix the error).  In this case user choose to create
+a special case of the Destroy-Unit to address the given situation. </font></b>
+<p /><img src="demoimages/kanal-suggestions-window.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> KANAL provide several general
+suggestions for this problem.  (In other cases, KANAL can produce
+more specific suggestions on how to fix the error).  In this case user choose to create
+a special case of the Destroy-Unit (called Destroy-Unit-Mechanized-Infantry)
+to address the given situation. </font></b> 
+<p /><img src="demoimages/kanal-creating-special-case.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> User makes agent being
+Mechanized-Infantry-Brigade as the trigger (defining criteria) of the new
+action definition. This special case of Destroy-Unit will be used when its
+agent is a Mechanized-Infantry-Brigade </font></b>  
+<p /><img src="demoimages/action-editor-convert-to-trigger.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> In this case the
+Required-Force-Ratio-Value is 2 instead of 5.</font></b> 
+<p /><img src="demoimages/action-editor-final.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> User tests the same
+plan with the new definition (Destroy-Unit-Mechanized-Infantry)
+and the warning is now gone.</font></b> 
+<p /><img src="demoimages/kanal-second-run-warning-gone.gif" />
+<br />
+<br />
+<br />
+
+<p /><b><font face="Arial,Helvetica" size="-1"> Summary of state transition:
+KANAL generates a table for each property that chanages over time in order to
+visualize changes made objects in a plan.</font></b> 
+<p /><img src="demoimages/kanal-time-varying-properties.gif" />
+<br />
+<br />
+<br />
+
+
+<P>
+
+</P>
+
+
+
+   
+</demo>
+</project>

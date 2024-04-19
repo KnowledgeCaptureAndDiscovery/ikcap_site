@@ -1,0 +1,467 @@
+<!-- ISD Personnel File -->
+<!-- <?xml version="1.0" ?> -->
+
+<personnel xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+  <person>
+    <userid>gil</userid>
+    <name>Yolanda Gil</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+    <project>Temple</project>
+    <project>Phosphorus</project>
+    <project>Rosetta</project>
+    <project>Kasper</project>
+    <project>Inspect</project>
+    <project>KANAL</project>
+    <project>EMeD</project>
+    <project>SLICK</project>
+    <project>DOCKER</project>
+    <project>dialog-manager</project>
+    <project>Constable</project>
+    <project>Planet</project>
+    <project>Evaluation</project>
+    <project>Expect</project>
+    <project>SCEC/IT</project>
+    <project>CAT</project>
+    <project>Wings</project>
+    <project>Cognitive Grids</project>
+    <project>Calo</project>
+    <project>Tailor</project>
+    <project>ECHO</project>
+    <project>Pegasus</project>
+    <project>MathTrust</project>
+    <project>Windward</project>
+    <project>Beamer</project>
+    <project>TellMe</project>
+    <project>Learner</project>
+    <project>Maven</project>
+    <project>Privateer</project>
+    <project>HowToDo</project>
+    <project>Shortipedia</project>
+    <project>DALE</project>
+    <project>WOOT</project>
+ </person>
+  <person>
+    <userid>jihie</userid>
+    <name>Jihie Kim</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Windward</project>
+    <project>Maven</project>
+    <project>Kasper</project>
+    <project>KANAL</project>
+    <project>EMeD</project>
+    <project>SLICK</project>
+    <project>Trellis</project>
+    <project>Temple</project>
+    <project>dialog-manager</project>
+    <project>SADL</project>
+    <project>Evaluation</project>
+    <project>Expect</project>
+    <project>Cognitive Grids</project>
+    <project>SCEC/IT</project>
+    <project>CAT</project>
+    <project>Wings</project>
+    <project>DOCKER</project>
+    <project>Calo</project>
+    <project>ECHO</project>
+    <isAlumni>yes</isAlumni>
+  </person>
+  <person>
+    <userid>dgarijo</userid>
+    <name>Daniel Garijo</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+  </person>
+  <person>
+    <userid>varunr</userid>
+    <name>Varun Ratnakar</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>TellMe</project>
+    <project>Windward</project>
+    <project>Maven</project>
+    <project>Beamer</project>
+    <project>Wings</project>
+    <project>Tailor</project>
+    <project>DOCKER</project>
+    <project>CAT</project>
+    <project>SCEC/IT</project>
+    <project>Trellis</project>
+    <project>KANAL</project>
+    <project>SLICK</project>
+    <project>HowToDo</project>
+    <project>WOOT</project>
+    <project>Shortipedia</project>
+  </person>
+  <person>
+    <userid>fritz</userid>
+    <name>Christian Fritz</name>
+    <isAlumni>yes</isAlumni>
+    <project>Wings</project>
+    <project>TellMe</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>moody</userid>
+    <name>Joshua Moody</name>
+    <isAlumni>yes</isAlumni>
+    <project>Wings</project>
+    <project>TellMe</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>ricky</userid>
+    <name>Ricky Sethi</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://research.sethi.org/ricky/</url>
+    <project>DALE</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Hyunjoon Jo</name>
+    <project>Interactive Knowledge Capture</project>
+    <isAlumni>yes</isAlumni>
+  </person>
+  <person>
+    <name>Christina Zheng</name>
+    <project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+    <name>Shannon McWeeney</name>
+    <project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+    <name>Chris Duffy</name>
+    <project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+    <name>Paul Hanson</name>
+    <project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+    <name>Dipsy Kapoor</name>
+    <project>Interactive Knowledge Capture</project>
+	 <isAlumni>yes</isAlumni>
+  </person>
+  <person>
+    <name>Rishi Verma</name>
+    <project>WOOT</project>
+    <project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+		<name>Andrew Hart</name>
+		<project>WOOT</project>
+		<project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+		<name>Paul Ramirez</name>
+		<project>WOOT</project>
+		<project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+		<name>Arni Sumarlidason</name>
+		<project>WOOT</project>
+		<project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+		<name>Sam Park</name>
+		<project>WOOT</project>
+		<project>Interactive Knowledge Capture</project>
+    <isCollaborator>yes</isCollaborator>
+  </person>
+  <person>
+    <userid>blythe</userid>
+    <name>Jim Blythe</name>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+    <project>Temple</project>
+    <project>Kasper</project>
+    <project>SADL</project>
+    <project>English method editor</project>
+    <project>Constable</project>
+    <project>Rosetta</project>
+    <project>KANAL</project>
+    <project>dialog-manager</project>
+    <project>Planet</project>
+    <project>Evaluation</project>
+    <project>Expect</project>
+    <project>Cognitive Grids</project>
+    <project>Calo</project>
+    <project>Tailor</project>
+    <project>Pegasus</project>
+    <isAlumni>yes</isAlumni>
+  </person>
+  <person>
+    <userid>pgroth</userid>
+    <name>Paul Groth</name>
+    <url>http://www.few.vu.nl/~pgroth/Site/Welcome.html</url>
+    <isAlumni>yes</isAlumni>
+    <project>Interactive Knowledge Capture</project>
+    <project>Wings</project>
+    <project>Windward</project>
+    <project>TellMe</project>
+  </person>
+  <person>
+    <userid>timc</userid>
+    <name>Timothy Chklovski</name>
+    <url>http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chklovski:Timothy.html</url>
+    <isAlumni>yes</isAlumni>
+    <project>Interactive Knowledge Capture</project>
+    <project>Trellis</project>
+    <project>Calo</project>
+    <project>Learner</project>
+    <project>VerbOcean</project>
+  </person>
+  <person>
+    <userid>marcs</userid>
+    <name>Marc Spraragen</name>
+    <url>http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Spraragen:Marc.html</url>
+    <isAlumni>yes</isAlumni>
+    <project>Interactive Knowledge Capture</project>
+    <project>DOCKER</project>
+    <project>KANAL</project>
+    <project>CAT</project>
+    <project>SCEC/IT</project>
+  </person>
+  <person>
+    <userid>dono</userid>
+    <name>Donovan Artz</name>
+    <url>http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Artz:Donovan.html</url>
+    <isAlumni>yes</isAlumni>
+    <project>MathTrust</project>
+    <project>Trellis</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Sonal Jain</name>
+    <isAlumni>yes</isAlumni>
+    <project>Interactive Knowledge Capture</project>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+
+  <person>
+    <userid>deelman</userid>
+    <name>Ewa Deelman</name>
+    <isCollaborator>yes</isCollaborator>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>carl</userid>
+    <name>Carl Kesselman</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+  <person>
+    <userid>gmehta</userid>
+    <isCollaborator>yes</isCollaborator>
+    <name>Gaurang Mehta</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+  <person>
+    <userid>vahi</userid>
+    <isCollaborator>yes</isCollaborator>
+    <name>Karan Vahi</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+  <person>
+    <userid>dennyv</userid>
+    <name>Denny Vrandecic</name>
+    <url>http://www.aifb.kit.edu/web/Denny_Vrandecic/en</url>
+    <project>HowToDo</project>
+    <project>Shortipedia</project>
+    <project>Interactive Knowledge Capture</project>
+    <isAlumni>yes</isAlumni>
+  </person>
+  <person>
+    <userid>gurmeet</userid>
+    <name>Gurmeet Singh</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+  <person>
+    <name>Mei-Hui Su</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+  <person>
+    <name>Mike Wilde</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+  <person>
+    <name>Jens Voeckler</name>
+    <project>Cognitive Grids</project>
+    <project>Pegasus</project>
+  </person>
+
+  <person>
+    <userid>kite</userid>
+    <name>Larry Kite</name>
+  </person>
+  <person>
+    <userid>hans</userid>
+    <name>Hans Chalupsky</name>
+  </person>
+  <person>
+    <userid>macgregor</userid>
+    <name>Robert MacGregor</name>
+  </person>
+  <person>
+    <userid>surya</userid>
+    <name>Surya Ramachandran</name>
+  </person>
+  <person>
+    <userid>swartout</userid>
+    <name>Bill Swartout</name>
+  </person>
+  <person>
+    <userid>pedro</userid>
+    <name>Pedro Gonzalez Calero</name>
+    <url>http://gaia.fdi.ucm.es/people/pedro/</url>
+    <isCollaborator>yes</isCollaborator>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Gonzalo Florez Puga</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>william</userid>
+    <name>William Cheung</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www.comp.hkbu.edu.hk/~william/</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Yan Liu</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www-bcf.usc.edu/~liu32/</url>
+    <project>DALE</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Matheus Hauder</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www.isi.edu/~hauder</url>
+    <project>Wings</project>
+    <project>DALE</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Sofus Macskassy</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www-bcf.usc.edu/~macskass</url>
+    <project>DALE</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>saltz</userid>
+    <name>Joel Saltz</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://cci.emory.edu/cms/people/pages/saltz_joel.html</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>bergmann</userid>
+    <name>Ralph Bergmann</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www.uni-trier.de/index.php?id=12983</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <userid>bourne</userid>
+    <name>Phillip Bourne</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://pharmacology.ucsd.edu/faculty/bourne.shtml</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Tom Harmon</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>https://eng.ucmerced.edu/harmongroup/harmon</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Sandra Villamizar</name>
+    <isCollaborator>yes</isCollaborator>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Tahsin Kurc</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://cci.emory.edu/cms/people/pages/kurc_tahsin.html</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Christopher Mason</name>
+    <isCollaborator>yes</isCollaborator>
+    <url>http://www.yale.edu/state/Christopher_Mason.html</url>
+    <project>Wings</project>
+    <project>Interactive Knowledge Capture</project>
+  </person>
+  <person>
+    <name>Molly Cinnamon</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Naveen Kothamasu</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Angela Knight</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Emelie Knight</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Victoria Knight</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Cynthia Nava</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Kevin Zhang</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+  <person>
+    <name>Larry Zhang</name>
+    <project>Interactive Knowledge Capture</project>
+    <isStudentIntern>yes</isStudentIntern>
+  </person>
+</personnel>

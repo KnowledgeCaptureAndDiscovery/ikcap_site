@@ -1,0 +1,164 @@
+This is intended to be a sample set of useful queries and commands for
+analysing and modifying task-based knowledge, independent of a
+particular interface, whether text-based or graphical.
+
+We plan to use a symbolic trace as a source of the information required
+in achieving a task, and will initially reason about threshold
+constraints and other simple constraint types by matching patterns in
+the procedural knowledge into our constraint ontology. The questions
+below demonstrate reasoning about dependencies, reasoning about simple
+constraint types and adding alternative procedures and special cases of
+procedures. The examples are based around the purchase.spark example
+that came with version 0.1.1 of Spark.
+
+Lines beginning with "Q: " are the user's query or command, lines with 
+" A: " represent the system response and lines with " F: " represent any
+user folow-up that was solicited. Anything in brackets is a comment.
+
+
+# Information about dependencies
+
+Q: What information [about laptops] is used in task "PurchaseLaptop"?
+  A: short: The vendor, price, clock speed, ram and hard drive 
+           [if 'about laptops' is omitted, also 'signing authorities']
+  A: long: The facts that a vendor sells the laptop,
+                   the laptop price from the vendor is below 1500
+                   the laptop's clock speed is above 1.5
+                   the laptop's ram is above 500
+                   the laptop's hard drive is above 200
+
+Q: How does clock_speed impact task "PurchaseLaptop"?
+  A: The laptop's clock speed must be above 1.5 for procedure FindLaptop
+    to succeed, which is required for PurchaseLaptop.
+
+
+# Modifying simple constraints
+
+Q: Increase the minimum clock speed to 2.4
+  A: Now the laptop's clock speed must be above 2.4 for FindLaptop to
+    succeed
+
+  [Assumes it is a subtask of the module's top task PurchaseLaptop]
+ 
+
+# Feedback about multiple constraints
+
+Q: Increase the maximum price for "PurchaseLaptop" to 2000.
+  A: the maximum price of a laptop is referenced twice under
+     PurchaseLaptop: once in FindLaptWhy can't I purchase an ibook?
+op and once in
+     GetSingleAuthorization. 
+     Do you want me to change both references or just one?
+  F: both
+  A: Ok, the maximum price of a laptop is now 2000 in both FindLaptop and
+     GetSingleAuthorization.
+
+[We also intend to allow users to add new conditions, but I don't have
+ an example on that.]
+
+
+# A sample question about tasks
+
+Q: Do I have to use SendEmail to purchase a laptop?
+  A: PurchaseLaptop requires procedure SendEmail to succeed in order to
+     achieve the task send_email as part of procedure GetSingleAuthorization
+
+# Adding an alternative to achieve a goal.
+
+Q: You can use 'discuss on phone' instead of 'send email' to get
+   authorization.
+   [assume this task was created earlier, and it also involves a manager
+    and a piece of equipment]
+
+  A: I can make an alternative version of GetSingleAuthorization that
+     replaces 'send email to the manager about the laptop' with 'discuss
+     on the phone with the manager about the laptop' in order to get
+     authorization from the manager for the laptop.
+     Do you want to do that?
+  F: Yes
+  A: Here is the new procedure (called GetSingleAuthorization-discuss_on_phone):
+     In order to get_authorization from a manager for a laptop,
+     a vendor must sell the laptop for a price below 2000,
+     then in sequence: discuss on the phone with the manager about the laptop,
+                       achieve receiving email from the manager about the laptop,
+                       print "Have authorization from Manager for Laptop"
+     and conclude have authorization from the manager for the laptop.
+  
+     Is this ok?
+
+     [Calo doesn't know that you don't need to receive a reply when you use
+      the phone. The user fixes this.]
+
+   F: Skip the step about receiving email
+   A: Ok. Here is the new procedure: ...
+
+# Feedback on alternatives - a question to the user when alternative
+# procedures are created for a goal, through any source.
+
+  A: I notice that I can now achieve get_authorization from a manager for
+    a laptop in two ways. They differ because one uses send_email and
+    receive_email, and one uses discuss_on_phone. 
+    Are there situations under which you prefer one procedure over the other?
+
+  F: Normally use send_email.
+     But if the purchase must be completed within 1 day, use
+       discuss_on_phone,
+       unless the manager is on travel.
+
+  A: Ok.
+  [Assumes purchase completion time and 'on travel' are in the KB and
+   can be recognized from the interaction. This is a fairly complex
+   condition, handled in terms of normal cases and nested exceptions.]
+
+
+# Questions about execution
+
+Q: Why can't I purchase an ibook?
+
+  A: The ibook has a clock speed of 0.8, which is below the minimum of
+  2.4 for FindLaptop. FindLaptop is required for PurchaseLaptop to
+  succeed.  
+  [This may require analysing the trace from Spark. Since it is a simple
+   threshold constraint, it will usually be knowable from the dependency
+   analysis. However, we need to investigate further to be sure that
+   this will be feasible.]
+
+
+# Adding a special case
+
+When the laptop is a mac, the minimum clock speed is 0.8.
+
+ A: Adding a special version of FindLaptop called FindLaptop-TypeMac,
+   with minimum clock speed 0.8 instead of 2.4, that will be used when
+   the laptop is a mac.
+   Here is the new procedure: ...
+   Is this ok?
+
+   [There probably should not be a distinction between a 'special case'
+    and an alternative case with a preference criterion as added above
+    for using the phone. Whether the two forms will be needed internally
+    depends on the expressivity of the preference language, but the
+    interaction should probably hide this anyway.]
+
+
+==================================
+
+Further information about the domain Why can't I purchase an ibook?
+that would be helpful.
+
+Predicate signatures - to know that, for example, (sells $laptop
+$vendor) means that $vendor is a vendor. There is currently only one
+declared type in purchase_laptop, which is 'laptop', used in
+GetAuthorizations. Type information would be very helpful, although not
+necessary in the sample questions that were included above.
+
+Predicate completeness - to know that, for example, every laptop that is
+sold has a cost, so that (cost $laptop $vendor $price) on its own is not
+viewed as a possible restriction on $laptop given that (sells $laptop
+$vendor) is known. (It can be part of a restriction on price when in
+conjunction with (< $price 10) for example.)
+
+This is complementary to the 'determined' specifications that say
+when there is at most one solution - here we would like to know that
+there is at least one solution.
+

@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The WOOT Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>A Scalable, Open Source Platform for Data Processing, Archiving and Dissemination</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Description</H2>
+<P>    	   	 
+
+<h3>Project Goals</h3>
+
+End users have a lot of data, but do not have the expertise needed to analyze it.  The goal of this project is to empower end users to analyze big data by demonstrating that: 1) data analytics experts can use open source software to quickly assemble workflows, 2) end users can easily run these expert-grade workflows and get useful views on their data.  
+
+<h3>Approach</h3>
+
+Our approach is to use workflows to bring end users big data analysis capabilities.  We combine semantic workflow capabilities of the WINGS workflow system with scalable data systems and workflow execution infrastructure available in the Apache OODT framework.  As a result:
+<ol>
+<li>End users can draw from a library of workflows that were previously developed by experts and that capture complex multi-step methods for data analytics.  
+
+<li>End users are assisted to reuse those workflows through the semantic workflow reasoning capabilities of WINGS
+
+<li>End users can easily process big data through scalable workflow execution and data management provided by the Apache OODT system
+</ol>
+ 
+<h3>Capturing Expertise in Workflows</h3>
+
+These are alternative expert-created workflows for modeling salient topics in a collection of documents: 
+ 
+<img src="img1.png"/> 
+ 
+<br/>They all use the popular LDA (Latent Dirichlet Allocation) algorithm to detect topics.  Each of these workflows uses a strategy that works better with large datasets for different reasons:  a) efficient LDA through hyperparameter optimization, b) online LDA for incremental processing of streaming data, c) a parallel LDA implementation, and d) sampling to reduce the size of the dataset before running LDA.   
+
+Creating a workflow does not require a lot of effort.  Big data experts can directly reuse the codes that they have.  For these topic modeling workflows, we took implementations of these algorithms that were available open source, and used them as components of the workflows.  These included <a href="http://mallet.cs.umass.edu/">Mallet</a> and <a href="https://github.com/qpleple/online-lda-vb">OnlineLDA</a>
+
+
+<h3>Using Workflows for Big Data Analytics</h3>
+
+End users can easily use workflows like these to analyze their own data.  Learning to use workflows does not require a lot of effort (e.g., a couple of hours for non-programmers that want to reuse workflows that are already in the system).
+
+We used these workflows to analyze data from the Kiva microfinancing site, which contains detailed information about loans and lenders.  Below are two examples of analyses done with workflows on this data, the one on the right for detecting popular uses of loans and the one on the left for detecting communities of lenders:
+
+
+<img src="img2.png"/> 
+
+
+<br/>The workflow on the right is one of the workflows shown above for topic modeling.  
+
+The workflow on the left uses the bigclam algorithm of the SNAP package and a visualization done with Gephi (both open source).  VARUN PLS ADD LINKS TO THESE
+
+
+<h3>User Interaction with Workflows for Big Data Analytics</h3>
+
+End users interact with the WINGS interface to find a workflow for the kind of analysis they want to do with their data.  Even users with no programming background find the structure of these workflows easy to understand.  WINGS assists them by suggesting parameters as well as any ancillary data that the workflow may need (e.g., a dictionary).  When the user is done specifying a workflow, WINGS elaborates it and submits it to OODT for execution.  The user is then presented with the results and can browse any intermediate data as well as the provenance records for the results:
+
+ 
+<img src="img3.png"/> 
+
+<h3>Architecture</h3>
+
+The integration of WINGS and OODT is ongoing, and we are planning a release of the integrated system as open source software within the Apache OODT project:
+
+<img src="img4.png"/> 
+ 
+    
+<P><A HREF='research.html'>More (Research)</A>
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

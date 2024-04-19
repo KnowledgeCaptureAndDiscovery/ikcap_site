@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
+    <!ENTITY p1 "http://www.owl-ontologies.com/assert.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY plns "http://www.isi.edu/ikcap/Maven/pmOntology.owl#" >
+    <!ENTITY tlns "http://www.isi.edu/ikcap/Maven/taskOntology.owl#" >
+    <!ENTITY dlns "http://www.isi.edu/ikcap/Maven/domainOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/Maven/pmLibrary.owl#"
+     xml:base="http://www.isi.edu/ikcap/Maven/pmLibrary.owl"
+     xmlns:plns="http://www.isi.edu/ikcap/Maven/pmOntology.owl#"
+     xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+     xmlns:tlns="http://www.isi.edu/ikcap/Maven/taskOntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dlns="http://www.isi.edu/ikcap/Maven/domainOntology.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Maven/taskOntology.owl"/>
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Maven/domainOntology.owl"/>
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/Maven/pmOntology.owl"/>
+    </owl:Ontology>
+    <tlns:Method rdf:ID="STITCH_CHARM_Method0">
+        <tlns:hasName rdf:datatype="&xsd;string">Method0</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod_STITCHMethod1"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#CHARM_ChooseObject1"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#PerformMethod_STITCHMethod2"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#CHARM_ChooseObject2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#PerformMethod_lookupMission"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#AchieveGoal_MissionAssigned"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#STITCHMethod0_Signature"/>
+    </tlns:Method>
+    <dlns:Airport rdf:ID="airport_option1"/>
+    <plns:PMStatus rdf:ID="PM5_Status_1">
+        <plns:hasPMStatusType rdf:resource="&plns;MethodSetCreated"/>
+    </plns:PMStatus>
+    <dlns:Airport rdf:ID="airport_option2"/>
+    <owl:Class rdf:about="&plns;PlanningModel"/>
+    <tlns:Test rdf:ID="STITCH_IfThenElse_Test1">
+        <tlns:hasElement rdf:resource="#Patient_NeedFlight"/>
+    </tlns:Test>
+    <tlns:PerformMethod rdf:ID="PerformMethod_STITCHMethod2">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#AirportSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1_destination"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#STITCHMethod2"/>
+    </tlns:PerformMethod>
+    <tlns:ChoiceCriteria rdf:ID="UNKNOWN_ChoiceCriteria"/>
+    <plns:Issue rdf:ID="Issue_ChooseObject_UnknownCriteria">
+        <plns:hasType rdf:datatype="&xsd;string">UnknownCriteria</plns:hasType>
+    </plns:Issue>
+    <tlns:Method rdf:ID="Method4_1">
+        <tlns:hasName rdf:datatype="&xsd;string">Method4</tlns:hasName>
+        <tlns:hasSignature rdf:resource="#Method4_1_Signature"/>
+    </tlns:Method>
+    <tlns:Equality rdf:ID="Patient_NeedFlight"/>
+    <tlns:MethodSignature rdf:ID="Method4_1_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string">Method4</tlns:hasName>
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#seat1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:ChooseObject rdf:ID="ChooseObject1">
+        <tlns:hasChoiceCriteria rdf:resource="#UNKNOWN_ChoiceCriteria"/>
+        <tlns:hasObjects>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport_option1"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#airport_option2"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasObjects>
+        <plns:hasIssues>
+            <rdf:List>
+                <rdf:first rdf:resource="#Issue_ChooseObject_UnknownCriteria"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </plns:hasIssues>
+    </tlns:ChooseObject>
+    <tlns:Method rdf:ID="PM7_TopMethod">
+        <tlns:hasName rdf:datatype="&xsd;string">TopMethod</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_PerformMethod_LookupRequrements"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#PM7_TopMethod_Loop1"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#STITCHTopMethod_Signature"/>
+    </tlns:Method>
+    <plns:PlanningModel rdf:ID="PM2">
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasInputPMs rdf:resource="#PM0"/>
+        <plns:hasSupersededPMs rdf:resource="#PM0"/>
+        <plns:hasCreator rdf:resource="#DISTILL"/>
+        <plns:hasPMStatus rdf:resource="#PM2_Status_1"/>
+    </plns:PlanningModel>
+    <tlns:TaskState rdf:ID="TaskState_1"/>
+    <plns:Agent rdf:ID="DISTILL"/>
+    <tlns:ForLoop rdf:ID="WITTopMethod_ForLoop1">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_Loop_Perform_WITMethod0"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasForEachInSet rdf:resource="#PatientRequirements_1"/>
+    </tlns:ForLoop>
+    <dlns:Location rdf:ID="patient1_origin"/>
+    <dlns:Location rdf:ID="patient1_destination"/>
+    <tlns:PerformMethod rdf:ID="TopMethod_PerformMethod_LookupRequrements">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#PatientRequirements_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#PatientSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="&dlns;lookupRequirements1"/>
+    </tlns:PerformMethod>
+    <tlns:Method rdf:ID="Method2">
+        <tlns:hasName rdf:datatype="&xsd;string">Method2</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#IfThenElse1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#Method2_Signature"/>
+    </tlns:Method>
+    <dlns:RequirementSet rdf:ID="PatientRequirements_1"/>
+    <tlns:Method rdf:ID="Method1">
+        <tlns:hasName rdf:datatype="&xsd;string">Method1</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#IfThenElse1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#Method1_Signature"/>
+    </tlns:Method>
+    <dlns:Patient rdf:ID="patient1"/>
+    <tlns:MethodSignature rdf:ID="STITCHTopMethod_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string">TopMethod</tlns:hasName>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#PatientSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:ForLoop rdf:ID="STITCHTopMethod_Loop1">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_Loop_Perform_STITCHMethod0"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasForEachInSet rdf:resource="#PatientRequirements_1"/>
+    </tlns:ForLoop>
+    <tlns:PerformMethod rdf:ID="TopMethod_Loop_Perform_STITCHMethod0">
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#STITCHMethod0"/>
+    </tlns:PerformMethod>
+    <tlns:Method rdf:ID="STITCHMethod0">
+        <tlns:hasName rdf:datatype="&xsd;string">Method0</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod_STITCHMethod1"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ChooseObject1"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#PerformMethod_STITCHMethod2"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#ChooseObject2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#PerformMethod_lookupMission"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#AchieveGoal_MissionAssigned"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#STITCHMethod0_Signature"/>
+    </tlns:Method>
+    <plns:PlanningModel rdf:ID="PM1">
+        <plns:hasMethods>
+            <rdf:List>
+                <rdf:first rdf:resource="#WITTopMethod"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#WITMethod0"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#Method1"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#Method2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#Method4_1"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#Method4_2"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </plns:hasMethods>
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasInputPMs rdf:resource="#PM0"/>
+        <plns:hasSupersededPMs rdf:resource="#PM0"/>
+        <plns:hasCreator rdf:resource="#WIT"/>
+        <plns:hasPMStatus rdf:resource="#PM1_Status_1"/>
+    </plns:PlanningModel>
+    <tlns:Test rdf:ID="Test_20"/>
+    <tlns:PerformMethod rdf:ID="PerformMethod_STITCHMethod1">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#AirportSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1_origin"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#STITCHMethod1"/>
+    </tlns:PerformMethod>
+    <tlns:Method rdf:ID="Method4_2">
+        <tlns:hasName rdf:datatype="&xsd;string">Method4</tlns:hasName>
+        <tlns:hasSignature rdf:resource="#Method4_2_Signature"/>
+    </tlns:Method>
+    <plns:Agent rdf:ID="CMAX"/>
+    <plns:Agent rdf:ID="RETAILER"/>
+    <tlns:MethodSignature rdf:ID="Method4_2_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string">Method4</tlns:hasName>
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#seat1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:Method rdf:ID="WITTopMethod">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_PerformMethod_LookupRequrements"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#WITTopMethod_ForLoop1"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#WITTopMethod_Signature"/>
+    </tlns:Method>
+    <plns:PMStatus rdf:ID="PM0_Status_1">
+        <plns:hasPMStatusType rdf:resource="&plns;Incomplete"/>
+    </plns:PMStatus>
+    <dlns:Airport rdf:ID="airport1"/>
+    <tlns:PerformMethod rdf:ID="PerformMethod_Method2">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#AirportSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1_destination"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#Method2"/>
+    </tlns:PerformMethod>
+    <tlns:Method rdf:ID="WITMethod0">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod_Method1"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#ChooseObject1"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#PerformMethod_Method2"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#ChooseObject2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#PerformMethod_lookupMission"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#AchieveGoal_MissionAssigned"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#WITMethod0_Signature"/>
+    </tlns:Method>
+    <plns:Agent rdf:ID="STITCH"/>
+    <tlns:Method rdf:ID="PM7_Method0">
+        <tlns:hasName rdf:datatype="&xsd;string">Method0</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod_STITCHMethod1"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#CHARM_ChooseObject1"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#PerformMethod_STITCHMethod2"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#CHARM_ChooseObject2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#PerformMethod_lookupMission"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#PM7_IfThenElse_Method4"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#STITCHMethod0_Signature"/>
+    </tlns:Method>
+    <tlns:PerformMethod rdf:ID="PerformMethod_lookupMission">
+        <tlns:hasMethod rdf:resource="&dlns;lookupMission1"/>
+    </tlns:PerformMethod>
+    <tlns:ChooseObject rdf:ID="ChooseObject2">
+        <tlns:hasChoiceCriteria rdf:resource="#UNKNOWN_ChoiceCriteria"/>
+        <tlns:hasObjects>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport_option3"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#airport_option4"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasObjects>
+        <plns:hasIssues>
+            <rdf:List>
+                <rdf:first rdf:resource="#Issue_ChooseObject_UnknownCriteria"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </plns:hasIssues>
+    </tlns:ChooseObject>
+    <plns:PMStatus rdf:ID="PM2_Status_1">
+        <plns:hasPMStatusType rdf:resource="&plns;MethodSetCreated"/>
+    </plns:PMStatus>
+    <dlns:PatientSet rdf:ID="PatientSet_1"/>
+    <tlns:Method rdf:ID="STITCH_CHARM_TopMethod">
+        <tlns:hasName rdf:datatype="&xsd;string">TopMethod</tlns:hasName>
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_PerformMethod_LookupRequrements"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#STITCH_CHARM_TopMethod_Loop1"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#STITCHTopMethod_Signature"/>
+    </tlns:Method>
+    <tlns:TaskGoal rdf:ID="TaskGoal_1"/>
+    <dlns:Seat rdf:ID="seat1"/>
+    <plns:PlanningModel rdf:ID="PM6">
+        <plns:hasMethods>
+            <rdf:List>
+                <rdf:first rdf:resource="#STITCH_CHARM_TopMethod"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#STITCH_CHARM_Method0"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#STITCHMethod1"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#STITCHMethod2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#Method4_1"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#Method4_2"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </plns:hasMethods>
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasCreator rdf:resource="#STITCH"/>
+    </plns:PlanningModel>
+    <tlns:ProblemDesc rdf:ID="InitialProblemDesc">
+        <tlns:hasGoal rdf:resource="#TaskGoal_1"/>
+        <tlns:hasInitialState rdf:resource="#TaskState_1"/>
+    </tlns:ProblemDesc>
+    <tlns:ForLoop rdf:ID="STITCH_CHARM_TopMethod_Loop1">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_Loop_Perform_STITCH_CHARM_Method0"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasForEachInSet rdf:resource="#PatientRequirements_1"/>
+    </tlns:ForLoop>
+    <plns:Agent rdf:ID="XPLAIN"/>
+    <dlns:AirportSet rdf:ID="AirportSet_1"/>
+    <tlns:ForLoop rdf:ID="PM7_TopMethod_Loop1">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#TopMethod_Loop_Perform_PM7_Method0"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasForEachInSet rdf:resource="#PatientRequirements_1"/>
+    </tlns:ForLoop>
+    <tlns:PerformMethod rdf:ID="PerformMethod_Method1">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#AirportSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1_origin"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#Method1"/>
+    </tlns:PerformMethod>
+    <tlns:ChooseObject rdf:ID="CHARM_ChooseObject2">
+        <tlns:hasChoiceCriteria rdf:resource="#CHARM_ChoiceCriteria_Closest"/>
+        <tlns:hasObjects>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport_option3"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#airport_option4"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasObjects>
+    </tlns:ChooseObject>
+    <tlns:MethodSignature rdf:ID="STITCHMethod0_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string">Method0</tlns:hasName>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <plns:PlanningModel rdf:ID="PM7">
+        <plns:hasMethods>
+            <rdf:List>
+                <rdf:first rdf:resource="#PM7_TopMethod"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#PM7_Method0"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#STITCHMethod1"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#STITCHMethod2"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#Method4_1"/>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:resource="#Method4_2"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </plns:hasMethods>
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasCreator rdf:resource="#DISTILL"/>
+    </plns:PlanningModel>
+    <tlns:Test rdf:ID="UNKNOWN_Test"/>
+    <tlns:TaskGoal rdf:ID="MissionAssigned"/>
+    <owl:Class rdf:about="&tlns;Task"/>
+    <plns:Agent rdf:ID="LIGHT"/>
+    <tlns:PerformMethod rdf:ID="TopMethod_Loop_Perform_WITMethod0">
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#WITMethod0"/>
+    </tlns:PerformMethod>
+    <tlns:IfThenElse rdf:ID="PM7_IfThenElse_Method4">
+        <tlns:hasTest rdf:resource="#PM7_Method0_IfThenElse_Test"/>
+        <tlns:hasElse>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod4_2"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasElse>
+        <tlns:hasThen>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod4_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasThen>
+    </tlns:IfThenElse>
+    <tlns:Method rdf:ID="STITCHMethod2">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#STITCHMethod1_IfThenElse"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#Method2_Signature"/>
+    </tlns:Method>
+    <plns:Agent rdf:ID="MAVEN"/>
+    <tlns:MethodSignature rdf:ID="Method2_Signature">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#location1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:MethodSignature rdf:ID="WITMethod0_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string">Method0</tlns:hasName>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:PerformMethod rdf:ID="TopMethod_Loop_Perform_PM7_Method0">
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#PM7_Method0"/>
+    </tlns:PerformMethod>
+    <tlns:Method rdf:ID="STITCHMethod1">
+        <tlns:hasSteps>
+            <rdf:List>
+                <rdf:first rdf:resource="#STITCHMethod1_IfThenElse"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasSteps>
+        <tlns:hasSignature rdf:resource="#Method1_Signature"/>
+    </tlns:Method>
+    <tlns:IfThenElse rdf:ID="IfThenElse1">
+        <tlns:hasTest rdf:resource="#UNKNOWN_Test"/>
+        <tlns:hasElse>
+            <rdf:List>
+                <rdf:first rdf:resource="#doNOTHING"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasElse>
+        <tlns:hasThen>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod_lookupAirport"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasThen>
+        <plns:hasIssues>
+            <rdf:List>
+                <rdf:first rdf:resource="#Issue_UnknownTestCondition"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </plns:hasIssues>
+    </tlns:IfThenElse>
+    <tlns:ChoiceCriteria rdf:ID="CHARM_ChoiceCriteria_Closest"/>
+    <plns:PMStatus rdf:ID="PM1_Status_1">
+        <plns:hasPMStatusType rdf:resource="&plns;MethodSetCreated"/>
+    </plns:PMStatus>
+    <plns:Agent rdf:ID="SPRAWL"/>
+    <tlns:PerformMethod rdf:ID="PerformMethod4_1">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#seat1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#Method4_1"/>
+    </tlns:PerformMethod>
+    <tlns:AchieveGoal rdf:ID="AchieveGoal_MissionAssigned">
+        <tlns:hasGoal rdf:resource="#MissionAssigned"/>
+    </tlns:AchieveGoal>
+    <tlns:MethodSignature rdf:ID="WITTopMethod_Signature">
+        <tlns:hasName rdf:datatype="&xsd;string">WITTopMethod</tlns:hasName>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#PatientSet_1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <plns:Agent rdf:ID="WIT"/>
+    <dlns:Airport rdf:ID="airport_option4"/>
+    <tlns:Test rdf:ID="PM7_Method0_IfThenElse_Test">
+        <tlns:hasElement rdf:resource="#SeatAvailable"/>
+    </tlns:Test>
+    <tlns:Action rdf:ID="doNOTHING"/>
+    <plns:Agent rdf:ID="CHARM"/>
+    <dlns:Location rdf:ID="location1"/>
+    <tlns:PerformMethod rdf:ID="TopMethod_Loop_Perform_STITCH_CHARM_Method0">
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#STITCH_CHARM_Method0"/>
+    </tlns:PerformMethod>
+    <plns:Issue rdf:ID="Issue_UnknownTestCondition"/>
+    <tlns:ChooseObject rdf:ID="CHARM_ChooseObject1">
+        <tlns:hasChoiceCriteria rdf:resource="#CHARM_ChoiceCriteria_Closest"/>
+        <tlns:hasObjects>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport_option1"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#airport_option2"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </tlns:hasObjects>
+    </tlns:ChooseObject>
+    <tlns:PerformMethod rdf:ID="PerformMethod_lookupAirport">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#location1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="&dlns;lookupAirport1"/>
+    </tlns:PerformMethod>
+    <tlns:PerformMethod rdf:ID="PerformMethod4_2">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#seat1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#patient1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+        <tlns:hasMethod rdf:resource="#Method4_2"/>
+    </tlns:PerformMethod>
+    <plns:ExpertTrace rdf:ID="ExpertTrace_1">
+        <plns:hasProblemDesc rdf:resource="#InitialProblemDesc"/>
+    </plns:ExpertTrace>
+    <tlns:MethodSignature rdf:ID="Method1_Signature">
+        <tlns:hasOutputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#airport1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasOutputArgs>
+        <tlns:hasInputArgs>
+            <rdf:List>
+                <rdf:first rdf:resource="#location1"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasInputArgs>
+    </tlns:MethodSignature>
+    <tlns:IfThenElse rdf:ID="STITCHMethod1_IfThenElse">
+        <tlns:hasTest rdf:resource="#STITCH_IfThenElse_Test1"/>
+        <tlns:hasElse>
+            <rdf:List>
+                <rdf:first rdf:resource="#doNOTHING"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasElse>
+        <tlns:hasThen>
+            <rdf:List>
+                <rdf:first rdf:resource="#PerformMethod_lookupAirport"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+            </rdf:List>
+        </tlns:hasThen>
+    </tlns:IfThenElse>
+    <dlns:Airport rdf:ID="airport_option3"/>
+    <plns:PlanningModel rdf:ID="PM5-2">
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasInputPMs rdf:resource="#PM5"/>
+        <plns:hasCreator rdf:resource="#CHARM"/>
+    </plns:PlanningModel>
+    <plns:PlanningModel rdf:ID="PM0">
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasCreator rdf:resource="#SPRAWL"/>
+        <plns:hasPMStatus rdf:resource="#PM0_Status_1"/>
+    </plns:PlanningModel>
+    <plns:PlanningModel rdf:ID="PM5">
+        <plns:hasMethods>
+            <rdf:List>
+                <rdf:first rdf:resource="#STITCHMethod0"/>
+                <rdf:rest>
+                    <rdf:List>
+                        <rdf:first rdf:resource="#STITCHMethod1"/>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:resource="#STITCHMethod2"/>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:resource="#Method4_1"/>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:resource="#Method4_2"/>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </rdf:rest>
+            </rdf:List>
+        </plns:hasMethods>
+        <plns:hasTraceUsed rdf:resource="#ExpertTrace_1"/>
+        <plns:hasInputPMs rdf:resource="#PM1"/>
+        <plns:hasInputPMs rdf:resource="#PM2"/>
+        <plns:hasSupersededPMs rdf:resource="#PM2"/>
+        <plns:hasCreator rdf:resource="#STITCH"/>
+        <plns:hasPMStatus rdf:resource="#PM5_Status_1"/>
+    </plns:PlanningModel>
+    <tlns:Equality rdf:ID="SeatAvailable"/>
+    <rdf:Description rdf:about="&dlns;createPatientMission1"/>
+</rdf:RDF>

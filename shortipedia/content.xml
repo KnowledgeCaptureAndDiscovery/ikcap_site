@@ -1,0 +1,88 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Shortipedia</name>
+  <title>No talk, just facts ...</title>
+
+  <status>
+    <short>
+    Shortipedia is already accessible for contributions in the <a href="http://www.shortipedia.org">live shortipedia site</a>.
+    </short>
+
+    <long>
+    Shortipedia is already accessible for contributions in the <a href="http://www.shortipedia.org">live shortipedia site</a>.<br/>We are planning to release the software with an open source license in the coming months.
+    </long>
+  </status>
+
+  <description>
+    <short>
+    Shortipedia is a provenance-aware social knowledge collection framework to collect structured information from volunteer contributors.  It was selected to participate in the competitive <a href="http://challenge.semanticweb.org">Semantic Web Challenge</a>, where it <a href="http://www3.isi.edu/about-news_story.htm?s=237">won Third Prize</a>. Shortipedia is a collaboration with the <a href="http://www.aifb.kit.edu/web/Hauptseite/en">Karlsruhe Institute of Technology</a>.
+    </short>
+
+    <long>
+<p>Shortipedia aims to show that: 1) it is possible to collect encyclopedic-style structured knowledge in the form of object-property-value triples that can be aggregated to answer structured queries, 2) volunteer contributors can validate many such triples that already exist in the Web published by a variety of sources, 3) alternative claims can co-exist and are annotated with their provenance.</p> 
+
+<p>Shortipedia builds on the widely used <a href=" http://semantic-mediawiki.org">Semantic MediaWiki</a> framework, which supports the entry of structured facts about the topic of any given page.  Semantic MediaWiki is used daily in <a href="http://semantic-mediawiki.org/wiki/Sites_using_Semantic_MediaWiki"> hundreds of installations</a> where end users successfully create structured content in areas as diverse as <a href="http://www.snpedia.org">science</a>, <a href="http://yugioh.wikia.com"> teen card trading</a>, and <a href="http://baseswiki.org/">international law</a>.  A theme throughout is the focus on organizing facts as RDF assertions and leaving other more complex knowledge as text in the wiki.</p> 
+
+<p>Shortipedia can import facts from the Linked Open Data (LOD) cloud, shown in the bottom right, a community-built resource with more than 25B interlinked triples that come from more than 200 sources. As would be expected of any repository that includes information from diverse sources, many of which have been created using automated information extraction tools, the LOD information has varying quality, is incomplete, redundant, often inconsistent, and many times impossible to comprehend. It is ripe for human contributors to edit and extend its contents, effectively demonstrating how automated extraction and manual review can complement one another in creating structured content.</p>
+
+<p>In Shortipedia, contributors find a wiki-style interface where each object has a page (called a "topic" in wikis).  The screenshot below shows a page for Nancy Pelosi, they can enter properties of that object (e.g., residence) and their values  (e.g., San Francisco) as other topic pages, and substantiate any such assertion with sources of evidence.  Web of Data sources are shown to contributors as possible sources.  In this example, the alma mater came from DBpedia and the religion from Freebase. For a structured query such as "What US representatives own a business?" there is already a claim about Pelosi owning a vineyard.  By further describing the entry for this vineyard and categorizing it as a business, that question could be answered.</p>
+
+<img src="Description.png"/>
+    </long>
+  </description>
+
+  <research>
+    <short>
+    Shortipedia is an example of a <b>provenance-aware social knowledge collection</b> site.  We are investigating novel techniques to support improved organization of content from volunteer contributors, provenance records that document the sources of each piece of structured content, and proactively guide contributors to areas where further knowledge is needed.  Our aim is to enable millions of web users to structure, manage, and access knowledge in their social communities of interest.
+    </short>
+    <long>
+    Shortipedia is an example of a <b>provenance-aware social knowledge collection</b> site.  We are investigating novel techniques to support improved organization of content from volunteer contributors, provenance records that document the sources of each piece of structured content, and proactively guide contributors to areas where further knowledge is needed.  Our aim is to enable millions of web users to structure, manage, and access knowledge in their social communities of interest by developing novel techniques that:
+    <ul>
+    <li><b>Allow end users with no programming background to contribute structured knowledge</b>, so that knowledge sharing can be easy, frequent, and fluid in a community of interest
+    <li><b>Allow the structure of the content to be defined by the contributors</b> themselves, and allow it to emerge as part of the self-organization that arises from community content development rather than from pre-defined schemas or ontologies
+    <li><b>Accept diverging views and evidence</b>, in order to support the acquisition of conflicting or contradictory facts that occur naturally when different results are obtained in practice
+    <li><b>Allow users to annotate the sources of any information</b>, so users can make trust judgments on what views to adopt
+    <li><b>Automatically aggregate related information</b>, in order to support reasonably interesting factual queries
+    <li><b>Self-analyze the contents and their usage</b>, so they can guide contributors to focus on knowledge gaps that are of immediate interest to the community
+    </ul>
+    </long>
+  </research>
+
+  <link>
+	Visit the <a href="http://www.shortipedia.org">live shortipedia site</a>
+  </link>
+  <link>
+	<a href="http://semantic-mediawiki.org">Semantic Media Wiki</a>
+  </link>
+  <link>
+	<a href="http://esw.w3.org/SweoIG/TaskForces/CommunityProjects/LinkingOpenData">Linked Open Data</a>
+  </link>
+
+  <mainlink>
+	Visit the <a href="http://www.shortipedia.org">live shortipedia site</a>
+  </mainlink>
+  <mainlink>
+	<a href="http://semantic-mediawiki.org">Semantic Media Wiki</a>
+  </mainlink>
+  <mainlink>
+	<a href="http://esw.w3.org/SweoIG/TaskForces/CommunityProjects/LinkingOpenData">Linked Open Data</a>
+  </mainlink>
+
+<!-- Demo -->
+<demo>
+	Visit the <a href="http://www.shortipedia.org">live shortipedia site</a>.
+</demo>
+</project>

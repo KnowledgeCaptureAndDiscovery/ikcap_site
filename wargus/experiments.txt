@@ -1,0 +1,3278 @@
+running on x86_64
+ECLiPSe Constraint Logic Programming System [kernel]
+Kernel and basic libraries copyright Cisco Systems, Inc.
+and subject to the Cisco-style Mozilla Public Licence 1.1
+(see legal/cmpl.txt or www.eclipse-clp.org/licence)
+Source available at www.sourceforge.org/projects/eclipse-clp
+GMP library copyright Free Software Foundation, see legal/lgpl.txt
+For other libraries see their individual copyright notices
+Version 5.10 #111 (x86_64_linux), Sat Feb  2 02:21 2008
+[eclipse 1]: 
+
+========================================
+  No.: 1
+  Class: 1
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build best_worker farm wait until ready best_worker ) build best_barracks footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack the attacker the nextVictim ) wait until dead the nextVictim )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	nondet( [
+	|	|	|	build(best_worker, farm),
+	|	|	|	build(farm, best_worker)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	nondet( [
+	|	|	build(best_barracks, footman),
+	|	|	build(footman, best_barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 16
+
+
+count: 230
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	build(best_barracks, footman),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [attack(pv(pv_attacker), pv(pv_nextVictim))]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 2
+  Class: 1
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build best_worker farm wait until ready best_worker ) train best_barracks footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack the attacker the nextVictim ) wait until dead the nextVictim )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], []), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], []), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])]),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 32
+
+
+count: 258
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [attack(pv(pv_attacker), pv(pv_nextVictim))]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 3
+  Class: 1
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build best_worker farm wait until ready best_worker ) build best_barracks footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack it him ) wait until dead him )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	nondet( [
+	|	|	|	build(best_worker, farm),
+	|	|	|	build(farm, best_worker)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	nondet( [
+	|	|	build(best_barracks, footman),
+	|	|	build(footman, best_barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([[nondet([attack(pv(pv_nextVictim), pv(pv_nextVictim))])], [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])], attack(pv(pv_attacker), pv(pv_attacker))])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 32
+
+
+count: 244
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	build(best_barracks, footman),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 4
+  Class: 1
+  Sentence: build barracks best_worker then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build farm best_worker wait until ready best_worker ) build footman best_barracks, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack the attacker the nextVictim ) wait until dead the nextVictim )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	nondet( [
+	|	|	|	build(best_worker, farm),
+	|	|	|	build(farm, best_worker)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	nondet( [
+	|	|	build(best_barracks, footman),
+	|	|	build(footman, best_barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 16
+
+
+count: 230
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	build(best_barracks, footman),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [attack(pv(pv_attacker), pv(pv_nextVictim))]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 5
+  Class: 1
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build best_worker farm wait until ready best_worker ) build footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack the nextVictim ) wait until dead the nextVictim )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	nondet( [
+	|	|	|	build(best_worker, farm),
+	|	|	|	build(farm, best_worker)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	pi( value0, 
+	|	[
+	|	|	?(value(value0)),
+	|	|	nondet( [
+	|	|	|	build(footman, value0),
+	|	|	|	build(value0, footman)
+	|	|	|	 ] )
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 6400
+
+
+count: 413
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	[
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 6
+  Class: 1
+  Sentence: build barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build farm wait until ready best_worker ) build footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack the nextVictim ) wait until dead the nextVictim )
+[
+	pi( value0, 
+	[
+	|	?(value(value0)),
+	|	nondet( [
+	|	|	build(barracks, value0),
+	|	|	build(value0, barracks)
+	|	|	 ] )
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	pi( value0, 
+	|	|	[
+	|	|	|	?(value(value0)),
+	|	|	|	nondet( [
+	|	|	|	|	build(farm, value0),
+	|	|	|	|	build(value0, farm)
+	|	|	|	|	 ] )
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	pi( value0, 
+	|	[
+	|	|	?(value(value0)),
+	|	|	nondet( [
+	|	|	|	build(footman, value0),
+	|	|	|	build(value0, footman)
+	|	|	|	 ] )
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 2560000
+
+
+count: 443
+
+[
+	[
+	build(playerId(2), barracks)
+	 ],
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	[
+	|	|	build(playerId(2), farm)
+	|	|	 ],
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	[
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 7
+  Class: 1
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build best_worker farm wait until ready best_worker ) train footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack the nextVictim ) wait until dead the nextVictim )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], []), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], []), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])]),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 12800
+
+
+count: 450
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	[
+	|	build(best_barracks, footman)
+	|	 ]
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 8
+  Class: 1
+  Sentence: build then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build wait until ready best_worker ) train , wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( attack ) wait until dead the nextVictim )
+[
+	pi( value0, 
+	[
+	|	?(value(value0)),
+	|	pi( value1, 
+	|	[
+	|	|	?(value(value1)),
+	|	|	nondet( [
+	|	|	|	build(value0, value1),
+	|	|	|	build(value1, value0)
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	nondet([if(supply<1, [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])]), waitone, waitfor(ready(best_worker))], []), pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [if(supply<1, [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])]), waitone, waitfor(ready(best_worker))], []), pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])]),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 819200000000
+
+
+count: 3151
+
+[
+	[
+	[
+	build(playerId(2), hp(2))
+	 ]
+	 ],
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	[
+	|	|	[
+	|	|	build(playerId(2), farm)
+	|	|	 ]
+	|	|	 ],
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	[
+	|	[
+	|	build(best_barracks, playerId(1))
+	|	 ]
+	|	 ]
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[[attack(pv(pv_attacker), pv(pv_nextVictim))]]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 9
+  Class: 1
+  Sentence: x1 then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( x2 wait until ready best_worker ) x3 , wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( x4 ) wait until dead the nextVictim )
+[
+	nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])]),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	nondet([if(supply<1, [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])]), waitone, waitfor(ready(best_worker))], []), pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [if(supply<1, [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])]), waitone, waitfor(ready(best_worker))], []), pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])]),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 6553600000000
+
+
+count: 7593
+
+[
+	[
+	[
+	[
+	build(playerId(2), hp(2))
+	 ]
+	 ]
+	 ],
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	[
+	|	|	[
+	|	|	[
+	|	|	build(playerId(2), farm)
+	|	|	 ]
+	|	|	 ]
+	|	|	 ],
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	[
+	|	[
+	|	build(best_barracks, playerId(1))
+	|	 ]
+	|	 ]
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[[[attack(pv(pv_attacker), pv(pv_nextVictim))]]]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 10
+  Class: 1
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2 ( if supply < 1 ( build best_worker farm wait until ready best_worker ) build best_barracks footman, wait until ready best_barracks ) while there is an opp_attacker who is alive ( take the nextVictim forall attacker ( xyz ) wait until dead the nextVictim )
+[
+	nondet( [
+	|	build(barracks, best_worker),
+	|	build(best_worker, barracks)
+	|	 ] ),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	nondet( [
+	|	|	|	build(best_worker, farm),
+	|	|	|	build(farm, best_worker)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	nondet( [
+	|	|	build(best_barracks, footman),
+	|	|	build(footman, best_barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])])]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+options: 12800
+
+
+count: 6589
+
+[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  ),
+	|	build(best_barracks, footman),
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ] ),
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[[[attack(pv(pv_attacker), pv(pv_nextVictim))]]]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+
+========================================
+  No.: 1
+  Class: 2
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build best_worker farm wait until ready best_worker  build best_barracks footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack the attacker the nextVictim  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	nondet( [
+	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])])
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 304
+
+
+count: 1529
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [attack(pv(pv_attacker), pv(pv_nextVictim))]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 2
+  Class: 2
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build best_worker farm wait until ready best_worker  train best_barracks footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack the attacker the nextVictim  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	nondet( [
+	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	nondet( [
+	|	|	|	|	attack(best_barracks, footman),
+	|	|	|	|	attack(footman, best_barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ],
+	|	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	attack(best_barracks, footman),
+	|	|	|	|	|	|	attack(footman, best_barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ],
+	|	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])])
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ]
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])])
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([[nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])])], [])]]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([[nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])])], [])]]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([attack(best_barracks, footman), attack(footman, best_barracks)])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 608
+
+
+count: 2347
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [attack(pv(pv_attacker), pv(pv_nextVictim))]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 3
+  Class: 2
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build best_worker farm wait until ready best_worker  build best_barracks footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack it him  wait until dead him 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	nondet( [
+	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])])
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([[nondet([attack(pv(pv_nextVictim), pv(pv_nextVictim))])], [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])], attack(pv(pv_attacker), pv(pv_attacker))])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([[nondet([attack(pv(pv_nextVictim), pv(pv_nextVictim))])], [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])], attack(pv(pv_attacker), pv(pv_attacker))])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([[nondet([attack(pv(pv_nextVictim), pv(pv_nextVictim))])], [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])], attack(pv(pv_attacker), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([[nondet([attack(pv(pv_nextVictim), pv(pv_nextVictim))])], [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])], attack(pv(pv_attacker), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 608
+
+
+count: 1543
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 4
+  Class: 2
+  Sentence: build barracks best_worker then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build farm best_worker wait until ready best_worker  build footman best_barracks, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack the attacker the nextVictim  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	nondet( [
+	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])])
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([attack(pv(pv_attacker), pv(pv_nextVictim)), attack(pv(pv_nextVictim), pv(pv_attacker))])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 304
+
+
+count: 1529
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [attack(pv(pv_attacker), pv(pv_nextVictim))]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 5
+  Class: 2
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build best_worker farm wait until ready best_worker  build footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack the nextVictim  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	pi( value0, 
+	|	|	|	[
+	|	|	|	|	?(value(value0)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [])])
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	[
+	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 121600
+
+
+count: 2882
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	[
+	|	build(best_barracks, footman)
+	|	 ]
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 6
+  Class: 2
+  Sentence: build barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build farm wait until ready best_worker  build footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack the nextVictim  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(barracks, value0),
+	|	|	|	|	|	|	build(value0, barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	|	[
+	|	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	|	build(farm, value0),
+	|	|	|	|	|	|	|	|	build(value0, farm)
+	|	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(barracks, value0),
+	|	|	|	|	|	|	build(value0, barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(barracks, value0),
+	|	|	|	|	|	|	build(value0, barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	|	[
+	|	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	|	build(farm, value0),
+	|	|	|	|	|	|	|	|	build(value0, farm)
+	|	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	pi( value0, 
+	|	|	|	[
+	|	|	|	|	?(value(value0)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	pi( value0, 
+	|	|	|	[
+	|	|	|	|	?(value(value0)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, value0),
+	|	|	|	|	|	build(value0, barracks)
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet([nondet([if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [])])
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	pi( value0, 
+	|	|	|	[
+	|	|	|	|	?(value(value0)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, value0),
+	|	|	|	|	|	build(value0, barracks)
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	[
+	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(farm, value0),
+	|	|	|	|	|	|	|	build(value0, farm)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	[
+	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	pi( value0, 
+	|	|	[
+	|	|	|	?(value(value0)),
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, value0),
+	|	|	|	|	build(value0, barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	pi( value0, 
+	|	|	[
+	|	|	|	?(value(value0)),
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, value0),
+	|	|	|	|	build(value0, barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(farm, value0),
+	|	|	|	|	|	|	build(value0, farm)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	pi( value0, 
+	|	[
+	|	|	?(value(value0)),
+	|	|	nondet( [
+	|	|	|	build(barracks, value0),
+	|	|	|	build(value0, barracks)
+	|	|	|	 ] )
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [pi(value0, [?(value(value0)), nondet([build(farm, value0), build(value0, farm)])]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(farm, value0),
+	|	|	|	|	|	|	build(value0, farm)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	pi( value0, 
+	|	[
+	|	|	?(value(value0)),
+	|	|	nondet( [
+	|	|	|	build(barracks, value0),
+	|	|	|	build(value0, barracks)
+	|	|	|	 ] )
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(farm, value0),
+	|	|	|	|	|	|	build(value0, farm)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	pi( value0, 
+	|	|	|	|	[
+	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 48640000
+
+
+count: 78133
+
+[
+	[
+	[
+	[
+	build(playerId(2), barracks)
+	 ],
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	[
+	|	|	build(playerId(2), farm)
+	|	|	 ],
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	[
+	|	build(best_barracks, footman)
+	|	 ]
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 7
+  Class: 2
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build best_worker farm wait until ready best_worker  train footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  attack the nextVictim  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	pi( value0, 
+	|	|	|	[
+	|	|	|	|	?(value(value0)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	pi( value0, 
+	|	|	|	[
+	|	|	|	|	?(value(value0)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	attack(footman, value0),
+	|	|	|	|	|	attack(value0, footman)
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]),
+	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	[
+	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(footman, value0),
+	|	|	|	|	|	|	|	build(value0, footman)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ],
+	|	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]),
+	|	|	|	|	|	pi( value0, 
+	|	|	|	|	|	[
+	|	|	|	|	|	|	?(value(value0)),
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	attack(footman, value0),
+	|	|	|	|	|	|	|	attack(value0, footman)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ],
+	|	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])])
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ]
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])])
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([[nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])])], [])]]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([[nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])])], [])]]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet([nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([build(footman, value0), build(value0, footman)])])], [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), pi(value0, [?(value(value0)), nondet([attack(footman, value0), attack(value0, footman)])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [pi(value0, [?(value(value0)), nondet([attack(value0, pv(pv_nextVictim)), attack(pv(pv_nextVictim), value0)])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 243200
+
+
+count: 4672
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	[
+	|	build(best_barracks, footman)
+	|	 ]
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[attack(pv(pv_attacker), pv(pv_nextVictim))]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ]
+
+========================================
+  No.: 10
+  Class: 2
+  Sentence: build best_worker barracks then wait until ready best_worker, while no_of_attackers < no_of_opp_attackers * 2  if supply < 1  build best_worker farm wait until ready best_worker  build best_barracks footman, wait until ready best_barracks  while there is an opp_attacker who is alive  take the nextVictim forall attacker  xyz  wait until dead the nextVictim 
+[
+	nondet( [
+	|	[
+	|	nondet( [
+	|	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])])
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ],
+	|	|	|	|	[
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	|	[
+	|	|	|	|	|	if( supply<1, 
+	|	|	|	|	|	|- [
+	|	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	|	waitone,
+	|	|	|	|	|	|	waitfor(ready(best_worker))
+	|	|	|	|	|	|	 ]
+	|	|	|	|	|	'-  )
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	|	 ] ),
+	|	|	|	nondet( [
+	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])])
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	nondet( [
+	|	|	|	|	build(barracks, best_worker),
+	|	|	|	|	build(best_worker, barracks)
+	|	|	|	|	 ] ),
+	|	|	|	waitone,
+	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	|	[
+	|	|	|	|	if( supply<1, 
+	|	|	|	|	|- [
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	|	 ] ),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	|	nondet( [
+	|	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	|	 ] )
+	|	|	|	|	|	 ]
+	|	|	|	|	'-  )
+	|	|	|	|	 ] )
+	|	|	|	 ]
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_barracks))
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])])
+	|	|	|	 ] )
+	|	|	 ],
+	|	|	[
+	|	|	nondet( [
+	|	|	|	build(barracks, best_worker),
+	|	|	|	build(best_worker, barracks)
+	|	|	|	 ] ),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker)),
+	|	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks))
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ] )
+	|	|	 ]
+	|	|	 ] ),
+	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	[
+	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])])]),
+	|	|	waitone,
+	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	nondet([nondet([nondet([if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)])], []), waitone, waitfor(ready(best_worker))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker))], [])]), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)])], [])]), waitone, waitfor(ready(best_barracks))], [if(supply<1, [nondet([build(best_worker, farm), build(farm, best_worker)]), waitone, waitfor(ready(best_worker)), nondet([build(best_barracks, footman), build(footman, best_barracks)]), waitone, waitfor(ready(best_barracks))], [])]),
+	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	[
+	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])])]),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	 ] )
+	|	|	|	 ],
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ],
+	|	[
+	|	nondet( [
+	|	|	build(barracks, best_worker),
+	|	|	build(best_worker, barracks)
+	|	|	 ] ),
+	|	waitone,
+	|	waitfor(ready(best_worker)),
+	|	while( no_of_attackers < no_of_opp_attackers*2, 
+	|	[
+	|	|	nondet( [
+	|	|	|	[
+	|	|	|	if( supply<1, 
+	|	|	|	|- [
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_worker, farm),
+	|	|	|	|	|	build(farm, best_worker)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_worker)),
+	|	|	|	|	nondet( [
+	|	|	|	|	|	build(best_barracks, footman),
+	|	|	|	|	|	build(footman, best_barracks)
+	|	|	|	|	|	 ] ),
+	|	|	|	|	waitone,
+	|	|	|	|	waitfor(ready(best_barracks)),
+	|	|	|	|	while( exists(x, and(opp_attacker(x), alive(x))), 
+	|	|	|	|	[
+	|	|	|	|	|	set(pv(pv_nextVictim), nextVictim),
+	|	|	|	|	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [nondet([pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([build(value0, value1), build(value1, value0)])])])], [pi(value0, [?(value(value0)), pi(value1, [?(value(value1)), nondet([attack(value0, value1), attack(value1, value0)])])])])]),
+	|	|	|	|	|	waitone,
+	|	|	|	|	|	waitfor(dead(pv(pv_nextVictim)))
+	|	|	|	|	|	 ] )
+	|	|	|	|	 ]
+	|	|	|	'-  )
+	|	|	|	 ]
+	|	|	|	 ] )
+	|	|	 ] )
+	|	 ]
+	|	 ] )
+	 ]
+options: 243200
+
+
+count: 8586
+
+[
+	[
+	[
+	build(best_worker, barracks),
+	waitone,
+	waitfor(ready(best_worker)),
+	while( no_of_attackers < no_of_opp_attackers*2, 
+	[
+	|	[
+	|	[
+	|	[
+	|	if( supply<1, 
+	|	|- [
+	|	|	build(best_worker, farm),
+	|	|	waitone,
+	|	|	waitfor(ready(best_worker))
+	|	|	 ]
+	|	'-  )
+	|	 ],
+	|	build(best_barracks, footman)
+	|	 ],
+	|	waitone,
+	|	waitfor(ready(best_barracks))
+	|	 ]
+	|	 ] )
+	 ],
+	while( exists(x, and(opp_attacker(x), alive(x))), 
+	[
+	|	set(pv(pv_nextVictim), nextVictim),
+	|	forall(pv(pv_attacker), attacker(pv(pv_attacker)), [[[[attack(pv(pv_attacker), pv(pv_nextVictim))]]]]),
+	|	waitone,
+	|	waitfor(dead(pv(pv_nextVictim)))
+	|	 ] )
+	 ]
+	 ][1, 1, [0.45, 0.0, 0.45], 16, 230
+2, 1, [0.46, 0.0, 0.45], 32, 258
+3, 1, [0.45, 0.0, 0.46], 32, 244
+4, 1, [0.45, 0.01, 0.45], 16, 230
+5, 1, [0.68, 0.0, 0.68], 6400, 413
+6, 1, [0.67, 0.0, 0.67], 2560000, 443
+7, 1, [0.68, 0.0, 0.68], 12800, 450
+8, 1, [19.29, 0.0, 19.3], 819200000000, 3151
+9, 1, [43.75, 0.01, 43.76], 6553600000000, 7593
+10, 1, [43.49, 0.01, 43.5], 12800, 6589
+1, 2, [1.14999999999999, 0.0, 1.14999999999999], 304, 1529
+2, 2, [1.65000000000001, 0.0, 1.64], 608, 2347
+3, 2, [1.17, 0.0, 1.18000000000001], 608, 1543
+4, 2, [1.14999999999999, 0.0, 1.14999999999999], 304, 1529
+5, 2, [1.59, 0.0, 1.59], 121600, 2882
+6, 2, [25.37, 0.01, 25.37], 48640000, 78133
+7, 2, [2.24000000000001, 0.0, 2.25], 243200, 4672
+10, 2, [44.02, 0.01, 44.04], 243200, 8586
+]
+
+Yes (188.72s cpu)
+[eclipse 2]: 

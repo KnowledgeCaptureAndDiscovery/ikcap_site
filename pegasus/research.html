@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The Pegasus Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Planning and execution in grids</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Research</H2>
+	 <p />
+	 
+<p>
+Cognitive grids are a collaboration
+between Grid and AI researchers at ISI aimed to
+provide intelligent middleware for Grid computing infrastructure.
+Our initial work has been exploratory and driven by the 
+<a href="http://www.griphyn.org">
+GriPhyN</a>
+and the
+<a href="../scec-it">
+SCEC/IT</a> projects.
+</p>
+
+<p>
+One of the challenges for scientists is to configure complex workflows
+of components and to setup the complex scripts required to execute each
+component (e.g., FFT code) as a job on a specific grid resource (e.g., a
+linux cluster).  One of the applications within the GriPhyN project is
+the Laser Interferometer Gravitational Wave Observatory (LIGO), where
+instruments collect data that needs to be analyzed in order to detect
+gravitational waves predicted by Einstein's theory of relativity.  One
+of the tasks involved is pulsar searches in certain areas of the sky for
+a time period, where observations are processed through Fourier
+transforms and frequency range extraction software.  This may involve
+composing a workflow of hundreds of jobs and executing them in
+appropriate computing resources on the grid, which gets unmanageable
+very fast. In addition, you have to spend a lot of time to become a
+knowledgeable grid user in order to do this, even if you have simple job
+workflows to run.  Physicists may be happy to do this (though they would
+probably prefer not to), but other potential users of scientific
+software may not be.  Last but not least, using the grid is not free and
+means sharing resources with others, so intelligent middleware can make
+grids more efficient and accessible overall.
+</p>
+
+<p>
+Our approach to these problems is to use automated planning techniques
+combined with knowledge representation and reasoning to specify the
+capabilities and requirements of these components as well as the
+capabilities offered by computing and storage resources available on the
+grid.  We are developing <a href="http://pegasus.isi.edu"> Pegasus</a>
+(Planning for Execution in Grids), a configurable system that can
+generate and execute complex workflows on the Grid.  Pegasus includes an
+AI planner that uses information about the capabilities and requirements
+of each domain-specific component (e.g., FFT code or simulation code) in
+terms of meta-data requirements and results (e.g., a seismic hazard
+simulation takes a fault model as input) as well as resource
+requirements.  Pegasus uses the Metadata Catalog Service (MCS), newly
+developed at ISI, to perform the mapping between application-specific
+attributes and logical file names of existing data products. AI-based
+planning technologies are used to construct an end-to-end workflow,
+taking into account preferences and other heuristics to minimize
+execution time or data movement.  Pegasus also contains a Virtual Data
+Language generator that can populate the Chimera catalog with newly
+constructed derivations. Finally, Pegasus generates the necessary submit
+files and sends the Workflow to the grid's DAGMan for execution.  We
+have used Pegasus for LIGO pulsar search, using LDAS and compute and
+storage resources at Caltech, University of Southern California,
+University of Wisconsin Milwaukee, University of Florida, and NCSA.
+This application was demonstrated at the Supercomputing Conference
+(SC-2002).
+</p>
+
+<p>
+Our future plans include incorporating these techniques in the new
+service-based grid architecture proposed by OGSA (Open Grid Services
+Architecture), dynamic planning and scheduling techniques for robust
+execution of job workflows, and using the grid as a robust
+infrastructure for distributed heterogeneous agent communities.
+Our work on Pegasus forms part of our work on the 
+<a href="../cognitive-grids">Cognitive Grids</a>
+project, along with work on interactive workflow construction and 
+ontologies for resource match-making.
+</p>
+    
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

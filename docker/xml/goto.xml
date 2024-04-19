@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PolyCalcApp" targetNamespace="http://www.capeclear.com/PolyCalcApp.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.capeclear.com/PolyCalcApp.wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.capeclear.com/PolyCalcApp.xsd">
+<types>
+<xsd:schema targetNamespace="http://www.capeclear.com/PolyCalcApp.xsd" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:complexType name="Coordinate">
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="x" type="xsd:float"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="y" type="xsd:float"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfCoordinate">
+<xsd:complexContent>
+<xsd:restriction base="SOAP-ENC:Array">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd1:Coordinate"/>
+</xsd:sequence>
+<xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="xsd1:Coordinate[]"/>
+</xsd:restriction>
+</xsd:complexContent>
+</xsd:complexType>
+</xsd:schema>
+</types>
+<message name="calculate">
+<part name="arg0" type="xsd1:ArrayOfCoordinate"/>
+</message>
+<message name="calculateResponse">
+<part name="return" type="xsd:float"/>
+</message>
+<portType name="PolyCalcApp">
+<operation name="calculate">
+<input message="tns:calculate"/>
+<output message="tns:calculateResponse"/>
+</operation>
+</portType>
+<binding name="PolyCalcAppBinding" type="tns:PolyCalcApp">
+<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="calculate">
+<soap:operation soapAction="capeconnect:PolyCalcApp:PolyCalc#calculate"/>
+<input>
+<soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="capeconnect:PolyCalcApp:PolyCalc" use="encoded"/>
+</input>
+<output>
+<soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="capeconnect:PolyCalcApp:PolyCalc" use="encoded"/>
+</output>
+</operation>
+</binding>
+<service name="PolyCalcApp">
+<documentation>PolyCalcApp</documentation>
+<port binding="tns:PolyCalcAppBinding" name="PolyCalcApp">
+<soap:address location="http://www.capescience.com:80/ccgw/GWXmlServlet"/>
+</port>
+</service>
+
+</definitions>

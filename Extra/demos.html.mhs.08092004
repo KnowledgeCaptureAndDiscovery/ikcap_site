@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Demo Gallery - Interactive Knowledge Capture</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="Stylesheet" href="./ikcap.css" type="text/css"/>
+<link rel="Stylesheet" type="text/css" href="./ikcap-basic.css">
+<style>
+  div li {
+     padding:0.1em;
+  }
+
+  div#mainProjects a {
+     text-decoration:none;
+     border-bottom: 1px dotted #069;
+     color: #069;
+     /*font-size:1.1em;
+     line-height:1.2em;
+     letter-spacing:.1em;*/
+  }
+
+</style>
+<script>
+  function openVid(file, width, height) {
+     var str = '';
+     str += '<object id="MediaPlayer1" width="'+width+'" height="'+height+'"'; 
+     str += 'classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95"';
+     str += 'codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"';
+     str += 'standby="Loading Microsoft Windows Media Player components..." ';
+     str += 'type="application/x-oleobject" align="middle">';
+     str += '<param name="FileName" value="'+file+'"/>';
+     str += '<param name="ShowStatusBar" value="true"/>';
+     str += '<param name="DefaultFrame" value="mainFrame"/>';
+     str += '<embed type="application/x-mplayer2" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/"';
+     str += 'src="'+file+'" align="middle" width="'+width+'" height="'+height+'" defaultframe="rightFrame" showstatusbar="true">';
+     str += '</embed>';
+     str += '</object>';
+
+     var videowin = window.open("","videowin","width="+(width+20)+",height="+(height+50));
+     videowin.document.writeln(str);
+     videowin.document.close();
+  }
+</script>
+</head>
+
+<body>
+  <a style="border:0;" href="http://www.isi.edu/ikcap"><img border=0 src="images/kcap.jpg"/></a>
+  <h4>The "Interactive Knowledge Capture" Research Group at ISI</h4>
+
+  <h3 style="padding-top:0">Demo Gallery</h3>
+  <div id="mainProjects">
+    <ul>
+       <li><a href="javascript:openVid('constable/constable-take-1.wmv',640,550)"><b>Constable Demo</b></a> -- A video walkthrough of Constable being used to critique a plan created in Softools. <a href="constable/constable-take-1.zip">Download</a></li>
+       <li><a href="javascript:openVid('kanal/kanal-second-pass.avi',1000,800)"><b>KANAL Demo</b></a> -- A video walkthrough of KANAL critiquing a "Virus Invasion" model defined using Shaken. <a href="kanal/kanal-second-pass.zip">Download</a></li>
+       <li><a href="javascript:openVid('misc/cat-scec-demo.avi',1000,800)"><b>CAT Demo</b></a> -- A video showing composition of a SCEC Pathway using CAT (Composition Analysis Tool). <a href="misc/cat-scec-demo.zip">Download</a></li>
+       <li><a href="javascript:openVid('misc/TrellisMovie.wmv',640,550)"><b>Trellis Demo</b></a> -- Capturing argumentation. <a href="misc/TrellisMovie.zip">Download</a></li>
+       <li><a href="javascript:openVid('misc/ace1.wmv',640,550)"><b>ACE Demo</b></a> -- Incremental formalization of document annotations. <a href="misc/ace1.zip">Download</a></li>
+     </ul>
+  </div>
+
+  <p><a href="http://www.isi.edu/ikcap/">&lt;&lt; Main Page</a></p>
+
+  <div class="footer">
+    <a href="http://www.isi.edu"><img title="ISI" alt="ISI" src="images/isi.gif" align="left" border="0"></a>
+    <a href="http://www.usc.edu"><img title="USC" alt="USC" src="images/usc.gif" align="left" border="0"></a>
+    <a href="http://ai.isi.edu"><img title="AI@ISI" alt="AI@ISI" src="images/ai.jpg" align="left" border="0"></a>
+  </div>
+</body>
+</html>

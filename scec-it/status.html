@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The SCEC/IT Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Information Infrastructure for Earthquake Research</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Status</H2>
+
+      <p>
+
+ <u>Objective</u>: We are developing intelligent reasoners and interfaces that
+enable users to 1) publish implemented codes of earthquake simulation models
+and describe model constraints 2) access published simulation models and check
+constraint violations, and 3) interactively construct computational
+pathways. We are developing a novel approach to interactive pathway
+composition that uses knowledge bases to represent and reason about model
+constraints and planning approaches to reason about the relationships among
+components within an end-to-end pathway computation.  We are also
+investigating how to model the grid execution environment so that the user can
+be isolated from the details of the execution of the pathway.  
+<p>
+<u>Systems
+Developed</u>: <ul>
+
+<li><A href="../cat">CAT</A> (Composition
+Analysis Tool): CAT facilitates interactive construction of computational
+pathways where users select and connect existing SCEC components, and the
+system generates assistance in completing a correctly formulated
+pathway. Given a sketch of a pathway, CAT analyzes it using the semantic
+description of components, reports errors and gaps, and generates specific
+suggestions on how to fix these errors. When a pathway is completed, it forms
+an end-to-end simulation for earthquake scientists.  
+
+
+<li><A href="../docker">DOCKER</A>
+(Distributed Operations of Code with
+Knowledge-based descriptions for Earthquake Research): DOCKER is a tool that
+enables model developers to publish the code for their models, describe I/O
+parameter types in terms of SCEC ontologies, and specify and document
+constraints of model use. DOCKER helps end users access models from a uniform
+interface, invoke models correctly by enforcing constraints, and find
+appropriate simulation models for their requirements.
+
+<li>Artemis : We have done some preliminary work in using query planning
+techniques to access metadata catalogs in the grid. Artemis isolates the users
+from the complexity of using distributed heterogeneous catalogs by providing
+interactive assistance to formulate valid, integrated queries using a single
+ontology that is automatically mapped to the particular metadata of each
+catalog.  
+
+</ul>
+<p>
+<u>CAT Integration with SCEC/IT infrastructure</u>: In Spring 2004, we
+participated in a successful end-to-end demo of CAT integrated with the SCEC
+grid workflow execution system.  The following shows a SCEC user interface with the
+results of the execution in the SCEC grid environment of a pathway created
+with CAT.  The left-hand side is a rendering of the knowledge base that
+represents all the components and abstract component types that the user can
+include in the pathway.  This is based on our Year 1 work on the DOCKER
+system.
+<IMG SRC="images/scec-integration.bmp">
+
+
+<p>
+
+<u>Recent Work</u>: We are developing CAT-S, a service-based architecture
+based on CAT that can also be used to check the correctness of a workflow but
+that can be invoked programmatically from other applications and user
+interface modalities.  Given a specification of a workflow, CAT-S analyzes it
+using the semantic descriptions of components, reports errors and gaps, and
+generates specific suggestions on how to fix these errors.  CAT-S can be
+reinvoked with a selection of suggestions, and will fix the workflow
+accordingly.  The interaction can thus proceed stepwise, with each analyze
+followed by an apply fix call, until the pathway is completed.  Our plan is to
+integrate CAT-S with the Pegasus workflow planning and execution system that
+has been recently adopted for SCEC.  <p>
+      </p>
+    
+  </TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

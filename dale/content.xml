@@ -1,0 +1,107 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>DALE</name>
+  <title>Data Analytics by Learning and Exploration</title>
+
+<status>
+
+<short>
+The DALE framework currently has focused to date on workflows for text analytics tasks such as document classification, document clustering, and topic modeling.  These workflows are composed of workflow fragments that pre-process text, prepare the data, and set up the learning task.
+</short>
+
+<long> 
+<p>The DALE framework currently has focused to date on workflows for text analytics tasks such as document classification, document clustering, and topic modeling.  These workflows are composed of workflow fragments that pre-process text, prepare the data, and set up the learning task.  
+
+<h4>Workflows and Workflow Fragments for Text Analytics</h4>
+
+<p>DALE contains workflow fragments that are common across text analytics tasks and are reused across workflows. They are composed of common workflow components, which can have several implementations, for example for term weighting there is a Chi Squared, a Mutual Information, and an Information Gain method.  The user can choose one of these methods for that step, otherwise the system makes the selection automatically. We have also defined workflow fragments for viewing certain types of data.
+
+<p>These predefined workflow fragments make text analytics expertise readily available to new users.  Workflow fragments can be executed independently from each other.  Users can run them to improve their understanding of the behavior of those steps. A good starting point for novices however is to use larger end-to-end workflows that are defined using the workflow fragments.  DALE has several pre-defined workflows for document classification, document clustering, and topic modeling
+
+<h4>Worfklow Components and Datasets</h4>
+
+<p>The workflows are currently composed of more than 50 workflow components that we built using popular machine learning and text processing packages, including Weka, Cluto, and Mallet among others.  These packages have very heterogeneous implementations but the components encapsulate the software with interfaces described with data types in the workflow system to make them reusable in different workflows. 
+
+<p>The system also includes several widely used datasets used in the text analytics community (WebKB, Reuters, 20 Newsgroups).  These datasets allow an end user to experiment with the workflows and learn how to use them with his or her own data.
+
+<p>In addition to the above 50 components, other components include widely-used MATLAB and R libraries (for example for sampling and visualizing datasets) and social network analysis algorithms and visualizations.
+
+<h4>Assisting End Users</h4>
+
+<p>DALE assists the end user to set up and execute workflows.  DALE is built on top of <a href="http://wings.isi.edu"> Wings workflow system</a>, which provides different kinds of assistance and automation during workflow creation.  It has a graphical workflow template editor that assists the user by enforcing the constraints specified for the workflow components.  It also has facilities for tracking execution progress, viewing execution results, and generating provenance. As users select and configure workflows to be executed, Wings ensures that workflows are correctly composed by checking that the data types and other constraints of the input and output types are consistent with the workflow. For example, multi-labeled data cannot be used for correlation scoring (only single-labeled data can be used), so a user would be alerted if using that workflow incorrectly. All the intermediate and final data products of workflow execution can be viewed, allowing the user to explore and understand how the methods work.  
+
+<h4>Usability of DALE for Non-Experts</h4>
+
+The first is a case of reuse by researchers not expert in machine learning or text analytics.  Their goal was to improve a question answering site by automating some of the current manual processes, for example to suggest best matches from the archives for an incoming question and find the best-suited scientist for incoming questions. Using workflows simplified the process of analysis significantly, by allowing calculation of standard statistics, visualization of document topics, and facilitating extensions of standard algorithms.
+
+<p>The second is a case of reuse by high-school students for an internship project to analyze twitter data. Over a period of a week, they were given tutorials and datasets. They had taken two semesters of introduction to programming in the eight and ninth grades, and were entering tenth grade in the coming year.  During the five days, the students: 1) Became familiar with workflows as a software paradigm; 2) Learned to use the system and run simple workflows to analyze data (e.g., compare sets of html files to see how they would be classified); 3) Learned to use pre-existing workflows for advanced text analytics (e.g., run workflows for document clustering and topic detection and compare their performance for different threshold parameters); 4) Extended existing workflows with new workflow components that they developed; and 5) Analyzed twitter data to detect topic trends by applying pre-existing advanced text analytic workflows.  A report describing these activities and their findings is available: <a href="http://workflow-sharing.isi.edu/workflow-sharing/index.php/Workflow_Usability">Usability Report</a>.  For example, they decided to run the same workflow with different amounts of training data to see how it affected accuracy.  They also analyzed twitter data from the timeframe of the Haiti earthquake, and detected popular topics in the dataset.  
+
+</long>
+ 
+</status>
+
+
+  <description>
+    <short>
+    DALE is an extension of the <a href="http://wings.isi.edu">Wings workflow system</a> that enables end users with no background in machine learning to analyze data by applying complex state-of-the-art techniques captured as workflows.  DALE includes a library of workflows and software components for data analytics, notably for document classification, document clustering, and topic extraction.  DALE has been used by non-experts including students at the high-school level.
+    </short>
+
+    <long>
+    DALE (Data Analytics by Learning and Exploration) is a framework that captures expert-level data analysis methods in data mining and machine learning as computational workflows.  This system exposes end users to workflows of well-understood end-to-end data analysis processes that represent the state-of-the-art and have proven successful in several challenging domains.  
+
+DALE, as an extension of the Wings workflow system, allows users to easily experiment with different combinations of steps, represented as workflows of computations that they can easily reconfigure and that the underlying system can easily manage and execute.
+
+DALE workflows capture expertise on using supervised and unsupervised statistical learning algorithms, as they reflect state-of-the art methods to prepare data, extract features, down-select features, and train models of the data.  
+
+The diagram below shows workflow fragments for (a) Feature generation, (b) Feature selection with correlation scoring, (c) Training a model to classify a test dataset, (d) Clustering of documents with label information. These workflow fragments are combined into larger workflows, such as the workflow for document classification shown in (e).
+
+<img src="Dale1.png" />
+    </long>
+  </description>
+
+  <research>
+    <short>
+    We plan to extend DALE so that end users will be able to acquire advanced analytic skills through practice in several domains of broad interest.
+    </short>
+    <long>
+    We plan to extend DALE so that end users will be able to acquire advanced analytic skills through practice in several domains of broad interest.  DALE will provide three levels of training:
+
+<ul>
+<li> <b>Hands-on exercises</b>:  In this training level, we plan to provide guided lessons in three domains to teach users how to conduct rigorous data analytics tasks. More specifically, we select analytic tasks from three domains, i.e. text categorization, recommender systems and regulatory network discovery in computational biology, as examples. In each domain, we select 2-3 datasets in which the system provides detailed task description, a target score that the user should aim to achieve at the end of the lesson, and a suggested abstract workflow. The goal of the user is to achieve the target score (or higher scores) by exploring different algorithms and settings within the suggested workflow. The user is expected to be able to understand the basic components of the data analytic workflow and their contribution to the quality of the solution in terms of the target score in each task. 
+
+<li><b>Guided Practice</b>: The second level of our training program is to provide guided practice. In this program, we will provide the analytic task, its associated dataset and the target score. In contrast to Hands-on Exercises, the system will not provide a suggested workflow but rather will allow the user to use any workflow defined in all lessons of that domain. The goal of this program is to train users to work relatively independently on analytic tasks and seek best solutions. 
+
+<li><b>Independent Exploration</b>: The third level of our training program is to provide a supportive environment for users to explore analytic tasks with data of his/her interest. DALE has a flexible architecture so that (1) the user can easily create different workflows and run them on their own datasets; (2) the user can write his/her own learning algorithms, or preprocessing algorithms and easily add them to the system as workflow components. DALE will significantly shorten the effort needed for the users to explore different workflows for their data of interest.
+</ul>
+
+The diagram below shows an overview of the DALE framework as we envision it in the future. A user at any skill level can benefit from using DALE. Users will be able to learn machine learning skills by starting from a beginner on data analysis, moving to intermediate level after hands-on exercises and to the expert level after several rounds of independent exploration. On the backend, DALE will consist of manual workflow formulation and exploration, generation of hints and critiques, and social learning capabilities.
+
+<img src="Dale2.png" />
+    </long>
+  </research>
+
+  <mainlink><a href="http://wings.isi.edu">WINGS</a></mainlink>
+  <link><a href="http://wings.isi.edu">WINGS</a></link>
+
+
+
+<!-- Demo -->
+<demo>
+DALE has a Web interface and does not require installing any software.  DALE allows end users to easily run workflows on their own data as well as to experiment with different datasets and algorithms.  
+
+<p>DALE is available at <a href="http://seagull.isi.edu/marbles">Wings Marbles</a> (Please request for an account)
+</demo>
+</project>

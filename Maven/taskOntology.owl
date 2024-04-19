@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY p1 "http://www.owl-ontologies.com/assert.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/Maven/taskOntology.owl#"
+     xml:base="http://www.isi.edu/ikcap/Maven/taskOntology.owl"
+     xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about=""/>
+    <owl:Class rdf:ID="PrimitiveMethod">
+        <rdfs:subClassOf rdf:resource="#Method"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasTest">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#IfThenElse"/>
+        <rdfs:range rdf:resource="#Test"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Set">
+        <rdfs:subClassOf rdf:resource="#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ActionList">
+        <rdfs:subClassOf rdf:resource="&rdf;List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:allValuesFrom rdf:resource="#Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:ID="ProblemDesc"/>
+    <owl:Class rdf:ID="ObjectList">
+        <rdfs:subClassOf rdf:resource="&rdf;List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:allValuesFrom rdf:resource="#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasChoiceCriteria">
+        <rdfs:domain rdf:resource="#ChooseObject"/>
+        <rdfs:range rdf:resource="#ChoiceCriteria"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="TaskState"/>
+    <owl:ObjectProperty rdf:ID="hasElse">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#IfThenElse"/>
+        <rdfs:range rdf:resource="#ActionList"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Action">
+        <rdfs:subClassOf rdf:resource="#Task"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Loop">
+        <rdfs:subClassOf rdf:resource="#Action"/>
+    </owl:Class>
+    <owl:Class rdf:ID="MethodList">
+        <rdfs:subClassOf rdf:resource="&rdf;List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:allValuesFrom rdf:resource="#Method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:ID="IfThenElse">
+        <rdfs:subClassOf rdf:resource="#Action"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasOutputArgs">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#MethodSignature"/>
+                    <owl:Class rdf:about="#PerformMethod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#ObjectList"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="TaskDescriptionComponent"/>
+    <owl:Class rdf:ID="Method">
+        <rdfs:subClassOf rdf:resource="#Task"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasGoal">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#AchieveGoal"/>
+                    <owl:Class rdf:about="#ProblemDesc"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#TaskGoal"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Object"/>
+    <owl:ObjectProperty rdf:ID="hasSteps">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#Loop"/>
+                    <owl:Class rdf:about="#Method"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#ActionList"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Test">
+        <rdfs:subClassOf rdf:resource="#TaskDescriptionComponent"/>
+    </owl:Class>
+    <owl:Class rdf:ID="AchieveGoal">
+        <rdfs:subClassOf rdf:resource="#Action"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Task"/>
+    <owl:ObjectProperty rdf:ID="hasInputArgs">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#MethodSignature"/>
+                    <owl:Class rdf:about="#PerformMethod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#ObjectList"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Individual">
+        <rdfs:subClassOf rdf:resource="#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ChooseObject">
+        <rdfs:subClassOf rdf:resource="#Action"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasForEachInSet">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ForLoop"/>
+        <rdfs:range rdf:resource="#Set"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="TaskGoal"/>
+    <owl:ObjectProperty rdf:ID="hasElement">
+        <rdfs:domain rdf:resource="#Test"/>
+        <rdfs:range rdf:resource="#Equality"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >conjunction only</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="MethodSignature">
+        <rdfs:subClassOf rdf:resource="#TaskDescriptionComponent"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ChoiceCriteria">
+        <rdfs:subClassOf rdf:resource="#TaskDescriptionComponent"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasSignature">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Method"/>
+        <rdfs:range rdf:resource="#MethodSignature"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Workflow">
+        <rdfs:subClassOf rdf:resource="#Task"/>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:ID="hasName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#Method"/>
+                    <owl:Class rdf:about="#MethodSignature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:ID="Equality">
+        <rdfs:subClassOf rdf:resource="#TaskDescriptionComponent"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasForAction">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Loop"/>
+        <rdfs:range rdf:resource="#Action"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="hasMethod">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#PerformMethod"/>
+        <rdfs:range rdf:resource="#Method"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="achievesGoal">
+        <rdfs:domain rdf:resource="#Method"/>
+        <rdfs:range rdf:resource="#TaskGoal"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="ForLoop">
+        <rdfs:subClassOf rdf:resource="#Loop"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasInitialState">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ProblemDesc"/>
+        <rdfs:range rdf:resource="#TaskState"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="WhileLoop">
+        <rdfs:subClassOf rdf:resource="#Loop"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasObjects">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ChooseObject"/>
+        <rdfs:range rdf:resource="#ObjectList"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="PerformMethod">
+        <rdfs:subClassOf rdf:resource="#Action"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasThen">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#IfThenElse"/>
+        <rdfs:range rdf:resource="#ActionList"/>
+    </owl:ObjectProperty>
+</rdf:RDF>

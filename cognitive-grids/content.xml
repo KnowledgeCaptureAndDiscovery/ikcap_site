@@ -1,0 +1,191 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+
+<project>
+<name>Cognitive Grids</name>
+<title>Intelligent Middleware for Distributed Problem Solving</title>
+<status>
+<short>
+<p>
+Pegasus helps scientists find gravitational waves using LIGO data.
+</p>
+</short>
+<long>
+<h2 style="font-size:14px"><a href="http://www.isi.edu/ikcap/pegasus">Pegasus</a> helps scientists find gravitational waves using LIGO data.</h2>
+<object CLASSID="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" WIDTH="530" HEIGHT="530" CODEBASE="http://www.apple.com/qtactivex/qtplugin.cab#version=6,0,2,0">
+<param NAME="controller" VALUE="TRUE"/>
+<param NAME="type" VALUE="video/mpeg"/>
+<param NAME="autoplay" VALUE="false"/>
+<param NAME="target" VALUE="myself"/>
+<param NAME="src" VALUE="http://www.isi.edu/~deelman/ligo3.mpeg"/>
+<param NAME="pluginspage" VALUE="http://www.apple.com/quicktime/download/indext.html"/>
+<embed  WIDTH="530" HEIGHT="530" CONTROLLER="TRUE" SRC="http://www.isi.edu/~deelman/ligo3.mpeg"></embed>
+</object>
+<div style="font-size:10px">Searching for Gravitational Waves in Pulsars and Other Stellar Objects</div>
+<p>Gravitational waves, though predicted by Einstein's theory of relativity, have never been observed experimentally.  Through simulations of Einstein's equations, scientists predict that those waves should be produced by colliding black holes or collapsing supernovae.</p>
+<p>The Laser Interferometry Gravitational-Wave Observatory (LIGO) project aims to detect such phenomena.  At $300M, it is the largest single enterprise ever undertaking by National Science Foundation.  With facilities in Livingston, Louisiana and Hanford, Washington, LIGO joined gravitational-wave observatories in Italy, Germany and Japan in searching for these signals.  Pulsars are believed to generate such waves, so scientists search areas with known pulsars as well as other areas in the hope that they will find other objects that emit them as well.</p>
+<p>The <a href="http://pegasus.isi.edu">Pegasus</a> planner that we have developed is one of the tools that scientists can use to analyze data collected by LIGO.  In the Fall of 2002, a 17-day data collection effort was held, followed by a two-months run in February of 2003 and a six-month run that will start in late 2003.  LIGO instruments are designed to measure the effect of gravitational waves on test masses suspended in a vacuum.  The data collected during experiments is a collection of time series (multi-channel). The observations are processed through Fourier transforms and frequency range extraction software. This may involve composing a workflow of hundreds of jobs and executing them in appropriate computing resources on the grid, which gets unmanageable very fast.</p>
+<p><a href="http://pegasus.isi.edu">Pegasus</a> was used with LIGO data collected during the first scientific run of the instrument, which targeted a set of locations of known pulsars as well as random locations in the sky.  <a href="http://pegasus.isi.edu">Pegasus</a> generated end-to-end grid job workflows that were run over computing and storage resources at Caltech, University of Southern California, University of Wisconsin Milwaukee, University of Florida, and NCSA.</p>
+<p>The screenshot and movie above show a visualization of the results of a pulsar search.  The search ranges are specified by scientists on the lower left corner of the screen.  The top left corner shows the specific range displayed in this visualization.  The bright points represent the locations searched.  The red points are pulsars within the bounds specified for the search, the yellow ones are pulsars outside of those bounds.  Blue and green points are the random points searched, within and outside the bounds respectively.</p>
+
+<p><b>Acknowledgements:</b>  The LIGO application of <a href="http://pegasus.isi.edu">Pegasus</a> was developed at USC/ISI by Ewa Deelman, Jim Blythe, Yolanda Gil, and Carl Kesselman in collaboration with A. Arbree, R. Cavanaugh, K. Blackburn, A. Lazzarini, S. Koranda,  G. Mehta, K. Vahi, S. Patil, S. Rao, and G. Singh.  The visualization of LIGO data shown here was created by M. Thiebaux. The original picture of the sky comes from the 2MASS (The Two Micron All Sky Survey--NASA) collection.  For more information, please visit the GriPhyn project page, the <a href="http://pegasus.isi.edu">Pegasus</a> project page, and the <a href="http://www.globus.org">Globus</a> project page.</p>
+</long>
+</status>
+<description>
+<short>
+Cognitive grids aim to provide intelligent
+middleware for Grid computing infrastructure.
+</short>
+<long>
+Our work uses a
+wide-range of AI technology to improve current Grid middleware, such as
+planning techniques to generate job workflows for execution in
+a Grid environment, ontology-based matchmaking for computing resources,
+reasoning about meta-data to automate
+the composition of distributed problem-solving components based on
+the user's desired end products,
+and dynamic planning and scheduling techniques for robust execution
+of job workflows.
+</long>
+</description>
+<research>
+<short>
+planning and resource reasoning, resource ontologies,
+meta-data for problem-solving components, distributed heterogeneous
+problem solving
+</short>
+<long>
+<p>
+Cognitive grids are a recently started collaboration
+between Grid and AI researchers at ISI aimed to
+provide intelligent middleware for Grid computing infrastructure.
+Our initial work has been exploratory and driven by the 
+<a href="http://www.griphyn.org">
+GriPhyN</a>
+and the
+<a href="http://www.isi.edu/ikcap/scec-it">
+SCEC/IT</a> projects.
+</p>
+
+<p>
+One of the challenges for scientists is to configure complex
+workflows of components and to setup the complex scripts
+required to execute each component (e.g., FFT code)
+as a job on a specific grid resource (e.g., a linux cluster).
+One of the applications within the GriPhyN
+project is the Laser Interferometer Gravitational Wave Observatory (LIGO),
+where instruments collect data that needs to be analyzed in order to
+detect gravitational waves predicted by Einstein's theory of relativity.
+One of the tasks involved is pulsar searches in certain areas of the
+sky for a time period, where observations are processed through
+Fourier transforms and frequency range extraction software.
+This may involve composing
+a workflow of hundreds
+of jobs and executing them in appropriate computing resources on the grid,
+which gets unmanageable very fast. In addition, you have to spend a 
+lot of time to become a
+knowledgeable grid user
+in order to do this, even if you have simple job workflows to run.
+Physicists may be happy to do this (though they would probably prefer not to),
+but other potential users of scientific software may not be.
+One of the goals of the SCEC/IT project is to make earthquake
+simulation software
+available to users outside of the scientific community, such as a
+building engineer that
+needs to evaluate the risk of an earthquake at a certain site.  There
+are many models
+available for doing complex probabilistic seismic hazard analysis (PSHA),
+but using them requires intelligent user interfaces that allow users
+to provide requirements to setup simulations that execute seamlesly over the
+grid without the
+user even being aware of it.
+Last but not least, using the grid is not free and means sharing
+resources with others, so
+intelligent middleware can make grids more efficient and accessible overall.
+</p>
+
+<p>
+Our approach to these problems is
+to use automated planning techniques combined with knowledge representation
+and reasoning to specify the capabilities and requirements of these
+components as
+well as the capabilities offered by computing and storage resources
+available on the grid.
+We are developing
+<a href="http://pegasus.isi.edu">
+Pegasus</a> (Planning for Execution in Grids),
+a configurable system that can
+generate and execute complex workflows on the Grid.
+Pegasus includes an AI planner that uses information about the capabilities
+and requirements of each domain-specific component (e.g., FFT code or 
+simulation code)
+in terms of meta-data requirements and results (e.g., a seismic 
+hazard simulation takes
+a fault model as input) as well as resource requirements.
+Pegasus uses the  Metadata Catalog Service  (MCS),
+newly developed at ISI, to perform the mapping between
+application-specific attributes and logical file names of
+existing data products. AI-based planning technologies are
+used to construct an end-to-end workflow, taking into account preferences and
+other heuristics to minimize execution time or data movement.
+Pegasus also contains a Virtual Data Language generator that
+can populate the Chimera catalog with newly constructed
+derivations. Finally, Pegasus generates the necessary submit
+files and sends the Workflow to the grid's DAGMan for execution.
+We have used Pegasus for LIGO pulsar search, using
+LDAS and compute and storage resources at Caltech,
+University of Southern California, University  of Wisconsin Milwaukee,
+University  of Florida, and NCSA.
+This application was demonstrated at the Supercomputing Conference (SC-2002).
+</p>
+
+<p>
+We are also developing ontologies that describe computing
+and storage resources available on the grid, so that they
+can be used for matchmaking and dynamic resource allocation.
+Our goal is to extend existing models (such as the CIM
+specification of systems and networks) with rich definitions
+of object classes that capture the capabilities of the resources
+available through the Grid. For example, running a single piece of
+Java code is not that simple and requires a 25-line script that assigns a
+host computer that can run JVM and is running a PBS scheduler,
+indicates the physical location of the code files, and moves
+the code to the right places. A system such as Pegasus can
+use the resource ontologies and descriptions to select
+resources automatically given the requirements of each
+of the application components in a workflow.
+</p>
+
+<p>
+Our future plans include incorporating these techniques in
+the new service-based grid architecture proposed by OGSA (Open Grid Services
+Architecture),
+dynamic planning and scheduling techniques for robust
+execution of job workflows, and using the grid as a robust 
+infrastructure for distributed
+heterogeneous agent communities.
+</p>
+
+
+</long>
+</research>
+<link><a href="http://www.isi.edu/cognitive-grids">Cognitive Grids</a></link>
+<link><a href="http://pegasus.isi.edu">Pegasus</a></link>
+<link><a href="http://www.globus.org">Globus</a></link>
+<link><a href="http://www.isi.edu/ikcap/scec-it">SCEC/IT</a></link>
+<link><a href="http://www.isi.edu/ikcap/docker">DOCKER</a></link>
+<!-- Demo -->
+<demo>
+  <center>
+<img src="tn_comingsoon.jpg"/>
+</center>
+</demo>
+</project>
+

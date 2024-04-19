@@ -1,0 +1,579 @@
+============== DECISION PROBLEM -0 ================
+... initializing problem ...
+-- STARTING A NEW DECISION PROBLEM (DECISION PROBLEM 0) --
+USER selects/sets a value: Tom for (visit0 visitor RESEARCHER)
+  => (visit0 visitor {Tom })
+USER selects/sets a value: 2/3/2004 for (visit0 visit-date DATE)
+*** WARNING: "2/3/2004" is not defined as one of DATE yet. ***
+ temporarily creating an instance 2/3/2004 of type DATE
+  => (visit0 visit-date {2/3/2004 })
+USER selects/sets a value: AI-seminar for (visit0 type VISIT-TYPE)
+  => (visit0 type {AI-seminar })
+USER selects/sets a value: Jose-Luis for (visit0 host ISI-RESEARCHER)
+  => (visit0 host {Jose-Luis })
+problem specific features:
+0: (visit0 activities activity1)
+1: (visit0 activities activity2)
+2: (visit0 activities activity3)
+3: (visit0 activities activity4)
+4: (visit0 activities activity5)
+5: (visit0 activities activity6)
+6: (visit0 activities activity7)
+7: (visit0 activities activity8)
+8: (visit0 activities activity9)
+9: (visit0 activities activity10)
+10: (visit0 visitor Tom)
+11: (visit0 visit-date 2/3/2004)
+12: (visit0 type AI-seminar)
+13: (visit0 host Jose-Luis)
+ --  need to decide on --
+ -------------------------------------------------------------
+ACTIVITY|     when          what          who          where          length          
+activity1|                                                                                                                         
+activity2|                                                                                                                         
+activity3|                                                                                                                         
+activity4|                                                                                                                         
+activity5|                                                                                                                         
+activity6|                                                                                                                         
+activity7|                                                                                                                         
+activity8|                                                                                                                         
+activity9|                                                                                                                         
+activity10|                                                                                                                         
+ -------------------------------------------------------------
+USER adds a source to the current problem:Arens:meeting-maker:"Arens has meetings late afternoon but is available at 15:00, 15:30"
+-------- USER Starts decision on --------------
+decision-4:(activity1 what ACTIVITY-TYPE)
+--------------------------------------------------
+USER selects/sets a value: meeting
+  => (activity1 what {meeting })
+-------- USER Starts decision on --------------
+decision-5:(activity1 who ISI-RESEARCHER)
+--------------------------------------------------
+USER selects/sets a value: Arens
+  => (activity1 who {Arens })
+-------- USER Starts decision on --------------
+decision-6:(activity1 when ACTIVITY-TIME)
+--------------------------------------------------
+ -- USER adds a source description for decision-6 --
++ source-0  decision (activity1 what {meeting })
+ -- USER adds a source description for decision-6 --
++ source-1  decision (activity1 who {Arens })
+ -- USER adds a source description for decision-6 --
++ source-2 Arens: meeting-maker "Arens has meetings late afternoon but is available at 15:00, 15:30" [not formalized]
+USER chooses {15:30 }
+ -------- source summary ----------- 
+     + source-0 (activity1 what {meeting })
+     + source-1 (activity1 who {Arens })
+     + source-2 Arens:meeting-maker:"Arens has meetings late afternoon but is available at 15:00, 15:30"
+ ------------------------------------- 
+  => (activity1 when {15:30 })
+-- CLOSING THE CURRENT DECISION PROBLEM (DECISION PROBLEM 0) --
+ current solution:
+ -------------------------------------------------------------
+ACTIVITY|     when          what          who          where          length          
+activity1|      {15:30 }  {meeting }  {Arens }                                                
+activity2|                                                                                                                         
+activity3|                                                                                                                         
+activity4|                                                                                                                         
+activity5|                                                                                                                         
+activity6|                                                                                                                         
+activity7|                                                                                                                         
+activity8|                                                                                                                         
+activity9|                                                                                                                         
+activity10|                                                                                                                         
+ -------------------------------------------------------------
+... checking temporary properties and instances if they should be permanent...
+ These are temporary properties defined for this problem:
+NONE
+ These are temporary instances defined for this problem:
+(DATE instance 2/3/2004)
+============== DECISION PROBLEM -1 ================
+... initializing problem ...
+-- STARTING A NEW DECISION PROBLEM (DECISION PROBLEM 1) --
+USER selects/sets a value: Ken for (visit11 visitor RESEARCHER)
+*** WARNING: "Ken" is not defined as one of RESEARCHER yet. ***
+ temporarily creating an instance Ken of type RESEARCHER
+  => (visit11 visitor {Ken })
+USER selects/sets a value: 4/8/2004 for (visit11 visit-date DATE)
+*** WARNING: "4/8/2004" is not defined as one of DATE yet. ***
+ temporarily creating an instance 4/8/2004 of type DATE
+  => (visit11 visit-date {4/8/2004 })
+USER selects/sets a value: AI-seminar for (visit11 type VISIT-TYPE)
+  => (visit11 type {AI-seminar })
+USER selects/sets a value: Jose-Luis for (visit11 host ISI-RESEARCHER)
+  => (visit11 host {Jose-Luis })
+problem specific features:
+0: (visit11 activities activity12)
+1: (visit11 activities activity13)
+2: (visit11 activities activity14)
+3: (visit11 activities activity15)
+4: (visit11 activities activity16)
+5: (visit11 activities activity17)
+6: (visit11 activities activity18)
+7: (visit11 activities activity19)
+8: (visit11 activities activity20)
+9: (visit11 activities activity21)
+10: (visit11 visitor Ken)
+11: (visit11 visit-date 4/8/2004)
+12: (visit11 type AI-seminar)
+13: (visit11 host Jose-Luis)
+ --  need to decide on --
+ -------------------------------------------------------------
+ACTIVITY|     when          what          who          where          length          
+activity12|                                                                                                                         
+activity13|                                                                                                                         
+activity14|                                                                                                                         
+activity15|                                                                                                                         
+activity16|                                                                                                                         
+activity17|                                                                                                                         
+activity18|                                                                                                                         
+activity19|                                                                                                                         
+activity20|                                                                                                                         
+activity21|                                                                                                                         
+ -------------------------------------------------------------
+USER adds a source to the current problem:Terry:email:"Terry can do lunch"
+USER adds a source to the current problem:Jane:email:"Jane can meet 16:30 or 17:00"
+USER adds a source to the current problem:Ken:email:"Ken leaves at 18:00"
+USER adds a source to the current problem:Arens:meeting-maker:"Arens is available at 15:00, 17:30"
+USER adds a source to the current problem:Hovy:meeting-maker:"Hovy is available at 17:00"
+USER adds a source to the current problem:meeting-maker:"CR-1 is available at 10:30, 15:00"
+USER adds a source to the current problem:meeting-maker:"CR-2 is available at 10:30, 14:30"
+-------- USER Starts decision on --------------
+decision-4:(activity12 what ACTIVITY-TYPE)
+--------------------------------------------------
+USER selects/sets a value: meeting
+  => (activity12 what {meeting })
+-------- USER Starts decision on --------------
+decision-5:(activity12 who ISI-RESEARCHER)
+--------------------------------------------------
+USER selects/sets a value: Arens
+  => (activity12 who {Arens })
+-------- USER Starts decision on --------------
+decision-6:(activity12 when ACTIVITY-TIME)
+--------------------------------------------------
+ -- USER adds a source description for decision-6 --
++ source-0 Arens: meeting-maker "Arens is available at 15:00, 17:30" [not formalized]
+ -- USER adds a source description for decision-6 --
++ source-1  decision (activity12 what {meeting })
+ -- USER adds a source description for decision-6 --
++ source-2  feature (activity12 who Arens)
+USER chooses {15:00 }
+ -------- source summary ----------- 
+     + source-0 Arens:meeting-maker:"Arens is available at 15:00, 17:30"
+     + source-1 (activity12 what {meeting })
+     + source-2 (activity12 who Arens)
+ ------------------------------------- 
+  => (activity12 when {15:00 })
+-------- USER Starts decision on --------------
+decision-7:(activity13 what ACTIVITY-TYPE)
+--------------------------------------------------
+USER selects/sets a value: meeting
+  => (activity13 what {meeting })
+-------- USER Starts decision on --------------
+decision-8:(activity13 who ISI-RESEARCHER)
+--------------------------------------------------
+USER selects/sets a value: Jane
+  => (activity13 who {Jane })
+-------- USER Starts decision on --------------
+decision-9:(activity13 when ACTIVITY-TIME)
+--------------------------------------------------
+ -- USER adds a source description for decision-9 --
++ source-0  decision (activity13 who {Jane })
+USER creates a new fact:(Jane available-at 17:00)
+ from a source Jane:email:"Jane can meet 16:30 or 17:00"
+*** WARNING: "available-at" is not defined as a property yet. ***
+ -> temporarily creating a new property:available-at
+ -- USER adds a source description for decision-9 --
++ source-1  feature (Jane available-at 17:00)
+USER chooses {17:00 }
+ -------- source summary ----------- 
+     + source-0 (activity13 who {Jane })
+     + source-1 (Jane available-at 17:00)
+ ------------------------------------- 
+  => (activity13 when {17:00 })
+-------- USER Starts decision on --------------
+decision-10:(activity14 what ACTIVITY-TYPE)
+--------------------------------------------------
+USER selects/sets a value: talk
+  => (activity14 what {talk })
+-------- USER Starts decision on --------------
+decision-11:(activity14 when ACTIVITY-TIME)
+--------------------------------------------------
+USER selects/sets a value: 10:30
+  => (activity14 when {10:30 })
+-------- USER Starts decision on --------------
+decision-12:(activity14 where LOCATION)
+--------------------------------------------------
+ -- USER adds a source description for decision-12 --
++ source-0  decision (activity14 what {talk })
+ -- USER adds a source description for decision-12 --
++ source-1  decision (activity14 when {10:30 })
+USER creates a new fact:(CR-1 available-at 10:30)
+ from a source meeting-maker:"CR-1 is available at 10:30, 15:00"
+ -- USER adds a source description for decision-12 --
++ source-2  feature (CR-1 available-at 10:30)
+USER chooses {CR-1 }
+ -------- source summary ----------- 
+     + source-0 (activity14 what {talk })
+     + source-1 (activity14 when {10:30 })
+     + source-2 (CR-1 available-at 10:30)
+ ------------------------------------- 
+  => (activity14 where {CR-1 })
+---------------------------------------------------------------
+Please specify any decisions that could have been made better
+   (specify a general description for future use)
+ Which decision was it? :decision-9(activity13 when {17:00 })
+ Which options would you avoid or choose?:
+     AVOID {17:00 }
+ Explain why:"Jane usually leaves at 5:30pm, and she does not have enough time if there is a delay."
+ When this kind of decision should be made? (select or enter features that describe the situation)
+(visit11 activities activity13)
+(activity13 what meeting)
+(activity13 who Jane)
+---------------------------------------------------------------
+---------------------------------------------------------------
+This is what SYSTEM learned
+ In deciding  (ACTIVITY_0  when ACTIVITY-TIME)
+  If (VISIT_0 activities ACTIVITY_0 )
+(ACTIVITY_0 what meeting )
+(ACTIVITY_0 who Jane )
+  Then   AVOID {17:00 }
+ because: "Jane usually leaves at 5:30pm, and she does not have enough time if there is a delay."
+---------------------------------------------------------------
+... if you don't agree, please modify the description above
+... finding any matches with past decisions...
+   --> no match found
+Confidence level of KItem-0:0.18315001
+ performance:0.0
+ recency:0.5
+ frequency:0.05
+ SYSTEM deactivates the original decision that is inconsistent with this KItem.
+ ... Deactivating decision-9:(activity13 when {17:00 }) ... SYSTEM will not use it for checking new KItems learned ...
+---------------------------------------------------------------
+Please specify any decisions that could have been made better
+   (specify a general description for future use)
+ Which decision was it? :decision-6(activity12 when {15:00 })
+ Which options would you avoid or choose?:
+     CHOOSE {16:30 17:00 }
+ Explain why:"Arens often cancels meetings and his meetings should be in the afternoon"
+ When this kind of decision should be made? (select or enter features that describe the situation)
+(visit11 activities activity12)
+(activity12 what meeting)
+(activity12 who Arens)
+---------------------------------------------------------------
+---------------------------------------------------------------
+This is what SYSTEM learned
+ In deciding  (ACTIVITY_0  when ACTIVITY-TIME)
+  If (VISIT_0 activities ACTIVITY_0 )
+(ACTIVITY_0 what meeting )
+(ACTIVITY_0 who Arens )
+  Then   CHOOSE {16:30 17:00 }
+ because: "Arens often cancels meetings and his meetings should be in the afternoon"
+---------------------------------------------------------------
+... if you don't agree, please modify the description above
+... finding any matches with past decisions...
+SYSTEM finds complete matches of KItem-1 with decision-6
+(activity1 when {15:30 }) in decision problem episode-0
+ --- match tokens ---
+(activity1 when ACTIVITY-TIME)
+(visit0 activities activity1)
+(activity1 what meeting)
+(activity1 who Arens)
+ --------------------
+*** WARNING: KItem-1 is inconsistent with past Decision-6     in Decision Problem 0 ***
+ in deciding (activity1 when ACTIVITY-TIME)
+ where 
+     (activity1 what {meeting })
+     (activity1 who {Arens })
+     Arens:meeting-maker:"Arens has meetings late afternoon but is available at 15:00, 15:30"
+ selected:15:30 
+*******************************************************************************
+   15:30 is not one of the good options{16:30 17:00 }
+SYSTEM SUGGESTION:ignore_warning
+SYSTEM SUGGESTION:forget_decision
+SYSTEM SUGGESTION:modify_kitem
+"explain why 15:30 was chosen then"
+"when the new strategy should hold?"
+ (select or enter features that holds only in the current situation)
+Confidence level of KItem-1:-0.1332
+ performance:-1.0
+ recency:0.5
+ frequency:0.1
+USER adds comment:  the strategy doesn't hold when :Arens had meetings in late afternoon
+USER creates a new fact:(Arens no-late-afternoon-meeting yes)
+*** WARNING: "no-late-afternoon-meeting" is not defined as a property yet. ***
+ -> temporarily creating a new property:no-late-afternoon-meeting
+USER adding feature to KItem:(Arens no-late-afternoon-meeting yes)
+---------------------------------------------------------------
+This is what SYSTEM learned
+ In deciding  (ACTIVITY_0  when ACTIVITY-TIME)
+  If (VISIT_0 activities ACTIVITY_0 )
+(ACTIVITY_0 what meeting )
+(ACTIVITY_0 who Arens )
+(Arens no-late-afternoon-meeting yes )
+  Then   CHOOSE {16:30 17:00 }
+ because: "Arens often cancels meetings and his meetings should be in the afternoon" and " the strategy doesn't hold when :Arens had meetings in late afternoon"
+---------------------------------------------------------------
+... if you don't agree, please modify the description above
+... finding any matches with past decisions...
+   --> no match found
+Confidence level of KItem-1:0.18315001
+ performance:0.0
+ recency:0.5
+ frequency:0.05
+ The original value was -0.1332
+ SYSTEM deactivates the original decision that is inconsistent with this KItem.
+ ... Deactivating decision-6:(activity12 when {15:00 }) ... SYSTEM will not use it for checking new KItems learned ...
+USER creates a new fact:(Ken well-known-speaker yes)
+*** WARNING: "well-known-speaker" is not defined as a property yet. ***
+ -> temporarily creating a new property:well-known-speaker
+---------------------------------------------------------------
+Please specify any decisions that could have been made better
+   (specify a general description for future use)
+ Which decision was it? :decision-12(activity14 where {CR-1 })
+ Which options would you avoid or choose?:
+     AVOID {CR-1 }
+ Explain why:"when the speaker is a well-known AI researcher, we need a large room"
+ When this kind of decision should be made? (select or enter features that describe the situation)
+(visit11 activities activity14)
+(activity14 what talk)
+(visit11 type AI-seminar)
+(visit11 visitor Ken)
+(Ken well-known-speaker yes)
+---------------------------------------------------------------
+---------------------------------------------------------------
+This is what SYSTEM learned
+ In deciding  (ACTIVITY_0  where LOCATION)
+  If (VISIT_0 activities ACTIVITY_0 )
+(ACTIVITY_0 what talk )
+(VISIT_0 type AI-seminar )
+(VISIT_0 visitor Ken )
+(Ken well-known-speaker yes )
+  Then   AVOID {CR-1 }
+ because: "when the speaker is a well-known AI researcher, we need a large room"
+---------------------------------------------------------------
+... if you don't agree, please modify the description above
+USER asks for generalizations of an obj:condition:3 field:2 -- Ken 
+ SYSTEM shows RESEARCHER_0  
+USER chooses an object:RESEARCHER_0 
+USER asks for generalizations of an obj:condition:4 field:0 -- Ken 
+ SYSTEM shows RESEARCHER_0  RESEARCHER_1  
+USER chooses an object:RESEARCHER_0 
+---------------------------------------------------------------
+This is what SYSTEM learned
+ In deciding  (ACTIVITY_0  where LOCATION)
+  If (VISIT_0 activities ACTIVITY_0 )
+(ACTIVITY_0 what talk )
+(VISIT_0 type AI-seminar )
+(VISIT_0 visitor RESEARCHER_0 )
+(RESEARCHER_0 well-known-speaker yes )
+  Then   AVOID {CR-1 }
+ because: "when the speaker is a well-known AI researcher, we need a large room"
+---------------------------------------------------------------
+... if you don't agree, please modify the description above
+... finding any matches with past decisions...
+   --> no match found
+Confidence level of KItem-2:0.18315001
+ performance:0.0
+ recency:0.5
+ frequency:0.05
+ SYSTEM deactivates the original decision that is inconsistent with this KItem.
+ ... Deactivating decision-12:(activity14 where {CR-1 }) ... SYSTEM will not use it for checking new KItems learned ...
+-- CLOSING THE CURRENT DECISION PROBLEM (DECISION PROBLEM 1) --
+ current solution:
+ -------------------------------------------------------------
+ACTIVITY|     when          what          who          where          length          
+activity12|      {15:00 }  {meeting }  {Arens }                                                
+activity13|      {17:00 }  {meeting }  {Jane }                                                
+activity14|      {10:30 }  {talk }                         {CR-1 }                         
+activity15|                                                                                                                         
+activity16|                                                                                                                         
+activity17|                                                                                                                         
+activity18|                                                                                                                         
+activity19|                                                                                                                         
+activity20|                                                                                                                         
+activity21|                                                                                                                         
+ -------------------------------------------------------------
+... checking temporary properties and instances if they should be permanent...
+ These are temporary properties defined for this problem:
+{available-at no-late-afternoon-meeting well-known-speaker }
+ These are temporary instances defined for this problem:
+(RESEARCHER instance Ken)
+(DATE instance 4/8/2004)
+USER defines property available-at permanently.
+USER defines property well-known-speaker permanently.
+USER defines property no-late-afternoon-meeting permanently.
+============== DECISION PROBLEM -2 ================
+... initializing problem ...
+-- STARTING A NEW DECISION PROBLEM (DECISION PROBLEM 2) --
+USER selects/sets a value: Ray for (visit22 visitor RESEARCHER)
+  => (visit22 visitor {Ray })
+USER selects/sets a value: 6/8/2004 for (visit22 visit-date DATE)
+*** WARNING: "6/8/2004" is not defined as one of DATE yet. ***
+ temporarily creating an instance 6/8/2004 of type DATE
+  => (visit22 visit-date {6/8/2004 })
+USER selects/sets a value: AI-seminar for (visit22 type VISIT-TYPE)
+  => (visit22 type {AI-seminar })
+USER selects/sets a value: Jose-Luis for (visit22 host ISI-RESEARCHER)
+  => (visit22 host {Jose-Luis })
+problem specific features:
+0: (visit22 activities activity23)
+1: (visit22 activities activity24)
+2: (visit22 activities activity25)
+3: (visit22 activities activity26)
+4: (visit22 activities activity27)
+5: (visit22 activities activity28)
+6: (visit22 activities activity29)
+7: (visit22 activities activity30)
+8: (visit22 activities activity31)
+9: (visit22 activities activity32)
+10: (visit22 visitor Ray)
+11: (visit22 visit-date 6/8/2004)
+12: (visit22 type AI-seminar)
+13: (visit22 host Jose-Luis)
+ --  need to decide on --
+ -------------------------------------------------------------
+ACTIVITY|     when          what          who          where          length          
+activity23|                                                                                                                         
+activity24|                                                                                                                         
+activity25|                                                                                                                         
+activity26|                                                                                                                         
+activity27|                                                                                                                         
+activity28|                                                                                                                         
+activity29|                                                                                                                         
+activity30|                                                                                                                         
+activity31|                                                                                                                         
+activity32|                                                                                                                         
+ -------------------------------------------------------------
+USER adds a source to the current problem:Ray:email:"Ray that he leaves early"
+USER adds a source to the current problem:Jane:email:"Jane can meet 14:00 or 17:00"
+USER adds a source to the current problem:Arens:meeting-maker:"Arens is available at 14:30, 17:00"
+USER adds a source to the current problem:Hovy:meeting-maker:"Hovy is available at 17:00"
+USER adds a source to the current problem:meeting-maker:"CR-1 is available at 10:30, 14:00"
+USER adds a source to the current problem:meeting-maker:"CR-3 is available at 10:30"
+-------- USER Starts decision on --------------
+decision-4:(activity23 what ACTIVITY-TYPE)
+--------------------------------------------------
+USER selects/sets a value: talk
+  => (activity23 what {talk })
+-------- USER Starts decision on --------------
+decision-5:(activity23 when ACTIVITY-TIME)
+--------------------------------------------------
+USER selects/sets a value: 10:30
+  => (activity23 when {10:30 })
+-------- USER Starts decision on --------------
+decision-6:(activity23 where LOCATION)
+--------------------------------------------------
+SYSTEM finds candidate facts from partial matches with KItems ..
+ Is this true?(Ray well-known-speaker yes)
+USER adds a fact:
+(Ray well-known-speaker yes)
+SYSTEM finds complete matches of KItem-2 with decision-6
+(activity23 where {}) in decision problem episode-2
+ --- match tokens ---
+(activity23 where LOCATION)
+(visit22 activities activity23)
+(activity23 what talk)
+(visit22 type AI-seminar)
+(visit22 visitor Ray)
+(Ray well-known-speaker yes)
+ --------------------
+SYSTEM reports a matching KItem-2 for this decision
+Confidence level of KItem-2:0.19116667
+ performance:0.0
+ recency:0.5
+ frequency:0.074074075
+ The original value was 0.18315001
+USER puts + sign for KItem-2: AVOID {CR-1 }"when the speaker is a well-known AI researcher, we need a large room"
+Confidence level of KItem-2:0.5241667
+ performance:1.0
+ recency:0.5
+ frequency:0.074074075
+ The original value was 0.19116667
+ -- USER adds a source description for decision-6 --
++ source-1  feature (activity23 what talk)
+ -- USER adds a source description for decision-6 --
++ source-2  feature (activity23 when 10:30)
+USER creates a new fact:(CR-3 available-at 10:30)
+ from a source meeting-maker:"CR-3 is available at 10:30"
+ -- USER adds a source description for decision-6 --
++ source-3  feature (CR-3 available-at 10:30)
+USER chooses {CR-3 }
+ -------- source summary ----------- 
+     + source-0 KItem-2: AVOID {CR-1 }"when the speaker is a well-known AI researcher, we need a large room"
+     + source-1 (activity23 what talk)
+     + source-2 (activity23 when 10:30)
+     + source-3 (CR-3 available-at 10:30)
+ ------------------------------------- 
+  => (activity23 where {CR-3 })
+-------- USER Starts decision on --------------
+decision-7:(activity24 what ACTIVITY-TYPE)
+--------------------------------------------------
+USER selects/sets a value: meeting
+  => (activity24 what {meeting })
+-------- USER Starts decision on --------------
+decision-8:(activity24 who ISI-RESEARCHER)
+--------------------------------------------------
+USER selects/sets a value: Jane
+  => (activity24 who {Jane })
+-------- USER Starts decision on --------------
+decision-9:(activity24 when ACTIVITY-TIME)
+--------------------------------------------------
+SYSTEM finds complete matches of KItem-0 with decision-9
+(activity24 when {}) in decision problem episode-2
+ --- match tokens ---
+(activity24 when ACTIVITY-TIME)
+(visit22 activities activity24)
+(activity24 what meeting)
+(activity24 who Jane)
+ --------------------
+SYSTEM reports a matching KItem-0 for this decision
+Confidence level of KItem-0:0.1887
+ performance:0.0
+ recency:0.5
+ frequency:0.06666667
+ The original value was 0.18315001
+USER puts - sign for KItem-0: AVOID {17:00 }"Jane usually leaves at 5:30pm, and she does not have enough time if there is a delay."
+*** WARNING: KItem-0matched but not used! ***
+SYSTEM SUGGESTION:ignore_warning
+SYSTEM SUGGESTION:deactivate_kitem
+SYSTEM SUGGESTION:modify_decision
+Confidence level of KItem-0:-0.1443
+ performance:-1.0
+ recency:0.5
+ frequency:0.06666667
+ The original value was 0.1887
+USER adds comment:  Jane no longer needs to leave at 5pm.
+USER asks to deactivate KItem0
+ ... Deactivating KItem-0: AVOID {17:00 }"Jane usually leaves at 5:30pm, and she does not have enough time if there is a delay." and " Jane no longer needs to leave at 5pm."
+ ... SYSTEM will not use it for checking new decisions ...
+USER creates a new fact:(Jane available-at 17:00)
+ from a source Jane:email:"Jane can meet 14:00 or 17:00"
+ -- USER adds a source description for decision-9 --
++ source-1  feature (Jane available-at 17:00)
+USER chooses {17:00 }
+ -------- source summary ----------- 
+     - source-0 KItem-0: AVOID {17:00 }"Jane usually leaves at 5:30pm, and she does not have enough time if there is a delay." and " Jane no longer needs to leave at 5pm."
+     + source-1 (Jane available-at 17:00)
+ ------------------------------------- 
+  => (activity24 when {17:00 })
+-- CLOSING THE CURRENT DECISION PROBLEM (DECISION PROBLEM 2) --
+ current solution:
+ -------------------------------------------------------------
+ACTIVITY|     when          what          who          where          length          
+activity23|      {10:30 }  {talk }                         {CR-3 }                         
+activity24|      {17:00 }  {meeting }  {Jane }                                                
+activity25|                                                                                                                         
+activity26|                                                                                                                         
+activity27|                                                                                                                         
+activity28|                                                                                                                         
+activity29|                                                                                                                         
+activity30|                                                                                                                         
+activity31|                                                                                                                         
+activity32|                                                                                                                         
+ -------------------------------------------------------------
+... checking temporary properties and instances if they should be permanent...
+ These are temporary properties defined for this problem:
+NONE
+ These are temporary instances defined for this problem:
+(DATE instance 6/8/2004)

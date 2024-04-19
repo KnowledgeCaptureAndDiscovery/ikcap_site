@@ -1,0 +1,285 @@
+
+------------------------------------
+-- replaced 2010-09-15, cf 
+
+  This project started in October 2008 as part of the
+  DARPA <a href="http://www.darpa.mil/ipto/programs/bl/bl.asp">Bootstrapped
+  Learning program</a>.    
+
+
+
+
+
+      <h3>Challenges in Learning Procedures from Tutorial Instruction</h3>
+
+      <p>
+	Human instruction by telling is naturally plagued with omissions,
+	oversights, unintentional inconsistencies and errors. Teachers
+	also often make incorrect assumptions about the student's
+	background knowledge and learning abilities. Humans can learn
+	from such imperfect instructions because 1) they assume that
+	such phenomena occur in the instruction and 2) they have
+	strategies to work around such imperfections. The electronic
+	students that we are developing in the BL program for learning
+	from being told have similar assumptions and
+	strategies. However, the student's task is easier or harder
+	depending on the degree and nature of the imperfections in the
+	instruction. Five key factors that influence the difficulty of
+	learning are:
+	<ol>
+	  <li>Situating the instruction by introducing objects </li>
+	  <li>Describing steps in adequate detail</li>
+	  <li>Specifying relations between steps</li>
+	  <li>Complexity of conditionals and iterations</li>
+	  <li>Background knowledge available to supplement the
+	    instruction</li>
+	</ol>
+      </p>
+
+      <p>
+	The first factor is the situation of instruction through introduction
+	of objects. That is, instruction of procedures is often framed
+	in the context of a general situation, specified by introducing
+	a set of generic objects. For example, a lesson may start off by
+	saying "suppose you have a route to follow, and a vehicle that
+	cannot negotiate slopes of more than 30 degrees", which
+	introduces two objects and their types plus a property
+	constraint. If the instruction introduces all the objects and
+	constraint that will be used in the lesson, it is easier for the
+	student to understand how the objects are used throughout the
+	procedure. If the instruction does not introduce some of the
+	objects, then the student has to hypothesize what the objects
+	are and what their types and constraints might be in the
+	situations where the procedure must be applied. The more objects
+	that are not properly introduced by the teacher, the harder the
+	learning task because there are more hypotheses to explore. A
+	different dimension that makes learning harder is the resolution
+	of references when objects are similar.If there are several
+	objects of similar types that are not specifically introduced by
+	the teacher, it will be harder for the student to figure out
+	which object references might be the same and which might refer
+	to a distinct object and therefore figure out how many distinct
+	objects need to be present. In those cases, the student has to
+	hypothesize and explore more alternative assignments or
+	permutations of the data objects.
+      </p>
+
+      <p>
+	In introducing new objects, another source of difficulty for
+	learning is mixing the introduction of the objects within other
+	expressions. A case of this is the need to introduce existential
+	or universal quantification. For example, in the instruction
+	"Suppose there is a company unit c1. If c1 has a mine plow, and
+	then do X.", c1 is an input argument for the function being
+	learned.However, in general, there can be multiple different
+	interpretations of the same expression, depending on the nature
+	of the introduced objects and how they are related. For example,
+	with this instruction, "Suppose there are a Company unit c1 and
+	a Platoon p1. If c1 has p1 and p1 has a mine plow, then do X.",
+	if the student knows that multiple platoons are organized into a
+	company, the instruction can be also interpreted as "Given a
+	company c1, if all the platoons p1 in c1 have a mine plow, then
+	do X", or "Given a company c1, if there exists a platoon p1 in
+	c1 that has a mine plow, then do X." If such quantification is
+	not explicitly stated, the student needs to form multiple
+	different hypotheses. The number of hypotheses will grow when
+	the student has to consider alternative interpretations of
+	multiple objects.
+      </p>
+
+      <p>
+	The second key factor that makes learning more difficult is the lack
+	of necessary details in describing a procedure's substeps. For
+	example, the instruction may call a subprocedure as one of the
+	steps but omit arguments that are required by the definition of
+	the subprocedure.In that case, the student must hypothesize what
+	objects may be used to invoked the subprocedure, perhaps also
+	hypothesizing objects that were not introduced in the
+	instruction. The more arguments missing and the more candidate
+	objects, the larger the hypothesis space to explore. Steps can
+	also be specified indirectly by mentioning the effect of an
+	action but not the action itself. For example, the instruction
+	may say "Before starting the engine make sure there is gas in
+	the tank." In those cases, the student must rely on prior
+	knowledge about actions that may have the effect mentioned, then
+	insert the action where it may be appropriate in the
+	procedure. The more candidate actions and insertion locations,
+	the harder learning is. Instruction may also lack information
+	about what to do when exceptions arise. Similarly, else
+	statements may not be specified. In these cases, the student is
+	unlikely to infer what the missing information is and would have
+	to wait for other lessons to learn that (e.g. follow on
+	practice).
+      </p>
+
+      <p>
+	The third key factor is how the relations among steps are
+	specified. This includes ordering relations, causal relations,
+	dataflow relations, resource relations, and temporal
+	relations. In particular, instruction is always provided in a
+	sequential order but a procedure's step structure may be quite
+	complex and non‐linear. Of immediate concern are step ordering
+	relations. The instruction may specify steps in a convenient but
+	not necessarily correct order. In addition, steps are given in a
+	sequence when the actual dependencies among steps are better
+	represented as a partial order. If the step ordering is not
+	fully specified or incorrect, the student needs to reason about
+	possible steps and step orderings, as well as other
+	relationships among them such as causal or dataflow
+	relations. The space to explore can grow quickly as the number
+	of hypotheses or the degree of ambiguity is higher.
+      </p>
+
+      <p>
+	An important relationship among steps is based on how the results and
+	effects of each step are used by others. Some actions have
+	side-effects and do not return any specific result, while other
+	actions return an object that can be used as an argument of
+	subsequent steps.
+	The former typically correspond to representations of physical
+	procedures while the latter are functions that are meant to be
+	evaluated to find a value. If the student knows that it is
+	learning a function, then it can reason about what each step is
+	returning and the compatibility between the objects produced and
+	returned by each substep as well as the entire function. If the
+	student does not know whether it is learning a function or a
+	procedure, then it must reason about the effects of each action
+	(including side-effects and conditional effects) and the
+	prerequisites of other actions in order to figure out how the
+	substeps are related.
+      </p>
+
+      <p>
+	The fourth key factor is the complexity of conditionals and
+	iterations. These control constructs are notoriously challenging
+	for human teachers to specify in all the detail necessary in
+	order for a procedure to be executable. That is, natural human
+	instruction typically leaves out important things such as
+	initialization and termination conditions for iterations,
+	clauses in conditions, and the need to create temporary
+	variables (e.g., counters) for iterations. When conditions and
+	iterations are present, the student's analysis of the procedure
+	becomes more complex. For conditional branches, the student
+	needs to consider the alternative data flows and control flows
+	possible. For iterations, the student may need to analyze
+	several folds in order to understand how a loop needs to
+	work. Iterations that are easier to learn involve processing
+	sets of objects one at a time. Harder iterations to learn are
+	those that require the student to set up loops with new
+	variables and infer exceptional initial and termination
+	conditions. Conditionals that are easier to learn involve
+	checking the state for a new object or property value to
+	manifest. More complex conditionals can mention disjuncts and
+	negations whose scope may be hard to determine from the
+	instruction.
+      </p>
+
+      <p>
+	Combinations and nestings of conditionals and iterations within a
+	procedure make learning harder. When conditional statements are
+	nested, instructions typically do not specify the scoping of
+	each statement. When scoping is ambiguous, the student must
+	create and explore alternative hypotheses. The more
+	combinations, the larger the search space that the student must
+	explore. Iterations can also be nested, raising the complexity
+	of learning because of potential interactions between the
+	objects in the inner and outer loops.
+      </p>
+
+      <p>
+	The fifth key factor that influences the difficulty of learning is the
+	availability of adequate background knowledge to help the
+	student supplement what is stated in the instruction. The
+	student must rely on background knowledge to detect and find
+	workarounds to omissions and errors in the instruction. For
+	example, if the knowledge base has overgeneral argument types
+	for a function, it can lead to overly general hypotheses for an
+	object type when the object is used for invoking the
+	function. This makes the space of hypotheses larger and harder
+	to explore. Also, the system may not be able to detect wrong use
+	of an object as an argument of a procedure or function. For
+	example, when the argument type is defined as a Number instead
+	of a Speed, when a Distance object is assigned to the argument
+	the student will not be able to detect the inconsistency. Given
+	a set of arguments with overgeneral types (e.g. several Number
+	arguments), and a set of objects to be assigned to the
+	arguments, alternative assignment combinations would need be
+	considered.
+      </p>
+
+      <p>
+	It is easier to learn when all concepts, vocabulary, and substeps have
+	been previously defined for the student (in a prior lesson or as
+	background knowledge). It is harder to learn if new vocabulary
+	such as a new type of object is introduced in the middle of
+	describing how a step is performed, since the student may have
+	to backtrack to reason about earlier steps differently given the
+	new assumptions introduced by the new object. It is also easier
+	to learn a procedure if the substeps have been taught
+	previously, since the student can reason about their nature and
+	their effects to rule out implausible hypotheses rather than
+	having to treat them as a black box of unknown nature that does
+	not help the student constrain the space of possible models of
+	the procedure being learned.
+      </p>
+
+      <p>
+	Finally, the difficulty of learning increases in lessons where larger
+	numbers of omissions and errors are present. To learn from the
+	lesson alone, the student must consider many combinations of
+	hypotheses that lead to alternative models of the procedure. The
+	student must also be equipped to reason about the plausibility
+	and likelihood of models by reasoning over larger amounts of
+	background knowledge. In practice, telling is combined with
+	other learning methods. A lesson by telling may be followed by a
+	demonstration or examples. Alternatively, the student could test
+	the alternative models learned from telling, by exercising them
+	in a simulation and measuring failures or by getting feedback
+	from the teacher on practice problems.
+      </p>
+
+      <h3>Approach</h3>
+      <p>
+	Our approach is to equip our student with an extensive catalog of
+	strategies and heuristics that human students use to learn from
+	natural and imperfect tutorial instruction. For example,
+	teachers do not always introduce all the objects that will be
+	referenced in the instruction. When an object is introduced, the
+	student would turn it into an input to the procedure. But when
+	an object is referenced but not introduced, the student can
+	adopt a strategy of making the object be one of the inputs to
+	the procedure.
+      </p>
+
+      <p>
+	The student then applies these strategies and heuristics to 1)
+	extract, 2) infer, and 3) hypothesize procedure models from the
+	stated instruction. Because learning may never be completed and
+	yet the learned procedure may be in good enough shape to be
+	used, the student applies these strategies to conduct
+	self-assessments of the quality of the learned procedure
+	models. Through this process the student develops increasingly
+	more refined (detailed) models of the procedure that are
+	consistent with the instruction. The student also needs to
+	reason about model constraints in order to detect whether a
+	model is inconsistent and therefore discard it from further consideration.
+      </p>
+
+      <p>
+	In parallel to these strategies, we are also investigating the
+	possibiliy of combining instructions with explicit
+	demonstrations of the procedure being taught, using
+	examples. Instruction and demonstration seem to have
+	complementary advantages. In particular with respect to the
+	first and second challenge above, demonstrations can help. Due
+	to their concrete nature, many details become apparant. The
+	actions being executed in a demonstration build a ground-truth
+	for the specific case on which the example operates. This can
+	help disambiguate or fill in omitted details such as missing
+	action arguments, ambiguous references, missing scopes for
+	program blocks (e.g., the body of a loop), or ambiguous action
+	argument mappings. It can also help in disambiguating what was
+	meant, when a user uses unknown terms to refer to known
+	objects or actions (e.g., using synonyms).	
+      </p>
+

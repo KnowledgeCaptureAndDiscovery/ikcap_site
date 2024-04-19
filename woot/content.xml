@@ -1,0 +1,112 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>WOOT</name>
+  <title>A Scalable, Open Source Platform for Data Processing, Archiving and Dissemination</title>
+
+  <status>
+    <short>
+An important need for users of big data systems is to get an answer within a specified timebound.  A current limitation of workflow systems is that they do not take into account user deadlines: they run workflows selected by the user, but take their time to do so.  This is impractical when large datasets are at stake, since users often prefer to see an answer faster even if it has lower precision or quality.  We recently developed WOOT, an extension to workflow systems that enables them to take into account user deadlines by automatically generating alternative workflow candidates and ranking them according to performance estimates.  The WOOT system makes these estimates based on workflow performance models created from workflow executions, and uses semantic technologies to reason about workflow options.  Possible workflow candidates are presented to the user in a compact manner, and are ranked according to their runtime estimates.  WOOT combines and extends capabilities from the WINGS semantic workflow system and the Apache OODT Object Oriented Data Technology and workflow execution system.
+    </short>
+    <long> 
+An important need for users of big data systems is to get an answer within a specified timebound.  A current limitation of workflow systems is that they do not take into account user deadlines: they run workflows selected by the user, but take their time to do so.  This is impractical when large datasets are at stake, since users often prefer to see an answer faster even if it has lower precision or quality.  We recently developed WOOT, an extension to workflow systems that enables them to take into account user deadlines by automatically generating alternative workflow candidates and ranking them according to performance estimates.  The WOOT system makes these estimates based on workflow performance models created from workflow executions, and uses semantic technologies to reason about workflow options.  Possible workflow candidates are presented to the user in a compact manner, and are ranked according to their runtime estimates.  WOOT combines and extends capabilities from the WINGS semantic workflow system and the Apache OODT Object Oriented Data Technology and workflow execution system.
+    </long>
+  </status>
+
+  <description>
+    <short>
+End users have a lot of data, but do not have the expertise needed to analyze it.  The goal of this project is to empower end users to analyze big data by demonstrating that: 1) data analytics experts can use open source software to quickly assemble workflows, 2) end users can easily run these expert-grade workflows and get useful views on their data.  Our work combines semantic workflow capabilities of the WINGS workflow system with scalable data systems and workflow execution infrastructure available in the OODT framework.   Our work includes a release of the integrated system as open source software within the Apache OODT project.
+    </short>
+
+    <long>
+<h3>Project Goals</h3>
+
+End users have a lot of data, but do not have the expertise needed to analyze it.  The goal of this project is to empower end users to analyze big data by demonstrating that: 1) data analytics experts can use open source software to quickly assemble workflows, 2) end users can easily run these expert-grade workflows and get useful views on their data.  
+
+<h3>Approach</h3>
+
+Our approach is to use workflows to bring end users big data analysis capabilities.  We combine semantic workflow capabilities of the WINGS workflow system with scalable data systems and workflow execution infrastructure available in the Apache OODT framework.  As a result:
+<ol>
+<li>End users can draw from a library of workflows that were previously developed by experts and that capture complex multi-step methods for data analytics.  
+
+<li>End users are assisted to reuse those workflows through the semantic workflow reasoning capabilities of WINGS
+
+<li>End users can easily process big data through scalable workflow execution and data management provided by the Apache OODT system
+</ol>
+ 
+<h3>Capturing Expertise in Workflows</h3>
+
+These are alternative expert-created workflows for modeling salient topics in a collection of documents: 
+ 
+<img src="img1.png"/> 
+ 
+<br/>They all use the popular LDA (Latent Dirichlet Allocation) algorithm to detect topics.  Each of these workflows uses a strategy that works better with large datasets for different reasons:  a) efficient LDA through hyperparameter optimization, b) online LDA for incremental processing of streaming data, c) a parallel LDA implementation, and d) sampling to reduce the size of the dataset before running LDA.   
+
+Creating a workflow does not require a lot of effort.  Big data experts can directly reuse the codes that they have.  For these topic modeling workflows, we took implementations of these algorithms that were available open source, and used them as components of the workflows.  These included <a href="http://mallet.cs.umass.edu/">Mallet</a> and <a href="https://github.com/qpleple/online-lda-vb">OnlineLDA</a>
+
+
+<h3>Using Workflows for Big Data Analytics</h3>
+
+End users can easily use workflows like these to analyze their own data.  Learning to use workflows does not require a lot of effort (e.g., a couple of hours for non-programmers that want to reuse workflows that are already in the system).
+
+We used these workflows to analyze data from the Kiva microfinancing site, which contains detailed information about loans and lenders.  Below are two examples of analyses done with workflows on this data, the one on the right for detecting popular uses of loans and the one on the left for detecting communities of lenders:
+
+
+<img src="img2.png"/> 
+
+
+<br/>The workflow on the right is one of the workflows shown above for topic modeling.  
+
+The workflow on the left uses the bigclam algorithm of the SNAP package and a visualization done with Gephi (both open source).  VARUN PLS ADD LINKS TO THESE
+
+
+<h3>User Interaction with Workflows for Big Data Analytics</h3>
+
+End users interact with the WINGS interface to find a workflow for the kind of analysis they want to do with their data.  Even users with no programming background find the structure of these workflows easy to understand.  WINGS assists them by suggesting parameters as well as any ancillary data that the workflow may need (e.g., a dictionary).  When the user is done specifying a workflow, WINGS elaborates it and submits it to OODT for execution.  The user is then presented with the results and can browse any intermediate data as well as the provenance records for the results:
+
+ 
+<img src="img3.png"/> 
+
+<h3>Architecture</h3>
+
+The integration of WINGS and OODT is ongoing, and we are planning a release of the integrated system as open source software within the Apache OODT project:
+
+<img src="img4.png"/> 
+ 
+    </long>
+  </description>
+
+  <research>
+    <short>
+    </short>
+    <long>
+    </long>
+  </research>
+
+  <mainlink><a href="http://www.wings-workflows.org">WINGS</a></mainlink>
+  <mainlink><a href="http://oodt.apache.org">OODT</a></mainlink>
+
+  <link><a href="http://www.wings-workflows.org">WINGS</a></link>
+  <link><a href="http://oodt.apache.org">OODT</a></link>
+
+
+
+<!-- Demo -->
+<demo>
+     <center>
+<iframe width="420" height="315" src="//www.youtube.com/embed/udVM-bENGUA" frameborder="0" allowfullscreen></iframe>
+	  </center>
+</demo>
+</project>

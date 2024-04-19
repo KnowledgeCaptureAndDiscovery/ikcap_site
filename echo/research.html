@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+  <TITLE>
+  The ECHO Project at ISI
+  </TITLE>
+  <link rel="stylesheet" href="../ikcap-basic.css">
+<STYLE TYPE="text/css">
+  BODY { background-color: white; font-size:12px}
+  TD { background-color: #CCCCCC; font-size: 14px}
+  TD.b { background-color: white ;font-size: 12px; }
+
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE border='0' cellspacing='1' cellpadding='5' bgcolor='black'>
+<TR>
+  <TD class='top' align='center'><A href='http://www.isi.edu/'>
+   <IMG border='0' SRC='../images/isi.jpg' /></A></TD>
+  <TD class='top' width='100%' align='center'>
+  <table cellspacing='0' cellpadding='0'>
+  <tr><td valign='center'>
+   <A href='./' style="border:0"><IMG border='0' SRC='logo.jpg' /></A>
+	</td><td valign='center'>
+   <A HREF="../" style="border:0"><IMG border='0' SRC="../images/kcap-small.jpg"/></A>
+	</td>
+  </tr>
+  <tr><td colspan='2'>
+<B>Memory-Based Meta-Level Reasoning for Interactive Knowledge Capture
+</B>
+  </td>
+  </tr>
+  </table>
+ </TD>
+</TR>
+<TR>
+  <TD valign='top' align='right'>
+  <P><A HREF='./'><B>Main</B></A>
+  <P><A HREF='description.html'><B>Description</B></A>
+  <P><A HREF='status.html'><B>Status</B></A>
+  <P><A HREF='research.html'><B>Research</B></A>
+  <P><A HREF='publications.html'><B>Publications</B></A>
+  <P><A HREF='demo.html'><B>Demo</B></A>
+  <P><A HREF='people.html'><B>People</B></A>
+  <P><A HREF='funding.html'><B>Funding</B></A>
+  <P><A HREF='links.html'><B>Links</B></A>
+  </TD>
+  <TD class='b' valign='top'>
+<H2>Research</H2>
+	 <p />
+	 
+
+In existing knowledge capture systems, knowledge entered by the user (called
+k-items) are treated equally and systems do not reflect on how each knowledge
+has been built and how well it has been used over time.  The systems cannot
+provide effective assistance in making the k-items more useful and the
+resulting problem solving more successful.  We present an an extension to
+knowledge acquisition interfaces that 1) keeps track of past problem solving
+episodes and relates them to each k-item 2) assesses the current status of
+k-items and problem solving using such relations and 3) provides assistance to
+improve k-items based on the assessment.
+<p>
+Echo builds a memory model that relates each
+k-item to the problem solving episode it was built from, the episodes it
+matched, the episodes where it was actually used, and the episodes it can
+potentially contribute to.  This model is used in assessing a k-item, checking
+if it can be confidently used, it conflicts with some successful results and
+needs some modifications, or it needs significant changes including
+deactivation.  Based on this assessment, Echo guides the user in improving and
+maintaining the confidence levels of the k-items over time. The following
+shows the architecture of the system.
+
+ <img src="images/arch.jpg"/>
+
+<p>
+
+
+The following algorithms show how memory model changes through knowledge
+authoring (add new k-item, modify a k-item, and deactivate/delete a k-item)
+and problem solving.  They also show how Echo makes use of the memory model in
+providing assistance to the user. These algorithms are general and independent
+of a given application or the knowledge representation used.
+
+ <img src="images/algo.jpg"/>
+<p>
+
+
+</TD>
+</TR>
+</TABLE>
+<A HREF='../'><< Back to IKCAP</A>
+</BODY>
+</HTML>

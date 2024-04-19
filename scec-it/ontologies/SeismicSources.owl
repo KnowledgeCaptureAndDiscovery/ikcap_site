@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:location="http://www.isi.edu/ikcap/scec-it/ontologies/SeismicLocation.owl#"
+    xmlns:swrlbImport="http://www.daml.org/rules/proposal/swrlb.owl#"
+    xmlns:tensors="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.isi.edu/ikcap/scec-it/ontologies/SeismicSources.owl#"
+    xmlns:swrlImport="http://www.daml.org/rules/proposal/swrl.owl#"
+  xml:base="http://www.isi.edu/ikcap/scec-it/ontologies/SeismicSources.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/SeismicLocation.owl"/>
+    <owl:imports rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="FaultPlane">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NodalPlane"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DoubleCoupleSource">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CompensatedLinearVectorDipoleSource"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#DoubleCoupleSeismicMomentTensor"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasSeismicMomentTensor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:ID="DeviatoricPointSource"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="LinearVectorDipoleSource">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >need to add a necessary &amp; sufficient condition that says
+
+all SeismicMomentTensors are tensors:LinearVectorDipoleSeismicMomentTensor</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+            <owl:allValuesFrom rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#LinearVectorDipoleSeismicMomentTensor"/>
+          </owl:Restriction>
+          <owl:Class rdf:ID="PointSource"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="CentroidMomentTensorSource">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#PointSource"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasNodalPlanes"/>
+            </owl:onProperty>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:complementOf>
+                  <owl:Class rdf:ID="AuxilliaryPlane"/>
+                </owl:complementOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasNodalPlanes"/>
+            </owl:onProperty>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:complementOf rdf:resource="#FaultPlane"/>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >need to add a necessary &amp; sufficient condition that says
+
+all SeismicMomentTensors are not tensors:LinearVectorDipoleSeismicMomentTensor</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:complementOf rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#LinearVectorDipoleSeismicMomentTensor"/>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ElementaryDislocationSource"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Strike"/>
+  <owl:Class rdf:about="#ElementaryDislocationSource">
+    <owl:disjointWith rdf:resource="#CentroidMomentTensorSource"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#DoubleCoupleSeismicMomentTensor"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#PointSource"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasNodalPlanes"/>
+            </owl:onProperty>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >2</owl:cardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasNodalPlanes"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#FaultPlane"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#AuxilliaryPlane"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasNodalPlanes"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#CompensatedLinearVectorDipoleSource">
+    <owl:disjointWith rdf:resource="#DoubleCoupleSource"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+            <owl:allValuesFrom rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#CompensatedLinearVectorDipoleSeismicMomentTensor"/>
+          </owl:Restriction>
+          <owl:Class rdf:about="#DeviatoricPointSource"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="IsotropicPointSource">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DeviatoricPointSource"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#IsotropicSeismicMomentTensor"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#DeviatoricPointSource">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#DeviatoricSeismicMomentTensor"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith rdf:resource="#IsotropicPointSource"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PointSource">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasTimeDomain"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="CentroidTime"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasScalarMoment"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:ID="SeismicSource"/>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasSourceMechanism"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#ElementaryDislocationSource"/>
+              <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+              <owl:Class rdf:about="#LinearVectorDipoleSource"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasMomentMagnitude"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasHypocenter"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasTimeDomain"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasLocationDomain"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hypocenter is equal to centroid-location
+origin time is equal to the centroid-time</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="OriginTime">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="TimePoint"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ExtendedSource">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+            </owl:onProperty>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >2</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasSourceMechanism"/>
+            </owl:onProperty>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >2</owl:minCardinality>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="SeismicMomentTensor">
+    <rdfs:subClassOf rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#MomentTensor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SourceMechanism">
+    <rdfs:subClassOf rdf:resource="#SeismicMomentTensor"/>
+    <rdfs:subClassOf rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/Tensors.owl#NormalizedMomentTensor"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CentroidTime">
+    <rdfs:subClassOf rdf:resource="#TimePoint"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dip"/>
+  <owl:Class rdf:about="#AuxilliaryPlane">
+    <rdfs:subClassOf rdf:resource="#NodalPlane"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Rake"/>
+  <owl:Class rdf:about="#SeismicSource">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasOriginTime">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >range is a centroid time</rdfs:comment>
+    <rdfs:range rdf:resource="#CentroidTime"/>
+    <rdfs:domain rdf:resource="#ExtendedSource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasSeismicMomentTensor">
+    <rdfs:range rdf:resource="#SeismicMomentTensor"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasNodalPlanes">
+    <rdfs:range rdf:resource="#NodalPlane"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasTimeDomain">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#TimePoint"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasSourceMechanism">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#SourceMechanism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasHypocenter">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#PointSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/SeismicLocation.owl#CentroidLocation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasLocationDomain">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.isi.edu/ikcap/scec-it/ontologies/SeismicLocation.owl#Location"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasTimeSystem">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#TimePoint"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasMomentMagnitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasScalarMoment">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SeismicSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+          <owl:Class rdf:about="#CentroidMomentTensorSource"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="hasRake">
+    <rdfs:range rdf:resource="#Rake"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#NodalPlane"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasTimeValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#TimePoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasStrike">
+    <rdfs:domain rdf:resource="#NodalPlane"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#Strike"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasDip">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#NodalPlane"/>
+    <rdfs:range rdf:resource="#Dip"/>
+  </owl:FunctionalProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 1.3, Build 225.4)  http://protege.stanford.edu -->

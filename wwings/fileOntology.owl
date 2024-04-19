@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.isi.edu/ikcap/wwings/fileOntology.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://www.isi.edu/ikcap/wwings/fileOntology.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="FileList">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="File"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MetaDatatype"/>
+  <owl:Class rdf:ID="Collection">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:ID="DescriptionFile"/>
+              <owl:Class rdf:ID="DescriptionFileCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasDescriptionFile"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ContentTemplate"/>
+  <owl:Class rdf:ID="CollectionList">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+        <owl:allValuesFrom rdf:resource="#Collection"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#DescriptionFileCollection">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasFiles"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#DescriptionFile"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FileCollection"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OneItemCollection">
+    <rdfs:subClassOf rdf:resource="#Collection"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DescriptionFile">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#File"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDescriptionFile"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#DescriptionFile"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Int">
+    <rdfs:subClassOf rdf:resource="#MetaDatatype"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Float">
+    <rdfs:subClassOf rdf:resource="#MetaDatatype"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FormatMetadata"/>
+  <owl:Class rdf:ID="StringConstant"/>
+  <owl:Class rdf:about="#FileCollection">
+    <rdfs:subClassOf rdf:resource="#Collection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="String">
+    <rdfs:subClassOf rdf:resource="#MetaDatatype"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FileSkolem">
+    <rdfs:subClassOf rdf:resource="#FormatMetadata"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#File"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="StandardMetadata"/>
+  <owl:Class rdf:ID="MetaDatatypeCollection"/>
+  <owl:Class rdf:ID="MetaDatatypeList">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+        <owl:allValuesFrom rdf:resource="#MetaDatatype"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CollOfCollection">
+    <rdfs:subClassOf rdf:resource="#Collection"/>
+  </owl:Class>
+  <owl:Class rdf:about="#File">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="usedAs"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#File"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FileNameFormat">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#MetaDatatype"/>
+              <owl:Class rdf:about="#StringConstant"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ContentMetadata"/>
+  <owl:ObjectProperty rdf:ID="hasNameFormat">
+    <rdfs:domain rdf:resource="#FileSkolem"/>
+    <rdfs:range rdf:resource="#FileNameFormat"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasFiles">
+    <rdfs:domain rdf:resource="#FileCollection"/>
+    <rdfs:range rdf:resource="#FileList"/>
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:ID="hasItems"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCollections">
+    <rdfs:range rdf:resource="#CollectionList"/>
+    <rdfs:domain rdf:resource="#CollOfCollection"/>
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:about="#hasItems"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#usedAs">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Collection"/>
+          <owl:Class rdf:about="#File"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ONLY USED IN THE FILE LIBRARY
+- points to the appropriate input file in the component library</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Collection"/>
+          <owl:Class rdf:about="#File"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMetadata"/>
+  <owl:ObjectProperty rdf:ID="hasCollectionConstraint">
+    <rdfs:domain rdf:resource="#CollOfCollection"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="subject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#StandardMetadata"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFormatControlString">
+    <rdfs:domain rdf:resource="#MetaDatatype"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasVal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#StringConstant"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasValue">
+    <rdfs:domain rdf:resource="#MetaDatatype"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFloatValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:subPropertyOf rdf:resource="#hasValue"/>
+    <rdfs:domain rdf:resource="#Float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasStringValue">
+    <rdfs:subPropertyOf rdf:resource="#hasValue"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#String"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCreationMetadata">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >URL to the template file</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#File"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="unusedByJob">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#File"/>
+          <owl:Class rdf:about="#Collection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasIntValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:subPropertyOf rdf:resource="#hasValue"/>
+    <rdfs:domain rdf:resource="#Int"/>
+  </owl:DatatypeProperty>
+  <owl:SymmetricProperty rdf:ID="isSameAs">
+    <rdfs:range rdf:resource="#MetaDatatype"/>
+    <rdfs:domain rdf:resource="#MetaDatatype"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#isSameAs"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:ID="creationTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#StandardMetadata"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasOrigin_ComponentInput">
+    <rdfs:domain rdf:resource="#MetaDatatype"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Collection"/>
+          <owl:Class rdf:about="#File"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasContentMetadata">
+    <rdfs:domain rdf:resource="#File"/>
+    <rdfs:range rdf:resource="#ContentMetadata"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasType">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Collection"/>
+          <owl:Class rdf:about="#File"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Collection"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasN_items">
+    <rdfs:range rdf:resource="#Int"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Collection"/>
+          <owl:Class rdf:about="#DescriptionFile"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasMetadataItems">
+    <rdfs:range rdf:resource="#MetaDatatypeList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#MetaDatatypeCollection"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="author">
+    <rdfs:domain rdf:resource="#StandardMetadata"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasItems">
+    <rdfs:domain rdf:resource="#Collection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#FileList"/>
+          <owl:Class rdf:about="#CollectionList"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasFormatMetadata">
+    <rdfs:domain rdf:resource="#File"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#FormatMetadata"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasCollectionType">
+    <rdfs:range rdf:resource="#Collection"/>
+    <rdfs:subPropertyOf rdf:resource="#hasType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#CollOfCollection"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasFileType">
+    <rdfs:subPropertyOf rdf:resource="#hasType"/>
+    <rdfs:domain rdf:resource="#FileCollection"/>
+    <rdfs:range rdf:resource="#File"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasContentTemplate">
+    <rdfs:domain rdf:resource="#File"/>
+    <rdfs:range rdf:resource="#ContentTemplate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasDescriptionFile">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#File"/>
+          <owl:Class rdf:about="#Collection"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasStandardMetadata">
+    <rdfs:domain rdf:resource="#File"/>
+    <rdfs:range rdf:resource="#StandardMetadata"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasGridId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#File"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasMetadataType">
+    <rdfs:range rdf:resource="#MetaDatatype"/>
+    <rdfs:domain rdf:resource="#MetaDatatypeCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <ContentMetadata rdf:ID="News"/>
+  <ContentMetadata rdf:ID="GenericText"/>
+  <ContentMetadata rdf:ID="Email"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2, Build 307)  http://protege.stanford.edu -->

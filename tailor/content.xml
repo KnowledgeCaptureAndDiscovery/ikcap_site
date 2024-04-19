@@ -1,0 +1,210 @@
+<!-- <?xml version='1.0'?> -->
+
+<!--
+
+IF YOU CAN READ THIS, YOUR BROWSER DOESN'T SUPPORT XML.
+
+PLEASE UPDATE YOUR BROWSER, OR VIEW THE HTML VERSION OF THIS PAGE.
+
+-->
+<!--
+When the schema works, reference it like this; change the project tag below to this
+<project xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation = "isd-personnel.xsd">
+-->
+<project>
+  <name>Tailor</name>
+  <title>Task learning by instruction in a procedural reasoning system</title>
+
+  <status>
+    <short>
+
+<p> Our work on Tailor is part of the <a href="../calo">Calo</a> project
+and began in May 2003.</p>
+
+<p> We have recently integrated Tailor with SRI's IRIS platform and we
+are on track to deliver code for the Calo Year 2 test, in the Task
+Fulfillment Column.
+</p>
+
+    </short>
+
+    <long>
+<p>Our work on Tailor is part of the <a href="../calo">Calo</a> project
+and began in May 2003.</p>
+
+<p>We delivered Tailor 1.0 as part of the Calo year 1 demo, integrated
+    with Calo GUI</p>
+
+<p>In year 2, Tailor is participating in the task fullfilment test,
+    integrated in Iris. An enhanced version will also be shown in the
+    year 2 demo.</p>
+    </long>
+  </status>
+
+  <description>
+    <short>
+    Tailor allows end users to modify procedure definitions 
+    through short sentences describing the desired change. The procedure
+    knowledge is represented in the 
+    <a href="http://www.ai.sri.com/software/SPARK" target="new">SPARK</a>
+    language and shown to the user
+    with a simple language generation interface.
+    </short>
+
+    <long>
+    <p>Tailor allows end users to modify procedure definitions 
+    through short sentences describing the desired change. For example,
+    given a definition of the procedure for purchasing a laptop within a
+    company that includes getting bids for the laptop, getting
+    authorization for the purchase and submitting the appropriate paper
+    work, a desired modification might be expressed as "You don't need
+    authorization when the cost is below $2000".</p>
+
+    <p>A system with the capability to follow instruction of this kind
+    will allow more end users to change the procedure that is followed,
+    but a number of challenges must be addressed to make this
+    feasible. First, the system must understand the sentence as a
+    precise modification to a portion of the procedural knowledge. This
+    may require interpreting incompletely specified tasks or roles. For
+    example, it is not clear what object's cost is referred to in the
+    above sentence.</p>
+
+    <p>Second, because the procedure knowledge is interconnected, a
+    modification like this may have a number of unintended
+    ramifications. For example, if the authorization subtask is skipped
+    in some situations, some later subtask that required it as a setup
+    step may fail. Tailor should notice this when it can, and either
+    take steps to repair the knowledge or warn the user and make
+    suggestions for how to repair it.</p>
+
+    <p>
+    The procedure knowledge is represented in the <a
+    href="http://www.ai.sri.com/software/SPARK" target="new">SPARK</a>
+    language and shown to the user with a simple language generation
+    interface.</p> 
+    </long>
+   </description>
+
+  <research>
+    <short>
+     knowledge acquisition for procedural reasoning systems,
+    search-based composition of compound expressions to match user text.
+    </short>
+    <long>
+    <p>Tailor allows end users to modify procedure definitions 
+    through short sentences describing the desired change. For example,
+    given a definition of the procedure for purchasing a laptop within a
+    company that includes getting bids for the laptop, getting
+    authorization for the purchase and submitting the appropriate paper
+    work, a desired modification might be expressed as "You don't need
+    authorization when the cost is below $2000".</p>
+
+    <p>A system with the capability to follow instruction of this kind
+    will allow more end users to change the procedure that is followed,
+    but a number of challenges must be addressed to make this
+    feasible. First, the system must understand the sentence as a
+    precise modification to a portion of the procedural knowledge. This
+    may require interpreting incompletely specified tasks or roles. For
+    example, it is not clear what object's cost is referred to in the
+    above sentence.</p>
+
+    <p>Second, because the procedure knowledge is interconnected, a
+    modification like this may have a number of unintended
+    ramifications. For example, if the authorization subtask is skipped
+    in some situations, some later subtask that required it as a setup
+    step may fail. Tailor should notice this when it can, and either
+    take steps to repair the knowledge or warn the user and make
+    suggestions for how to repair it.</p>
+
+    <p>
+    The procedure knowledge is represented in the SPARK language and
+    shown to the user with a simple language generation interface.</p>
+
+    <p>
+    More details of our approach can be found in
+    <a href="blythe-06-21-04.ppt">these slides</a>
+    </p>
+    </long>
+  </research>
+
+  <link>
+  <a href="../calo">The Calo project in the IKCAP group</a>
+  </link>
+
+<!-- Demo -->
+<demo>
+
+<h3>Initial domain description</h3>
+
+<p>Warning: the UI shown here is a little out of date. These demo
+screenshots are from December 2004.</p>
+
+<p>Tailor's initial screen, below, shows how a top-level goal will be
+carried out in SPARK using an interactive tree widget to allow the user
+to see the domain as an overview or in detail. This description is
+automatically generated from the SPARK procedure representation,
+optionally using templates to specify an English phrase for a predicate
+or action.
+</p>
+
+<center><img src="demo/screen1.gif"/></center>
+
+<h3>Modifying the domain description</h3>
+
+<p>This domain is based on a page in <a href="http://www.ehow.com"
+target="new">EHow.com</a> that describes how to hang drywall from a
+ceiling. Users can post tips on the pages there, which we use as
+third-party examples of modifications to process descriptions. In this
+case, a user posted a tip that that drywall jack doesn't help much and
+it is easier to hold the drywall directly onto the ceiling. The Tailor
+user paraphrases this modification for Tailor as <em>"Don't use a
+drywall jack if you are a drywall expert"</em>. Tailor attempts to
+recognize this sentence as a modification to its process description,
+and provides feedback about the modification it thinks the user might be
+making, as shown below.
+</p>
+
+<center><img src="demo/screen2.gif"/></center>
+
+<h3>Noticing potentially unintended side effects and suggesting
+remedies</h3>
+
+<p>In the new process description shown above, step 6 has been colored
+red, and a button labelled 'Warning' appears next to it. When the user
+clicks the button, Tailor explains what it thinks might be a problem
+with this new description.</p>
+
+<p>The step that has been made conditional on not being an expert has an
+effect: it places the sheet on the drywall jack. The step in question
+has been defined so it will be an error if it is applied when the sheet
+is not on the drywall jack. Tailor can't know for sure that this won't
+be true when step 6 is applied because other actions could cause it to
+change, but it highlights that the condition will no longer be
+established by step 3 and offers the user some ways to fix it, that have
+been specialized from general knowledge about fixes to SPARK
+domains.</p>
+
+<center><img src="demo/screen3.gif"/></center>
+
+<p>The user wants to apply the condition to both steps 3 and 6. This can
+be achieved by explicitly selecting the steps in separate window that
+appears when the user clicks on 'select expression'.</p>
+
+<center><img src="demo/screen4.gif"/></center>
+
+<p>Once this is done, the new proposed change to the process description
+is shown as in the screen below. The user can select 'send' to have this
+new definition sent to the SPARK process, which can use it while it is
+running.</p>
+
+<center><img src="demo/screen5.gif"/></center>
+
+<hr>
+
+<p>For some background on what's going on under the hood, see the <a
+href="research.html">research page</a>.</p>
+
+
+</demo>
+</project>

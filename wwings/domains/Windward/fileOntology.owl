@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY flns "http://www.isi.edu/ikcap/wwings/fileOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.isi.edu/ikcap/wwings/domains/Windward/fileOntology.owl#"
+     xml:base="http://www.isi.edu/ikcap/wwings/domains/Windward/fileOntology.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:flns="http://www.isi.edu/ikcap/wwings/fileOntology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.isi.edu/ikcap/wwings/fileOntology.owl"/>
+    </owl:Ontology>
+    <owl:Ontology rdf:about="http://www.isi.edu/ikcap/wwings/fileOntology.owl"/>
+    <owl:Class rdf:ID="HatsTrades">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="SeedMembers">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="TerroristHats">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="NetkitScores">
+        <rdfs:subClassOf rdf:resource="#LabelRankings"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasMeetingView">
+        <rdfs:domain rdf:resource="#HatsMeetings"/>
+        <rdfs:range rdf:resource="&flns;String"/>
+        <rdfs:subPropertyOf rdf:resource="&flns;hasMetadata"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="BCSeedMembers">
+        <rdfs:subClassOf rdf:resource="#SeedMembers"/>
+    </owl:Class>
+    <owl:Class rdf:ID="KojakLinks">
+        <rdfs:subClassOf rdf:resource="#Links"/>
+    </owl:Class>
+    <owl:Class rdf:ID="GDALinks">
+        <rdfs:subClassOf rdf:resource="#Links"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Beacons">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="LabelRankings">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="GDA-Demographics-ParamFile">
+        <rdfs:subClassOf rdf:resource="#ParameterFile"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HatsKojakScript">
+        <rdfs:subClassOf rdf:resource="#ConfigFile"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Links">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Capabilities">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="BCLinks">
+        <rdfs:subClassOf rdf:resource="#Links"/>
+    </owl:Class>
+    <owl:Class rdf:ID="RLPLabels">
+        <rdfs:subClassOf rdf:resource="#Labels"/>
+    </owl:Class>
+    <owl:Class rdf:ID="NetkitKnown">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="NetkitPriors">
+        <rdfs:subClassOf rdf:resource="#ConfigFile"/>
+    </owl:Class>
+    <owl:Class rdf:ID="GDASeedMembers">
+        <rdfs:subClassOf rdf:resource="#SeedMembers"/>
+    </owl:Class>
+    <owl:Class rdf:ID="BCGroups">
+        <rdfs:subClassOf rdf:resource="#Groups"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasThresholdProbability">
+        <rdfs:domain rdf:resource="#GDA-Demographics-ParamFile"/>
+        <rdfs:range rdf:resource="&flns;String"/>
+        <rdfs:subPropertyOf rdf:resource="&flns;hasMetadata"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:about="&flns;File"/>
+    <owl:Class rdf:ID="WatchList">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Warnings">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HatsKojakConfig">
+        <rdfs:subClassOf rdf:resource="#ConfigFile"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ParameterFile">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasMaxLength">
+        <rdfs:domain rdf:resource="#BC-Groups-To-BC-Seed-Members-Param-File"/>
+        <rdfs:range rdf:resource="&flns;String"/>
+        <rdfs:subPropertyOf rdf:resource="&flns;hasMetadata"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="Groups">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HatsMeetings">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="KojakGroups">
+        <rdfs:subClassOf rdf:resource="#Groups"/>
+    </owl:Class>
+    <owl:Class rdf:ID="KojakSeedMembers">
+        <rdfs:subClassOf rdf:resource="#SeedMembers"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HatsWithCaps">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="unknownLabel">
+        <rdfs:domain rdf:resource="#GDA-Demographics-ParamFile"/>
+        <rdfs:range rdf:resource="&flns;String"/>
+        <rdfs:subPropertyOf rdf:resource="&flns;hasMetadata"/>
+    </owl:ObjectProperty>
+    <owl:Class rdf:ID="CapabilityPriors">
+        <rdfs:subClassOf rdf:resource="#HatsWithCaps"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ConfigFile">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Labels">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="RLPRanking">
+        <rdfs:subClassOf rdf:resource="#LabelRankings"/>
+    </owl:Class>
+    <owl:Class rdf:ID="RLPLinks">
+        <rdfs:subClassOf rdf:resource="#Links"/>
+    </owl:Class>
+    <owl:Class rdf:ID="CapTrackerLinks">
+        <rdfs:subClassOf rdf:resource="#Links"/>
+    </owl:Class>
+    <owl:Class rdf:ID="BC-Groups-To-BC-Seed-Members-Param-File">
+        <rdfs:subClassOf rdf:resource="#ParameterFile"/>
+    </owl:Class>
+    <owl:Class rdf:ID="GDADemographics">
+        <rdfs:subClassOf rdf:resource="&flns;File"/>
+    </owl:Class>
+    <owl:Class rdf:ID="GDAGroups">
+        <rdfs:subClassOf rdf:resource="#Groups"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:ID="hasMeetingType">
+        <rdfs:domain rdf:resource="#HatsMeetings"/>
+        <rdfs:range rdf:resource="&flns;String"/>
+        <rdfs:subPropertyOf rdf:resource="&flns;hasMetadata"/>
+    </owl:ObjectProperty>
+</rdf:RDF>

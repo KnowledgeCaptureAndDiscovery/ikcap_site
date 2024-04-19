@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>SCEC/CAT main page</title>
+<link rel="stylesheet" href="../../ikcap-basic.css">
+<style>
+ul li {
+   padding-bottom:4px;
+}
+</style>
+
+<script>
+  function openVid(file, width, height) {
+     var str = '';
+     str += '<video width="'+width+'" height="'+height+'" controls>'; 
+     str += '<source src="'+file+'" />';
+     str += 'Your browser does not support the video tag';
+     str += '</video>';
+
+     var videowin = window.open("","videowin","width="+(width+20)+",height="+(height+50));
+     videowin.document.writeln(str);
+     videowin.document.close();
+  }
+</script>
+</head>
+
+<body>
+<center>
+<h1>Composition Analysis Tool (CAT)</h1>
+</center>
+
+<b>Papers</b>
+<ul>
+  <li>Jihie Kim, Marc Spraragen, and Yolanda Gil, Interactive Workflow
+  Composition as Plan Synthesis, 2004. (submitted for publication)
+ </li>
+
+  <li>Jihie Kim, Marc Spraragen, and Yolanda Gil, <a href="../papers/IUI-2004-Kim-Spraragen-Gil.pdf">An Intelligent Assistant for Interactive Workflow
+  Composition </a>, Proceedings of the International Conference on
+  Intelligent User Interfaces (IUI-2004).</li>
+
+  <li>Jihie Kim and Yolanda Gil, <a href="../papers/AAAI-Symp-04-Kim-Gil.pdf">Towards
+  Interactive Composition of Semantic Web Services</a>, AAAI Spring
+  Symposium on Semantic Web Services, 2004 (accepted).</li>
+  <li>Jihie Kim and Yolanda Gil, <a href="cat-poster.pdf">Towards Interactive
+  Composition of Semantic Web Services (Two Page Poster)</a>, 2nd
+  International Semantic Web Conference (ISWC 2003).</li>
+</ul>
+
+<b>Presentations</b>
+<ul>
+  <li><a href="all-hands-jan-2004.ppt">Interactive Composition of
+  Computational Pathways :: SCEC all-hands meeting, Jan 2004</a></li>
+  <li><a href="IKCAP-NSF-review-Y2.ppt">Interactive Composition of
+  Computational Pathways :: SCEC annual meeting 2003</a></li>
+</ul>
+
+
+<b>Demos</b>
+<ul>
+    <li><a
+       href="javascript:openVid('../../misc/cat-scec-demo.m4v',1000,800)"><b>CAT
+       Demo</b></a> -- A video showing composition of a SCEC Pathway</li>
+  <li><a href="demo/index.html">Demo Walkthrough with Screenshots</a></li>
+</ul>
+
+
+</body>
+</html>

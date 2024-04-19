@@ -1,0 +1,46 @@
+[ NetCDFPostProcessing:
+	(?m rdf:type ts:Software)
+	(?m ts:hasOutput ?out)
+	(?out rdf:type data:NetCDF)
+	makeTemp(?vh)
+->
+	(?m ts:hasValueHolder ?vh)
+	(?vh rdf:type ts:ValueHolder)
+	(?vh ts:PostProcessingSoftware "Something that handles NetCDF files")
+	(?vh ts:NeedsPostProcessing "true"^^xsd:boolean)
+	(?vh ts:isInferred "true"^^xsd:boolean)
+	print (Setting Post Processing Information for NetCDF output)
+]
+
+[ NavierStokes:
+	(?m rdf:type ts:Software)
+	(?m ts:hasValueHolder ?vh)
+	(?vh ts:hasStandardName ?sn)
+	(?sn ts:hasObject <http://www.isi.edu/ikcap/geosoft/ontology/CSDMS.owl#navier_stokes_equation>)
+	makeTemp(?vh1)
+	makeTemp(?vh2)
+	makeTemp(?vh3)
+->
+	(?vh1 rdf:type ts:ValueHolder)
+	(?vh2 rdf:type ts:ValueHolder)
+	(?vh3 rdf:type ts:ValueHolder)
+	(?vh1 ts:hasAssumption <http://www.isi.edu/ikcap/geosoft/ontology/CSDMS.owl#incompressible_fluid>)
+	(?vh2 ts:hasAssumption <http://www.isi.edu/ikcap/geosoft/ontology/CSDMS.owl#newtonian_fluid>)
+	(?vh3 ts:hasAssumption <http://www.isi.edu/ikcap/geosoft/ontology/CSDMS.owl#momentum_conserved>)
+	(?m ts:hasValueHolder ?vh1)
+	(?m ts:hasValueHolder ?vh2)
+	(?m ts:hasValueHolder ?vh3)
+	print (NavierStokes object implies => assumptions incompressible_fluid, newtonian_fluid, momentum_conserved)
+]
+
+[ NewtonianFluid:
+	(?m rdf:type ts:Software)
+	(?m ts:hasValueHolder ?vh)
+	(?vh ts:hasAssumption <http://www.isi.edu/ikcap/geosoft/ontology/CSDMS.owl#newtonian_fluid>)
+	makeTemp(?vh1)
+->
+	(?vh1 rdf:type ts:ValueHolder)
+	(?vh1 ts:hasAssumption <http://www.isi.edu/ikcap/geosoft/ontology/CSDMS.owl#power_law_fluid>)
+	(?m ts:hasValueHolder ?vh1)
+	print (NewtonianFluid assumption implies => assumption power_law_fluid)
+]
